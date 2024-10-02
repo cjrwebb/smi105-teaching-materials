@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>SMI105: Week 3 Data Storytelling</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Calum Webb" />
+    <meta name="date" content="2024-09-30" />
+    <script src="smi105-week-3_files/header-attrs/header-attrs.js"></script>
+    <link href="smi105-week-3_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="smi105-week-3_files/tile-view/tile-view.js"></script>
+    <link href="smi105-week-3_files/panelset/panelset.css" rel="stylesheet" />
+    <script src="smi105-week-3_files/panelset/panelset.js"></script>
+    <script src="smi105-week-3_files/xaringanExtra-progressBar/progress-bar.js"></script>
+    <link href="smi105-week-3_files/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script src="smi105-week-3_files/clipboard/clipboard.min.js"></script>
+    <link href="smi105-week-3_files/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="smi105-week-3_files/shareon/shareon.min.js"></script>
+    <link href="smi105-week-3_files/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="smi105-week-3_files/xaringanExtra-shareagain/shareagain.js"></script>
+    <script src="smi105-week-3_files/mark.js/mark.min.js"></script>
+    <link href="smi105-week-3_files/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="smi105-week-3_files/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: middle, title
+background-size: contain
+
+
+&lt;br&gt;&lt;br&gt;
+
+# Data Storytelling
+#### SMI105: Week 3
+
+&lt;br&gt;&lt;br&gt;
+
+**Dr. Calum Webb**&lt;br&gt;
+Sheffield Methods Institute, the University of Sheffield&lt;br&gt;
+[c.j.webb@sheffield.ac.uk](mailto:c.j.webb@sheffield.ac.uk)
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 180px;
+height: 128px;
+z-index: 0;
+background-image: url(header/smi-logo-white.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:2em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+
+
+
+<style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #F8F8F8;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+
+
+
+---
+
+class: middle, inverse
+
+# Sign in
+
+---
+
+class: middle
+
+## Learning outcomes
+
+.panelset[
+
+.panel[.panel-name[What will I learn?]
+
+By the end of this week you will know:
+
+* Lecture: How to apply principles of storytelling to data visualisation and presenting data and critically assessing others' presentation of data.
+
+* Workshop: How to extend our use of scatterplots in order to incorporate more information or manage complexity.
+
+]
+]
+
+
+---
+
+class: inverse, middle
+
+
+
+
+#### Part 1
+
+# What is a story?
+
+---
+
+### The data underlying any particular data visualisation contains many possible stories
+
+.pull-left-big[
+
+&lt;img src="smi105-week-3_files/figure-html/unnamed-chunk-2-1.png" width="700" height="500" /&gt;
+
+]
+
+.pull-right-small[
+
+&lt;br&gt;&lt;br&gt;
+
+There were 53 different songs in the top ten during the year 2000, how do we choose what our story is here?
+
+Consider the data backstory:
+
+* Are there any particularly interesting patterns or anomalies?
+* Is there something people will care about?
+
+A **story** helps the audience to engage with the data and your data visualisations.
+
+
+
+]
+
+
+---
+
+# What is a story?
+
+.pull-left[
+
+We can think of a story of having a few essential components:
+
+* An audience
+* A plot
+* A character/characters
+
+.footnote[Feigenbaum and Alamalhodaei (2020), *the Data Storytelling Workbook*]
+
+] 
+
+
+
+---
+
+background-color: white
+
+# What is a story?
+
+.pull-left[
+
+We can think of a story of having a few essential components:
+
+* **An audience**
+  * Different audiences will be drawn to different presentations of data.
+    * Example 1: Establishes a connection at the personal, employee, level — people can *feel* how long 14 days is
+* A plot
+* A character/characters
+
+.footnote[Feigenbaum and Alamalhodaei (2020), *the Data Storytelling Workbook*]
+
+] 
+
+.pull-right[
+
+#### By the end of the year, the average Brit will spend 14 days — almost half a month — commuting to and from work.
+
+&lt;img src="smi105-week-3_files/figure-html/unnamed-chunk-3-1.png" width="450" height="380" /&gt;
+
+
+]
+
+---
+
+# What is a story?
+
+.pull-left[
+
+We can think of a story of having a few essential components:
+
+* **An audience**
+  * Different audiences will be drawn to different presentations of data.
+    * Example 1: Establishes a connection at the personal, employee, level — people can *feel* how long 14 days is.
+    * Example 2: £5.2billion is not really a scale of money most people can imagine — framing more targeted towards a politically informed audience, policymakers, or large businesses.
+    * Data may be "framed" for different audiences, this can inform the kind of data visualisation you choose.
+* A plot
+* A character/characters
+
+.footnote[Feigenbaum and Alamalhodaei (2020), *the Data Storytelling Workbook*]
+
+] 
+
+.pull-right[
+
+#### Time spent commuting by UK workers is worth £5.3billion in lost productivity annually
+
+&lt;img src="smi105-week-3_files/figure-html/unnamed-chunk-4-1.png" width="450" height="380" /&gt;
+
+
+]
+
+
+---
+
+# What is a story?
+
+.pull-left[
+
+We can think of a story of having a few essential components:
+
+* **An audience**
+  * Different audiences will be drawn to different presentations of data.
+    * Example 1: Establishes a connection at the personal, employee, level — people can *feel* how long 14 days is.
+    * Example 2: £5.2billion is not really a scale of money most people can imagine — framing more targeted towards a politically informed audience, policymakers, or large businesses.
+    * Data may be "framed" for different audiences, this can inform the kind of data visualisation you choose.
+* A plot
+* A character/characters
+
+.footnote[Feigenbaum and Alamalhodaei (2020), *the Data Storytelling Workbook*]
+
+] 
+
+.pull-right[
+
+#### "Think, feel, do" Feigenbaum and Alamalhodaei, (2020).
+
+* Who are your audience?
+* What do they **know** already? What do you want them to **think** after viewing your data visualisation?
+* How do you want them to **feel** after reviewing your data visualisation?
+* What do you want them to **do**? What is your **call to action**?
+
+
+* How much **time do they have to hear your story**?
+
+
+]
+
+
+
+---
+
+background-color: white
+
+# What is a story?
+
+.pull-left[
+
+We can think of a story of having a few essential components:
+
+* An audience
+* **A plot**
+  * Not a 'data visualisation' type of plot, but an actual story plot. 
+  * Not just **what** the story is, but **how you tell it**
+* A character/characters
+
+.footnote[Feigenbaum and Alamalhodaei (2020), *the Data Storytelling Workbook*]
+
+] 
+
+.pull-right[
+
+
+
+&lt;img src="images/Heros-Journey-Illustration-sm.png" width="100%" /&gt;
+
+
+]
+
+---
+
+background-color: white
+
+# What is a story?
+
+.pull-left[
+
+We can think of a story of having a few essential components:
+
+* An audience
+* **A plot**
+  * Not a 'data visualisation' type of plot, but an actual story plot. 
+  * Not just **what** the story is, but **how you tell it**
+  * Examples of using 'conventional' narrative story archetypes:
+      * **Hero's Journey**: *Something disturbs our comfortable knowledge of a topic, we struggle to make sense of this new information, we transform our existing knowledge and return changed.*
+* A character/characters
+
+.footnote[Feigenbaum and Alamalhodaei (2020), *the Data Storytelling Workbook*]
+
+] 
+
+.pull-right[
+
+
+
+&lt;img src="images/Heros-Journey-Illustration-sm.png" width="100%" /&gt;
+
+
+]
+
+---
+
+# What is a story?
+
+.pull-left[
+
+We can think of a story of having a few essential components:
+
+* An audience
+* **A plot**
+  * Not a 'data visualisation' type of plot, but an actual story plot. 
+  * Not just **what** the story is, but **how you tell it**
+  * Examples of using 'conventional' narrative story archetypes:
+      * **Voyage and Return**: *We set out to a strange land not knowing what we might find, before returning with new wisdom and life experience. Typical for a lot of very "new" areas of research, e.g. new online movements (Think documentary)*
+* A character/characters
+
+.footnote[Feigenbaum and Alamalhodaei (2020), *the Data Storytelling Workbook*]
+
+] 
+
+.pull-right[
+
+
+&lt;center&gt;
+&lt;iframe width="252" height="450"
+src="https://www.youtube.com/embed/sdLqIvHxyA0"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;
+
+
+]
+
+---
+
+# What is a story?
+
+.pull-left[
+
+We can think of a story of having a few essential components:
+
+* An audience
+* **A plot**
+  * Not a 'data visualisation' type of plot, but an actual story plot. 
+  * Not just **what** the story is, but **how you tell it**
+  * Examples of using 'conventional' narrative story archetypes:
+      * **Mystery**: *There is a puzzling event or observation. You follow along with the investigator who uncovers clues and makes discoveries. At the end of the story there is a big revelation where all of the clues fit together.*
+* A character/characters
+
+.footnote[Feigenbaum and Alamalhodaei (2020), *the Data Storytelling Workbook*]
+
+] 
+
+.pull-right[
+
+&lt;center&gt;
+
+&lt;img src="images/icons8-spy.svg" width="70%" /&gt;
+
+&lt;/center&gt;
+
+]
+
+
+---
+
+# What is a story?
+
+.pull-left[
+
+We can think of a story of having a few essential components:
+
+* An audience
+* A plot
+* **A character/characters**
+  * A person, an event (including a year), or a place can all be characters.
+  * When there are many possible characters in a story, one or two can be used to act as representatives for a wider group in order to make it more relatable to an audience (e.g. Barbie and Oppenheimer)
+
+.footnote[Feigenbaum and Alamalhodaei (2020), *the Data Storytelling Workbook*]
+
+] 
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;
+&lt;center&gt;
+
+&lt;img src="images/characters.png" width="100%" /&gt;
+
+&lt;/center&gt;
+
+]
+
+
+
+---
+
+# What is a story?
+
+.pull-left[
+
+We can think of a story of having a few essential components:
+
+* An audience
+* A plot
+* A character/characters
+
+
+* **Dialogue**
+  * It is also common to have some "dialogue" between data visualisation and either people affected by the issue or experts on the matter. This can be very effective for engaging audiences and making the subject more personally relatable.
+
+
+.footnote[Feigenbaum and Alamalhodaei (2020), *the Data Storytelling Workbook*]
+
+] 
+
+.pull-right[
+
+&lt;center&gt;
+
+&lt;img src="images/icons8-chat_bubble.svg" width="70%" /&gt;
+
+&lt;/center&gt;
+
+]
+
+---
+
+class: middle, inverse
+
+
+#### Part 2
+
+# Let's hear a story.
+
+
+---
+
+.pull-left[
+
+&lt;img src="smi105-week-3_files/figure-html/unnamed-chunk-10-1.png" width="450" height="250" /&gt;
+
+&lt;img src="smi105-week-3_files/figure-html/unnamed-chunk-11-1.png" width="100%" height="250" /&gt;
+
+]
+
+.pull-right[
+
+### I'm going to tell a story using these three data visualisations.
+
+&lt;img src="smi105-week-3_files/figure-html/unnamed-chunk-12-1.png" width="450" height="450" /&gt;
+
+]
+
+
+---
+
+.pull-left-small[
+
+## Let's start with this chart
+
+* What is interesting about it?
+
+* How can I draw attention to what is interesting about it?
+
+* How can I focus the audience on one specific "character"?
+
+
+]
+
+.pull-right-big[
+
+
+&lt;img src="smi105-week-3_files/figure-html/unnamed-chunk-13-1.png" width="700" height="550" /&gt;
+
+]
+
+
+---
+
+.pull-left-small[
+
+## Turning this visualisation into a story
+
+* Add an active title
+
+* Highlight important characters 
+
+
+&gt; "Since its launch in 2020, the video game Genshin Impact, from Chinese developer miHoYo, has become a staple app on many young peoples' smartphones across the world. The scale of the game's success outstrips even the most successful PC games on the Steam platform in the years before."
+
+
+]
+
+.pull-right-big[
+
+
+&lt;img src="smi105-week-3_files/figure-html/unnamed-chunk-14-1.png" width="700" height="550" /&gt;
+
+]
+
+
+---
+
+.pull-left[
+
+## Developing our story
+
+* Placing the data within a broader context
+
+* Highlighting variation between two things
+
+* Why is this new and interesting?
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-3_files/figure-html/unnamed-chunk-15-1.png" width="500" height="500" /&gt;
+
+]
+
+
+---
+
+background-color: white
+
+&lt;br&gt;
+
+.pull-left[
+
+## Developing our story
+
+* Improved communication by using instantly recognisable flags, avoiding the need for a key
+
+* Placed the dot representing Genshin Impact (the Chinese studio developed game) in the centre of the visualisation, rather than at the top, to make it the focal point (the main character).
+
+&gt; Taking a wider view, few of the most popular games on the Steam platform have been developed in China, with the United States and Canada dominating the 'top-played' list.
+
+&gt; "*Other games have Chinese translations and can be loads of fun, but very few (probably none) have such high production values with such a vast amount of high quality relatable dialogue/audio for $0 up front.*" - Genshin Impact Player
+
+
+]
+
+.pull-right[
+
+
+&lt;img src="smi105-week-3_files/figure-html/unnamed-chunk-16-1.png" width="500" height="500" /&gt;
+
+]
+
+
+---
+
+class: inverse, middle
+
+&gt; ## Few games, however, have also generated so much interest in Chinese culture, as games from Japan did for Japanese culture in the 1980s and 1990s:
+
+&gt; ##"* It also means there are cultural norms hidden in it because it was created by Chinese citizens in China. ... there is a bunch of simple scenarios mixed in with the Dragons, Infinite teapots and dimension travelling.*" - Genshin Impact Player
+
+---
+
+class: inverse
+background-image: url("images/genshin-mcdonalds-ad.jpeg")
+background-position: center
+background-size: contain
+
+
+---
+
+.pull-left[
+
+## Call to action: changing the way people think about video games
+
+* How to draw a link between two pieces of data in a way that tells an interesting story?
+
+* What message do I want people to take away that will change their thinking or behaviour?
+
+]
+
+.pull-right[
+
+
+&lt;img src="smi105-week-3_files/figure-html/unnamed-chunk-17-1.png" width="500" height="550" /&gt;
+
+]
+
+
+---
+
+.pull-left[
+
+## Call to action: changing the way people think about video games
+
+* Cross-reference the 'character' from the first two visualisations at a specific point in the data on a different visualisation
+
+* Add frequency counts to the bars to make the change more of the focus
+
+&gt; The success of Genshin Impact has coincided with a large increase in the numbers of young people studying for GCSE and A-level qualifications in Mandarin Chinese in the UK in a way that other strategies to increase uptake in the language have failed to accomplish.
+
+&gt; "*[A]fter I started learning Chinese, I switch from JP to CN audio. It's helpful. And at the same time you're learning and enjoying the game.*" - Genshin Impact Player&lt;br&gt;
+&gt; "*I've always been a bit interested in Chinese culture. I'm not gonna lie when I say that Genshin Impact introduced me to it's culture in a new light.*" - Genshin Impact Player&lt;br&gt;
+&gt; "*Genshin got way more people interested in Chinese culture.*" - Genshin Impact Player
+
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-3_files/figure-html/unnamed-chunk-18-1.png" width="500" height="500" /&gt;
+
+]
+
+
+---
+
+.pull-left[
+
+# Activity: Breaking down the storytelling of "The Genshin Impact on young peoples' interest in Chinese language in the UK" 
+
+* Go to [app.wooclap.com/TKOOEY](app.wooclap.com/TKOOEY) and join the first event.
+
+Think about the following:
+
+* Who was the audience? How did I want them to change their views after the story?
+* What kind of storytelling plot archetype might this data story have fallen into?
+* Who/what could be considered a character in this story?
+* How could the audience and plot be changed if I presented the last plot in my story first instead?
+
+
+]
+
+.pull-right[
+
+.center[
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="images/wooclap-qr-week3.png" width="80%" /&gt;
+
+]
+
+]
+
+---
+
+# The rest of this week:
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;
+
+**This week's workshop**:
+
+Let’s extend graphs where we show the relationship between a continuous and a categorical variable: box plots, density curves, histograms, and so on. What’s the easiest way to understand this information? Why would we use one of these graphs over another?
+
+
+]
+
+--
+
+.pull-right[
+
+**Before week 4**:
+
+**Core tasks**:
+
+* **Before lecture**: Bookmark or download a copy of the FT’s Visual Vocabulary: https://github.com/Financial-Times/chart-doctor/blob/main/visual-vocabulary/poster.png
+
+* **Before lecture**: Find a chart in the news that relates to the topic given to you at the end of week 3 lecture. Then, share on Piazza: (i) the chart you find, (ii) where it was published (if that’s not obvious) and (iii) which category from the 9 listed across the top of FT Visual Vocabulary you think best describes the data relationship in it.
+
+* **Before workshop**: Work through the task at the end of the workshop handout from week 3
+Supplementary tasks:
+
+* **Before workshop**: Read chapter 3/Make a plot of the Healy book
+
+]
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"sealed": false,
+"ratio": "16:9",
+"self_contained": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<style>
+.my-header {
+	background-color: #440099;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 70px;
+	width: 100%;
+	text-align: left;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.inverse)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="my-header"></div>';
+  });
+</script>
+
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

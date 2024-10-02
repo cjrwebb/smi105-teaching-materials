@@ -1,0 +1,54 @@
+artist_name,album_release_date,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,time_signature,duration_ms,explicit,track_name,track_number,album_name,key_name,mode_name,key_mode
+My Chemical Romance,2002,0.311,0.733,4,-18.015,0,0.0436,0.888,0.95,0.386,0.454,115.663,3,62663,FALSE,Romance,1,"I Brought You My Bullets, You Brought Me Your Love",E,minor,E minor
+My Chemical Romance,2002,0.383,0.946,1,-8.122,0,0.0789,3.28e-4,1.13e-6,0.0537,0.534,108.591,4,231096,TRUE,"Honey, This Mirror Isn't Big Enough for the Two of Us",2,"I Brought You My Bullets, You Brought Me Your Love",C#,minor,C# minor
+My Chemical Romance,2002,0.327,0.963,4,-8.871,0,0.174,0.0118,0,0.176,0.199,98.416,4,326506,FALSE,Vampires Will Never Hurt You,3,"I Brought You My Bullets, You Brought Me Your Love",E,minor,E minor
+My Chemical Romance,2002,0.306,0.94,9,-6.475,1,0.119,6.65e-4,0,0.336,0.357,127.331,4,263813,FALSE,Drowning Lessons,4,"I Brought You My Bullets, You Brought Me Your Love",A,major,A major
+My Chemical Romance,2002,0.271,0.931,1,-6.81,0,0.0785,9.9e-4,0,0.182,0.382,142.407,4,125626,TRUE,Our Lady of Sorrows,5,"I Brought You My Bullets, You Brought Me Your Love",C#,minor,C# minor
+My Chemical Romance,2002,0.291,0.976,2,-6.443,1,0.09,1.62e-4,8.29e-6,0.359,0.276,112.225,4,208173,FALSE,Headfirst for Halos,6,"I Brought You My Bullets, You Brought Me Your Love",D,major,D major
+My Chemical Romance,2002,0.351,0.944,0,-6.51,1,0.148,8.11e-4,0,0.495,0.462,122.58,4,203146,FALSE,Skylines and Turnstiles,7,"I Brought You My Bullets, You Brought Me Your Love",C,major,C major
+My Chemical Romance,2002,0.408,0.674,2,-8.882,1,0.0297,8.21e-4,0,0.134,0.422,128.974,4,305053,FALSE,Early Sunsets Over Monroeville,8,"I Brought You My Bullets, You Brought Me Your Love",D,major,D major
+My Chemical Romance,2002,0.278,0.936,7,-5.986,1,0.107,4.01e-4,0,0.335,0.34,119.088,4,132546,FALSE,This Is the Best Day Ever,9,"I Brought You My Bullets, You Brought Me Your Love",G,major,G major
+My Chemical Romance,2002,0.288,0.933,8,-6.947,0,0.0968,9.71e-4,0,0.133,0.497,98.918,4,231853,FALSE,Cubicles,10,"I Brought You My Bullets, You Brought Me Your Love",G#,minor,G# minor
+My Chemical Romance,2002,0.38,0.797,8,-9.091,1,0.057,0.00184,1.42e-5,0.208,0.206,118.64,4,366560,FALSE,Demolition Lovers,11,"I Brought You My Bullets, You Brought Me Your Love",G#,major,G# major
+My Chemical Romance,2004-06-08,0.356,0.96,4,-3.487,1,0.104,0.0142,0,0.209,0.0857,125.921,4,204733,FALSE,Helena,1,Three Cheers for Sweet Revenge,E,major,E major
+My Chemical Romance,2004-06-08,0.252,0.993,4,-3.079,0,0.16,0.0234,0,0.228,0.118,183.773,4,138840,FALSE,"Give 'Em Hell, Kid",2,Three Cheers for Sweet Revenge,E,minor,E minor
+My Chemical Romance,2004-06-08,0.372,0.975,10,-3.949,1,0.075,1.33e-4,4.29e-6,0.351,0.467,162.967,4,181026,FALSE,To the End,3,Three Cheers for Sweet Revenge,A#,major,A# major
+My Chemical Romance,2004-06-08,0.387,0.913,8,-3.761,1,0.0814,0.00366,0,0.136,0.674,185.957,4,173733,TRUE,You Know What They Do to Guys Like Us in Prison,4,Three Cheers for Sweet Revenge,G#,major,G# major
+My Chemical Romance,2004-06-08,0.21,0.94,9,-3.427,1,0.123,0.00602,0,0.269,0.255,179.722,4,186480,TRUE,I'm Not Okay (I Promise),5,Three Cheers for Sweet Revenge,A,major,A major
+My Chemical Romance,2004-06-08,0.202,0.886,11,-3.805,0,0.0816,0.0286,0,0.643,0.192,145.781,4,194253,FALSE,The Ghost of You,6,Three Cheers for Sweet Revenge,B,minor,B minor
+My Chemical Romance,2004-06-08,0.494,0.971,2,-3.868,0,0.0546,3.89e-4,4.45e-5,0.0978,0.185,125.019,4,217733,FALSE,The Jetset Life Is Gonna Kill You,7,Three Cheers for Sweet Revenge,D,minor,D minor
+My Chemical Romance,2004-06-08,0.502,0.0753,9,-22.703,1,0.0322,0.942,0.314,0.0844,0.0509,132.827,4,57173,FALSE,Interlude,8,Three Cheers for Sweet Revenge,A,major,A major
+My Chemical Romance,2004-06-08,0.486,0.977,7,-3.463,1,0.0603,0.00237,0,0.298,0.413,103.501,4,221093,FALSE,Thank You for the Venom,9,Three Cheers for Sweet Revenge,G,major,G major
+My Chemical Romance,2004-06-08,0.422,0.946,2,-3.145,0,0.0651,1.81e-4,0,0.231,0.262,127.03,3,167533,FALSE,Hang 'Em High,10,Three Cheers for Sweet Revenge,D,minor,D minor
+My Chemical Romance,2004-06-08,0.353,0.953,1,-3.635,0,0.0515,1.29e-4,0,0.34,0.48,105.236,4,210866,FALSE,"It's Not a Fashion Statement, It's a Deathwish",11,Three Cheers for Sweet Revenge,C#,minor,C# minor
+My Chemical Romance,2004-06-08,0.548,0.888,1,-4.861,0,0.0362,9.02e-4,0.00172,0.0943,0.655,115.993,4,188066,FALSE,Cemetery Drive,12,Three Cheers for Sweet Revenge,C#,minor,C# minor
+My Chemical Romance,2004-06-08,0.253,0.887,11,-4.635,0,0.0578,0.00114,2.99e-6,0.259,0.274,115.522,4,232466,FALSE,I Never Told You What I Do for a Living,13,Three Cheers for Sweet Revenge,B,minor,B minor
+My Chemical Romance,2006-10-23,0.292,0.548,2,-4.977,1,0.0363,0.0827,0,0.414,0.207,175.053,3,112920,FALSE,The End.,1,The Black Parade,D,major,D major
+My Chemical Romance,2006-10-23,0.481,0.973,7,-1.945,1,0.0542,0.0037,8.77e-4,0.325,0.362,99.331,4,195520,TRUE,Dead!,2,The Black Parade,G,major,G major
+My Chemical Romance,2006-10-23,0.242,0.983,2,-2.679,1,0.106,5.08e-5,4.43e-5,0.303,0.301,163.366,4,239053,FALSE,This Is How I Disappear,3,The Black Parade,D,major,D major
+My Chemical Romance,2006-10-23,0.513,0.937,1,-3.427,0,0.0532,1.11e-4,1.02e-4,0.083,0.543,155.015,4,200880,FALSE,The Sharpest Lives,4,The Black Parade,C#,minor,C# minor
+My Chemical Romance,2006-10-23,0.217,0.905,2,-4.103,1,0.0752,2.89e-4,1.1e-4,0.222,0.236,96.95,4,311106,FALSE,Welcome to the Black Parade,5,The Black Parade,D,major,D major
+My Chemical Romance,2006-10-23,0.289,0.796,0,-4.22,1,0.0494,0.00837,2.61e-5,0.202,0.33,169.835,4,238680,FALSE,I Don't Love You,6,The Black Parade,C,major,C major
+My Chemical Romance,2006-10-23,0.445,0.977,0,-2.674,1,0.0995,3.47e-4,0.0235,0.126,0.239,105.825,4,184000,TRUE,House of Wolves,7,The Black Parade,C,major,C major
+My Chemical Romance,2006-10-23,0.457,0.515,4,-4.31,1,0.0261,0.358,0,0.278,0.222,74.984,4,142973,FALSE,Cancer,8,The Black Parade,E,major,E major
+My Chemical Romance,2006-10-23,0.236,0.799,4,-5.167,0,0.0939,0.0136,0,0.0948,0.303,208.951,4,279026,TRUE,Mama,9,The Black Parade,E,minor,E minor
+My Chemical Romance,2006-10-23,0.188,0.952,0,-4.499,1,0.201,0.00138,8.56e-4,0.381,0.152,155.973,4,283466,FALSE,Sleep,10,The Black Parade,C,major,C major
+My Chemical Romance,2006-10-23,0.463,0.857,4,-3.063,1,0.0632,0.0506,0,0.184,0.856,111.647,4,161920,FALSE,Teenagers,11,The Black Parade,E,major,E major
+My Chemical Romance,2006-10-23,0.343,0.692,2,-3.926,1,0.0355,0.00218,0,0.112,0.153,174.07,4,295000,FALSE,Disenchanted,12,The Black Parade,D,major,D major
+My Chemical Romance,2006-10-23,0.467,0.883,2,-3.679,0,0.106,3.21e-4,1.52e-4,0.125,0.309,122.252,4,299226,FALSE,Famous Last Words,13,The Black Parade,D,minor,D minor
+My Chemical Romance,2006-10-23,0.739,0.405,4,-10.524,1,0.107,0.972,0,0.0699,0.827,123.497,4,173533,TRUE,Blood - Hidden Track,14,The Black Parade,E,major,E major
+My Chemical Romance,2010-11-05,0.482,0.73,8,-13.89,1,0.279,0.758,0,0.342,0.449,128.773,5,29733,FALSE,"Look Alive, Sunshine",1,Danger Days: The True Lives of the Fabulous Killjoys,G#,major,G# major
+My Chemical Romance,2010-11-05,0.411,0.986,8,-2.522,0,0.0583,2.64e-4,0.00148,0.371,0.649,165.981,4,205960,TRUE,Na Na Na (Na Na Na Na Na Na Na Na Na),2,Danger Days: The True Lives of the Fabulous Killjoys,G#,minor,G# minor
+My Chemical Romance,2010-11-05,0.405,0.95,6,-2.8,1,0.071,3.3e-4,3.47e-6,0.108,0.383,139.715,4,296733,FALSE,Bulletproof Heart,3,Danger Days: The True Lives of the Fabulous Killjoys,F#,major,F# major
+My Chemical Romance,2010-11-05,0.606,0.942,2,-3.618,1,0.0357,2.33e-4,7.07e-6,0.106,0.373,110.98,4,270386,FALSE,SING,4,Danger Days: The True Lives of the Fabulous Killjoys,D,major,D major
+My Chemical Romance,2010-11-05,0.608,0.954,7,-3.507,1,0.0499,6e-4,0.269,0.358,0.723,131.991,4,246760,TRUE,Planetary (GO!),5,Danger Days: The True Lives of the Fabulous Killjoys,G,major,G major
+My Chemical Romance,2010-11-05,0.479,0.854,6,-4.129,1,0.0548,2.71e-4,4.89e-6,0.117,0.129,125.92,4,272773,FALSE,The Only Hope for Me Is You,6,Danger Days: The True Lives of the Fabulous Killjoys,F#,major,F# major
+My Chemical Romance,2010-11-05,0.706,0.39,4,-16.251,1,0.826,0.807,0,0.45,0.917,111.425,4,26440,FALSE,Jet-Star and the Kobra Kid / Traffic Report,7,Danger Days: The True Lives of the Fabulous Killjoys,E,major,E major
+My Chemical Romance,2010-11-05,0.413,0.988,8,-2.165,1,0.0745,0.0033,0.00334,0.471,0.642,162.954,4,215960,FALSE,Party Poison,8,Danger Days: The True Lives of the Fabulous Killjoys,G#,major,G# major
+My Chemical Romance,2010-11-05,0.463,0.961,4,-3.591,0,0.169,9.16e-5,0.0262,0.0499,0.269,136.9,4,230426,TRUE,"Save Yourself, I'll Hold Them Back",9,Danger Days: The True Lives of the Fabulous Killjoys,E,minor,E minor
+My Chemical Romance,2010-11-05,0.41,0.912,2,-2.795,1,0.0334,7.46e-5,0.145,0.423,0.289,155.031,4,268426,FALSE,S/C/A/R/E/C/R/O/W,10,Danger Days: The True Lives of the Fabulous Killjoys,D,major,D major
+My Chemical Romance,2010-11-05,0.6,0.799,2,-3.51,1,0.0332,2.52e-4,0.0121,0.0932,0.647,130.031,4,246720,FALSE,Summertime,11,Danger Days: The True Lives of the Fabulous Killjoys,D,major,D major
+My Chemical Romance,2010-11-05,0.5,0.978,9,-5.128,1,0.103,0.00408,0.593,0.204,0.199,100.038,4,272906,FALSE,DESTROYA,12,Danger Days: The True Lives of the Fabulous Killjoys,A,major,A major
+My Chemical Romance,2010-11-05,0.553,0.897,2,-4.297,1,0.0444,1.55e-4,0.0225,0.0972,0.361,120.007,4,324973,FALSE,The Kids from Yesterday,13,Danger Days: The True Lives of the Fabulous Killjoys,D,major,D major
+My Chemical Romance,2010-11-05,0.479,0.281,10,-7.095,1,0.115,0.89,4.41e-4,0.523,0.059,89.815,4,119040,FALSE,"Goodnite, Dr. Death",14,Danger Days: The True Lives of the Fabulous Killjoys,A#,major,A# major
+My Chemical Romance,2010-11-05,0.261,0.979,1,-3.652,0,0.0966,1.76e-4,0.122,0.113,0.64,183.718,4,218120,TRUE,Vampire Money,15,Danger Days: The True Lives of the Fabulous Killjoys,C#,minor,C# minor

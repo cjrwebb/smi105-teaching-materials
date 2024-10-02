@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>SMI105: Week 2 Interpreting a Data Visualisation</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Calum Webb" />
+    <meta name="date" content="2024-09-25" />
+    <script src="smi105-week-2_files/header-attrs/header-attrs.js"></script>
+    <link href="smi105-week-2_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="smi105-week-2_files/tile-view/tile-view.js"></script>
+    <link href="smi105-week-2_files/panelset/panelset.css" rel="stylesheet" />
+    <script src="smi105-week-2_files/panelset/panelset.js"></script>
+    <script src="smi105-week-2_files/xaringanExtra-progressBar/progress-bar.js"></script>
+    <link href="smi105-week-2_files/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script src="smi105-week-2_files/clipboard/clipboard.min.js"></script>
+    <link href="smi105-week-2_files/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="smi105-week-2_files/shareon/shareon.min.js"></script>
+    <link href="smi105-week-2_files/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="smi105-week-2_files/xaringanExtra-shareagain/shareagain.js"></script>
+    <script src="smi105-week-2_files/mark.js/mark.min.js"></script>
+    <link href="smi105-week-2_files/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="smi105-week-2_files/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: middle, title
+background-size: contain
+
+
+&lt;br&gt;&lt;br&gt;
+
+# Interpreting a Data Visualisation
+#### SMI105: Week 2
+
+&lt;br&gt;&lt;br&gt;
+
+**Dr. Calum Webb**&lt;br&gt;
+Sheffield Methods Institute, the University of Sheffield&lt;br&gt;
+[c.j.webb@sheffield.ac.uk](mailto:c.j.webb@sheffield.ac.uk)
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 180px;
+height: 128px;
+z-index: 0;
+background-image: url(header/smi-logo-white.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:2em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+
+
+
+<style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #F8F8F8;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+
+
+
+---
+
+class: middle, inverse
+
+# Sign in
+
+---
+
+class: middle
+
+## Learning outcomes
+
+.panelset[
+
+.panel[.panel-name[What will I learn?]
+
+By the end of this week you will:
+
+* Lecture: How to 'read' a data visualisation, how to identify key structural and aesthetic parameters in their construction, and how they can be manipulated.
+
+* Lecture: What social and societal factors influence engagement.
+
+* Workshop: How to create bar charts to visualise data
+
+]
+]
+
+
+---
+
+class: inverse, middle
+
+
+#### Part I
+# The anatomy of a data visualisation
+
+
+
+
+
+---
+
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-2-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### The Anatomy of a Chart
+
+]
+
+
+
+---
+
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-3-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### The Anatomy of a Chart
+
+* **The Title**
+  * Is there a title?
+  * Does the title give you information about what to expect from the chart?
+  * Does the chart show or support what the title states?
+
+]
+
+
+---
+
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-4-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### The Anatomy of a Chart
+
+* The Title
+* **The Key/Legend**
+  * Is there a key?
+  * What does it tell you about the different colours &amp; shapes in the chart?
+  * Does it help you understand how to read it?
+  * The key is not always a separate element, sometimes it can be embedded in the title (e.g. certain colours highlighted)
+
+
+]
+
+
+---
+
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-5-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### The Anatomy of a Chart
+
+* The Title
+* The Key/Legend
+* **The Axes &amp; Scales**
+  * What are the scales? (positions on X &amp; Y axis, size of points, shade of colour)
+  * Do the scales start at 0? If not, why not?
+  * What is the range of values?
+  * Which values are good or bad, high or low?
+  * Have the scales been transformed in any way or are they linear? (linear means that, for example, an increase of 5 covers the same distance anywhere on the axis)
+
+]
+
+---
+
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-6-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### The Anatomy of a Chart
+
+* The Title
+* The Key/Legend
+* The Axes &amp; Scales
+* **The Data**
+  * What are the biggest categories? Do they represent proportions, relative differences, or frequencies? (Bar Charts/Histograms/Area Charts)
+  * What is the relationship between two variables? (e.g. Scatterplots, Heatmaps, Stacked/Grouped Bar Charts)
+  * What is the relationship over time (when one axis is time, line charts)? Is upward movement good or bad? Do lines interact? Are there seasonal trends? 
+  * How much *variation* is there, and is variation shown at all? 
+
+]
+
+
+---
+
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-7-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### The Anatomy of a Chart
+
+* The Title
+* The Key/Legend
+* The Axes &amp; Scales
+* The Data
+* **The Source of the Data**
+  * Is there a source provided?
+  * Can the source of the data be trusted/verified?
+  * If there is no source, can we be sure the data is accurate and truthful? How easy would it be to verify?
+  * Has the author been willing to put their name on the visualisation? If not, why not?
+
+]
+
+
+---
+
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-8-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### The Anatomy of a Chart
+
+* The Title
+* The Key/Legend
+* The Axes &amp; Scales
+* The Data
+* The Source of the Data
+* **Information outside the visualisation**
+  * Format and prominence
+  * Titles, URL, author, sponsor, funder
+  * Introductions &amp; guides (how do I use and interpret this visualisation/interactive tool)
+  * Layout
+  * Data sources and treatment (how has data been transformed)
+  * Interactive features
+
+]
+
+---
+
+class: middle
+background-color: #ffffff
+
+.center[
+
+&lt;img src="images/kirk-process.jpg" width="75%" /&gt;
+
+]
+
+.footnote[Kirk 2016, fig 1.3, The Three Stages of Understanding, p.22]
+
+---
+
+class: middle, inverse
+
+
+# How can we manipulate these parts of a data visualisation, using &lt;u&gt;bad practice&lt;/u&gt; to construct a specific narrative? 
+
+
+---
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-10-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### Manipulating our datavis
+
+* You are a **Kamala Harris** Campaign Strategist. You will be manipulating this data visualisation so that it conveys a more **Pro-Harris** message.
+* I will be taking the role of a Trump strategist, but also acting as your data visualiser.
+* But first
+  * Go to wooclap.com (or scan the QR code below)
+  * Enter the Event Code: **EYEEGJ**
+
+.center[
+
+&lt;img src="images/wooclap-qr-week2.png" width="65%" /&gt;
+
+]
+  
+]
+
+
+
+---
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-12-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### Manipulating our datavis
+
+* You are a **Kamala Harris** Campaign Strategist. You will be manipulating this data visualisation so that it conveys a more **Pro-Harris** message.
+* I will be taking the role of a Trump strategist, but also acting as your data visualiser.
+* But first
+  * Go to wooclap.com (or scan the QR code below)
+  * Enter the Event Code: **EYEEGJ**
+
+.center[
+
+&lt;img src="images/wooclap-qr-week2.png" width="65%" /&gt;
+
+]
+  
+]
+
+
+
+---
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-14-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### Manipulating our datavis
+
+* The Title
+  
+]
+
+---
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-15-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### Manipulating our datavis
+
+* The Title
+* The Key/Legend, axes and scales
+  
+]
+
+---
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-16-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### Manipulating our datavis
+
+* The Title
+* The Key/Legend, axes and scales
+  
+]
+
+
+---
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-17-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### Manipulating our datavis
+
+* The Title
+* The Key/Legend, axes and scales
+* The Data 
+  
+]
+
+
+---
+
+.pull-left-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-18-1.png" width="750" height="520" /&gt;
+
+]
+
+
+.pull-right-small[
+
+&lt;br&gt;
+
+### Manipulating our datavis
+
+* The Title
+* The Key/Legend, axes and scales
+* The Data 
+  
+]
+
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-19-1.png" width="520" height="520" /&gt;
+
+]
+
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-20-1.png" width="520" height="520" /&gt;
+
+  
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-21-1.png" width="520" height="520" /&gt;
+
+]
+
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-22-1.png" width="520" height="520" /&gt;
+
+  
+]
+
+
+---
+
+class: middle, inverse
+
+
+# I am showing you this &lt;u&gt;not so you can do it&lt;/u&gt;, but so that you can &lt;u&gt;identify when data visualisations have been manipulated to support a specific narrative&lt;/u&gt;.
+
+
+---
+
+background-color: #ffffff
+
+class: middle
+
+.pull-left[
+
+&lt;br&gt;
+
+# Problematising 'Neutral' 
+
+* Most good practice guidance (e.g. Tufte) emphasises the importance of being 'neutral' and 'objective'.
+
+* There is a difference between being 'neutral'/'objective' and being 'misleading'.
+
+* But there is also a difference between being 'neutral'/'objective' and being .tuos_purple[boring]!
+
+* You want people to engage with your data visualisation, so you can pick colours, themes, and designs that you find appealing or that communicate the kind of emotions you want to communicate!
+
+]
+
+
+.pull-right[
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-23-1.png" width="500" height="500" /&gt;
+
+]
+
+
+---
+
+background-color: #ffffff
+
+class: middle
+
+.pull-left[
+
+&lt;br&gt;
+
+# Problematising 'Neutral'
+
+* Most good practice guidance (e.g. Tufte) emphasises the importance of being 'neutral' and 'objective'.
+
+* There is a difference between being 'neutral'/'objective' and being 'misleading'.
+
+* But there is also a difference between being 'neutral'/'objective' and being .tuos_purple[boring]!
+
+* You want people to engage with your data visualisation, so you can pick colours, themes, and designs that you find appealing or that communicate the kind of emotions you want to communicate!
+
+]
+
+
+.pull-right[
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-24-1.png" width="500" height="500" /&gt;
+
+]
+
+
+---
+
+### Which data visualisation do you trust more?
+
+.pull-left[
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-25-1.png" width="500" height="450" /&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="smi105-week-2_files/figure-html/unnamed-chunk-26-1.png" width="500" height="450" /&gt;
+
+
+
+]
+
+
+---
+
+background-color: #ffffff
+
+class: middle
+
+.pull-left[
+
+&lt;br&gt;
+
+# Problematising 'Neutral'
+
+'Neutral' or 'objective' presentation can also be used to mask the trustworthiness of the data and/or source by leveraging the **optics of scientific data visualisation**. 
+
+]
+
+--
+
+.pull-right[
+
+The data visualisation equivalent of academic jargon:
+
+&gt; "The systemic realignment of intersubjective modalities generates a paradigm shift in the ontological discourse, fostering emergent epistemic fluidities across multilayered socio-dynamic frameworks."
+
+.right[Prompt: chatGPT: generate some academic sounding jargon that actually means nothing]
+
+
+
+]
+
+---
+
+class: middle, inverse
+
+
+#### Part II
+
+# Factors that influence engagement
+
+
+---
+
+# Factors that influence engagement
+
+.pull-left[
+
+&lt;img src="images/engagement-1.png" width="100%" /&gt;
+
+]
+
+.pull-right[
+
+* **Subject matter &amp; the source**
+
+&gt; “I’m not really interested in American Football, but the dynamic image of the footballer and the big red circles drew me in by getting me thinking about the impacts of sport on the body.”
+
+
+]
+
+
+.footnote[Source: Kennedy, et al. [Seeing Data](https://seeingdata.org/developing-visualisation-literacy/rate-these-visualisations/) ]
+
+
+---
+
+# Factors that influence engagement
+
+.pull-left[
+
+&lt;img src="images/engagement-2.png" width="100%" /&gt;
+
+]
+
+.pull-right[
+
+* Subject matter &amp; the source
+* **Beliefs and opinions**
+  * Confirmation
+
+&gt; “I would say it reinforced ... how I feel. It’s not great the way that refugees and migrants are portrayed. But I wouldn’t say [my view] changed, because I had that view before; it just reinforced it I think”
+
+
+
+]
+
+
+.footnote[Source: Kennedy, et al. [Seeing Data](https://seeingdata.org/developing-visualisation-literacy/rate-these-visualisations/) ]
+
+---
+
+# Factors that influence engagement
+
+.pull-left[
+
+&lt;img src="images/engagement-3.png" width="100%" /&gt;
+
+]
+
+.pull-right[
+
+* Subject matter &amp; the source
+* **Beliefs and opinions**
+  * Confirmation
+  * Challenged or changed
+
+&gt; “I was surprised that Irish immigrants were the most common in the U.K. … it was something I hadn’t even thought of and it was like, ‘Wow!’. For all the talk of immigration things, the fact that Irish immigrants are the most common, for a lot of the time until ten years ago, it was something I didn’t expect”
+
+
+
+]
+
+
+---
+
+# Factors that influence engagement
+
+.pull-left[
+
+&lt;img src="images/engagement-4.png" width="100%" /&gt;
+
+]
+
+.pull-right[
+
+* Subject matter &amp; the source
+* Beliefs and opinions
+* **Time/cognitive load**
+
+&gt; “Because I don’t have a lot of time to like read things and what have you, so if it’s kept simple and easy to read, then I’m more likely to be interested in it and reading it all and, and you know, to look at it, have a good look at it really.”
+
+&gt; “I could probably spend an hour on it”
+
+
+
+]
+
+
+.footnote[Source: Kennedy, et al. [Seeing Data](https://seeingdata.org/developing-visualisation-literacy/rate-these-visualisations/) ]
+
+---
+
+# Factors that influence engagement
+
+.pull-left[
+
+&lt;img src="images/engagement-5.png" width="100%" /&gt;
+
+]
+
+.pull-right[
+
+* Subject matter &amp; the source
+* Beliefs and opinions
+* Time/cognitive load
+* **Emotions**
+
+&gt; “It was a pleasure to look at this visual presentation because of the co-ordination between the image and the message it carries”
+
+&gt; “Frustrated. It was an ugly representation to start with, difficult to see clearly, no information, just a mess”
+
+
+
+]
+
+
+.footnote[Source: Kennedy, et al. [Seeing Data](https://seeingdata.org/developing-visualisation-literacy/rate-these-visualisations/) ]
+
+
+
+
+---
+
+# Factors that influence engagement
+
+.pull-left[
+
+&lt;img src="images/engagement-6.png" width="80%" /&gt;
+
+]
+
+.pull-right[
+
+* Subject matter &amp; the source
+* Beliefs and opinions
+* Time/cognitive load
+* Emotions
+* **Confidence** (does it *feel* like it is worth engaging with)
+
+&gt; “It was all these circles and colours and I thought that looks like a bit of hard work; don’t know if I understand.”
+
+
+]
+
+
+.footnote[Source: Kennedy, et al. [Seeing Data](https://seeingdata.org/developing-visualisation-literacy/rate-these-visualisations/) ]
+
+
+---
+
+class: middle
+
+# Factors that influence engagement
+
+.pull-left[
+
+* Subject matter &amp; the source
+* Beliefs and opinions
+* Time/cognitive load
+* Emotions
+* Confidence
+
+
+]
+
+
+.pull-right[
+
+&gt; Remember what it feels like to be on the receiving end of making sense of other people’s data visualisation — to be the audience — before you become an expert in data visualisation!
+
+
+]
+
+
+---
+
+# The rest of this week:
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;
+
+**This week's workshop**:
+
+Let’s extend bar charts. Last week we drew our first bar chart, but we can do better. What if we want to make the categories easier to interpret? What if we want to put the categories in descending order? What if we want to have bar charts that have the average of different categories, rather than just the number of categories that there are?
+
+
+]
+
+--
+
+
+.pull-right[
+
+**Before week 3**:
+
+**Core tasks**:
+
+* **Before lecture**: Give yourself two minutes. See how many different ways you can visualise this dataset: 75, 37 (yes, it is a dataset that only has two numbers in it). Use pen and paper to sketch all the different ways you can think of to visually compare these two numbers. Share (on Piazza) the total number of ways you find.
+
+* **Before lecture**: Read the first half of the second chapter, pages 17-42, A Narrative Approach to Data Storytelling, in Feigenbaum, A. and Alamalhodaei, A. (2020) The Data Storytelling Workbook, Routledge
+
+* **Before workshop**: Work through the task at the end of the workshop handout from week 2
+
+]
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"sealed": false,
+"ratio": "16:9",
+"self_contained": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<style>
+.my-header {
+	background-color: #440099;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 70px;
+	width: 100%;
+	text-align: left;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.inverse)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="my-header"></div>';
+  });
+</script>
+
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>SMI105: Week 1 Introduction &amp; Overview</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Calum Webb" />
+    <meta name="date" content="2024-09-21" />
+    <script src="smi105-week-1_files/header-attrs/header-attrs.js"></script>
+    <link href="smi105-week-1_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="smi105-week-1_files/tile-view/tile-view.js"></script>
+    <link href="smi105-week-1_files/panelset/panelset.css" rel="stylesheet" />
+    <script src="smi105-week-1_files/panelset/panelset.js"></script>
+    <script src="smi105-week-1_files/xaringanExtra-progressBar/progress-bar.js"></script>
+    <link href="smi105-week-1_files/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script src="smi105-week-1_files/clipboard/clipboard.min.js"></script>
+    <link href="smi105-week-1_files/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="smi105-week-1_files/shareon/shareon.min.js"></script>
+    <link href="smi105-week-1_files/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="smi105-week-1_files/xaringanExtra-shareagain/shareagain.js"></script>
+    <script src="smi105-week-1_files/mark.js/mark.min.js"></script>
+    <link href="smi105-week-1_files/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="smi105-week-1_files/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: middle, title
+background-size: contain
+
+
+&lt;br&gt;&lt;br&gt;
+
+# Overview and Introduction
+#### SMI105: Week 1
+
+&lt;br&gt;&lt;br&gt;
+
+**Dr. Calum Webb**&lt;br&gt;
+Sheffield Methods Institute, the University of Sheffield&lt;br&gt;
+[c.j.webb@sheffield.ac.uk](mailto:c.j.webb@sheffield.ac.uk)
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 180px;
+height: 128px;
+z-index: 0;
+background-image: url(header/smi-logo-white.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:2em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+
+
+
+<style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #F8F8F8;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+
+
+
+---
+
+class: middle, inverse
+
+# Sign in
+
+---
+
+class: middle
+
+## Learning outcomes
+
+.panelset[
+
+.panel[.panel-name[What will I learn?]
+
+By the end of this week you will:
+
+* Lecture: How the module will operate, where to find more information, how to navigate the module resources, and what we will be doing each week.
+
+* Lecture: What is data visualisation, why do we do it, why does it matter, and how will we approach it?
+
+* Workshop: First steps in `ggplot2` and `R`: how do we create visualisations of data in `R`
+
+]
+]
+
+
+---
+
+class: middle
+
+# Who are we?
+
+.pull-left[
+
+&lt;br&gt;
+
+.center[
+
+## Calum Webb
+
+[c.j.webb@sheffield.ac.uk](mailto:c.j.webb@sheffield.ac.uk)
+
+Research on poverty and the child welfare system in the UK using secondary survey and administrative data in `R`. My most recent project has been about how investment in services for children improves their welfare and safety.
+
+]
+]
+
+
+.pull-right[
+
+.center[
+
+## Lowenna Jones
+
+Lowenna's research focuses on regulation of chemical risk, particularly within the United Kingdom (UK) following the UK's departure from the European Union (EU) (i.e., Brexit).
+
+
+---
+
+## Kate Montague-Hellen
+
+Kate’s PhD research project aims to explore the impact of an untreated chronic cancer diagnosis on patients, their expectations, and support needs in the first year following diagnosis.
+
+
+]
+
+]
+
+
+---
+
+class: inverse, middle
+
+
+# Here's some data visualisation I've done in my own work and hobbies
+
+
+---
+
+class: hide-logo
+background-color: #006353
+
+.pull-left[
+
+.center[
+
+&lt;img src="images/caterpillar.jpg" width="50%" /&gt;
+]
+
+]
+
+.pull-right[
+.center[
+
+&lt;img src="images/ipse-map.png" width="80%" /&gt;
+
+]
+]
+
+
+
+---
+
+class: hide-logo
+background-color: #00AD92
+
+.center[
+
+&lt;img src="images/cwip-app-map.png" width="95%" /&gt;
+]
+
+---
+
+class: hide-logo
+background-color: #EADCC9
+
+.center[
+
+&lt;img src="images/intersectional-inequalities.png" width="80%" /&gt;
+]
+
+
+---
+
+class: hide-logo
+background-color: #FBFAE7
+
+
+
+.center[
+
+&lt;img src="images/animal-1.png" width="50%" /&gt;
+]
+
+### .right[.ac_yellow[I did a lot of Animal Crossing visualisation over the pandemic...]]
+
+---
+
+class: hide-logo
+background-color: #FBFAE7
+
+.center[
+
+&lt;img src="images/animal-2.png" width="100%" /&gt;
+]
+
+### .right[.ac_yellow[Like...]]
+
+---
+
+class: hide-logo
+background-color: #FBFAE7
+
+.center[
+
+&lt;img src="images/animal-3.png" width="70%" /&gt;
+]
+
+### .right[.ac_yellow[A lot.]]
+
+
+---
+
+class: hide-logo, middle
+background-color: #000000
+
+.pull-left-small[
+
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+.center[
+
+&lt;img src="images/edm-1.png" width="100%" /&gt;
+]
+
+]
+
+.pull-right-big[
+.center[
+
+&lt;img src="images/edm-2.png" width="90%" /&gt;
+
+]
+]
+
+---
+
+class: inverse, middle
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+# Enough about me, let me ask something about you.
+
+Go to [Wooclap.com](https://app.wooclap.com/FNJKHC) and enter code: **.tuos_blue[FNJKHC]**
+
+]
+
+.pull-right[
+
+.center[
+
+&lt;img src="images/wooclap-1.png" width="100%" /&gt;
+
+]
+
+]
+
+
+
+
+---
+
+class: inverse, middle
+
+#### Part I
+
+# Overview of the module: How will it work?
+
+
+---
+
+class: middle
+
+# By the end of this module, you should know about:
+
+.pull-left[
+
+&lt;br&gt;
+
+* The **theory** of data visualisation
+* The **practice** of data visualisation
+* How to be **critical** about both the theory and practice of data visualisation
+
+To do that, you will be learning how to *create* data visualisations using `R`, how to *design* data visualisations using best practice, and how to be *critical* of the data visualisations you make and see.
+
+We don't assume you know anything about data visualisation, coding, or information design before starting this class!
+
+]
+
+.pull-right[
+
+.center[
+
+&lt;img src="images/icons8-venn_diagram.svg" width="60%" /&gt;
+
+]
+
+
+]
+
+
+---
+
+class: middle
+
+# By the end of this module, you should know about:
+
+.pull-left[
+
+&lt;br&gt;
+
+* The **theory** of data visualisation
+  * **Why is the data visualised in the way it is?**
+* The **practice** of data visualisation
+  * **How are key ideas implemented to create effective data visualisation?**
+* How to be **critical** about both the theory and practice of data visualisation
+  * **What is the impact of the things we visualise and the way we visualise them on society and culture?**
+
+.grey[To do that, you will be learning how to *create* data visualisations using `R`, how to *design* data visualisations using best practice, and how to be *critical* of the data visualisations you make and see.
+
+We don't assume you know anything about data visualisation, coding, or information design before starting this class!]
+
+]
+
+.pull-right[
+
+.center[
+
+&lt;img src="images/icons8-venn_diagram.svg" width="60%" /&gt;
+
+]
+
+
+]
+
+
+---
+
+class: middle
+
+# Logistics
+
+* **Two** teaching sessions per week: 1 hour lecture &amp; 1.5 hour practical workshop
+
+--
+
+* **Lectures** will mostly focus on theory and critical awareness
+    * 4pm - 4:50pm Sheffield University Management School, MS Lowe Memorial LT03 (Uphill from the Wave) (Tuesdays, Week 1-5, 7-11)
+
+--
+
+* **Workshops** will focus on the practice of creating data visualisations
+    * 09:00-10:30/10:30-12:00/12:00-13:30 in The Wave, Computer Room 2A (Thursdays Week 1-5, 7-11), check your timetable for group allocation.
+
+--
+
+* Slides and worksheets will be posted on Blackboard, usually worksheets will be posted after the workshops.
+
+* Lectures will be recorded either via Encore Lecture Capture or Blackboard Collaborate. **We do our best to ensure all lectures are recorded, but cannot guarantee this.**
+
+---
+
+class: middle, inverse
+
+# Lecture recordings and uploaded worksheets are &lt;u&gt;not&lt;/u&gt; a replacement for attending lectures and worksheets.
+
+---
+
+class: middle, inverse
+
+# If attendance at lectures and workshops becomes very poor, we will stop providing lecture recordings. 
+
+
+---
+
+class: middle
+
+# Weekly Tasks
+
+* For most weeks there are **core** and **supplementary** tasks. 
+
+  * **You are required to complete core weekly tasks**. These are *formative* (ungraded) assessments; you will receive group feedback in the weekly workshops to help you improve and prepare for your *summative* (graded) assessments.
+  
+  * A full breakdown of all weekly tasks and topics is available [in the module handbook/resource list](https://calumwebb.co.uk/teaching/smi105-content/reading-list/).
+  
+  * You are not required to complete the supplementary tasks, but you will probably do better in your assessment if you do.
+  
+---
+
+class: middle, inverse
+
+## This is a 10-credit module and therefore it is expected it will require 100 study hours per student. Formal teaching hours for this module will take 25 hours (lectures and workshops). Therefore, as a rough guide, this means you should expect to devote around 5 hours of study time per week to this module during a 15-week semester.
+
+
+---
+
+class: middle
+
+# Assessment
+
+.pull-left[
+
+There are two assessments:
+
+* **Assessment 1**: due in November, is worth **30% of final grade**. You will be provided with some real contemporary social science data and asked to produce several different graphs and reflect on what they tell us about the topic.
+
+
+* **Assessment 2**: due in January, is worth **70% of final grade**. You will be asked to critique and reflect on a published article that contains a data visualisation, and consider how it might be improved. Then, you will need to improve it using the same or related data, explaining the decisions you took.
+
+]
+
+.pull-right[
+
+.center[
+
+&lt;img src="images/icons8-news.svg" width="60%" /&gt;
+
+]
+
+
+]
+
+
+---
+
+class: middle
+
+# Getting help with your studies
+
+.pull-left[
+
+* **Consultation and Feedback hours**
+
+I run two Consultation and Feedback hours per week, you can ask me questions about SMI105.
+
+If you want to book an appointment with me, please use the calendar [here](https://calendar.app.google/3N7v2r6zPYFo4SL7A) or on Blackboard.
+
+* **Piazza Discussion Board**
+
+If you have any questions about the module or any tasks, including errors with `R` code, you can post for help on [the Piazza Discussion Board](https://piazza.com/shef.ac.uk/fall2024/smi105). This is accessible through Blackboard. Also, try to help other students with their questions — it will help you learn!
+
+
+]
+
+.pull-right[
+
+.center[
+
+&lt;img src="images/icons8-help.svg" width="60%" /&gt;
+
+]
+
+
+]
+
+
+---
+
+class: middle
+
+
+# Additional Resources &amp; Workshops from the University 
+
+.pull-left[
+
+## [Library](https://www.sheffield.ac.uk/library/study/workshops)
+
+Research Skills and Critical Thinking (RSCT) workshops:
+
+* [Discovering Information: Getting Started](https://www.sheffield.ac.uk/library/study/workshops)
+* [Discovering Information: A masterclass](https://www.sheffield.ac.uk/library/study/workshops)
+
+Online resources:
+
+* [How to read a journal article](https://xerte.shef.ac.uk/play.php?template_id=788#page1)
+* [Active reading for understanding](https://xerte.shef.ac.uk/play.php?template_id=1076)
+* [Tutorials A-Z](https://www.sheffield.ac.uk/library/study/tutorials)
+
+
+]
+
+.pull-right[
+
+## [301 Skills Centre](https://students.sheffield.ac.uk/301)
+
+* [Academic skills refresher](https://301skills.shef.ac.uk/events/361/upcoming)
+* [Reading and note-taking at university](https://301skills.shef.ac.uk/events/263/upcoming)
+* [Managing your time and avoiding distractions](https://301skills.shef.ac.uk/events/71/upcoming)
+* Study Skills 1-to-1s
+
+## [M.A.S.H.](https://www.sheffield.ac.uk/mash)
+
+[Statistics resources](https://www.sheffield.ac.uk/mash/stats-resources):
+
+* [First steps in R](https://www.sheffield.ac.uk/mash/stats-resources/r)
+* [R/Excel/SPSS for Ultra-Beginners](https://students.sheffield.ac.uk/mash/workshops/stats)
+* [1-to-1 Support](https://students.sheffield.ac.uk/mash/bookings)
+
+]
+
+
+
+---
+
+class: inverse, middle
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+# Let's take a quick tour of the Blackboard page for SMI105
+
+]
+
+
+.pull-right[
+
+.center[
+
+&lt;img src="images/icons8-web.svg" width="60%" /&gt;
+
+]
+
+
+]
+
+
+---
+
+class: inverse, middle
+
+#### Part II
+
+# Introduction to Data Visualisation
+
+
+---
+
+background-color: #ffffff
+
+class: middle
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+# What is the purpose of data visualisation? Why do we do it?
+
+* Re-open the [wooclap.com](https://app.wooclap.com/FNJKHC?from=event-page) app and go to Question/Activity 2
+
+]
+
+.pull-right[
+
+.center[
+
+&lt;img src="images/wooclap-1.png" width="100%" /&gt;
+
+]
+
+]
+
+---
+
+
+.pull-left-small[
+
+# Data Visualisation 1
+
+**What is the main purpose?**
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-1_files/figure-html/unnamed-chunk-17-1.png" width="700" height="450" /&gt;
+
+]
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 2)]
+
+---
+
+
+.pull-left-small[
+
+# Data Visualisation 1
+
+**What is the main purpose?**
+
+* To communicate information.
+
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-1_files/figure-html/unnamed-chunk-18-1.png" width="700" height="450" /&gt;
+
+]
+
+
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 2)]
+
+---
+
+class: hide-logo, inverse
+background-color: #006353
+
+
+.pull-left-small[
+
+# Data Visualisation 2
+
+**.tuos_blue[What is the main purpose?]**
+
+* To communicate information
+
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;
+
+&lt;img src="images/decreased-funding.png" width="90%" /&gt;
+
+]
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 2)]
+
+
+---
+
+class: hide-logo, inverse
+background-color: #006353
+
+
+.pull-left-small[
+
+# Data Visualisation 2
+
+**.tuos_blue[What is the main purpose?]**
+
+* To communicate information
+
+* To tell a story
+
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;
+
+&lt;img src="images/decreased-funding.png" width="90%" /&gt;
+
+]
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 2)]
+
+
+
+---
+
+background-color: #ffffff
+
+.pull-left-small[
+
+# Data Visualisation 3
+
+**.tuos_blue[What is the main purpose?]**
+
+* To communicate information
+
+* To tell a story
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+On a piece of paper in your notebook (if you have one), or by drawing with your finger or describing to your neighbour, draw a representation of the following table to illustrate the difference between "Party A"'s £2million commitment to spending and "Party B"'s £2billion commitment to spending.
+
+
+|Party   |Spending Commitment |
+|:-------|:-------------------|
+|Party A |£2million           |
+|Party B |£2billion           |
+
+]
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 2)]
+
+
+---
+
+background-color: #ffffff
+
+.pull-left-small[
+
+# Data Visualisation 3
+
+**.tuos_blue[What is the main purpose?]**
+
+* To communicate information
+
+* To tell a story
+
+* To use our visual sense to understand data, detect patterns, etc., rather than language and logical processing
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-1_files/figure-html/unnamed-chunk-22-1.gif" width="700" height="450" /&gt;
+
+]
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 2)]
+
+
+---
+
+class: hide-logo, inverse
+background-color: #000000
+
+.pull-left-small[
+
+# Data Visualisation 4
+
+**.tuos_blue[What is the main purpose?]**
+
+* To communicate information
+
+* To tell a story
+
+* To use our visual sense to understand data, detect patterns, etc., rather than language and logical processing
+
+]
+
+
+.pull-right-big[
+
+.center[
+
+&lt;img src="images/edm-2.png" width="80%" /&gt;
+]
+
+
+
+]
+
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 2)]
+
+
+---
+
+class: hide-logo, inverse
+background-color: #000000
+
+.pull-left-small[
+
+# Data Visualisation 4
+
+**.tuos_blue[What is the main purpose?]**
+
+* To communicate information
+
+* To tell a story
+
+* To use our visual sense to understand data, detect patterns, etc., rather than language and logical processing
+
+* To look cool! Data visualisation can be art. E.g. see Generative Data Visualisation Art by [Thomas Lin Pedersen](https://thomaslinpedersen.art/work/) and [Danielle Navarro](https://art.djnavarro.net/gallery/)
+
+]
+
+
+.pull-right-big[
+
+.center[
+
+&lt;img src="images/edm-2.png" width="80%" /&gt;
+]
+
+
+
+]
+
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 2)]
+
+---
+
+class: inverse, middle
+
+# ‘[Data visualisation is] the representation and presentation of data to facilitate understanding’ 
+
+.right[Andy Kirk, (2016), Data Visualisation: A Handbook for Data Driven Design]
+
+
+---
+
+class: inverse, middle
+
+
+# What assumptions do these data visualisations make, and reinforce, about society?
+
+
+---
+
+.pull-left-small[
+
+# Data Visualisation 1
+
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;
+
+.center[
+
+&lt;img src="smi105-week-1_files/figure-html/unnamed-chunk-25-1.png" width="700" height="450" /&gt;
+
+]]
+
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 3)]
+
+---
+
+.pull-left-small[
+
+# Data Visualisation 1
+
+* Assumes everyone is able to access red-green colour schemes
+
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;
+
+.center[
+
+&lt;img src="smi105-week-1_files/figure-html/unnamed-chunk-26-1.png" width="700" height="450" /&gt;
+
+]]
+
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 3)]
+
+
+---
+
+class: hide-logo
+background-color: #EADCC9
+
+.pull-left-small[
+
+# Data Visualisation 2
+
+* Assumes everyone is able to access red-green colour schemes
+
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;
+
+.center[
+
+&lt;img src="images/intersectional-inequalities.png" width="90%" /&gt;
+
+]]
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 3)]
+
+
+---
+
+class: hide-logo
+background-color: #EADCC9
+
+.pull-left-small[
+
+# Data Visualisation 2
+
+* Assumes everyone is able to access red-green colour schemes
+
+* Reinforces the idea that ethnicity and race can be categorised into distinct groups
+
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;
+
+.center[
+
+&lt;img src="images/intersectional-inequalities.png" width="90%" /&gt;
+
+]]
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 3)]
+
+
+---
+
+.pull-left-small[
+
+# Data Visualisation 3
+
+* Assumes everyone is able to access red-green colour schemes
+
+* Reinforces the idea that ethnicity and race can be categorised into distinct groups
+
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;
+
+.center[
+
+&lt;img src="images/Political_map_of_Canada.svg.png" width="75%" /&gt;
+
+]]
+
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 3)]
+
+
+---
+
+.pull-left-small[
+
+# Data Visualisation 3
+
+* Assumes everyone is able to access red-green colour schemes
+
+* Reinforces the idea that ethnicity and race can be categorised into distinct groups
+
+* Reinforces dominant (settler) forms of knowledge over other (indigenous) forms of knowledge
+
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;
+
+.center[
+
+&lt;img src="images/map-of-aboriginal-groups-in-canada-treaty-6-wikipedia-of-map-of-aboriginal-groups-in-canada.png" width="90%" /&gt;
+
+]]
+
+
+.footnote[Wooclap event code: app.wooclap.com/FNJKHC (Activity 3)]
+
+---
+
+class: inverse, middle
+
+
+# “If you’re designing technology for society and you don’t know anything about society, you’re unqualified.” 
+
+.right[Quote from Safiya Noble presenting her book Algorithms of Oppression, hosted by Open Data Manchester, 8th May 2018 ]
+
+---
+
+class: inverse, middle
+
+## “…some groups experience unearned advantages—because various systems have been designed by people like them and work for people like them—and other groups experience systematic disadvantages—because those same systems were not designed by them or with people like them in mind”
+
+.right[D’Ignazio, C. and Klein, L. (2020) Data Feminism (p.24)]
+
+
+---
+
+class: middle
+
+# Summary: So, what is data visualisation?
+
+* Data visualisation is an **object** — a chart, a graph, a map — that follows a set of rules and principles, where parameters are defined by data
+
+--
+
+* Data visualisation is also a **process** — an act of transformation and reproduction of best practice in order to tell a story or to make sense of the world visually
+
+--
+
+* Data visualisation is also a **social phenomenon** — it is related to power, can reinforce or challenges societal norms or assumptions, and shapes how people engage with information
+
+---
+
+# The rest of this week:
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;
+
+**This week's workshop**:
+
+* Computer Room 2a, SMI, The Wave
+* You can take and use your own laptop if you like
+* 09:00-10:30, 10:30-12:00, or 12:00-13:30
+
+**Do you know when and where you are going?**
+
+If not clear from your timetable which group you're in, email [smi@sheffield.ac.uk](mailto:smi@sheffield.ac.uk) 
+
+**You will not be permitted to move group without a very good reason.**
+
+
+]
+
+--
+
+.pull-right[
+
+**Before week 2**:
+
+**Core tasks**:
+* Before lecture: Read this module handbook in full
+* Before workshop: If you’ve got a personal machine, get R and RStudio installed on it (instructions on how to do this will be in the Week 2 learning resources folder)
+* Having done so, work through the workshop handout once again to check it works on your machine (if it doesn’t, don’t worry, we’ll go through and troubleshoot it together)
+
+**Supplementary tasks:**
+
+* Before lecture: Read Top 5 things to look for in a visualisation on the Seeing Data website: https://seeingdata.org/developing-visualisation-literacy/top-5-things-to-look-for-in-a-visualisation/ 
+
+]
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"sealed": false,
+"ratio": "16:9",
+"self_contained": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<style>
+.my-header {
+	background-color: #440099;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 70px;
+	width: 100%;
+	text-align: left;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.inverse)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="my-header"></div>';
+  });
+</script>
+
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
