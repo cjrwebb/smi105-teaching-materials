@@ -1,6 +1,5 @@
 ---
 title: "SMI105 week 2"
-date: "6/10/2022"
 output: html_document
 ---
 
@@ -31,9 +30,11 @@ library(tidyverse)
 Last week, we talked about graphs in a ggplot2 context having a minimum of three explicit elements: data, aesthetic mappings, and geometric objects. The aesthetic mappings and geometric objects we explicitly specified from the data that were available, but where did the data come from? The datasets we used -- *economics*, *midwest*, *diamonds*, etc -- all come preloaded with ggplot2. But most of the time, we want to use our own data to find out interesting things about the world. Let's load some data on Taylor Swift, Adele, and My Chemical Romance.
 
 ```{r, eval = FALSE}
-taylor <- read_csv("https://bit.ly/SMI105TS")
-adele <- read_csv("https://bit.ly/AdeleAlbums")
-mcr <- read_csv("https://bit.ly/SMI105MyChemicalRomance")
+
+taylor <- read_csv("https://bit.ly/taylor-data-csv")
+adele <- read_csv("https://bit.ly/adele-data-csv")
+mcr <- read_csv("https://bit.ly/mcr-data-csv")
+
 ```
 
 What's happening here?

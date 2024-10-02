@@ -27,9 +27,9 @@ In the last few weeks, we've started by loading the  **tidyverse**. This time ro
 Let's also load some Spotify data, as we did last week.
 
 ```{r, eval = FALSE}
-adele <- read_csv("https://bit.ly/AdeleAlbums")
-taylor <- read_csv("https://bit.ly/SMI105TS")
-mcr <- read_csv("https://bit.ly/SMI105MyChemicalRomance")
+taylor <- read_csv("https://bit.ly/taylor-data-csv")
+adele <- read_csv("https://bit.ly/adele-data-csv")
+mcr <- read_csv("https://bit.ly/mcr-data-csv")
 ghost <- read_csv("https://bit.ly/SMI105Ghost")
 beyonce <- read_csv("https://bit.ly/SMI105BeyonceBig")
 ```

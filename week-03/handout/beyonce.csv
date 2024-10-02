@@ -1,0 +1,703 @@
+artist_name,album_release_date,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,time_signature,duration_ms,explicit,track_name,track_number,album_name,key_name,mode_name,key_mode
+Beyoncé,2022-07-29,0.554,0.535,5,-8.959,0,0.186,0.0616,1.32e-5,0.124,0.136,105.865,4,208014,TRUE,I'M THAT GIRL,1,RENAISSANCE,F,minor,F minor
+Beyoncé,2022-07-29,0.556,0.63,7,-8.15,1,0.102,8.28e-4,0.00468,0.155,0.367,149.147,5,210372,TRUE,COZY,2,RENAISSANCE,G,major,G major
+Beyoncé,2022-07-29,0.545,0.641,10,-6.398,0,0.0998,0.00453,6.59e-5,0.171,0.464,121.892,4,215459,TRUE,ALIEN SUPERSTAR,3,RENAISSANCE,A#,minor,A# minor
+Beyoncé,2022-07-29,0.78,0.689,7,-5.668,1,0.141,0.0368,9.69e-6,0.0698,0.642,115.042,4,225388,TRUE,CUFF IT,4,RENAISSANCE,G,major,G major
+Beyoncé,2022-07-29,0.903,0.519,1,-9.151,1,0.26,0.281,1.06e-4,0.155,0.587,114.991,4,116727,FALSE,ENERGY (feat. Beam),5,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.693,0.887,1,-5.039,0,0.0795,0.0581,2.71e-6,0.27,0.864,114.942,4,278281,FALSE,BREAK MY SOUL,6,RENAISSANCE,C#,minor,C# minor
+Beyoncé,2022-07-29,0.792,0.919,2,-5.688,1,0.276,0.0381,5.1e-6,0.368,0.22,92.028,4,224472,TRUE,CHURCH GIRL,7,RENAISSANCE,D,major,D major
+Beyoncé,2022-07-29,0.618,0.712,1,-8.246,1,0.114,0.14,4.53e-6,0.575,0.305,97.057,4,254319,FALSE,PLASTIC OFF THE SOFA,8,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.683,0.85,11,-5.042,0,0.0699,0.0781,1.09e-6,0.741,0.598,107.988,4,368758,TRUE,VIRGO'S GROOVE,9,RENAISSANCE,B,minor,B minor
+Beyoncé,2022-07-29,0.876,0.628,1,-6.595,1,0.0935,0.0165,0.0339,0.0938,0.809,118.028,4,203383,FALSE,MOVE (feat. Grace Jones & Tems),10,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.785,0.732,1,-5.724,1,0.164,0.0636,8.07e-4,0.265,0.496,110.952,4,260769,TRUE,HEATED,11,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.823,0.536,5,-10.123,0,0.319,0.0616,0.0143,0.326,0.537,128.955,4,244792,TRUE,THIQUE,12,RENAISSANCE,F,minor,F minor
+Beyoncé,2022-07-29,0.744,0.577,9,-7.228,1,0.0631,0.0672,3.06e-6,0.178,0.0805,135.869,4,169819,TRUE,ALL UP IN YOUR MIND,13,RENAISSANCE,A,major,A major
+Beyoncé,2022-07-29,0.789,0.614,1,-6.491,1,0.0579,0.00348,0.00152,0.283,0.108,126.035,4,198897,TRUE,AMERICA HAS A PROBLEM,14,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.857,0.558,1,-7.888,1,0.134,0.0122,4.8e-5,0.288,0.453,123.973,4,288254,TRUE,PURE/HONEY,15,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.674,0.625,1,-9.593,1,0.0514,0.0843,0.0015,0.11,0.208,120.004,4,273997,TRUE,SUMMER RENAISSANCE,16,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.571,0.537,7,-8.93,1,0.246,0.0593,2.06e-5,0.124,0.136,105.994,4,208014,FALSE,I'M THAT GIRL,1,RENAISSANCE,G,major,G major
+Beyoncé,2022-07-29,0.843,0.639,0,-8.202,1,0.0624,0.00113,0.00334,0.153,0.398,112.058,4,210372,FALSE,COZY,2,RENAISSANCE,C,major,C major
+Beyoncé,2022-07-29,0.546,0.633,1,-6.444,1,0.0793,0.00363,6.98e-5,0.149,0.489,119.777,4,215459,FALSE,ALIEN SUPERSTAR,3,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.745,0.729,4,-5.573,0,0.221,0.0558,0,0.0589,0.629,115.028,4,225388,FALSE,CUFF IT,4,RENAISSANCE,E,minor,E minor
+Beyoncé,2022-07-29,0.903,0.519,1,-9.151,1,0.26,0.281,1.06e-4,0.155,0.587,114.991,4,116727,FALSE,ENERGY (feat. Beam),5,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.693,0.887,1,-5.039,0,0.0795,0.0581,2.71e-6,0.27,0.864,114.942,4,278281,FALSE,BREAK MY SOUL,6,RENAISSANCE,C#,minor,C# minor
+Beyoncé,2022-07-29,0.773,0.919,2,-5.698,1,0.271,0.0375,3.59e-6,0.367,0.239,92.068,4,224472,FALSE,CHURCH GIRL,7,RENAISSANCE,D,major,D major
+Beyoncé,2022-07-29,0.618,0.712,1,-8.246,1,0.114,0.14,4.53e-6,0.575,0.305,97.057,4,254319,FALSE,PLASTIC OFF THE SOFA,8,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.679,0.85,11,-5.039,0,0.0481,0.0778,1.05e-6,0.741,0.619,107.988,4,368758,FALSE,VIRGO'S GROOVE,9,RENAISSANCE,B,minor,B minor
+Beyoncé,2022-07-29,0.876,0.628,1,-6.595,1,0.0935,0.0165,0.0339,0.0938,0.809,118.028,4,203383,FALSE,MOVE (feat. Grace Jones & Tems),10,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.791,0.725,1,-5.733,1,0.161,0.0621,0.00115,0.246,0.484,110.977,4,260769,FALSE,HEATED,11,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.82,0.537,5,-10.156,0,0.396,0.0648,0.01,0.401,0.596,128.982,4,244792,FALSE,THIQUE,12,RENAISSANCE,F,minor,F minor
+Beyoncé,2022-07-29,0.736,0.558,9,-7.973,1,0.0657,0.0157,3.16e-5,0.156,0.115,135.9,4,169819,FALSE,ALL UP IN YOUR MIND,13,RENAISSANCE,A,major,A major
+Beyoncé,2022-07-29,0.803,0.624,1,-6.391,1,0.0444,0.00398,2.51e-4,0.222,0.104,126.057,4,198897,FALSE,AMERICA HAS A PROBLEM,14,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.86,0.555,1,-7.889,1,0.135,0.0129,2.69e-5,0.287,0.43,123.972,4,288254,FALSE,PURE/HONEY,15,RENAISSANCE,C#,major,C# major
+Beyoncé,2022-07-29,0.664,0.628,8,-9.618,1,0.0435,0.0791,0.00108,0.11,0.226,120.014,4,273997,FALSE,SUMMER RENAISSANCE,16,RENAISSANCE,G#,major,G# major
+Beyoncé,2020-07-31,0.509,0.36,5,-8.2,0,0.0361,0.633,0,0.13,0.181,129.624,4,226360,FALSE,BIGGER,1,The Lion King: The Gift [Deluxe Edition],F,minor,F minor
+Beyoncé,2020-07-31,0.783,0.693,4,-6.747,0,0.174,0.197,0.0274,0.0768,0.623,119.063,4,162438,FALSE,FIND YOUR WAY BACK,2,The Lion King: The Gift [Deluxe Edition],E,minor,E minor
+Beyoncé,2020-07-31,0.926,0.782,7,-5.3,0,0.101,0.0194,0.0718,0.355,0.563,120.005,4,156442,FALSE,DON'T JEALOUS ME,3,The Lion King: The Gift [Deluxe Edition],G,minor,G minor
+Beyoncé,2020-07-31,0.795,0.671,0,-5.792,1,0.0601,0.0488,0.0119,0.0752,0.867,92.001,4,190434,FALSE,JA ARA E,4,The Lion King: The Gift [Deluxe Edition],C,major,C major
+Beyoncé,2020-07-31,0.554,0.45,8,-9.454,0,0.182,0.731,0,0.339,0.348,87.047,4,107462,FALSE,NILE,5,The Lion King: The Gift [Deluxe Edition],G#,minor,G# minor
+Beyoncé,2020-07-31,0.611,0.723,7,-6.199,1,0.369,0.12,0,0.322,0.718,105.758,4,272464,FALSE,MOOD 4 EVA (feat. Oumou Sangaré),6,The Lion King: The Gift [Deluxe Edition],G,major,G major
+Beyoncé,2020-07-31,0.807,0.809,0,-3.713,0,0.0709,0.105,3.3e-6,0.186,0.462,124.052,4,153193,FALSE,WATER,7,The Lion King: The Gift [Deluxe Edition],C,minor,C minor
+Beyoncé,2020-07-31,0.526,0.609,6,-7.072,1,0.212,0.0554,0,0.291,0.605,88.83,4,248143,FALSE,BROWN SKIN GIRL,8,The Lion King: The Gift [Deluxe Edition],F#,major,F# major
+Beyoncé,2020-07-31,0.735,0.678,0,-6.655,1,0.0896,0.00642,1.58e-5,0.114,0.686,90.028,4,199073,FALSE,KEYS TO THE KINGDOM,9,The Lion King: The Gift [Deluxe Edition],C,major,C major
+Beyoncé,2020-07-31,0.671,0.755,2,-5.831,0,0.0683,0.0876,0,0.429,0.543,67.332,3,223422,FALSE,ALREADY,10,The Lion King: The Gift [Deluxe Edition],D,minor,D minor
+Beyoncé,2020-07-31,0.33,0.244,3,-9.508,1,0.0339,0.94,0.00466,0.0969,0.4,136.344,4,220232,FALSE,OTHERSIDE,11,The Lion King: The Gift [Deluxe Edition],D#,major,D# major
+Beyoncé,2020-07-31,0.769,0.856,7,-4.923,1,0.127,0.0162,0,0.125,0.755,126.95,4,260560,FALSE,MY POWER,12,The Lion King: The Gift [Deluxe Edition],G,major,G major
+Beyoncé,2020-07-31,0.576,0.434,1,-7.769,1,0.0491,0.284,1.56e-6,0.118,0.0588,118.259,4,187334,FALSE,SCAR,13,The Lion King: The Gift [Deluxe Edition],C#,major,C# major
+Beyoncé,2020-07-31,0.447,0.436,10,-8.119,1,0.0389,0.00971,0,0.0986,0.0497,80.856,4,277070,FALSE,"SPIRIT - From Disney's ""The Lion King""",14,The Lion King: The Gift [Deluxe Edition],A#,major,A# major
+Beyoncé,2020-07-31,0.807,0.544,1,-5.875,1,0.0409,0.00333,1.67e-5,0.146,0.0541,120.006,4,316750,TRUE,BLACK PARADE - Extended Version,15,The Lion King: The Gift [Deluxe Edition],C#,major,C# major
+Beyoncé,2020-07-31,0.777,0.588,7,-9.759,1,0.0756,0.0227,0.0545,0.267,0.195,119.109,4,216339,FALSE,FIND YOUR WAY BACK - MELO-X Remix,16,The Lion King: The Gift [Deluxe Edition],G,major,G major
+Beyoncé,2020-07-31,0.824,0.555,1,-5.817,1,0.05,0.00337,6.42e-6,0.217,0.0611,120.002,4,281272,TRUE,BLACK PARADE,17,The Lion King: The Gift [Deluxe Edition],C#,major,C# major
+Beyoncé,2020-07-31,0.509,0.36,5,-8.2,0,0.0361,0.633,0,0.13,0.181,129.624,4,226360,FALSE,BIGGER,1,The Lion King: The Gift [Deluxe Edition],F,minor,F minor
+Beyoncé,2020-07-31,0.783,0.693,4,-6.747,0,0.174,0.197,0.0274,0.0768,0.623,119.063,4,162438,FALSE,FIND YOUR WAY BACK,2,The Lion King: The Gift [Deluxe Edition],E,minor,E minor
+Beyoncé,2020-07-31,0.926,0.782,7,-5.3,0,0.101,0.0194,0.0718,0.355,0.563,120.005,4,156442,FALSE,DON'T JEALOUS ME,3,The Lion King: The Gift [Deluxe Edition],G,minor,G minor
+Beyoncé,2020-07-31,0.795,0.671,0,-5.792,1,0.0601,0.0488,0.0119,0.0752,0.867,92.001,4,190434,FALSE,JA ARA E,4,The Lion King: The Gift [Deluxe Edition],C,major,C major
+Beyoncé,2020-07-31,0.554,0.45,8,-9.454,0,0.182,0.731,0,0.339,0.348,87.047,4,107462,FALSE,NILE,5,The Lion King: The Gift [Deluxe Edition],G#,minor,G# minor
+Beyoncé,2020-07-31,0.611,0.723,7,-6.199,1,0.369,0.12,0,0.322,0.718,105.758,4,272464,FALSE,MOOD 4 EVA (feat. Oumou Sangaré),6,The Lion King: The Gift [Deluxe Edition],G,major,G major
+Beyoncé,2020-07-31,0.807,0.809,0,-3.713,0,0.0709,0.105,3.3e-6,0.186,0.462,124.052,4,153193,FALSE,WATER,7,The Lion King: The Gift [Deluxe Edition],C,minor,C minor
+Beyoncé,2020-07-31,0.526,0.609,6,-7.072,1,0.212,0.0554,0,0.291,0.605,88.83,4,248143,FALSE,BROWN SKIN GIRL,8,The Lion King: The Gift [Deluxe Edition],F#,major,F# major
+Beyoncé,2020-07-31,0.735,0.678,0,-6.655,1,0.0896,0.00642,1.58e-5,0.114,0.686,90.028,4,199073,FALSE,KEYS TO THE KINGDOM,9,The Lion King: The Gift [Deluxe Edition],C,major,C major
+Beyoncé,2020-07-31,0.671,0.755,2,-5.831,0,0.0683,0.0876,0,0.429,0.543,67.332,3,223422,FALSE,ALREADY,10,The Lion King: The Gift [Deluxe Edition],D,minor,D minor
+Beyoncé,2020-07-31,0.33,0.244,3,-9.508,1,0.0339,0.94,0.00466,0.0969,0.4,136.344,4,220232,FALSE,OTHERSIDE,11,The Lion King: The Gift [Deluxe Edition],D#,major,D# major
+Beyoncé,2020-07-31,0.769,0.856,7,-4.923,1,0.127,0.0162,0,0.125,0.755,126.95,4,260560,FALSE,MY POWER,12,The Lion King: The Gift [Deluxe Edition],G,major,G major
+Beyoncé,2020-07-31,0.576,0.434,1,-7.769,1,0.0491,0.284,1.56e-6,0.118,0.0588,118.259,4,187334,FALSE,SCAR,13,The Lion King: The Gift [Deluxe Edition],C#,major,C# major
+Beyoncé,2020-07-31,0.447,0.436,10,-8.119,1,0.0389,0.00971,0,0.0986,0.0497,80.856,4,277070,FALSE,"SPIRIT - From Disney's ""The Lion King""",14,The Lion King: The Gift [Deluxe Edition],A#,major,A# major
+Beyoncé,2020-07-31,0.807,0.544,1,-5.88,1,0.0413,0.00343,1.62e-5,0.146,0.0546,120.002,4,316750,FALSE,BLACK PARADE - Extended Version,15,The Lion King: The Gift [Deluxe Edition],C#,major,C# major
+Beyoncé,2020-07-31,0.777,0.588,7,-9.759,1,0.0756,0.0227,0.0545,0.267,0.195,119.109,4,216339,FALSE,FIND YOUR WAY BACK - MELO-X Remix,16,The Lion King: The Gift [Deluxe Edition],G,major,G major
+Beyoncé,2020-07-31,0.826,0.553,1,-5.808,1,0.0505,0.00358,5.96e-6,0.217,0.0616,119.992,4,281272,FALSE,BLACK PARADE,17,The Lion King: The Gift [Deluxe Edition],C#,major,C# major
+Beyoncé,2019-07-19,0.386,0.288,1,-18.513,1,0.0602,0.533,0.0167,0.141,0.399,76.796,4,43850,FALSE,balance (mufasa interlude),1,The Lion King: The Gift,C#,major,C# major
+Beyoncé,2019-07-19,0.484,0.363,5,-8.094,0,0.0368,0.645,0,0.125,0.201,127.822,4,226479,FALSE,BIGGER,2,The Lion King: The Gift,F,minor,F minor
+Beyoncé,2019-07-19,0.537,0.247,2,-17.75,1,0.0793,0.199,1.04e-5,0.423,0.17,109.981,5,46566,FALSE,the stars (mufasa interlude),3,The Lion King: The Gift,D,major,D major
+Beyoncé,2019-07-19,0.672,0.696,4,-6.693,0,0.177,0.2,0.0275,0.0736,0.642,118.742,4,162353,FALSE,FIND YOUR WAY BACK,4,The Lion King: The Gift,E,minor,E minor
+Beyoncé,2019-07-19,0,0.00515,9,-22.612,0,0,0.524,0.95,0.114,0,0,0,13853,FALSE,uncle scar (scar interlude),5,The Lion King: The Gift,A,minor,A minor
+Beyoncé,2019-07-19,0.932,0.775,7,-5.345,0,0.115,0.0184,0.0157,0.318,0.584,119.976,4,155990,FALSE,DON'T JEALOUS ME,6,The Lion King: The Gift,G,minor,G minor
+Beyoncé,2019-07-19,0.563,0.47,6,-13.47,1,0.147,0.0306,0.661,0.283,0.186,95.011,3,16768,FALSE,danger (young simba & young nala interlude),7,The Lion King: The Gift,F#,major,F# major
+Beyoncé,2019-07-19,0.79,0.693,0,-5.767,1,0.0605,0.042,0.0267,0.079,0.855,91.991,4,190108,FALSE,JA ARA E,8,The Lion King: The Gift,C,major,C major
+Beyoncé,2019-07-19,0.489,0.353,8,-17.619,1,0.664,0.491,2.17e-5,0.229,0.175,127.814,1,29582,FALSE,run away (scar & young simba interlude),9,The Lion King: The Gift,G#,major,G# major
+Beyoncé,2019-07-19,0.484,0.457,8,-9.458,0,0.204,0.738,0,0.536,0.342,83.493,4,107204,FALSE,NILE,10,The Lion King: The Gift,G#,minor,G# minor
+Beyoncé,2019-07-19,0.494,0.411,6,-15.021,0,0.771,0.703,0,0.156,0.403,77.539,1,53793,FALSE,"new lesson (timon, pumbaa & young simba interlude)",11,The Lion King: The Gift,F#,minor,F# minor
+Beyoncé,2019-07-19,0.608,0.709,7,-6.175,1,0.374,0.119,0,0.337,0.709,105.742,4,272068,FALSE,MOOD 4 EVA (feat. Oumou Sangaré),12,The Lion King: The Gift,G,major,G major
+Beyoncé,2019-07-19,0,0.558,0,-17.238,1,0,0.756,0,0.533,0,0,0,8619,FALSE,reunited (nala & simba interlude),13,The Lion King: The Gift,C,major,C major
+Beyoncé,2019-07-19,0.804,0.823,0,-3.667,0,0.0745,0.0984,3.78e-6,0.246,0.489,124.062,4,152563,FALSE,WATER,14,The Lion King: The Gift,C,minor,C minor
+Beyoncé,2019-07-19,0.603,0.602,6,-7.083,1,0.23,0.049,0,0.279,0.595,119.703,5,248472,FALSE,BROWN SKIN GIRL,15,The Lion King: The Gift,F#,major,F# major
+Beyoncé,2019-07-19,0,0.186,0,-17.37,1,0,0.783,1.4e-4,0.333,0,0,0,14827,FALSE,come home (nala interlude),16,The Lion King: The Gift,C,major,C major
+Beyoncé,2019-07-19,0.731,0.674,2,-6.704,1,0.0801,0.0057,2.54e-5,0.109,0.73,90.022,4,198952,FALSE,KEYS TO THE KINGDOM,17,The Lion King: The Gift,D,major,D major
+Beyoncé,2019-07-19,0.628,0.287,9,-16.666,0,0.66,0.675,0,0.426,0.535,83.69,4,31391,FALSE,follow me (simba & rafiki interlude),18,The Lion King: The Gift,A,minor,A minor
+Beyoncé,2019-07-19,0.647,0.732,2,-5.846,1,0.0891,0.0846,0,0.597,0.548,67.295,3,222529,FALSE,ALREADY,19,The Lion King: The Gift,D,major,D major
+Beyoncé,2019-07-19,0.255,0.32,8,-19.821,1,0.0533,0.826,0.0219,0.261,0.302,87.301,3,45293,FALSE,remember (mufasa interlude),20,The Lion King: The Gift,G#,major,G# major
+Beyoncé,2019-07-19,0.258,0.248,3,-9.507,1,0.0343,0.944,0.00365,0.0967,0.369,80.187,5,219991,FALSE,OTHERSIDE,21,The Lion King: The Gift,D#,major,D# major
+Beyoncé,2019-07-19,0.399,0.38,10,-10.247,1,0.355,0.432,5.9e-6,0.536,0.123,80.096,3,18047,FALSE,war (nala interlude),22,The Lion King: The Gift,A#,major,A# major
+Beyoncé,2019-07-19,0.773,0.86,7,-4.966,1,0.13,0.0159,0,0.236,0.715,126.967,4,259741,FALSE,MY POWER,23,The Lion King: The Gift,G,major,G major
+Beyoncé,2019-07-19,0,0.155,1,-16.549,0,0,0.406,0.636,0.0973,0,0,0,14051,FALSE,surrender (simba & scar interlude),24,The Lion King: The Gift,C#,minor,C# minor
+Beyoncé,2019-07-19,0.45,0.453,1,-7.82,1,0.06,0.24,5.48e-6,0.12,0.0532,117.956,4,186677,FALSE,SCAR,25,The Lion King: The Gift,C#,major,C# major
+Beyoncé,2019-07-19,0.536,0.115,0,-20.651,1,0.0353,0.699,0.00178,0.115,0.595,32.918,4,42978,FALSE,"i'm home (mufasa, sarabi & simba interlude)",26,The Lion King: The Gift,C,major,C major
+Beyoncé,2019-07-19,0.238,0.435,5,-8.096,1,0.0497,0.00956,0,0.0981,0.0447,78.797,4,277030,FALSE,"SPIRIT - From Disney's ""The Lion King""",27,The Lion King: The Gift,F,major,F major
+Beyoncé,2019-04-17,0.6,0.831,7,-12.294,1,0.378,0.143,0.576,0.7,0.123,170.133,4,196473,FALSE,Welcome - Homecoming Live,1,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-17,0.401,0.769,2,-8.316,1,0.158,2.63e-4,4.59e-4,0.327,0.402,99.252,4,167347,TRUE,Crazy In Love - Homecoming Live,2,HOMECOMING: THE LIVE ALBUM,D,major,D major
+Beyoncé,2019-04-17,0.486,0.813,2,-7.528,1,0.114,0.00174,1.09e-5,0.406,0.403,85.161,4,114370,FALSE,Freedom - Homecoming Live,3,HOMECOMING: THE LIVE ALBUM,D,major,D major
+Beyoncé,2019-04-17,0.201,0.409,2,-13.089,1,0.0393,0.124,1.86e-6,0.683,0.0795,85.35,3,129117,FALSE,Lift Ev'ry Voice and Sing - Homecoming Live,4,HOMECOMING: THE LIVE ALBUM,D,major,D major
+Beyoncé,2019-04-17,0.676,0.871,5,-9.134,0,0.433,0.0237,0,0.956,0.419,121.963,4,262831,TRUE,Formation - Homecoming Live,5,HOMECOMING: THE LIVE ALBUM,F,minor,F minor
+Beyoncé,2019-04-17,0.535,0.338,6,-27.432,1,0.883,0.994,0.011,0.891,0.547,67.709,5,59056,TRUE,So Much Damn Swag - Interlude - Homecoming Live,6,HOMECOMING: THE LIVE ALBUM,F#,major,F# major
+Beyoncé,2019-04-17,0.418,0.728,7,-11.479,1,0.486,0.00981,0,0.966,0.193,129.252,4,393524,TRUE,Sorry - Homecoming Live,7,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-17,0.456,0.551,5,-15.779,1,0.465,0.257,1.14e-6,0.73,0.488,123.714,4,42305,FALSE,Kitty Kat - Homecoming Live,8,HOMECOMING: THE LIVE ALBUM,F,major,F major
+Beyoncé,2019-04-17,0.395,0.866,1,-7.544,1,0.128,0.0332,0,0.432,0.377,141.577,4,87887,TRUE,Bow Down - Homecoming Live,9,HOMECOMING: THE LIVE ALBUM,C#,major,C# major
+Beyoncé,2019-04-17,0.555,0.676,1,-11.151,1,0.0763,0.018,0.0463,0.721,0.14,95.174,4,160089,TRUE,I Been On - Homecoming Live,10,HOMECOMING: THE LIVE ALBUM,C#,major,C# major
+Beyoncé,2019-04-17,0.325,0.836,5,-8.933,0,0.283,0.0197,8.22e-6,0.33,0.571,141.306,4,254004,TRUE,Drunk in Love - Homecoming Live,11,HOMECOMING: THE LIVE ALBUM,F,minor,F minor
+Beyoncé,2019-04-17,0.576,0.845,9,-7.406,1,0.162,0.0276,2.9e-4,0.387,0.486,145.918,4,165872,TRUE,Diva - Homecoming Live,12,HOMECOMING: THE LIVE ALBUM,A,major,A major
+Beyoncé,2019-04-17,0.58,0.764,8,-9.321,1,0.221,0.079,2.1e-6,0.776,0.444,137.068,4,238293,TRUE,Flawless / Feeling Myself - Homecoming Live,13,HOMECOMING: THE LIVE ALBUM,G#,major,G# major
+Beyoncé,2019-04-17,0.599,0.692,9,-9.48,1,0.224,0.0298,0,0.69,0.537,129.816,4,82933,TRUE,Top Off - Homecoming Live,14,HOMECOMING: THE LIVE ALBUM,A,major,A major
+Beyoncé,2019-04-17,0.587,0.732,9,-9.208,0,0.18,0.0158,0,0.969,0.383,136.084,4,184295,TRUE,7/11 - Homecoming Live,15,HOMECOMING: THE LIVE ALBUM,A,minor,A minor
+Beyoncé,2019-04-17,0.726,0.255,11,-18.138,1,0.653,0.129,1.74e-5,0.0747,0.436,90.056,4,117936,FALSE,Bug A Boo Roll Call - Interlude - Homecoming Live,16,HOMECOMING: THE LIVE ALBUM,B,major,B major
+Beyoncé,2019-04-17,0.581,0.618,4,-11.11,0,0.339,0.0138,0.147,0.428,0.384,149.832,4,228208,FALSE,Party - Homecoming Live,17,HOMECOMING: THE LIVE ALBUM,E,minor,E minor
+Beyoncé,2019-04-17,0.384,0.81,4,-8.709,0,0.124,9.59e-4,1.07e-5,0.537,0.111,137.696,4,256812,TRUE,Don't Hurt Yourself - Homecoming Live,18,HOMECOMING: THE LIVE ALBUM,E,minor,E minor
+Beyoncé,2019-04-17,0.443,0.821,4,-6.96,0,0.145,0.0143,0,0.721,0.184,88.726,4,248538,FALSE,I Care - Homecoming Live,19,HOMECOMING: THE LIVE ALBUM,E,minor,E minor
+Beyoncé,2019-04-17,0.452,0.487,0,-11.767,1,0.0462,0.0101,0.0039,0.698,0.104,123.44,5,138526,FALSE,Partition - Homecoming Live,20,HOMECOMING: THE LIVE ALBUM,C,major,C major
+Beyoncé,2019-04-17,0.685,0.628,9,-12.981,0,0.325,0.0649,0,0.31,0.436,88.007,4,68351,FALSE,Yoncé - Homecoming Live,21,HOMECOMING: THE LIVE ALBUM,A,minor,A minor
+Beyoncé,2019-04-17,0.667,0.741,7,-10.832,1,0.0547,0.00232,1.49e-6,0.426,0.637,104.841,4,176718,FALSE,Mi Gente - Homecoming Live,22,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-17,0.702,0.817,1,-8.644,1,0.102,0.00646,0,0.467,0.694,100.003,4,92162,FALSE,Baby Boy - Homecoming Live,23,HOMECOMING: THE LIVE ALBUM,C#,major,C# major
+Beyoncé,2019-04-17,0.496,0.485,10,-9.339,0,0.0299,6.88e-4,0,0.648,0.554,80.108,4,71916,FALSE,"You Don't Love Me (No, No, No) - Homecoming Live",24,HOMECOMING: THE LIVE ALBUM,A#,minor,A# minor
+Beyoncé,2019-04-17,0.519,0.636,0,-11.539,1,0.504,0.149,1.06e-6,0.672,0.922,81.167,3,46475,FALSE,Hold Up - Homecoming Live,25,HOMECOMING: THE LIVE ALBUM,C,major,C major
+Beyoncé,2019-04-17,0.57,0.805,0,-9.217,1,0.293,0.00413,0,0.557,0.444,167.333,4,103235,FALSE,Countdown - Homecoming Live,26,HOMECOMING: THE LIVE ALBUM,C,major,C major
+Beyoncé,2019-04-17,0.519,0.884,7,-8.077,1,0.369,0.00294,0,0.943,0.693,167.346,4,76214,FALSE,Check On It - Homecoming Live,27,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-17,0.772,0.684,6,-8.742,1,0.14,0.00534,2.66e-6,0.7,0.154,105.975,4,289790,FALSE,Deja Vu (feat. Jay-Z) - Homecoming Live,28,HOMECOMING: THE LIVE ALBUM,F#,major,F# major
+Beyoncé,2019-04-17,0.555,0.84,1,-11.977,1,0.302,0.0335,0.0644,0.373,0.237,134.519,4,190104,FALSE,The Bzzzz Drumline - Interlude - Homecoming Live,29,HOMECOMING: THE LIVE ALBUM,C#,major,C# major
+Beyoncé,2019-04-17,0.663,0.891,5,-8.774,0,0.18,0.00269,1.54e-4,0.778,0.49,126.548,4,233376,TRUE,Run the World (Girls) - Homecoming Live,30,HOMECOMING: THE LIVE ALBUM,F,minor,F minor
+Beyoncé,2019-04-17,0.721,0.892,8,-8.606,1,0.206,0.0351,2.12e-4,0.575,0.416,118.982,4,90815,FALSE,Lose My Breath (feat. Kelly Rowland & Michelle Williams) - Homecoming Live,31,HOMECOMING: THE LIVE ALBUM,G#,major,G# major
+Beyoncé,2019-04-17,0.491,0.666,5,-7.338,0,0.111,0.028,0,0.503,0.303,138.672,4,111769,FALSE,Say My Name (feat. Kelly Rowland & Michelle Williams) - Homecoming Live,32,HOMECOMING: THE LIVE ALBUM,F,minor,F minor
+Beyoncé,2019-04-17,0.472,0.821,8,-8.333,1,0.55,0.013,0,0.846,0.475,155.176,4,131185,FALSE,Soldier (feat. Kelly Rowland & Michelle Williams) - Homecoming Live,33,HOMECOMING: THE LIVE ALBUM,G#,major,G# major
+Beyoncé,2019-04-17,0.822,0.935,11,-7.741,0,0.345,0.011,0,0.379,0.396,97.018,4,263008,FALSE,Get Me Bodied - Homecoming Live,34,HOMECOMING: THE LIVE ALBUM,B,minor,B minor
+Beyoncé,2019-04-17,0.639,0.93,6,-6.626,0,0.171,0.00563,0,0.956,0.572,96.94,4,207208,FALSE,Single Ladies (Put a Ring on It) - Homecoming Live,35,HOMECOMING: THE LIVE ALBUM,F#,minor,F# minor
+Beyoncé,2019-04-17,0.564,0.424,1,-20.285,1,0.94,0.963,7.37e-6,0.697,0.433,97.708,5,102412,FALSE,Lift Ev'ry Voice and Sing (feat. Blue Ivy) - Blue's Version - Homecoming Live,36,HOMECOMING: THE LIVE ALBUM,C#,major,C# major
+Beyoncé,2019-04-17,0.318,0.855,7,-8.415,1,0.628,0.0515,0,0.897,0.184,175.555,4,227215,FALSE,Love On Top - Homecoming Live,37,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-17,0.626,0.928,2,-9.326,0,0.124,0.00282,3.63e-4,0.941,0.475,104.912,4,159115,FALSE,Shining (Thank You) - Homecoming Live,38,HOMECOMING: THE LIVE ALBUM,D,minor,D minor
+Beyoncé,2019-04-17,0.71,0.842,6,-5.424,0,0.0944,0.0686,0,0.337,0.435,102.994,4,240776,FALSE,Before I Let Go - Homecoming Live Bonus Track,39,HOMECOMING: THE LIVE ALBUM,F#,minor,F# minor
+Beyoncé,2019-04-17,0.656,0.741,5,-6.413,0,0.0555,0.0134,4.68e-4,0.269,0.196,95.326,4,144661,TRUE,I Been On - Homecoming Live Bonus Track,40,HOMECOMING: THE LIVE ALBUM,F,minor,F minor
+Beyoncé,2019-04-16,0.582,0.827,7,-12.175,1,0.38,0.15,0.439,0.698,0.135,170.103,4,196473,FALSE,Welcome - Homecoming Live,1,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-16,0.442,0.774,2,-8.29,1,0.148,2.62e-4,2.45e-4,0.336,0.382,99.266,4,167347,FALSE,Crazy In Love - Homecoming Live,2,HOMECOMING: THE LIVE ALBUM,D,major,D major
+Beyoncé,2019-04-16,0.273,0.823,2,-7.51,1,0.295,0.00222,9.6e-6,0.34,0.364,85.471,4,114370,FALSE,Freedom - Homecoming Live,3,HOMECOMING: THE LIVE ALBUM,D,major,D major
+Beyoncé,2019-04-16,0.155,0.406,2,-12.984,1,0.04,0.109,0,0.638,0.0772,89.714,3,129117,FALSE,Lift Ev'ry Voice and Sing - Homecoming Live,4,HOMECOMING: THE LIVE ALBUM,D,major,D major
+Beyoncé,2019-04-16,0.667,0.865,5,-9.043,0,0.394,0.0234,0,0.953,0.41,121.904,4,262806,FALSE,Formation - Homecoming Live,5,HOMECOMING: THE LIVE ALBUM,F,minor,F minor
+Beyoncé,2019-04-16,0.553,0.35,11,-27.375,1,0.82,0.994,0.00749,0.853,0.501,125.815,3,59056,FALSE,So Much Damn Swag - Interlude - Homecoming Live,6,HOMECOMING: THE LIVE ALBUM,B,major,B major
+Beyoncé,2019-04-16,0.334,0.664,7,-11.643,1,0.498,0.00997,3.07e-6,0.938,0.209,78.776,5,393524,FALSE,Sorry - Homecoming Live,7,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-16,0.398,0.53,5,-15.648,1,0.398,0.195,0,0.604,0.513,112.212,4,42305,FALSE,Kitty Kat - Homecoming Live,8,HOMECOMING: THE LIVE ALBUM,F,major,F major
+Beyoncé,2019-04-16,0.434,0.865,1,-7.461,1,0.111,0.0338,0,0.457,0.329,141.918,4,87887,FALSE,Bow Down - Homecoming Live,9,HOMECOMING: THE LIVE ALBUM,C#,major,C# major
+Beyoncé,2019-04-16,0.577,0.694,1,-11.119,1,0.0799,0.0151,0.0743,0.723,0.124,95.136,4,160089,FALSE,I Been On - Homecoming Live,10,HOMECOMING: THE LIVE ALBUM,C#,major,C# major
+Beyoncé,2019-04-16,0.326,0.844,5,-8.921,0,0.292,0.0171,1.5e-5,0.308,0.598,142.226,4,254004,FALSE,Drunk in Love - Homecoming Live,11,HOMECOMING: THE LIVE ALBUM,F,minor,F minor
+Beyoncé,2019-04-16,0.564,0.859,6,-7.356,0,0.192,0.0288,2.01e-4,0.5,0.434,146.016,4,165872,FALSE,Diva - Homecoming Live,12,HOMECOMING: THE LIVE ALBUM,F#,minor,F# minor
+Beyoncé,2019-04-16,0.595,0.76,8,-9.295,1,0.188,0.0702,4.45e-6,0.842,0.434,137.055,4,238293,FALSE,Flawless / Feeling Myself - Homecoming Live,13,HOMECOMING: THE LIVE ALBUM,G#,major,G# major
+Beyoncé,2019-04-16,0.434,0.709,4,-9.805,1,0.286,0.0235,0,0.771,0.485,92.634,3,82933,FALSE,Top Off - Homecoming Live,14,HOMECOMING: THE LIVE ALBUM,E,major,E major
+Beyoncé,2019-04-16,0.59,0.709,9,-9.297,0,0.15,0.0116,0,0.986,0.374,136.1,4,184295,FALSE,7/11 - Homecoming Live,15,HOMECOMING: THE LIVE ALBUM,A,minor,A minor
+Beyoncé,2019-04-16,0.707,0.301,10,-17.942,0,0.672,0.166,4.84e-5,0.112,0.407,90.957,4,117936,FALSE,Bug A Boo Roll Call - Interlude - Homecoming Live,16,HOMECOMING: THE LIVE ALBUM,A#,minor,A# minor
+Beyoncé,2019-04-16,0.6,0.63,4,-11.08,0,0.354,0.0148,0.247,0.44,0.394,149.992,4,228208,FALSE,Party - Homecoming Live,17,HOMECOMING: THE LIVE ALBUM,E,minor,E minor
+Beyoncé,2019-04-16,0.301,0.795,7,-8.533,1,0.135,9.83e-4,5.85e-6,0.649,0.125,138.004,4,256812,FALSE,Don't Hurt Yourself - Homecoming Live,18,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-16,0.307,0.828,4,-6.92,0,0.199,0.0111,0,0.716,0.194,86.002,4,248538,FALSE,I Care - Homecoming Live,19,HOMECOMING: THE LIVE ALBUM,E,minor,E minor
+Beyoncé,2019-04-16,0.617,0.502,0,-11.753,1,0.037,0.00923,0.00611,0.698,0.129,92.973,4,138526,FALSE,Partition - Homecoming Live,20,HOMECOMING: THE LIVE ALBUM,C,major,C major
+Beyoncé,2019-04-16,0.675,0.646,9,-12.932,0,0.462,0.0751,0,0.315,0.42,88.063,4,68351,FALSE,Yoncé - Homecoming Live,21,HOMECOMING: THE LIVE ALBUM,A,minor,A minor
+Beyoncé,2019-04-16,0.661,0.761,7,-10.792,1,0.0555,0.00185,0,0.486,0.644,104.813,4,176718,FALSE,Mi Gente - Homecoming Live,22,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-16,0.7,0.818,7,-8.597,1,0.0932,0.00586,0,0.477,0.607,99.999,4,92162,FALSE,Baby Boy - Homecoming Live,23,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-16,0.499,0.477,10,-9.388,0,0.0292,5.08e-4,0,0.685,0.585,80.058,4,71916,FALSE,"You Don't Love Me (No, No, No) - Homecoming Live",24,HOMECOMING: THE LIVE ALBUM,A#,minor,A# minor
+Beyoncé,2019-04-16,0.485,0.622,0,-11.604,1,0.397,0.153,2.6e-6,0.701,0.906,165.642,3,46475,FALSE,Hold Up - Homecoming Live,25,HOMECOMING: THE LIVE ALBUM,C,major,C major
+Beyoncé,2019-04-16,0.566,0.831,0,-9.177,1,0.289,0.00367,0,0.527,0.417,167.329,4,103235,FALSE,Countdown - Homecoming Live,26,HOMECOMING: THE LIVE ALBUM,C,major,C major
+Beyoncé,2019-04-16,0.464,0.877,7,-8.102,1,0.41,0.00267,0,0.949,0.64,167.468,4,76214,FALSE,Check On It - Homecoming Live,27,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-16,0.763,0.692,7,-8.73,1,0.143,0.00487,3.83e-6,0.708,0.153,105.941,4,289790,FALSE,Deja Vu (feat. Jay-Z) - Homecoming Live,28,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-16,0.55,0.843,1,-11.979,1,0.295,0.0309,0.0699,0.389,0.253,134.318,4,190104,FALSE,The Bzzzz Drumline - Interlude - Homecoming Live,29,HOMECOMING: THE LIVE ALBUM,C#,major,C# major
+Beyoncé,2019-04-16,0.651,0.891,5,-8.708,0,0.172,0.00258,2.14e-4,0.767,0.483,126.734,4,233376,FALSE,Run the World (Girls) - Homecoming Live,30,HOMECOMING: THE LIVE ALBUM,F,minor,F minor
+Beyoncé,2019-04-16,0.723,0.898,8,-8.549,1,0.223,0.0373,2.09e-4,0.57,0.415,118.959,4,90815,FALSE,Lose My Breath (feat. Kelly Rowland & Michelle Williams) - Homecoming Live,31,HOMECOMING: THE LIVE ALBUM,G#,major,G# major
+Beyoncé,2019-04-16,0.459,0.671,5,-7.353,0,0.122,0.0273,0,0.509,0.352,138.462,4,111769,FALSE,Say My Name (feat. Kelly Rowland & Michelle Williams) - Homecoming Live,32,HOMECOMING: THE LIVE ALBUM,F,minor,F minor
+Beyoncé,2019-04-16,0.499,0.806,8,-8.269,1,0.53,0.0128,0,0.858,0.394,155.214,4,131185,FALSE,Soldier (feat. Kelly Rowland & Michelle Williams) - Homecoming Live,33,HOMECOMING: THE LIVE ALBUM,G#,major,G# major
+Beyoncé,2019-04-16,0.817,0.929,11,-7.689,0,0.268,0.00903,0,0.37,0.317,97.019,4,263008,FALSE,Get Me Bodied - Homecoming Live,34,HOMECOMING: THE LIVE ALBUM,B,minor,B minor
+Beyoncé,2019-04-16,0.679,0.932,6,-6.593,0,0.128,0.00543,0,0.959,0.525,96.998,4,207208,FALSE,Single Ladies (Put a Ring on It) - Homecoming Live,35,HOMECOMING: THE LIVE ALBUM,F#,minor,F# minor
+Beyoncé,2019-04-16,0.586,0.431,5,-20.288,0,0.938,0.964,5.26e-6,0.692,0.391,130.911,3,102412,FALSE,Lift Ev'ry Voice and Sing (feat. Blue Ivy) - Blue's Version - Homecoming Live,36,HOMECOMING: THE LIVE ALBUM,F,minor,F minor
+Beyoncé,2019-04-16,0.316,0.869,7,-8.372,1,0.566,0.0535,0,0.907,0.222,175.655,4,227215,FALSE,Love On Top - Homecoming Live,37,HOMECOMING: THE LIVE ALBUM,G,major,G major
+Beyoncé,2019-04-16,0.633,0.932,2,-9.309,0,0.112,0.00278,3.87e-4,0.917,0.472,104.96,4,159115,FALSE,Shining (Thank You) - Homecoming Live,38,HOMECOMING: THE LIVE ALBUM,D,minor,D minor
+Beyoncé,2019-04-16,0.711,0.844,6,-5.589,0,0.0967,0.0699,0,0.354,0.469,102.999,4,240776,FALSE,Before I Let Go - Homecoming Live Bonus Track,39,HOMECOMING: THE LIVE ALBUM,F#,minor,F# minor
+Beyoncé,2019-04-16,0.482,0.735,1,-6.394,1,0.0853,0.0116,7.2e-4,0.251,0.197,94.454,4,144661,FALSE,I Been On - Homecoming Live Bonus Track,40,HOMECOMING: THE LIVE ALBUM,C#,major,C# major
+Beyoncé,2016-04-23,0.25,0.215,8,-13.676,0,0.037,0.632,0.0717,0.401,0.0746,174.824,3,195986,FALSE,Pray You Catch Me,1,Lemonade,G#,minor,G# minor
+Beyoncé,2016-04-23,0.524,0.397,0,-11.936,1,0.405,0.745,0,0.521,0.552,80.744,4,221093,TRUE,Hold Up,2,Lemonade,C,major,C major
+Beyoncé,2016-04-23,0.614,0.686,9,-6.483,0,0.21,0.0105,1.36e-6,0.184,0.645,136.537,4,233666,TRUE,Don't Hurt Yourself (feat. Jack White),3,Lemonade,A,minor,A minor
+Beyoncé,2016-04-23,0.775,0.598,2,-7.274,1,0.0535,0.00175,4.44e-6,0.253,0.356,129.988,4,232560,TRUE,Sorry,4,Lemonade,D,major,D major
+Beyoncé,2016-04-23,0.516,0.637,6,-8.832,1,0.0632,0.0433,3.89e-6,0.11,0.324,138.011,4,260440,TRUE,6 Inch (feat. The Weeknd),5,Lemonade,F#,major,F# major
+Beyoncé,2016-04-23,0.643,0.503,7,-8.37,1,0.216,0.273,0,0.349,0.598,90.886,4,287986,FALSE,Daddy Lessons,6,Lemonade,G,major,G major
+Beyoncé,2016-04-23,0.455,0.535,9,-10.602,0,0.0426,0.0209,0.64,0.126,0.216,157.01,4,237440,FALSE,Love Drought,7,Lemonade,A,minor,A minor
+Beyoncé,2016-04-23,0.33,0.357,10,-10.171,1,0.0348,0.866,1.76e-5,0.19,0.101,84.119,3,182720,TRUE,Sandcastles,8,Lemonade,A#,major,A# major
+Beyoncé,2016-04-23,0.387,0.133,7,-15.633,0,0.0474,0.947,0.0591,0.107,0.0498,124.397,4,79200,FALSE,Forward (feat. James Blake),9,Lemonade,G,minor,G minor
+Beyoncé,2016-04-23,0.437,0.803,2,-6.412,1,0.305,0.0376,0,0.683,0.406,84.378,4,289760,FALSE,Freedom (feat. Kendrick Lamar),10,Lemonade,D,major,D major
+Beyoncé,2016-04-23,0.574,0.573,11,-7.079,1,0.085,0.392,2.16e-5,0.0933,0.626,136.304,4,322000,FALSE,All Night,11,Lemonade,B,major,B major
+Beyoncé,2016-04-23,0.896,0.621,5,-6.857,0,0.237,0.00532,0,0.196,0.818,121.966,4,206080,TRUE,Formation,12,Lemonade,F,minor,F minor
+Beyoncé,2016-04-23,0.546,0.26,1,-12.573,1,0.125,0.942,5.09e-6,0.128,0.421,155.033,4,204400,TRUE,Sorry - Original Demo,13,Lemonade,C#,major,C# major
+Beyoncé,2016-04-23,0.249,0.218,8,-13.676,0,0.038,0.631,0.0668,0.464,0.0786,175.844,3,196000,FALSE,Pray You Catch Me,1,Lemonade,G#,minor,G# minor
+Beyoncé,2016-04-23,0.49,0.401,0,-11.929,1,0.415,0.724,0,0.526,0.549,78.672,4,221106,FALSE,Hold Up,2,Lemonade,C,major,C major
+Beyoncé,2016-04-23,0.619,0.681,9,-6.499,0,0.215,0.0107,1.27e-6,0.107,0.667,136.516,4,233640,FALSE,Don't Hurt Yourself (feat. Jack White),3,Lemonade,A,minor,A minor
+Beyoncé,2016-04-23,0.785,0.598,2,-7.249,1,0.0475,0.00154,8.73e-6,0.249,0.388,130.001,4,232426,FALSE,Sorry,4,Lemonade,D,major,D major
+Beyoncé,2016-04-23,0.53,0.611,6,-9.016,1,0.0671,0.0509,5.65e-6,0.11,0.341,138.044,4,260586,FALSE,6 Inch (feat. The Weeknd),5,Lemonade,F#,major,F# major
+Beyoncé,2016-04-23,0.618,0.5,7,-8.334,1,0.205,0.27,0,0.325,0.575,90.963,4,287960,FALSE,Daddy Lessons,6,Lemonade,G,major,G major
+Beyoncé,2016-04-23,0.491,0.538,9,-10.62,0,0.0439,0.0205,0.595,0.126,0.21,157.063,4,237466,FALSE,Love Drought,7,Lemonade,A,minor,A minor
+Beyoncé,2016-04-23,0.381,0.348,10,-10.053,1,0.0338,0.853,4.25e-5,0.189,0.0964,89.517,3,182706,FALSE,Sandcastles,8,Lemonade,A#,major,A# major
+Beyoncé,2016-04-23,0.383,0.134,7,-15.443,0,0.0465,0.946,0.0454,0.107,0.0768,126.861,3,79200,FALSE,Forward (feat. James Blake),9,Lemonade,G,minor,G minor
+Beyoncé,2016-04-23,0.458,0.804,2,-6.421,1,0.294,0.0375,0,0.685,0.408,84.733,4,289760,FALSE,Freedom (feat. Kendrick Lamar),10,Lemonade,D,major,D major
+Beyoncé,2016-04-23,0.564,0.572,11,-7.073,1,0.0865,0.389,2.22e-5,0.0985,0.625,136.304,4,322000,FALSE,All Night,11,Lemonade,B,major,B major
+Beyoncé,2016-04-23,0.733,0.611,1,-6.859,1,0.456,0.00463,0,0.195,0.81,61.145,4,206080,FALSE,Formation,12,Lemonade,C#,major,C# major
+Beyoncé,2016-04-23,0.522,0.26,1,-12.556,1,0.126,0.942,8.85e-6,0.128,0.455,155.036,4,204400,FALSE,Sorry - Original Demo,13,Lemonade,C#,major,C# major
+Beyoncé,2014-11-24,0.512,0.624,11,-6.761,1,0.0509,0.00305,1.72e-4,0.346,0.2,129.932,4,257653,FALSE,Pretty Hurts,1,BEYONCÉ [Platinum Edition],B,major,B major
+Beyoncé,2014-11-24,0.313,0.533,1,-9.416,0,0.166,0.103,0.00635,0.507,0.311,66.93,4,369040,TRUE,Haunted,2,BEYONCÉ [Platinum Edition],C#,minor,C# minor
+Beyoncé,2014-11-24,0.583,0.621,5,-6.902,0,0.0479,0.00972,0.00106,0.181,0.399,140.036,4,323480,TRUE,Drunk in Love (feat. Jay-Z),3,BEYONCÉ [Platinum Edition],F,minor,F minor
+Beyoncé,2014-11-24,0.875,0.434,0,-7.683,1,0.091,0.242,0.00147,0.233,0.776,120.067,4,309720,FALSE,Blow,4,BEYONCÉ [Platinum Edition],C,major,C major
+Beyoncé,2014-11-24,0.57,0.467,9,-9.152,0,0.171,0.0421,0.00253,0.125,0.509,111.58,1,228693,FALSE,No Angel,5,BEYONCÉ [Platinum Edition],A,minor,A minor
+Beyoncé,2014-11-24,0.418,0.441,11,-11.522,0,0.283,0.029,0.0707,0.306,0.172,175.928,4,319466,TRUE,Partition,6,BEYONCÉ [Platinum Edition],B,minor,B minor
+Beyoncé,2014-11-24,0.452,0.54,8,-10.087,1,0.229,0.122,0.00462,0.0882,0.227,133.774,4,184013,FALSE,Jealous,7,BEYONCÉ [Platinum Edition],G#,major,G# major
+Beyoncé,2014-11-24,0.495,0.403,1,-9.732,1,0.299,0.499,0,0.7,0.563,140.365,3,391906,TRUE,Rocket,8,BEYONCÉ [Platinum Edition],C#,major,C# major
+Beyoncé,2014-11-24,0.557,0.428,5,-11.306,1,0.136,0.0673,0.0019,0.144,0.0996,103.009,4,378600,TRUE,Mine (feat. Drake),9,BEYONCÉ [Platinum Edition],F,major,F major
+Beyoncé,2014-11-24,0.47,0.793,0,-8.929,1,0.26,0.164,1.31e-6,0.313,0.216,170.1,4,215946,FALSE,XO,10,BEYONCÉ [Platinum Edition],C,major,C major
+Beyoncé,2014-11-24,0.476,0.688,1,-7.799,1,0.245,0.0953,6.48e-4,0.438,0.353,140.555,4,250960,TRUE,***Flawless (feat. Chimamanda Ngozi Adichie),11,BEYONCÉ [Platinum Edition],C#,major,C# major
+Beyoncé,2014-11-24,0.525,0.334,0,-11.54,1,0.0686,0.641,0,0.114,0.185,80.307,3,276560,FALSE,Superpower (feat. Frank Ocean),12,BEYONCÉ [Platinum Edition],C,major,C major
+Beyoncé,2014-11-24,0.346,0.188,6,-12.688,0,0.0327,0.573,0.0166,0.108,0.0388,103.265,4,230893,FALSE,Heaven,13,BEYONCÉ [Platinum Edition],F#,minor,F# minor
+Beyoncé,2014-11-24,0.499,0.434,6,-10.14,1,0.0608,0.541,6.58e-5,0.119,0.0643,90.322,4,266920,FALSE,Blue (feat. Blue Ivy),14,BEYONCÉ [Platinum Edition],F#,major,F# major
+Beyoncé,2014-11-24,0.747,0.705,9,-5.137,0,0.126,0.0128,0,0.126,0.56,136.024,4,213506,FALSE,7/11,1,BEYONCÉ [Platinum Edition],A,minor,A minor
+Beyoncé,2014-11-24,0.64,0.659,8,-7.273,1,0.215,0.241,8.33e-6,0.484,0.457,136.804,4,234413,TRUE,Flawless Remix (feat. Nicki Minaj),2,BEYONCÉ [Platinum Edition],G#,major,G# major
+Beyoncé,2014-11-24,0.508,0.763,8,-3.58,1,0.0516,0.16,0,0.118,0.476,139.653,4,395986,TRUE,Drunk in Love Remix (feat. Jay-Z & Kanye West),3,BEYONCÉ [Platinum Edition],G#,major,G# major
+Beyoncé,2014-11-24,0.732,0.763,0,-6.732,1,0.0729,0.0273,0,0.33,0.709,98.011,4,180186,FALSE,Ring Off,4,BEYONCÉ [Platinum Edition],C,major,C major
+Beyoncé,2014-11-24,0.872,0.445,2,-7.631,0,0.0936,0.272,0.00119,0.345,0.763,120.029,4,309746,FALSE,Blow Remix (feat. Pharrell Williams),5,BEYONCÉ [Platinum Edition],D,minor,D minor
+Beyoncé,2014-11-24,0.664,0.808,0,-6.477,1,0.0726,0.0225,2.44e-5,0.259,0.409,98.044,4,273480,FALSE,Standing on the Sun Remix (feat. Mr. Vegas),6,BEYONCÉ [Platinum Edition],C,major,C major
+Beyoncé,2014-11-24,0.512,0.625,11,-6.764,1,0.0508,0.00308,1.64e-4,0.346,0.201,129.935,4,257653,FALSE,Pretty Hurts,1,BEYONCÉ [Platinum Edition],B,major,B major
+Beyoncé,2014-11-24,0.468,0.545,1,-9.419,0,0.0736,0.113,0.00653,0.507,0.296,122.278,4,369040,FALSE,Haunted,2,BEYONCÉ [Platinum Edition],C#,minor,C# minor
+Beyoncé,2014-11-24,0.591,0.609,5,-7.132,0,0.0471,0.00925,0.00159,0.217,0.392,140.006,4,323480,FALSE,Drunk in Love (feat. Jay-Z),3,BEYONCÉ [Platinum Edition],F,minor,F minor
+Beyoncé,2014-11-24,0.875,0.434,0,-7.684,1,0.091,0.242,0.00146,0.266,0.776,120.068,4,309720,FALSE,Blow,4,BEYONCÉ [Platinum Edition],C,major,C major
+Beyoncé,2014-11-24,0.571,0.466,9,-9.153,0,0.173,0.0424,0.00262,0.125,0.512,111.58,1,228693,FALSE,No Angel,5,BEYONCÉ [Platinum Edition],A,minor,A minor
+Beyoncé,2014-11-24,0.447,0.439,11,-11.522,0,0.236,0.0275,0.0679,0.31,0.174,87.953,4,319466,FALSE,Partition,6,BEYONCÉ [Platinum Edition],B,minor,B minor
+Beyoncé,2014-11-24,0.59,0.541,8,-10.087,1,0.151,0.122,0.00414,0.0878,0.237,133.929,4,184013,FALSE,Jealous,7,BEYONCÉ [Platinum Edition],G#,major,G# major
+Beyoncé,2014-11-24,0.498,0.404,6,-9.749,1,0.296,0.495,0,0.797,0.556,140.419,3,391906,FALSE,Rocket,8,BEYONCÉ [Platinum Edition],F#,major,F# major
+Beyoncé,2014-11-24,0.556,0.425,2,-11.296,0,0.144,0.0744,0.00143,0.14,0.0959,103.012,4,378600,FALSE,Mine (feat. Drake),9,BEYONCÉ [Platinum Edition],D,minor,D minor
+Beyoncé,2014-11-24,0.467,0.793,0,-8.932,1,0.26,0.171,1.28e-6,0.313,0.214,170.056,4,215946,FALSE,XO,10,BEYONCÉ [Platinum Edition],C,major,C major
+Beyoncé,2014-11-24,0.491,0.674,1,-7.881,1,0.243,0.0975,0.00132,0.43,0.333,136.832,4,250960,FALSE,***Flawless (feat. Chimamanda Ngozi Adichie),11,BEYONCÉ [Platinum Edition],C#,major,C# major
+Beyoncé,2014-11-24,0.527,0.334,0,-11.54,1,0.0681,0.643,0,0.114,0.186,80.334,3,276560,FALSE,Superpower (feat. Frank Ocean),12,BEYONCÉ [Platinum Edition],C,major,C major
+Beyoncé,2014-11-24,0.342,0.188,6,-12.688,0,0.033,0.573,0.017,0.108,0.0388,102.601,4,230893,FALSE,Heaven,13,BEYONCÉ [Platinum Edition],F#,minor,F# minor
+Beyoncé,2014-11-24,0.459,0.435,1,-10.139,1,0.064,0.541,6.51e-5,0.119,0.0631,90.567,4,266920,FALSE,Blue (feat. Blue Ivy),14,BEYONCÉ [Platinum Edition],C#,major,C# major
+Beyoncé,2014-11-24,0.747,0.705,9,-5.137,0,0.126,0.0128,0,0.126,0.56,136.024,4,213520,FALSE,7/11,1,BEYONCÉ [Platinum Edition],A,minor,A minor
+Beyoncé,2014-11-24,0.645,0.656,8,-7.307,1,0.232,0.252,2.36e-5,0.575,0.418,136.825,4,234666,FALSE,Flawless Remix (feat. Nicki Minaj),2,BEYONCÉ [Platinum Edition],G#,major,G# major
+Beyoncé,2014-11-24,0.475,0.76,10,-3.531,0,0.0569,0.149,0,0.119,0.491,139.672,4,395973,FALSE,Drunk in Love Remix (feat. Jay-Z & Kanye West),3,BEYONCÉ [Platinum Edition],A#,minor,A# minor
+Beyoncé,2014-11-24,0.731,0.764,0,-6.705,1,0.0711,0.0292,0,0.357,0.689,98.028,4,180173,FALSE,Ring Off,4,BEYONCÉ [Platinum Edition],C,major,C major
+Beyoncé,2014-11-24,0.875,0.446,2,-7.631,0,0.082,0.279,7.28e-4,0.268,0.784,120.034,4,309746,FALSE,Blow Remix (feat. Pharrell Williams),5,BEYONCÉ [Platinum Edition],D,minor,D minor
+Beyoncé,2014-11-24,0.456,0.816,0,-6.45,1,0.0844,0.018,1.4e-5,0.275,0.4,124.979,5,273453,FALSE,Standing on the Sun Remix (feat. Mr. Vegas),6,BEYONCÉ [Platinum Edition],C,major,C major
+Beyoncé,2011-06-24,0.652,0.749,0,-5.248,1,0.0886,0.0848,0,0.604,0.651,94.103,4,267413,FALSE,Love On Top,1,4,C,major,C major
+Beyoncé,2011-06-24,0.648,0.593,10,-6.267,1,0.0509,0.0188,0,0.169,0.719,160.984,4,245480,FALSE,Party (feat. André 3000),2,4,A#,major,A# major
+Beyoncé,2011-06-24,0.799,0.715,4,-5.481,1,0.0819,0.0289,0,0.339,0.551,124.04,4,293133,FALSE,Schoolin' Life,3,4,E,major,E major
+Beyoncé,2011-06-24,0.665,0.787,5,-5.73,1,0.151,0.31,0,0.219,0.699,167.351,4,212146,FALSE,Countdown,4,4,F,major,F major
+Beyoncé,2011-06-24,0.718,0.523,6,-7.181,1,0.198,0.352,0.00304,0.0909,0.836,167.963,4,179066,FALSE,I Miss You,5,4,F#,major,F# major
+Beyoncé,2011-06-24,0.621,0.781,2,-6.062,1,0.0636,0.0321,0,0.173,0.484,110.002,4,377466,FALSE,Dance for You,6,4,D,major,D major
+Beyoncé,2011-06-24,0.371,0.841,0,-6.021,1,0.297,0.287,4.67e-6,0.135,0.231,85.656,4,239466,FALSE,I Care,7,4,C,major,C major
+Beyoncé,2011-06-24,0.628,0.666,4,-6.626,1,0.111,0.158,0.00258,0.177,0.45,72.032,4,222480,FALSE,Rather Die Young,8,4,E,major,E major
+Beyoncé,2011-06-24,0.365,0.382,6,-7.344,1,0.0295,0.382,5.08e-6,0.0661,0.268,148.363,3,273880,FALSE,1+1,9,4,F#,major,F# major
+Beyoncé,2011-06-24,0.716,0.811,6,-7.503,0,0.212,0.0328,5.17e-4,0.0649,0.786,118.005,4,223986,FALSE,End of Time,10,4,F#,minor,F# minor
+Beyoncé,2011-06-24,0.732,0.899,0,-4.237,1,0.143,0.00496,4.64e-5,0.372,0.759,127.091,4,236093,FALSE,Run the World (Girls),11,4,C,major,C major
+Beyoncé,2011-06-24,0.546,0.649,6,-4.056,1,0.0324,0.143,1.55e-5,0.0894,0.298,99.05,4,253746,FALSE,Best Thing I Never Had,12,4,F#,major,F# major
+Beyoncé,2011-06-24,0.474,0.797,6,-4.541,0,0.192,0.193,6.2e-6,0.322,0.399,149.965,4,199106,FALSE,Start Over,13,4,F#,minor,F# minor
+Beyoncé,2011-06-24,0.525,0.627,7,-6.59,1,0.0335,0.431,0,0.0927,0.235,111.026,3,239213,FALSE,I Was Here,14,4,G,major,G major
+Beyoncé,2011-06-24,0.303,0.384,6,-7.342,1,0.0339,0.381,5.14e-6,0.0661,0.261,63.345,5,273880,FALSE,1+1,1,4,F#,major,F# major
+Beyoncé,2011-06-24,0.371,0.84,0,-6.021,1,0.292,0.284,4.79e-6,0.135,0.228,86.934,4,239466,FALSE,I Care,2,4,C,major,C major
+Beyoncé,2011-06-24,0.718,0.523,6,-7.181,1,0.199,0.352,0.00314,0.0909,0.835,167.963,4,179066,FALSE,I Miss You,3,4,F#,major,F# major
+Beyoncé,2011-06-24,0.545,0.649,6,-4.062,1,0.0324,0.143,1.57e-5,0.0894,0.297,99.099,4,253746,FALSE,Best Thing I Never Had,4,4,F#,major,F# major
+Beyoncé,2011-06-24,0.648,0.593,10,-6.267,1,0.0506,0.0188,0,0.169,0.712,160.979,4,245480,FALSE,Party (feat. André 3000),5,4,A#,major,A# major
+Beyoncé,2011-06-24,0.628,0.665,4,-6.626,1,0.112,0.158,0.00278,0.177,0.447,72.032,4,222480,FALSE,Rather Die Young,6,4,E,major,E major
+Beyoncé,2011-06-24,0.474,0.797,6,-4.541,0,0.191,0.193,6.2e-6,0.322,0.398,150.006,4,199106,FALSE,Start Over,7,4,F#,minor,F# minor
+Beyoncé,2011-06-24,0.652,0.749,0,-5.248,1,0.0886,0.0848,0,0.604,0.651,94.103,4,267413,FALSE,Love On Top,8,4,C,major,C major
+Beyoncé,2011-06-24,0.665,0.787,5,-5.73,1,0.151,0.308,0,0.219,0.699,167.349,4,212146,FALSE,Countdown,9,4,F,major,F major
+Beyoncé,2011-06-24,0.711,0.811,6,-7.503,0,0.219,0.0328,5.17e-4,0.0649,0.785,117.999,4,223986,FALSE,End of Time,10,4,F#,minor,F# minor
+Beyoncé,2011-06-24,0.51,0.627,7,-6.59,1,0.0336,0.431,0,0.0927,0.234,110.992,3,239213,FALSE,I Was Here,11,4,G,major,G major
+Beyoncé,2011-06-24,0.733,0.899,0,-4.237,1,0.143,0.00496,4.72e-5,0.372,0.76,127.086,4,236093,FALSE,Run the World (Girls),12,4,C,major,C major
+Beyoncé,2011-06-24,0.303,0.384,6,-7.342,1,0.0339,0.381,5.14e-6,0.0661,0.261,63.345,5,273880,FALSE,1+1,1,4,F#,major,F# major
+Beyoncé,2011-06-24,0.371,0.84,0,-6.021,1,0.292,0.284,4.79e-6,0.135,0.228,86.934,4,239466,FALSE,I Care,2,4,C,major,C major
+Beyoncé,2011-06-24,0.718,0.523,6,-7.181,1,0.199,0.352,0.00314,0.0909,0.835,167.963,4,179066,FALSE,I Miss You,3,4,F#,major,F# major
+Beyoncé,2011-06-24,0.545,0.649,6,-4.062,1,0.0324,0.143,1.57e-5,0.0894,0.297,99.099,4,253746,FALSE,Best Thing I Never Had,4,4,F#,major,F# major
+Beyoncé,2011-06-24,0.648,0.593,10,-6.267,1,0.0506,0.0188,0,0.169,0.712,160.979,4,245480,FALSE,Party (feat. André 3000),5,4,A#,major,A# major
+Beyoncé,2011-06-24,0.628,0.665,4,-6.626,1,0.112,0.158,0.00278,0.177,0.447,72.032,4,222480,FALSE,Rather Die Young,6,4,E,major,E major
+Beyoncé,2011-06-24,0.474,0.797,6,-4.541,0,0.191,0.193,6.2e-6,0.322,0.398,150.006,4,199106,FALSE,Start Over,7,4,F#,minor,F# minor
+Beyoncé,2011-06-24,0.652,0.749,0,-5.248,1,0.0886,0.0848,0,0.604,0.651,94.103,4,267413,FALSE,Love On Top,8,4,C,major,C major
+Beyoncé,2011-06-24,0.665,0.787,5,-5.73,1,0.151,0.308,0,0.219,0.699,167.349,4,212146,FALSE,Countdown,9,4,F,major,F major
+Beyoncé,2011-06-24,0.711,0.811,6,-7.503,0,0.219,0.0328,5.17e-4,0.0649,0.785,117.999,4,223986,FALSE,End of Time,10,4,F#,minor,F# minor
+Beyoncé,2011-06-24,0.51,0.627,7,-6.59,1,0.0336,0.431,0,0.0927,0.234,110.992,3,239213,FALSE,I Was Here,11,4,G,major,G major
+Beyoncé,2011-06-24,0.733,0.899,0,-4.237,1,0.143,0.00496,4.72e-5,0.372,0.76,127.086,4,236093,FALSE,Run the World (Girls),12,4,C,major,C major
+Beyoncé,2011,0.303,0.384,6,-7.342,1,0.0339,0.381,5.14e-6,0.0661,0.261,63.345,5,273880,FALSE,1+1,1,4,F#,major,F# major
+Beyoncé,2011,0.371,0.84,0,-6.021,1,0.292,0.284,4.79e-6,0.135,0.228,86.934,4,239466,FALSE,I Care,2,4,C,major,C major
+Beyoncé,2011,0.718,0.523,6,-7.181,1,0.199,0.352,0.00314,0.0909,0.835,167.963,4,179066,FALSE,I Miss You,3,4,F#,major,F# major
+Beyoncé,2011,0.545,0.649,6,-4.062,1,0.0324,0.143,1.57e-5,0.0894,0.297,99.099,4,253746,FALSE,Best Thing I Never Had,4,4,F#,major,F# major
+Beyoncé,2011,0.648,0.593,10,-6.267,1,0.0506,0.0188,0,0.169,0.712,160.979,4,245480,FALSE,Party (feat. André 3000),5,4,A#,major,A# major
+Beyoncé,2011,0.628,0.665,4,-6.626,1,0.112,0.158,0.00278,0.177,0.447,72.032,4,222480,FALSE,Rather Die Young,6,4,E,major,E major
+Beyoncé,2011,0.474,0.797,6,-4.541,0,0.191,0.193,6.2e-6,0.322,0.398,150.006,4,199106,FALSE,Start Over,7,4,F#,minor,F# minor
+Beyoncé,2011,0.652,0.749,0,-5.248,1,0.0886,0.0848,0,0.604,0.651,94.103,4,267413,FALSE,Love On Top,8,4,C,major,C major
+Beyoncé,2011,0.665,0.787,5,-5.73,1,0.151,0.308,0,0.219,0.699,167.349,4,212146,FALSE,Countdown,9,4,F,major,F major
+Beyoncé,2011,0.711,0.811,6,-7.503,0,0.219,0.0328,5.17e-4,0.0649,0.785,117.999,4,223986,FALSE,End of Time,10,4,F#,minor,F# minor
+Beyoncé,2011,0.51,0.627,7,-6.59,1,0.0336,0.431,0,0.0927,0.234,110.992,3,239213,FALSE,I Was Here,11,4,G,major,G major
+Beyoncé,2011,0.733,0.899,0,-4.237,1,0.143,0.00496,4.72e-5,0.372,0.76,127.086,4,236093,FALSE,Run the World (Girls),12,4,C,major,C major
+Beyoncé,2011,0.724,0.792,9,-5.374,0,0.0665,0.0446,0,0.231,0.672,116.01,4,253760,FALSE,Lay Up Under Me,1,4,A,minor,A minor
+Beyoncé,2011,0.799,0.715,4,-5.481,1,0.0822,0.0289,0,0.339,0.551,124.04,4,293133,FALSE,Schoolin' Life,2,4,E,major,E major
+Beyoncé,2011,0.616,0.78,2,-6.062,1,0.0623,0.0322,0,0.173,0.471,110.005,4,377466,FALSE,Dance for You,3,4,D,major,D major
+Beyoncé,2011,0.65,0.814,5,-5.052,0,0.0817,0.00385,0.0115,0.082,0.848,127.003,4,302426,FALSE,Run the World (Girls) - Kaskade Club Remix,4,4,F,minor,F minor
+Beyoncé,2011,0.728,0.821,1,-3.545,1,0.0449,1.8e-4,0.265,0.076,0.698,128.02,4,362986,FALSE,Run the World (Girls) - RedTop Club Remix,5,4,C#,major,C# major
+Beyoncé,2011,0.806,0.774,0,-4.162,0,0.0535,0.00192,0.703,0.238,0.358,129.022,4,377093,FALSE,Run the World (Girls) - Jochen Simms Club Remix,6,4,C,minor,C minor
+Beyoncé,2010-11-26,0.352,0.655,0,-10.571,1,0.0736,6.63e-5,0.806,0.659,0.0852,148.045,4,71866,FALSE,Intro - Live,1,I Am...World Tour,C,major,C major
+Beyoncé,2010-11-26,0.562,0.967,9,-4.919,0,0.271,0.0496,7.37e-5,0.953,0.268,99.13,4,323733,FALSE,Crazy In Love - Live,2,I Am...World Tour,A,minor,A minor
+Beyoncé,2010-11-26,0.591,0.79,6,-7.864,0,0.0956,0.0488,9.22e-4,0.417,0.245,99.946,4,154026,FALSE,Naughty Girl - Live,3,I Am...World Tour,F#,minor,F# minor
+Beyoncé,2010-11-26,0.429,0.967,7,-5.08,1,0.309,2.79e-4,0.00215,0.933,0.184,99.027,4,190986,FALSE,Freakum Dress - Live,4,I Am...World Tour,G,major,G major
+Beyoncé,2010-11-26,0.556,0.945,3,-5.756,1,0.52,0.141,1.46e-4,0.347,0.184,96.618,4,149626,FALSE,Get Me Bodied - Live,5,I Am...World Tour,D#,major,D# major
+Beyoncé,2010-11-26,0.524,0.691,1,-7.99,1,0.0332,0.0196,0.00668,0.939,0.208,94.982,4,231933,FALSE,Smash Into You - Live,6,I Am...World Tour,C#,major,C# major
+Beyoncé,2010-11-26,0.275,0.449,0,-10.563,1,0.0335,0.613,4.25e-5,0.857,0.0784,104.838,3,255440,FALSE,Ave Maria - Live,7,I Am...World Tour,C,major,C major
+Beyoncé,2010-11-26,0.297,0.596,5,-7.308,1,0.21,0.537,5.85e-6,0.971,0.15,169.502,4,192480,FALSE,Broken-Hearted Girl - Live,8,I Am...World Tour,F,major,F major
+Beyoncé,2010-11-26,0.306,0.945,6,-5.32,1,0.424,0.0131,0.0272,0.892,0.157,100.105,4,316773,FALSE,If I Were A Boy / You Oughta Know - Live,9,I Am...World Tour,F#,major,F# major
+Beyoncé,2010-11-26,0.601,0.939,11,-7.323,0,0.309,0.00252,0.00431,0.289,0.337,146.248,4,179893,FALSE,Diva - Live,10,I Am...World Tour,B,minor,B minor
+Beyoncé,2010-11-26,0.509,0.739,1,-6.124,1,0.287,0.0577,1.69e-6,0.904,0.353,135.995,4,123600,FALSE,Radio - Live,11,I Am...World Tour,C#,major,C# major
+Beyoncé,2010-11-26,0.476,0.844,1,-7.971,1,0.659,0.367,2.68e-6,0.867,0.603,83.132,4,114906,FALSE,Ego (feat. Kanye West),12,I Am...World Tour,C#,major,C# major
+Beyoncé,2010-11-26,0.426,0.903,6,-6.175,1,0.236,0.0547,2.4e-6,0.924,0.534,129.117,4,217466,FALSE,Hello - Live,13,I Am...World Tour,F#,major,F# major
+Beyoncé,2010-11-26,0.473,0.84,1,-8.271,1,0.313,0.0307,0.0199,0.475,0.217,91.13,4,129613,FALSE,Baby Boy - Live,14,I Am...World Tour,C#,major,C# major
+Beyoncé,2010-11-26,0.395,0.592,10,-10.841,1,0.0443,0.00778,0.0348,0.816,0.314,144.848,4,108626,FALSE,"You Don't Love Me, No No No - Live",15,I Am...World Tour,A#,major,A# major
+Beyoncé,2010-11-26,0.304,0.921,11,-8.559,0,0.79,0.0346,2.38e-6,0.983,0.266,88.515,4,304106,FALSE,Irreplaceable - Live,16,I Am...World Tour,B,minor,B minor
+Beyoncé,2010-11-26,0.399,0.741,2,-8.987,1,0.484,0.235,0.0245,0.413,0.267,83.213,3,128639,FALSE,Check On It - Live,17,I Am...World Tour,D,major,D major
+Beyoncé,2010-11-26,0.542,0.878,1,-8.096,1,0.297,0.0064,0,0.859,0.438,103.293,4,50773,FALSE,Bootylicious - Live,18,I Am...World Tour,C#,major,C# major
+Beyoncé,2010-11-26,0.565,0.807,7,-7.988,1,0.293,0.00102,0.21,0.971,0.334,84.937,4,135866,FALSE,Upgrade U - Live,19,I Am...World Tour,G,major,G major
+Beyoncé,2010-11-26,0.503,0.871,8,-6.659,1,0.404,0.306,0,0.823,0.448,137.164,4,139893,FALSE,Say My Name - Live,20,I Am...World Tour,G#,major,G# major
+Beyoncé,2010-11-26,0.143,0.315,2,-12.587,0,0.0368,0.306,0.00888,0.916,0.255,75.195,3,179960,FALSE,At Last - Live,21,I Am...World Tour,D,minor,D minor
+Beyoncé,2010-11-26,0.358,0.641,9,-8.823,1,0.0752,0.193,4.55e-5,0.763,0.171,124.061,4,202160,FALSE,"Listen (From the Motion Picture ""Dreamgirls"") - Live",22,I Am...World Tour,A,major,A major
+Beyoncé,2010-11-26,0.628,0.894,11,-5.448,0,0.137,0.018,3.52e-5,0.922,0.198,97.083,4,262920,FALSE,Single Ladies (Put a Ring on It) - Live,23,I Am...World Tour,B,minor,B minor
+Beyoncé,2010-11-26,0.261,0.913,1,-5.795,1,0.433,0.0352,2.41e-4,0.863,0.217,143.024,4,391893,FALSE,Halo - Live,24,I Am...World Tour,C#,major,C# major
+Beyoncé,2010-11-26,0.326,0.975,10,-5.784,0,0.233,7.03e-4,0.051,0.815,0.22,155.075,4,118653,FALSE,Outro - Live,25,I Am...World Tour,A#,minor,A# minor
+Beyoncé,2009-06-16,0.712,0.828,1,-7.108,1,0.0418,0.00323,0.115,0.0264,0.885,125.999,4,387080,FALSE,If I Were a Boy - Maurice Joshua Mojo UK Remix - Main,1,Above And Beyoncé Dance Mixes,C#,major,C# major
+Beyoncé,2009-06-16,0.796,0.92,6,-5.638,0,0.0873,0.00241,0.923,0.0243,0.783,128.005,4,413826,FALSE,Single Ladies (Put a Ring on It) - DJ Escape & Tony Coluccio Remix - Club Version,2,Above And Beyoncé Dance Mixes,F#,minor,F# minor
+Beyoncé,2009-06-16,0.846,0.629,8,-7.355,0,0.0658,0.00327,0.00223,0.0655,0.622,131.997,4,305946,FALSE,Diva - Karmatronic Club Remix,3,Above And Beyoncé Dance Mixes,G#,minor,G# minor
+Beyoncé,2009-06-16,0.802,0.702,11,-6.601,0,0.0616,0.0147,0.653,0.0162,0.851,128.008,4,533293,FALSE,Halo - Dave Audé Club Remix,4,Above And Beyoncé Dance Mixes,B,minor,B minor
+Beyoncé,2009-06-16,0.372,0.751,0,-6.694,1,0.257,0.0846,8.02e-6,0.122,0.0813,168.247,4,285640,FALSE,Broken-Hearted Girl - Catalyst Remix,5,Above And Beyoncé Dance Mixes,C,major,C major
+Beyoncé,2009-06-16,0.846,0.683,10,-6.148,0,0.0654,0.0452,1.74e-5,0.0583,0.613,122.988,4,387320,FALSE,Ego - OK DAC Club Remix,6,Above And Beyoncé Dance Mixes,A#,minor,A# minor
+Beyoncé,2009-06-16,0.772,0.863,11,-6.35,1,0.0423,0.00202,0.487,0.331,0.774,126.995,4,401960,FALSE,Sweet Dreams - Harlan Pepper & AG III Remix,7,Above And Beyoncé Dance Mixes,B,major,B major
+Beyoncé,2009-06-16,0.574,0.421,1,-5.443,1,0.174,0.0989,0,0.0568,0.341,78.781,4,283933,FALSE,Ego (feat. Kanye West) - Remix,8,Above And Beyoncé Dance Mixes,C#,major,C# major
+Beyoncé,2008-11-17,0.633,0.519,6,-6.126,1,0.0315,0.109,0,0.354,0.443,89.966,4,249146,FALSE,If I Were a Boy,1,I AM...SASHA FIERCE,F#,major,F# major
+Beyoncé,2008-11-17,0.511,0.72,11,-5.916,0,0.0652,0.272,0,0.0563,0.468,79.982,4,261640,FALSE,Halo,2,I AM...SASHA FIERCE,B,minor,B minor
+Beyoncé,2008-11-17,0.552,0.348,5,-10.676,1,0.0284,0.128,0,0.326,0.207,78.036,4,267453,FALSE,Disappear,3,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-17,0.336,0.423,5,-7.203,1,0.0353,0.511,0,0.273,0.159,82.103,4,277626,FALSE,Broken-Hearted Girl,4,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-17,0.349,0.402,0,-9.57,1,0.0276,0.786,0,0.114,0.201,104.953,3,222160,FALSE,Ave Maria,5,I AM...SASHA FIERCE,C,major,C major
+Beyoncé,2008-11-17,0.306,0.15,7,-14.558,1,0.0355,0.719,0,0.105,0.272,130.483,5,187026,FALSE,Satellites,6,I AM...SASHA FIERCE,G,major,G major
+Beyoncé,2008-11-17,0.551,0.467,10,-10.365,1,0.0332,0.673,0,0.0762,0.148,116.97,4,273880,FALSE,Save The Hero,7,I AM...SASHA FIERCE,A#,major,A# major
+Beyoncé,2008-11-17,0.426,0.585,1,-5.293,1,0.294,0.0384,0,0.188,0.268,193.524,4,193213,FALSE,Single Ladies (Put a Ring on It),1,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-17,0.605,0.763,1,-5.949,1,0.0781,0.13,2.06e-6,0.0839,0.554,135.771,4,218786,FALSE,Radio,2,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-17,0.875,0.551,6,-6.744,0,0.317,0.0488,0.00702,0.0537,0.861,146.092,4,200613,FALSE,Diva,3,I AM...SASHA FIERCE,F#,minor,F# minor
+Beyoncé,2008-11-17,0.693,0.825,1,-5.986,1,0.111,0.0896,1.85e-5,0.0618,0.788,121.953,4,208066,FALSE,Sweet Dreams,4,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-17,0.452,0.764,8,-8.953,1,0.175,0.00235,0.0347,0.369,0.606,86.191,4,215493,FALSE,Video Phone,5,I AM...SASHA FIERCE,G#,major,G# major
+Beyoncé,2008-11-17,0.693,0.73,6,-4.571,1,0.086,0.0462,2.46e-6,0.0582,0.741,136.886,4,217386,FALSE,Why Don't You Love Me,6,I AM...SASHA FIERCE,F#,major,F# major
+Beyoncé,2008-11-17,0.632,0.518,6,-6.126,1,0.0313,0.107,0,0.354,0.427,90.007,4,249146,FALSE,If I Were a Boy,1,I AM...SASHA FIERCE,F#,major,F# major
+Beyoncé,2008-11-17,0.508,0.72,11,-5.908,0,0.0628,0.272,0,0.0563,0.472,79.983,4,261640,FALSE,Halo,2,I AM...SASHA FIERCE,B,minor,B minor
+Beyoncé,2008-11-17,0.492,0.348,5,-10.676,1,0.0301,0.128,0,0.326,0.206,78.412,4,267453,FALSE,Disappear,3,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-17,0.336,0.424,5,-7.203,1,0.0353,0.503,0,0.273,0.159,82.149,4,277626,FALSE,Broken-Hearted Girl,4,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-17,0.35,0.403,0,-9.57,1,0.0279,0.786,0,0.114,0.201,104.957,3,222160,FALSE,Ave Maria,5,I AM...SASHA FIERCE,C,major,C major
+Beyoncé,2008-11-17,0.204,0.15,7,-14.558,1,0.0349,0.719,0,0.105,0.279,64.639,4,187026,FALSE,Satellites,6,I AM...SASHA FIERCE,G,major,G major
+Beyoncé,2008-11-17,0.426,0.584,1,-5.293,1,0.296,0.0383,0,0.188,0.272,193.437,4,193213,FALSE,Single Ladies (Put a Ring on It),1,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-17,0.605,0.763,1,-5.949,1,0.0775,0.129,2.41e-6,0.0839,0.553,135.771,4,218786,FALSE,Radio,2,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-17,0.875,0.551,6,-6.744,0,0.317,0.0488,0.00728,0.0537,0.861,146.092,4,200613,FALSE,Diva,3,I AM...SASHA FIERCE,F#,minor,F# minor
+Beyoncé,2008-11-17,0.694,0.825,1,-5.986,1,0.111,0.0895,1.86e-5,0.0618,0.788,121.949,4,208066,FALSE,Sweet Dreams,4,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-17,0.479,0.763,8,-8.954,1,0.178,0.00242,0.0353,0.369,0.608,84.769,4,215493,FALSE,Video Phone,5,I AM...SASHA FIERCE,G#,major,G# major
+Beyoncé,2008-11-14,0.633,0.519,6,-6.126,1,0.0315,0.109,0,0.354,0.443,89.966,4,249146,FALSE,If I Were a Boy,1,I AM...SASHA FIERCE,F#,major,F# major
+Beyoncé,2008-11-14,0.511,0.72,11,-5.916,0,0.0652,0.272,0,0.0563,0.468,79.982,4,261640,FALSE,Halo,2,I AM...SASHA FIERCE,B,minor,B minor
+Beyoncé,2008-11-14,0.552,0.348,5,-10.676,1,0.0284,0.128,0,0.326,0.207,78.036,4,267453,FALSE,Disappear,3,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-14,0.336,0.423,5,-7.203,1,0.0353,0.511,0,0.273,0.159,82.103,4,277626,FALSE,Broken-Hearted Girl,4,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-14,0.349,0.402,0,-9.57,1,0.0276,0.786,0,0.12,0.201,104.953,3,221653,FALSE,Ave Maria,5,I AM...SASHA FIERCE,C,major,C major
+Beyoncé,2008-11-14,0.573,0.429,1,-8.974,1,0.027,0.192,1.01e-6,0.263,0.103,95,4,271613,FALSE,Smash Into You,6,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.314,0.153,7,-14.55,1,0.0322,0.729,0,0.116,0.279,108.413,4,186826,FALSE,Satellites,7,I AM...SASHA FIERCE,G,major,G major
+Beyoncé,2008-11-14,0.549,0.628,2,-7.45,1,0.0309,0.00904,2.2e-5,0.128,0.098,115.033,4,221466,FALSE,That's Why You're Beautiful,8,I AM...SASHA FIERCE,D,major,D major
+Beyoncé,2008-11-14,0.551,0.467,10,-10.365,1,0.0332,0.673,0,0.0762,0.148,116.97,4,273880,FALSE,Save The Hero,9,I AM...SASHA FIERCE,A#,major,A# major
+Beyoncé,2008-11-14,0.426,0.585,1,-5.293,1,0.294,0.0384,0,0.188,0.268,193.524,4,193213,FALSE,Single Ladies (Put a Ring on It),1,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.605,0.763,1,-5.949,1,0.0781,0.13,2.06e-6,0.0839,0.554,135.771,4,218786,FALSE,Radio,2,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.875,0.551,6,-6.744,0,0.317,0.0488,0.00702,0.0537,0.861,146.092,4,200613,FALSE,Diva,3,I AM...SASHA FIERCE,F#,minor,F# minor
+Beyoncé,2008-11-14,0.693,0.825,1,-5.986,1,0.111,0.0896,1.85e-5,0.0618,0.788,121.953,4,208066,FALSE,Sweet Dreams,4,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.452,0.764,8,-8.953,1,0.175,0.00235,0.0347,0.383,0.606,86.191,4,215440,FALSE,Video Phone,5,I AM...SASHA FIERCE,G#,major,G# major
+Beyoncé,2008-11-14,0.331,0.769,6,-5.752,1,0.165,0.208,1.51e-6,0.143,0.418,97.512,3,256532,FALSE,Hello,6,I AM...SASHA FIERCE,F#,major,F# major
+Beyoncé,2008-11-14,0.623,0.389,1,-7.816,1,0.241,0.154,0,0.163,0.489,79.454,4,236360,FALSE,Ego,7,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.534,0.576,1,-6.706,1,0.0526,0.0545,0,0.129,0.213,86.961,4,222920,FALSE,Scared of Lonely,8,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.693,0.73,6,-4.571,1,0.086,0.0462,2.46e-6,0.0582,0.741,136.886,4,217386,FALSE,Why Don't You Love Me,9,I AM...SASHA FIERCE,F#,major,F# major
+Beyoncé,2008-11-14,0.633,0.519,6,-6.126,1,0.0315,0.109,0,0.354,0.443,89.966,4,249146,FALSE,If I Were a Boy,1,I AM...SASHA FIERCE,F#,major,F# major
+Beyoncé,2008-11-14,0.511,0.72,11,-5.916,0,0.0652,0.272,0,0.0563,0.468,79.982,4,261640,FALSE,Halo,2,I AM...SASHA FIERCE,B,minor,B minor
+Beyoncé,2008-11-14,0.492,0.348,5,-10.676,1,0.0301,0.128,0,0.326,0.206,78.412,4,267453,FALSE,Disappear,3,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-14,0.336,0.424,5,-7.203,1,0.0353,0.503,0,0.274,0.159,82.149,4,277626,FALSE,Broken-Hearted Girl,4,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-14,0.35,0.403,0,-9.57,1,0.0279,0.786,0,0.108,0.201,104.957,3,221653,FALSE,Ave Maria,5,I AM...SASHA FIERCE,C,major,C major
+Beyoncé,2008-11-14,0.572,0.429,1,-8.974,1,0.027,0.192,0,0.257,0.103,95,4,271613,FALSE,Smash Into You,6,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.384,0.153,7,-14.55,1,0.0324,0.729,0,0.137,0.282,109.859,4,186826,FALSE,Satellites,7,I AM...SASHA FIERCE,G,major,G major
+Beyoncé,2008-11-14,0.549,0.628,2,-7.45,1,0.0309,0.00908,2.06e-5,0.114,0.102,115.036,4,221466,FALSE,That's Why You're Beautiful,8,I AM...SASHA FIERCE,D,major,D major
+Beyoncé,2008-11-14,0.551,0.467,10,-10.364,1,0.0332,0.673,0,0.075,0.148,116.966,4,273880,FALSE,Save The Hero,9,I AM...SASHA FIERCE,A#,major,A# major
+Beyoncé,2008-11-14,0.426,0.585,1,-5.293,1,0.294,0.0384,0,0.188,0.268,193.524,4,193213,FALSE,Single Ladies (Put a Ring on It),1,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.605,0.763,1,-5.949,1,0.0775,0.129,2.41e-6,0.0855,0.553,135.771,4,218786,FALSE,Radio,2,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.875,0.551,6,-6.744,0,0.317,0.0488,0.00702,0.0537,0.861,146.092,4,200613,FALSE,Diva,3,I AM...SASHA FIERCE,F#,minor,F# minor
+Beyoncé,2008-11-14,0.694,0.825,1,-5.986,1,0.111,0.0895,1.86e-5,0.0614,0.788,121.949,4,208066,FALSE,Sweet Dreams,4,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.479,0.763,8,-8.954,1,0.178,0.00242,0.0353,0.468,0.608,84.769,4,215440,FALSE,Video Phone,5,I AM...SASHA FIERCE,G#,major,G# major
+Beyoncé,2008-11-14,0.33,0.769,6,-5.755,1,0.17,0.206,1.54e-6,0.138,0.416,97.515,3,256533,FALSE,Hello,6,I AM...SASHA FIERCE,F#,major,F# major
+Beyoncé,2008-11-14,0.623,0.389,1,-7.816,1,0.241,0.154,0,0.163,0.489,79.454,4,236360,FALSE,Ego,7,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.534,0.576,1,-6.706,1,0.0526,0.0545,0,0.129,0.213,86.961,4,222920,FALSE,Scared of Lonely,8,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.632,0.518,6,-6.126,1,0.0313,0.107,0,0.354,0.427,90.007,4,249146,FALSE,If I Were a Boy,1,I AM...SASHA FIERCE,F#,major,F# major
+Beyoncé,2008-11-14,0.508,0.72,11,-5.908,0,0.0628,0.272,0,0.0563,0.472,79.983,4,261640,FALSE,Halo,2,I AM...SASHA FIERCE,B,minor,B minor
+Beyoncé,2008-11-14,0.492,0.348,5,-10.676,1,0.0301,0.128,0,0.326,0.206,78.412,4,267453,FALSE,Disappear,3,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-14,0.336,0.424,5,-7.203,1,0.0353,0.503,0,0.273,0.159,82.149,4,277626,FALSE,Broken-Hearted Girl,4,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-14,0.35,0.403,0,-9.57,1,0.0279,0.786,0,0.12,0.201,104.957,3,221653,FALSE,Ave Maria,5,I AM...SASHA FIERCE,C,major,C major
+Beyoncé,2008-11-14,0.572,0.429,1,-8.974,1,0.0271,0.192,0,0.263,0.103,95.068,4,271613,FALSE,Smash Into You,6,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.384,0.153,7,-14.55,1,0.0324,0.729,0,0.116,0.282,109.859,4,186826,FALSE,Satellites,7,I AM...SASHA FIERCE,G,major,G major
+Beyoncé,2008-11-14,0.549,0.628,2,-7.45,1,0.0309,0.00908,2.06e-5,0.128,0.102,115.036,4,221466,FALSE,That's Why You're Beautiful,8,I AM...SASHA FIERCE,D,major,D major
+Beyoncé,2008-11-14,0.426,0.584,1,-5.293,1,0.296,0.0383,0,0.188,0.272,193.437,4,193213,FALSE,Single Ladies (Put a Ring on It),1,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.605,0.763,1,-5.949,1,0.0775,0.129,2.41e-6,0.0839,0.553,135.771,4,218786,FALSE,Radio,2,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.875,0.551,6,-6.744,0,0.317,0.0488,0.00728,0.0537,0.861,146.092,4,200613,FALSE,Diva,3,I AM...SASHA FIERCE,F#,minor,F# minor
+Beyoncé,2008-11-14,0.694,0.825,1,-5.986,1,0.111,0.0895,1.86e-5,0.0618,0.788,121.949,4,208066,FALSE,Sweet Dreams,4,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.479,0.763,8,-8.954,1,0.178,0.00242,0.0353,0.383,0.608,84.769,4,215440,FALSE,Video Phone,5,I AM...SASHA FIERCE,G#,major,G# major
+Beyoncé,2008-11-14,0.33,0.769,6,-5.755,1,0.17,0.206,1.54e-6,0.143,0.416,97.515,3,256533,FALSE,Hello,6,I AM...SASHA FIERCE,F#,major,F# major
+Beyoncé,2008-11-14,0.623,0.389,1,-7.816,1,0.241,0.155,0,0.163,0.489,79.454,4,236360,FALSE,Ego,7,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.534,0.575,1,-6.706,1,0.0519,0.0546,0,0.131,0.205,86.961,4,222920,FALSE,Scared of Lonely,8,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.633,0.519,6,-6.126,1,0.0315,0.109,0,0.354,0.443,89.966,4,249146,FALSE,If I Were a Boy,1,I AM...SASHA FIERCE,F#,major,F# major
+Beyoncé,2008-11-14,0.511,0.72,11,-5.916,0,0.0652,0.272,0,0.0563,0.468,79.982,4,261640,FALSE,Halo,2,I AM...SASHA FIERCE,B,minor,B minor
+Beyoncé,2008-11-14,0.492,0.348,5,-10.676,1,0.0301,0.128,0,0.326,0.206,78.412,4,267453,FALSE,Disappear,3,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-14,0.336,0.423,5,-7.203,1,0.0353,0.511,0,0.273,0.159,82.103,4,277626,FALSE,Broken-Hearted Girl,4,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-14,0.35,0.403,0,-9.57,1,0.0279,0.786,0,0.114,0.201,104.957,3,222160,FALSE,Ave Maria,5,I AM...SASHA FIERCE,C,major,C major
+Beyoncé,2008-11-14,0.204,0.15,7,-14.558,1,0.0349,0.719,0,0.105,0.279,64.639,4,187026,FALSE,Satellites,6,I AM...SASHA FIERCE,G,major,G major
+Beyoncé,2008-11-14,0.551,0.467,10,-10.364,1,0.0332,0.673,0,0.0762,0.148,116.966,4,273880,FALSE,Save The Hero,7,I AM...SASHA FIERCE,A#,major,A# major
+Beyoncé,2008-11-14,0.426,0.585,1,-5.293,1,0.294,0.0384,0,0.188,0.268,193.524,4,193213,FALSE,Single Ladies (Put a Ring on It),1,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.605,0.763,1,-5.949,1,0.0775,0.129,2.41e-6,0.0839,0.553,135.771,4,218786,FALSE,Radio,2,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.875,0.551,6,-6.744,0,0.317,0.0488,0.00702,0.0537,0.861,146.092,4,200613,FALSE,Diva,3,I AM...SASHA FIERCE,F#,minor,F# minor
+Beyoncé,2008-11-14,0.693,0.825,1,-5.986,1,0.111,0.0896,1.85e-5,0.0618,0.788,121.953,4,208066,FALSE,Sweet Dreams,4,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-14,0.479,0.763,8,-8.954,1,0.178,0.00242,0.0353,0.369,0.608,84.769,4,215493,FALSE,Video Phone,5,I AM...SASHA FIERCE,G#,major,G# major
+Beyoncé,2008-11-12,0.632,0.518,6,-6.126,1,0.0313,0.107,0,0.354,0.427,90.007,4,249146,FALSE,If I Were a Boy,1,I AM...SASHA FIERCE,F#,major,F# major
+Beyoncé,2008-11-12,0.508,0.72,11,-5.908,0,0.0628,0.272,0,0.0563,0.472,79.983,4,261640,FALSE,Halo,2,I AM...SASHA FIERCE,B,minor,B minor
+Beyoncé,2008-11-12,0.492,0.348,5,-10.676,1,0.0301,0.128,0,0.326,0.206,78.412,4,267453,FALSE,Disappear,3,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-12,0.336,0.424,5,-7.203,1,0.0353,0.503,0,0.273,0.159,82.149,4,277626,FALSE,Broken-Hearted Girl,4,I AM...SASHA FIERCE,F,major,F major
+Beyoncé,2008-11-12,0.35,0.403,0,-9.57,1,0.0279,0.786,0,0.114,0.201,104.957,3,222160,FALSE,Ave Maria,5,I AM...SASHA FIERCE,C,major,C major
+Beyoncé,2008-11-12,0.204,0.15,7,-14.558,1,0.0349,0.719,0,0.11,0.279,64.639,4,186853,FALSE,Satellites,6,I AM...SASHA FIERCE,G,major,G major
+Beyoncé,2008-11-12,0.545,0.467,10,-10.351,1,0.0339,0.663,0,0.0757,0.149,117.035,4,273880,FALSE,Save The Hero,7,I AM...SASHA FIERCE,A#,major,A# major
+Beyoncé,2008-11-12,0.426,0.584,1,-5.293,1,0.296,0.0383,0,0.188,0.272,193.437,4,193213,FALSE,Single Ladies (Put a Ring on It),1,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-12,0.605,0.763,1,-5.949,1,0.0775,0.129,2.41e-6,0.0839,0.553,135.771,4,218786,FALSE,Radio,2,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-12,0.875,0.551,6,-6.744,0,0.317,0.0488,0.00728,0.0537,0.861,146.092,4,200613,FALSE,Diva,3,I AM...SASHA FIERCE,F#,minor,F# minor
+Beyoncé,2008-11-12,0.694,0.825,1,-5.986,1,0.111,0.0895,1.86e-5,0.0618,0.788,121.949,4,208066,FALSE,Sweet Dreams,4,I AM...SASHA FIERCE,C#,major,C# major
+Beyoncé,2008-11-12,0.479,0.763,8,-8.954,1,0.178,0.00242,0.0353,0.383,0.608,84.769,4,215306,FALSE,Video Phone,5,I AM...SASHA FIERCE,G#,major,G# major
+Beyoncé,2008,0.426,0.584,1,-5.293,1,0.296,0.0383,0,0.192,0.272,193.438,4,192586,FALSE,Single Ladies (Put a Ring on It),1,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.869,0.546,6,-6.755,0,0.327,0.0512,0.0113,0.0541,0.855,146.118,4,200320,FALSE,Diva,2,I AM...SASHA FIERCE - Platinum Edition,F#,minor,F# minor
+Beyoncé,2008,0.474,0.391,1,-7.781,1,0.263,0.145,0,0.201,0.526,78.798,4,235680,FALSE,Ego,3,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.422,0.712,11,-5.907,0,0.1,0.273,0,0.051,0.471,78.454,4,261160,FALSE,Halo,4,I AM...SASHA FIERCE - Platinum Edition,B,minor,B minor
+Beyoncé,2008,0.63,0.504,6,-6.152,1,0.0334,0.0953,0,0.308,0.487,89.946,4,249866,FALSE,If I Were a Boy,5,I AM...SASHA FIERCE - Platinum Edition,F#,major,F# major
+Beyoncé,2008,0.57,0.423,1,-8.995,1,0.0267,0.206,0,0.293,0.11,95.026,4,270760,FALSE,Smash Into You,6,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.693,0.822,1,-6.01,1,0.102,0.0995,1.73e-5,0.061,0.765,121.969,4,207480,FALSE,Sweet Dreams,7,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.453,0.425,5,-7.198,1,0.0325,0.495,0,0.254,0.144,83.413,4,278400,FALSE,Broken-Hearted Girl,8,I AM...SASHA FIERCE - Platinum Edition,F,major,F major
+Beyoncé,2008,0.54,0.576,1,-6.679,1,0.0483,0.0577,0,0.114,0.203,86.959,4,223586,FALSE,Scared of Lonely,9,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.548,0.604,2,-7.449,1,0.0308,0.00926,2.04e-5,0.128,0.109,115.025,4,221080,FALSE,That's Why You're Beautiful,10,I AM...SASHA FIERCE - Platinum Edition,D,major,D major
+Beyoncé,2008,0.331,0.793,6,-5.196,1,0.148,0.197,2.93e-6,0.164,0.435,97.526,3,255733,FALSE,Hello,11,I AM...SASHA FIERCE - Platinum Edition,F#,major,F# major
+Beyoncé,2008,0.614,0.754,1,-5.953,1,0.0717,0.123,4.09e-6,0.0906,0.545,135.734,4,217666,FALSE,Radio,12,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.596,0.767,8,-8.96,1,0.146,0.00255,0.0267,0.437,0.566,155.881,4,215173,FALSE,Video Phone,13,I AM...SASHA FIERCE - Platinum Edition,G#,major,G# major
+Beyoncé,2008,0.711,0.439,1,-5.156,1,0.138,0.114,0,0.0573,0.326,78.074,4,283520,FALSE,Ego (feat. Kanye West) - Remix,14,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.697,0.738,6,-4.583,1,0.0808,0.0453,1.1e-6,0.0485,0.722,136.901,4,217506,FALSE,Why Don't You Love Me,15,I AM...SASHA FIERCE - Platinum Edition,F#,major,F# major
+Beyoncé,2008,0.565,0.442,2,-7.738,1,0.0309,0.428,0,0.109,0.0717,135.99,4,224386,FALSE,Honesty,16,I AM...SASHA FIERCE - Platinum Edition,D,major,D major
+Beyoncé,2008,0.55,0.472,10,-9.829,1,0.0334,0.632,0,0.0788,0.161,116.966,4,274573,FALSE,Save The Hero,17,I AM...SASHA FIERCE - Platinum Edition,A#,major,A# major
+Beyoncé,2008,0.403,0.161,7,-14.466,1,0.0321,0.713,0,0.109,0.249,109.888,4,187573,FALSE,Satellites,18,I AM...SASHA FIERCE - Platinum Edition,G,major,G major
+Beyoncé,2008,0.489,0.332,5,-10.689,1,0.0277,0.108,0,0.307,0.226,78.294,4,267826,FALSE,Disappear,19,I AM...SASHA FIERCE - Platinum Edition,F,major,F major
+Beyoncé,2008,0.264,0.414,0,-9.563,1,0.0299,0.783,0,0.122,0.192,76.38,4,221466,FALSE,Ave Maria,20,I AM...SASHA FIERCE - Platinum Edition,C,major,C major
+Beyoncé,2008,0.747,0.365,10,-7.572,0,0.0739,0.00182,0.0469,0.0597,0.672,127.998,4,379066,FALSE,"Ego - Slang ""Big Ego"" Club Remix",21,I AM...SASHA FIERCE - Platinum Edition,A#,minor,A# minor
+Beyoncé,2008,0.846,0.629,8,-7.355,0,0.0658,0.00327,0.00223,0.0655,0.622,131.997,4,305946,FALSE,Diva - Karmatronic Club Remix,22,I AM...SASHA FIERCE - Platinum Edition,G#,minor,G# minor
+Beyoncé,2008,0.426,0.584,1,-5.293,1,0.296,0.0383,0,0.192,0.272,193.438,4,192586,FALSE,Single Ladies (Put a Ring on It),1,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.869,0.546,6,-6.755,0,0.327,0.0512,0.0113,0.0541,0.855,146.118,4,200320,FALSE,Diva,2,I AM...SASHA FIERCE - Platinum Edition,F#,minor,F# minor
+Beyoncé,2008,0.474,0.391,1,-7.781,1,0.263,0.145,0,0.201,0.526,78.798,4,235680,FALSE,Ego,3,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.422,0.712,11,-5.907,0,0.1,0.273,0,0.051,0.471,78.454,4,261085,FALSE,Halo,4,I AM...SASHA FIERCE - Platinum Edition,B,minor,B minor
+Beyoncé,2008,0.63,0.504,6,-6.152,1,0.0334,0.0953,0,0.308,0.487,89.946,4,249866,FALSE,If I Were a Boy,5,I AM...SASHA FIERCE - Platinum Edition,F#,major,F# major
+Beyoncé,2008,0.57,0.423,1,-8.995,1,0.0267,0.206,0,0.293,0.11,95.026,4,270760,FALSE,Smash Into You,6,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.693,0.822,1,-6.01,1,0.102,0.0995,1.73e-5,0.061,0.765,121.969,4,207480,FALSE,Sweet Dreams,7,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.453,0.425,5,-7.198,1,0.0325,0.495,0,0.254,0.144,83.413,4,278400,FALSE,Broken-Hearted Girl,8,I AM...SASHA FIERCE - Platinum Edition,F,major,F major
+Beyoncé,2008,0.54,0.576,1,-6.679,1,0.0483,0.0577,0,0.114,0.203,86.959,4,223586,FALSE,Scared of Lonely,9,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.548,0.604,2,-7.449,1,0.0308,0.00926,2.04e-5,0.128,0.109,115.025,4,221080,FALSE,That's Why You're Beautiful,10,I AM...SASHA FIERCE - Platinum Edition,D,major,D major
+Beyoncé,2008,0.331,0.793,6,-5.196,1,0.148,0.197,2.93e-6,0.164,0.435,97.526,3,255733,FALSE,Hello,11,I AM...SASHA FIERCE - Platinum Edition,F#,major,F# major
+Beyoncé,2008,0.614,0.754,1,-5.953,1,0.0717,0.123,4.09e-6,0.0906,0.545,135.734,4,217666,FALSE,Radio,12,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.596,0.767,8,-8.96,1,0.146,0.00255,0.0267,0.437,0.566,155.881,4,215173,FALSE,Video Phone,13,I AM...SASHA FIERCE - Platinum Edition,G#,major,G# major
+Beyoncé,2008,0.711,0.439,1,-5.156,1,0.138,0.114,0,0.0573,0.326,78.074,4,283520,FALSE,Ego (feat. Kanye West) - Remix,14,I AM...SASHA FIERCE - Platinum Edition,C#,major,C# major
+Beyoncé,2008,0.697,0.738,6,-4.583,1,0.0808,0.0453,1.1e-6,0.0485,0.722,136.901,4,217506,FALSE,Why Don't You Love Me,15,I AM...SASHA FIERCE - Platinum Edition,F#,major,F# major
+Beyoncé,2008,0.565,0.442,2,-7.738,1,0.0309,0.428,0,0.109,0.0717,135.99,4,224386,FALSE,Honesty,16,I AM...SASHA FIERCE - Platinum Edition,D,major,D major
+Beyoncé,2008,0.55,0.472,10,-9.829,1,0.0334,0.632,0,0.0788,0.161,116.966,4,274573,FALSE,Save The Hero,17,I AM...SASHA FIERCE - Platinum Edition,A#,major,A# major
+Beyoncé,2008,0.403,0.161,7,-14.466,1,0.0321,0.713,0,0.109,0.249,109.888,4,187573,FALSE,Satellites,18,I AM...SASHA FIERCE - Platinum Edition,G,major,G major
+Beyoncé,2008,0.489,0.332,5,-10.689,1,0.0277,0.108,0,0.307,0.226,78.294,4,267826,FALSE,Disappear,19,I AM...SASHA FIERCE - Platinum Edition,F,major,F major
+Beyoncé,2008,0.264,0.414,0,-9.563,1,0.0299,0.783,0,0.122,0.192,76.38,4,221466,FALSE,Ave Maria,20,I AM...SASHA FIERCE - Platinum Edition,C,major,C major
+Beyoncé,2008,0.632,0.518,6,-6.126,1,0.0313,0.107,0,0.354,0.427,90.007,4,249146,FALSE,If I Were a Boy,1,I AM...SASHA FIERCE NEW DELUXE EDITION,F#,major,F# major
+Beyoncé,2008,0.508,0.72,11,-5.908,0,0.0628,0.272,0,0.0563,0.472,79.983,4,261640,FALSE,Halo,2,I AM...SASHA FIERCE NEW DELUXE EDITION,B,minor,B minor
+Beyoncé,2008,0.492,0.348,5,-10.676,1,0.0301,0.128,0,0.326,0.206,78.412,4,267453,FALSE,Disappear,3,I AM...SASHA FIERCE NEW DELUXE EDITION,F,major,F major
+Beyoncé,2008,0.336,0.424,5,-7.203,1,0.0353,0.503,0,0.273,0.159,82.149,4,277626,FALSE,Broken-Hearted Girl,4,I AM...SASHA FIERCE NEW DELUXE EDITION,F,major,F major
+Beyoncé,2008,0.35,0.403,0,-9.57,1,0.0279,0.786,0,0.12,0.201,104.957,3,221653,FALSE,Ave Maria,5,I AM...SASHA FIERCE NEW DELUXE EDITION,C,major,C major
+Beyoncé,2008,0.572,0.429,1,-8.974,1,0.0271,0.192,0,0.263,0.103,95.068,4,271613,FALSE,Smash Into You,6,I AM...SASHA FIERCE NEW DELUXE EDITION,C#,major,C# major
+Beyoncé,2008,0.384,0.153,7,-14.55,1,0.0324,0.729,0,0.116,0.282,109.859,4,186826,FALSE,Satellites,7,I AM...SASHA FIERCE NEW DELUXE EDITION,G,major,G major
+Beyoncé,2008,0.549,0.628,2,-7.45,1,0.0309,0.00908,2.06e-5,0.122,0.102,115.036,4,222106,FALSE,That's Why You're Beautiful,8,I AM...SASHA FIERCE NEW DELUXE EDITION,D,major,D major
+Beyoncé,2008,0.427,0.592,1,-5.298,1,0.301,0.0447,0,0.199,0.272,193.351,4,192906,FALSE,Single Ladies (Put a Ring on It),9,I AM...SASHA FIERCE NEW DELUXE EDITION,C#,major,C# major
+Beyoncé,2008,0.613,0.77,1,-5.941,1,0.0655,0.106,5.7e-6,0.0934,0.537,135.743,4,218960,FALSE,Radio,10,I AM...SASHA FIERCE NEW DELUXE EDITION,C#,major,C# major
+Beyoncé,2008,0.878,0.542,7,-6.757,1,0.324,0.0489,0.0105,0.0515,0.875,146.1,4,200626,FALSE,Diva,11,I AM...SASHA FIERCE NEW DELUXE EDITION,G,major,G major
+Beyoncé,2008,0.697,0.806,1,-6.014,1,0.105,0.104,1.74e-5,0.0623,0.764,121.985,4,208080,FALSE,Sweet Dreams,12,I AM...SASHA FIERCE NEW DELUXE EDITION,C#,major,C# major
+Beyoncé,2008,0.602,0.758,8,-8.945,1,0.149,0.00281,0.0384,0.38,0.602,155.9,4,215440,FALSE,Video Phone,13,I AM...SASHA FIERCE NEW DELUXE EDITION,G#,major,G# major
+Beyoncé,2008,0.369,0.773,6,-5.682,1,0.153,0.208,3.24e-6,0.194,0.39,129.963,4,256519,FALSE,Hello,14,I AM...SASHA FIERCE NEW DELUXE EDITION,F#,major,F# major
+Beyoncé,2008,0.501,0.391,1,-7.723,1,0.232,0.164,0,0.228,0.5,89.598,5,236400,FALSE,Ego,15,I AM...SASHA FIERCE NEW DELUXE EDITION,C#,major,C# major
+Beyoncé,2008,0.538,0.584,1,-6.687,1,0.0479,0.0597,0,0.117,0.215,86.927,4,223080,FALSE,Scared of Lonely,16,I AM...SASHA FIERCE NEW DELUXE EDITION,C#,major,C# major
+Beyoncé,2008,0.771,0.674,7,-5.136,1,0.266,0.171,0,0.096,0.686,125.01,4,244893,FALSE,Poison,17,I AM...SASHA FIERCE NEW DELUXE EDITION,G,major,G major
+Beyoncé,2008,0.32,0.782,8,-7.37,1,0.374,0.00203,8.51e-4,0.39,0.527,78.05,4,304693,FALSE,Video Phone (feat. Lady Gaga),18,I AM...SASHA FIERCE NEW DELUXE EDITION,G#,major,G# major
+Beyoncé,2007-11-19,0.29,0.979,7,-3.533,0,0.141,0.0179,0,0.767,0.161,99.289,4,328786,FALSE,Crazy In Love Medley - Audio from The Beyonce Experience Live,1,The Beyonce Experience Live Audio,G,minor,G minor
+Beyoncé,2007-11-19,0.178,0.955,7,-3.153,1,0.168,8.55e-4,0,0.877,0.165,98.84,4,240653,FALSE,Freakum Dress - Audio from The Beyonce Experience Live,2,The Beyonce Experience Live Audio,G,major,G major
+Beyoncé,2007-11-19,0.368,0.939,10,-3.149,0,0.125,0.0934,0,0.358,0.441,106.376,4,216760,FALSE,Green Light Medley - Audio from The Beyonce Experience Live,3,The Beyonce Experience Live Audio,A#,minor,A# minor
+Beyoncé,2007-11-19,0.291,0.937,8,-4.057,1,0.192,0.179,0,0.915,0.395,94.828,4,262506,FALSE,Baby Boy Medley - Audio from The Beyonce Experience Live,4,The Beyonce Experience Live Audio,G#,major,G# major
+Beyoncé,2007-11-19,0.416,0.958,8,-3.423,1,0.101,0.0258,2.73e-6,0.934,0.37,91.973,4,150573,FALSE,Beautiful Liar - Audio from The Beyonce Experience Live,5,The Beyonce Experience Live Audio,G#,major,G# major
+Beyoncé,2007-11-19,0.497,0.935,1,-4.034,1,0.099,0.0551,0,0.939,0.489,99.993,4,215560,FALSE,Naughty Girl Medley - Audio from The Beyonce Experience Live,6,The Beyonce Experience Live Audio,C#,major,C# major
+Beyoncé,2007-11-19,0.218,0.892,1,-3.447,1,0.171,0.45,0,0.61,0.437,166.538,4,192026,FALSE,"Me, Myself And I - Audio from The Beyonce Experience Live",7,The Beyonce Experience Live Audio,C#,major,C# major
+Beyoncé,2007-11-19,0.176,0.863,3,-4.599,0,0.131,0.749,1.89e-6,0.794,0.115,92.253,4,419706,FALSE,Dangerously In Love Medley - Audio from The Beyonce Experience Live,8,The Beyonce Experience Live Audio,D#,minor,D# minor
+Beyoncé,2007-11-19,0.207,0.774,10,-3.734,0,0.0449,0.731,0,0.253,0.258,152.751,4,263053,FALSE,Flaws And All - Audio from The Beyonce Experience Live,9,The Beyonce Experience Live Audio,A#,minor,A# minor
+Beyoncé,2007-11-19,0.262,0.971,11,-3.827,0,0.383,0.108,0,0.949,0.289,140.767,4,1187253,FALSE,Destiny's Child Medley - Audio from The Beyonce Experience Live,10,The Beyonce Experience Live Audio,B,minor,B minor
+Beyoncé,2007-11-19,0.356,0.753,7,-4.417,0,0.0436,0.0776,0,0.638,0.381,112.791,3,215026,FALSE,Speechless - Audio from The Beyonce Experience Live,11,The Beyonce Experience Live Audio,G,minor,G minor
+Beyoncé,2007-11-19,0.393,0.987,9,-2.97,1,0.323,0.227,8.42e-4,0.934,0.0882,85.372,3,161386,FALSE,Ring The Alarm - Audio from The Beyonce Experience Live,12,The Beyonce Experience Live Audio,A,major,A major
+Beyoncé,2007-11-19,0.377,0.994,2,-2.764,1,0.274,0.053900000000000003,0,0.952,0.15,93.439,4,188213,FALSE,Suga Mama - Audio from The Beyonce Experience Live,13,The Beyonce Experience Live Audio,D,major,D major
+Beyoncé,2007-11-19,0.41,0.93,7,-3.554,1,0.262,0.00654,0,0.288,0.468,84.715,4,270613,FALSE,Upgrade U - Audio from The Beyonce Experience Live,14,The Beyonce Experience Live Audio,G,major,G major
+Beyoncé,2007-11-19,0.368,0.982,9,-4.754,0,0.249,0.049,4.01e-4,0.332,0.331,92.841,4,95666,FALSE,Bonnie And Clyde Medley - Audio from The Beyonce Experience Live,15,The Beyonce Experience Live Audio,A,minor,A minor
+Beyoncé,2007-11-19,0.194,0.968,2,-5.367,1,0.554,0.61,1.59e-5,0.946,0.151,166.201,4,115746,FALSE,Check On It - Audio from The Beyonce Experience Live,16,The Beyonce Experience Live Audio,D,major,D major
+Beyoncé,2007-11-19,0.482,0.987,1,-3.324,1,0.246,0.0235,0,0.946,0.155,106.114,4,183760,FALSE,Deja Vu - Audio from The Beyonce Experience Live,17,The Beyonce Experience Live Audio,C#,major,C# major
+Beyoncé,2007-11-19,0.57,0.972,10,-3.752,0,0.261,0.0332,0,0.924,0.203,96.462,4,313986,FALSE,Get Me Bodied - Audio from The Beyonce Experience Live,18,The Beyonce Experience Live Audio,A#,minor,A# minor
+Beyoncé,2007-11-19,0.412,0.959,2,-3.333,0,0.17,0.00689,0,0.72,0.415,124.684,4,151906,FALSE,Welcome To Hollywood (feat. Jay-Z) - Audio from The Beyonce Experience Live,19,The Beyonce Experience Live Audio,D,minor,D minor
+Beyoncé,2007-11-19,0.252,0.894,9,-3.944,1,0.0815,0.305,0,0.495,0.192,127.331,4,308053,FALSE,Dreamgirls Medley - Audio from The Beyonce Experience Live,20,The Beyonce Experience Live Audio,A,major,A major
+Beyoncé,2007-11-19,0.268,0.939,9,-4.166,1,0.18,0.352,0,0.951,0.33,86.941,4,457933,FALSE,Irreplaceable Medley - Audio from The Beyonce Experience Live,21,The Beyonce Experience Live Audio,A,major,A major
+Beyoncé,2007-05-29,0.764,0.751,8,-3.74,1,0.0703,0.00554,2.37e-4,0.164,0.418,91.977,4,199853,FALSE,Beautiful Liar,1,B'Day Deluxe Edition,G#,major,G# major
+Beyoncé,2007-05-29,0.447,0.694,7,-4.637,0,0.382,0.0293,5.46e-6,0.167,0.509,175.868,4,227853,FALSE,Irreplaceable,2,B'Day Deluxe Edition,G,minor,G minor
+Beyoncé,2007-05-29,0.796,0.572,10,-7.019,0,0.0634,0.0682,7.82e-6,0.135,0.726,107.045,4,210240,FALSE,Green Light,3,B'Day Deluxe Edition,A#,minor,A# minor
+Beyoncé,2007-05-29,0.814,0.384,1,-7.953,1,0.292,0.0516,0.00305,0.0968,0.537,157.992,4,235680,FALSE,Kitty Kat,4,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-05-29,0.807,0.784,7,-4.866,1,0.236,0.0118,1.24e-4,0.315,0.78,124.821,4,198280,FALSE,Welcome To Hollywood (feat. Jay-Z),5,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-05-29,0.593,0.68,7,-5.556,1,0.335,0.00182,4.84e-5,0.31,0.483,84.547,4,273053,FALSE,Upgrade U (feat. Jay-Z),6,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-05-29,0.664,0.701,1,-7.718,1,0.0967,0.234,0.00117,0.0646,0.625,151.947,4,248853,FALSE,Flaws and All,7,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-05-29,0.485,0.827,11,-3.707,0,0.177,0.144,0,0.116,0.196,92.161,4,222013,FALSE,World Wide Woman,8,B'Day Deluxe Edition,B,minor,B minor
+Beyoncé,2007-05-29,0.925,0.728,1,-6.82,1,0.254,0.00408,0,0.207,0.667,96.54,4,379120,FALSE,Get Me Bodied - Extended Mix,9,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-05-29,0.47,0.476,8,-8.825,1,0.0371,0.248,0,0.106,0.298,94.922,4,198280,FALSE,If,10,B'Day Deluxe Edition,G#,major,G# major
+Beyoncé,2007-05-29,0.681,0.715,1,-5.148,1,0.0638,0.0039,5.04e-5,0.0569,0.459,98.96,4,201200,FALSE,Freakum Dress,11,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-05-29,0.691,0.931,9,-4.037,0,0.265,0.212,1.18e-4,0.34,0.573,93.852,4,205973,FALSE,Suga Mama,12,B'Day Deluxe Edition,A,minor,A minor
+Beyoncé,2007-05-29,0.644,0.746,7,-4.941,1,0.341,0.0071,1.22e-5,0.0743,0.355,105.253,4,240280,FALSE,Deja Vu (feat. Jay-Z),13,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-05-29,0.458,0.751,2,-8.395,1,0.469,0.0299,1.55e-4,0.258,0.48,169.673,4,203346,FALSE,Ring The Alarm,14,B'Day Deluxe Edition,D,major,D major
+Beyoncé,2007-05-29,0.29,0.574,6,-5.387,1,0.112,0.6,0,0.149,0.48,197.431,3,282360,FALSE,Resentment,15,B'Day Deluxe Edition,F#,major,F# major
+Beyoncé,2007-05-29,0.432,0.637,11,-3.905,1,0.0475,0.416,0,0.113,0.187,122.394,4,219546,FALSE,"Listen (From the Motion Picture ""Dreamgirls"")",16,B'Day Deluxe Edition,B,major,B major
+Beyoncé,2007-05-29,0.491,0.745,4,-5.631,0,0.254,0.473,0,0.239,0.596,167.875,4,228413,FALSE,Amor Gitano,1,B'Day Deluxe Edition,E,minor,E minor
+Beyoncé,2007-05-29,0.548,0.638,11,-3.115,1,0.0435,0.588,0,0.101,0.141,122.868,4,221200,FALSE,Listen (Oye) - Spanish Version,2,B'Day Deluxe Edition,B,major,B major
+Beyoncé,2007-05-29,0.627,0.705,10,-3.539,1,0.231,0.0941,6.61e-6,0.178,0.615,175.861,4,227666,FALSE,Irreplaceable (Irreemplazable) - Spanish version,3,B'Day Deluxe Edition,A#,major,A# major
+Beyoncé,2007-05-29,0.646,0.806,7,-4.495,1,0.135,0.0997,1.26e-6,0.258,0.513,91.962,4,200813,FALSE,Beautiful Liar (Bello Embustero) - Spanish Version,4,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-05-29,0.763,0.761,7,-3.794,1,0.0544,0.0063,8.31e-5,0.287,0.487,91.977,4,180520,FALSE,Beautiful Liar - Remix,5,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-05-29,0.694,0.726,7,-5.13,1,0.042,0.0034,0.00373,0.0801,0.57,92.015,4,199426,FALSE,Beautiful Liar (feat. Sasha) - Spanglish Version,6,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-05-29,0.511,0.808,10,-4.09,1,0.139,0.15,1.03e-6,0.232,0.845,176.042,4,230746,FALSE,Irreplaceable (Irreemplazable) - Nortena Remix,7,B'Day Deluxe Edition,A#,major,A# major
+Beyoncé,2007-04-20,0.765,0.754,8,-3.736,1,0.0764,0.0053,2.86e-4,0.157,0.404,91.973,4,199840,FALSE,Beautiful Liar,1,B'Day Deluxe Edition,G#,major,G# major
+Beyoncé,2007-04-20,0.574,0.685,10,-4.651,1,0.339,0.0277,1.78e-6,0.136,0.541,175.891,4,228440,FALSE,Irreplaceable,2,B'Day Deluxe Edition,A#,major,A# major
+Beyoncé,2007-04-20,0.796,0.57,10,-7.027,0,0.061,0.0662,8.71e-6,0.139,0.797,107.051,4,210173,FALSE,Green Light,3,B'Day Deluxe Edition,A#,minor,A# minor
+Beyoncé,2007-04-20,0.852,0.391,1,-7.907,1,0.241,0.0541,0.00201,0.101,0.539,79.006,4,235560,FALSE,Kitty Kat,4,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-04-20,0.817,0.775,4,-4.895,0,0.22,0.0109,1.56e-4,0.31,0.81,124.811,4,198240,FALSE,Welcome To Hollywood (feat. Jay-Z),5,B'Day Deluxe Edition,E,minor,E minor
+Beyoncé,2007-04-20,0.531,0.675,7,-5.555,1,0.37,0.00139,5.94e-5,0.26,0.498,169.735,4,273133,FALSE,Upgrade U (feat. Jay-Z),6,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-20,0.665,0.717,1,-7.721,1,0.1,0.247,6.54e-4,0.068,0.665,151.922,4,249506,FALSE,Flaws and All,7,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-04-20,0.488,0.477,8,-8.789,1,0.036,0.233,0,0.109,0.28,94.867,4,198506,FALSE,If,8,B'Day Deluxe Edition,G#,major,G# major
+Beyoncé,2007-04-20,0.924,0.725,1,-6.822,1,0.262,0.00438,1.36e-6,0.244,0.68,96.543,4,378933,FALSE,Get Me Bodied - Extended Mix,9,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-04-20,0.684,0.706,1,-5.129,1,0.0544,0.00439,1.54e-5,0.0598,0.44,98.949,4,201146,FALSE,Freakum Dress,10,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-04-20,0.719,0.929,9,-4.054,0,0.252,0.239,1.23e-4,0.316,0.57,93.785,4,205853,FALSE,Suga Mama,11,B'Day Deluxe Edition,A,minor,A minor
+Beyoncé,2007-04-20,0.731,0.739,7,-4.894,1,0.339,0.00545,1.59e-5,0.0874,0.386,105.785,4,240346,FALSE,Deja Vu (feat. Jay-Z),12,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-20,0.457,0.754,2,-8.38,1,0.439,0.0299,7.19e-5,0.146,0.468,169.839,4,203293,FALSE,Ring The Alarm,13,B'Day Deluxe Edition,D,major,D major
+Beyoncé,2007-04-20,0.366,0.567,6,-5.414,1,0.0594,0.611,0,0.111,0.485,97.855,4,280786,FALSE,Resentment,14,B'Day Deluxe Edition,F#,major,F# major
+Beyoncé,2007-04-20,0.425,0.642,11,-3.874,1,0.0493,0.403,0,0.14,0.186,121.689,4,219640,FALSE,"Listen (From the Motion Picture ""Dreamgirls"")",15,B'Day Deluxe Edition,B,major,B major
+Beyoncé,2007-04-20,0.518,0.84,7,-3.689,1,0.202,0.172,0,0.122,0.214,92,4,221373,FALSE,World Wide Woman,16,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-20,0.708,0.869,7,-4.586,1,0.254,0.0789,0,0.351,0.922,166.032,4,210546,FALSE,Check On It (feat. Bun B & Slim Thug),17,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-20,0.494,0.75,4,-5.648,0,0.238,0.457,0,0.241,0.6,168.072,4,228866,FALSE,Amor Gitano,18,B'Day Deluxe Edition,E,minor,E minor
+Beyoncé,2007-04-20,0.753,0.762,7,-3.84,1,0.0621,0.00876,8.02e-5,0.244,0.494,92.015,4,180693,FALSE,Beautiful Liar - Remix,19,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-03,0.765,0.754,8,-3.736,1,0.0764,0.0053,2.86e-4,0.157,0.404,91.973,4,199840,FALSE,Beautiful Liar,1,B'Day Deluxe Edition,G#,major,G# major
+Beyoncé,2007-04-03,0.574,0.685,10,-4.651,1,0.339,0.0277,1.78e-6,0.136,0.541,175.891,4,228440,FALSE,Irreplaceable,2,B'Day Deluxe Edition,A#,major,A# major
+Beyoncé,2007-04-03,0.796,0.57,10,-7.027,0,0.061,0.0662,8.71e-6,0.139,0.797,107.051,4,210173,FALSE,Green Light,3,B'Day Deluxe Edition,A#,minor,A# minor
+Beyoncé,2007-04-03,0.852,0.391,1,-7.907,1,0.241,0.0541,0.00201,0.101,0.539,79.006,4,235560,FALSE,Kitty Kat,4,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-04-03,0.817,0.775,4,-4.895,0,0.22,0.0109,1.56e-4,0.31,0.81,124.811,4,198240,FALSE,Welcome To Hollywood (feat. Jay-Z),5,B'Day Deluxe Edition,E,minor,E minor
+Beyoncé,2007-04-03,0.531,0.675,7,-5.555,1,0.37,0.00139,5.94e-5,0.26,0.498,169.735,4,273133,FALSE,Upgrade U (feat. Jay-Z),6,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-03,0.665,0.717,1,-7.721,1,0.1,0.247,6.54e-4,0.0688,0.665,151.921,4,250146,FALSE,Flaws and All,7,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-04-03,0.923,0.73,1,-6.822,1,0.253,0.00429,1.61e-6,0.232,0.674,96.542,4,378920,FALSE,Get Me Bodied - Extended Mix,8,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-04-03,0.683,0.703,1,-5.176,1,0.0575,0.0038,4.02e-5,0.0594,0.423,98.957,4,201146,FALSE,Freakum Dress,9,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-04-03,0.721,0.937,9,-4.044,0,0.25,0.217,9.66e-5,0.318,0.6,93.804,4,205853,FALSE,Suga Mama,10,B'Day Deluxe Edition,A,minor,A minor
+Beyoncé,2007-04-03,0.721,0.742,7,-4.94,1,0.318,0.00646,1.45e-5,0.0887,0.373,105.775,4,240346,FALSE,Deja Vu (feat. Jay-Z),11,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-03,0.459,0.739,2,-8.39,1,0.445,0.0363,1.32e-4,0.123,0.489,170.137,4,203293,FALSE,Ring The Alarm,12,B'Day Deluxe Edition,D,major,D major
+Beyoncé,2007-04-03,0.293,0.569,6,-5.431,1,0.0993,0.634,0,0.171,0.495,195.146,3,281880,FALSE,Resentment,13,B'Day Deluxe Edition,F#,major,F# major
+Beyoncé,2007-04-03,0.49,0.656,11,-3.86,1,0.0496,0.411,0,0.141,0.192,122.956,4,219640,FALSE,"Listen (From the Motion Picture ""Dreamgirls"")",14,B'Day Deluxe Edition,B,major,B major
+Beyoncé,2007-04-03,0.484,0.839,11,-3.709,0,0.223,0.151,0,0.123,0.194,91.625,4,221786,FALSE,World Wide Woman,15,B'Day Deluxe Edition,B,minor,B minor
+Beyoncé,2007-04-03,0.491,0.745,4,-5.631,0,0.254,0.473,0,0.239,0.596,167.875,4,228413,FALSE,Amor Gitano,1,B'Day Deluxe Edition,E,minor,E minor
+Beyoncé,2007-04-03,0.548,0.638,11,-3.115,1,0.0435,0.588,0,0.101,0.141,122.868,4,221200,FALSE,Listen (Oye) - Spanish Version,2,B'Day Deluxe Edition,B,major,B major
+Beyoncé,2007-04-03,0.627,0.705,10,-3.539,1,0.231,0.0941,6.61e-6,0.178,0.615,175.861,4,227666,FALSE,Irreplaceable (Irreemplazable) - Spanish version,3,B'Day Deluxe Edition,A#,major,A# major
+Beyoncé,2007-04-03,0.646,0.806,7,-4.495,1,0.135,0.0997,1.26e-6,0.258,0.513,91.962,4,200813,FALSE,Beautiful Liar (Bello Embustero) - Spanish Version,4,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-03,0.763,0.761,7,-3.794,1,0.0544,0.0063,8.31e-5,0.287,0.487,91.977,4,180520,FALSE,Beautiful Liar - Remix,5,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-03,0.694,0.726,7,-5.13,1,0.042,0.0034,0.00373,0.0801,0.57,92.015,4,199426,FALSE,Beautiful Liar (feat. Sasha) - Spanglish Version,6,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-03,0.511,0.808,10,-4.09,1,0.139,0.15,1.03e-6,0.232,0.845,176.042,4,230746,FALSE,Irreplaceable (Irreemplazable) - Nortena Remix,7,B'Day Deluxe Edition,A#,major,A# major
+Beyoncé,2007-04-03,0.765,0.754,8,-3.736,1,0.0764,0.0053,2.86e-4,0.157,0.404,91.973,4,199840,FALSE,Beautiful Liar,1,B'Day Deluxe Edition,G#,major,G# major
+Beyoncé,2007-04-03,0.574,0.685,10,-4.651,1,0.339,0.0277,1.78e-6,0.136,0.541,175.891,4,228440,FALSE,Irreplaceable,2,B'Day Deluxe Edition,A#,major,A# major
+Beyoncé,2007-04-03,0.796,0.57,10,-7.027,0,0.061,0.0662,8.71e-6,0.139,0.797,107.051,4,210173,FALSE,Green Light,3,B'Day Deluxe Edition,A#,minor,A# minor
+Beyoncé,2007-04-03,0.852,0.391,1,-7.907,1,0.241,0.0541,0.00201,0.101,0.539,79.006,4,235560,FALSE,Kitty Kat,4,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-04-03,0.817,0.775,4,-4.895,0,0.22,0.0109,1.56e-4,0.31,0.81,124.811,4,198240,FALSE,Welcome To Hollywood (feat. Jay-Z),5,B'Day Deluxe Edition,E,minor,E minor
+Beyoncé,2007-04-03,0.531,0.675,7,-5.555,1,0.37,0.00139,5.94e-5,0.26,0.498,169.735,4,273133,FALSE,Upgrade U (feat. Jay-Z),6,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-03,0.665,0.717,1,-7.721,1,0.1,0.247,6.54e-4,0.068,0.665,151.922,4,249506,FALSE,Flaws and All,7,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-04-03,0.488,0.477,8,-8.789,1,0.036,0.233,0,0.109,0.28,94.867,4,198506,FALSE,If,8,B'Day Deluxe Edition,G#,major,G# major
+Beyoncé,2007-04-03,0.924,0.725,1,-6.822,1,0.262,0.00438,1.36e-6,0.244,0.68,96.543,4,378933,FALSE,Get Me Bodied - Extended Mix,9,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-04-03,0.684,0.706,1,-5.129,1,0.0544,0.00439,1.54e-5,0.0598,0.44,98.949,4,201146,FALSE,Freakum Dress,10,B'Day Deluxe Edition,C#,major,C# major
+Beyoncé,2007-04-03,0.719,0.929,9,-4.054,0,0.252,0.239,1.23e-4,0.316,0.57,93.785,4,205853,FALSE,Suga Mama,11,B'Day Deluxe Edition,A,minor,A minor
+Beyoncé,2007-04-03,0.731,0.739,7,-4.894,1,0.339,0.00545,1.59e-5,0.0874,0.386,105.785,4,240346,FALSE,Deja Vu (feat. Jay-Z),12,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-03,0.457,0.754,2,-8.38,1,0.439,0.0299,7.19e-5,0.146,0.468,169.839,4,203293,FALSE,Ring The Alarm,13,B'Day Deluxe Edition,D,major,D major
+Beyoncé,2007-04-03,0.366,0.567,6,-5.414,1,0.0594,0.611,0,0.111,0.485,97.855,4,280786,FALSE,Resentment,14,B'Day Deluxe Edition,F#,major,F# major
+Beyoncé,2007-04-03,0.425,0.642,11,-3.874,1,0.0493,0.403,0,0.14,0.186,121.689,4,219640,FALSE,"Listen (From the Motion Picture ""Dreamgirls"")",15,B'Day Deluxe Edition,B,major,B major
+Beyoncé,2007-04-03,0.518,0.84,7,-3.689,1,0.202,0.172,0,0.122,0.214,92,4,221373,FALSE,World Wide Woman,16,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-03,0.708,0.869,7,-4.586,1,0.254,0.0789,0,0.351,0.922,166.032,4,210546,FALSE,Check On It (feat. Bun B & Slim Thug),17,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-03,0.494,0.75,4,-5.648,0,0.238,0.457,0,0.241,0.6,168.072,4,228866,FALSE,Amor Gitano,18,B'Day Deluxe Edition,E,minor,E minor
+Beyoncé,2007-04-03,0.753,0.762,7,-3.84,1,0.062,0.00876,8.02e-5,0.227,0.494,92.013,4,181520,FALSE,Beautiful Liar - Remix,19,B'Day Deluxe Edition,G,major,G major
+Beyoncé,2007-04-03,0.815,0.738,8,-3.1,1,0.105,0.0261,0,0.0533,0.758,98.992,4,233226,FALSE,Creole,20,B'Day Deluxe Edition,G#,major,G# major
+Beyoncé,2006-09-25,0.763,0.728,7,-4.944,1,0.326,0.00677,1.22e-5,0.0915,0.362,105.923,4,239960,FALSE,Deja Vu (feat. Jay-Z),1,B'Day,G,major,G major
+Beyoncé,2006-09-25,0.865,0.829,0,-6.981,0,0.315,0.0673,0,0.253,0.651,96.511,4,205813,FALSE,Get Me Bodied,2,B'Day,C,minor,C minor
+Beyoncé,2006-09-25,0.682,0.939,9,-4.054,0,0.284,0.226,3.15e-4,0.346,0.615,93.81,4,204813,FALSE,Suga Mama,3,B'Day,A,minor,A minor
+Beyoncé,2006-09-25,0.474,0.683,7,-5.585,1,0.397,0.00161,1.23e-4,0.309,0.509,169.51,4,272706,FALSE,Upgrade U (feat. Jay-Z),4,B'Day,G,major,G major
+Beyoncé,2006-09-25,0.456,0.742,2,-8.39,1,0.481,0.0534,2.23e-4,0.0837,0.428,168.507,4,203200,FALSE,Ring The Alarm,5,B'Day,D,major,D major
+Beyoncé,2006-09-25,0.81,0.386,1,-7.846,1,0.311,0.0529,0.00944,0.0969,0.506,157.919,4,235386,FALSE,Kitty Kat,6,B'Day,C#,major,C# major
+Beyoncé,2006-09-25,0.683,0.703,1,-5.154,1,0.0585,0.0043,1.49e-5,0.0599,0.378,98.953,4,200533,FALSE,Freakum Dress,7,B'Day,C#,major,C# major
+Beyoncé,2006-09-25,0.796,0.568,10,-7.071,0,0.0631,0.0833,1.11e-5,0.256,0.729,107.034,4,209106,FALSE,Green Light,8,B'Day,A#,minor,A# minor
+Beyoncé,2006-09-25,0.576,0.697,10,-4.192,1,0.326,0.0286,1.15e-6,0.167,0.501,175.906,4,227666,FALSE,Irreplaceable,9,B'Day,A#,major,A# major
+Beyoncé,2006-09-25,0.378,0.565,6,-5.388,1,0.0493,0.648,0,0.13,0.482,102.131,3,280693,FALSE,Resentment,10,B'Day,F#,major,F# major
+Beyoncé,2006-09-25,0.706,0.0193,0,-27.631,0,0.648,0.143,0,0.136,0.68,108.161,4,39880,FALSE,Encore For The Fans,11,B'Day,C,minor,C minor
+Beyoncé,2006-09-25,0.483,0.59,11,-5.228,1,0.0453,0.273,0,0.177,0.202,122.658,4,217786,FALSE,"Listen (From the Motion Picture ""Dreamgirls"")",12,B'Day,B,major,B major
+Beyoncé,2006-09-25,0.911,0.727,10,-7.067,0,0.26,0.0106,0,0.122,0.69,96.521,4,359560,FALSE,Get Me Bodied - Extended Mix,13,B'Day,A#,minor,A# minor
+Beyoncé,2006-09-05,0.763,0.728,7,-4.944,1,0.326,0.00677,1.22e-5,0.0915,0.361,105.923,4,239960,FALSE,Deja Vu (feat. Jay-Z),1,B'Day,G,major,G major
+Beyoncé,2006-09-05,0.865,0.829,0,-6.981,0,0.315,0.0678,0,0.253,0.653,96.511,4,205813,FALSE,Get Me Bodied,2,B'Day,C,minor,C minor
+Beyoncé,2006-09-05,0.682,0.939,9,-4.054,0,0.284,0.226,3.15e-4,0.346,0.615,93.81,4,204813,FALSE,Suga Mama,3,B'Day,A,minor,A minor
+Beyoncé,2006-09-05,0.474,0.684,7,-5.585,1,0.396,0.00158,1.18e-4,0.309,0.509,169.54,4,272706,FALSE,Upgrade U (feat. Jay-Z),4,B'Day,G,major,G major
+Beyoncé,2006-09-05,0.456,0.742,2,-8.39,1,0.481,0.0534,2.23e-4,0.0837,0.428,168.507,4,203200,FALSE,Ring The Alarm,5,B'Day,D,major,D major
+Beyoncé,2006-09-05,0.81,0.386,1,-7.846,1,0.314,0.0529,0.00939,0.0969,0.506,157.94,4,235386,FALSE,Kitty Kat,6,B'Day,C#,major,C# major
+Beyoncé,2006-09-05,0.607,0.703,10,-5.154,0,0.0834,0.0043,1.5e-5,0.06,0.364,98.847,4,200533,FALSE,Freakum Dress,7,B'Day,A#,minor,A# minor
+Beyoncé,2006-09-05,0.796,0.568,10,-7.071,0,0.0631,0.0833,1.11e-5,0.256,0.729,107.034,4,209106,FALSE,Green Light,8,B'Day,A#,minor,A# minor
+Beyoncé,2006-09-05,0.575,0.697,10,-4.192,1,0.326,0.0286,1.14e-6,0.167,0.5,175.916,4,227666,FALSE,Irreplaceable,9,B'Day,A#,major,A# major
+Beyoncé,2006-09-05,0.289,0.565,6,-5.39,1,0.0884,0.648,0,0.13,0.496,199.59,3,280693,FALSE,Resentment,10,B'Day,F#,major,F# major
+Beyoncé,2006-09-05,0.706,0.0193,0,-27.631,0,0.648,0.143,0,0.136,0.68,108.161,4,39880,FALSE,Encore For The Fans,11,B'Day,C,minor,C minor
+Beyoncé,2006-09-05,0.483,0.59,11,-5.228,1,0.0453,0.273,0,0.177,0.202,122.652,4,217786,FALSE,"Listen (From the Motion Picture ""Dreamgirls"")",12,B'Day,B,major,B major
+Beyoncé,2006-09-05,0.911,0.727,10,-7.067,0,0.26,0.0106,0,0.122,0.69,96.521,4,359560,FALSE,Get Me Bodied - Extended Mix,13,B'Day,A#,minor,A# minor
+Beyoncé,2006-09-04,0.763,0.728,7,-4.944,1,0.326,0.00677,1.22e-5,0.0915,0.362,105.923,4,239960,FALSE,Deja Vu (feat. Jay-Z),1,B'Day,G,major,G major
+Beyoncé,2006-09-04,0.865,0.829,0,-6.981,0,0.315,0.0673,0,0.253,0.651,96.511,4,205813,FALSE,Get Me Bodied,2,B'Day,C,minor,C minor
+Beyoncé,2006-09-04,0.682,0.939,9,-4.054,0,0.284,0.226,3.15e-4,0.346,0.615,93.81,4,204813,FALSE,Suga Mama,3,B'Day,A,minor,A minor
+Beyoncé,2006-09-04,0.474,0.683,7,-5.585,1,0.397,0.00161,1.23e-4,0.309,0.509,169.51,4,272706,FALSE,Upgrade U (feat. Jay-Z),4,B'Day,G,major,G major
+Beyoncé,2006-09-04,0.456,0.742,2,-8.39,1,0.481,0.0534,2.23e-4,0.0837,0.428,168.507,4,203200,FALSE,Ring The Alarm,5,B'Day,D,major,D major
+Beyoncé,2006-09-04,0.81,0.386,1,-7.846,1,0.311,0.0529,0.00944,0.0969,0.506,157.919,4,235386,FALSE,Kitty Kat,6,B'Day,C#,major,C# major
+Beyoncé,2006-09-04,0.683,0.703,1,-5.154,1,0.0585,0.0043,1.49e-5,0.0599,0.378,98.953,4,200533,FALSE,Freakum Dress,7,B'Day,C#,major,C# major
+Beyoncé,2006-09-04,0.796,0.568,10,-7.071,0,0.0631,0.0833,1.11e-5,0.256,0.729,107.034,4,209106,FALSE,Green Light,8,B'Day,A#,minor,A# minor
+Beyoncé,2006-09-04,0.576,0.697,10,-4.192,1,0.326,0.0286,1.15e-6,0.167,0.501,175.906,4,227666,FALSE,Irreplaceable,9,B'Day,A#,major,A# major
+Beyoncé,2006-09-04,0.378,0.565,6,-5.388,1,0.0493,0.648,0,0.13,0.482,102.131,3,280693,FALSE,Resentment,10,B'Day,F#,major,F# major
+Beyoncé,2006-09-04,0.705,0.796,7,-6.845,1,0.267,0.0708,0,0.388,0.864,166.042,4,210453,FALSE,Check On It (feat. Bun B & Slim Thug),11,B'Day,G,major,G major
+Beyoncé,2006-09-01,0.761,0.736,7,-4.952,1,0.326,0.00678,1.77e-5,0.0774,0.369,105.906,4,239960,FALSE,Deja Vu (feat. Jay-Z),1,B'Day,G,major,G major
+Beyoncé,2006-09-01,0.864,0.834,5,-6.966,0,0.315,0.0821,0,0.231,0.678,96.512,4,205813,FALSE,Get Me Bodied,2,B'Day,F,minor,F minor
+Beyoncé,2006-09-01,0.714,0.932,9,-4.028,0,0.267,0.208,1.61e-4,0.344,0.554,93.848,4,204813,FALSE,Suga Mama,3,B'Day,A,minor,A minor
+Beyoncé,2006-09-01,0.676,0.683,7,-5.586,1,0.298,0.00164,1.86e-4,0.302,0.461,84.931,4,272706,FALSE,Upgrade U (feat. Jay-Z),4,B'Day,G,major,G major
+Beyoncé,2006-09-01,0.457,0.726,2,-8.336,1,0.478,0.0434,2.09e-4,0.0926,0.442,169.19,4,203200,FALSE,Ring The Alarm,5,B'Day,D,major,D major
+Beyoncé,2006-09-01,0.819,0.381,1,-7.961,1,0.292,0.051,0.00828,0.0952,0.514,157.951,4,235386,FALSE,Kitty Kat,6,B'Day,C#,major,C# major
+Beyoncé,2006-09-01,0.689,0.702,1,-5.229,1,0.0566,0.00373,1.43e-5,0.062,0.416,99.023,4,200533,FALSE,Freakum Dress,7,B'Day,C#,major,C# major
+Beyoncé,2006-09-01,0.795,0.564,10,-7.08,0,0.0618,0.0735,1.27e-5,0.25,0.753,107.039,4,209106,FALSE,Green Light,8,B'Day,A#,minor,A# minor
+Beyoncé,2006-09-01,0.453,0.708,10,-4.192,1,0.385,0.0242,6.16e-6,0.167,0.506,175.855,4,227666,FALSE,Irreplaceable,9,B'Day,A#,major,A# major
+Beyoncé,2006-09-01,0.44,0.573,6,-5.39,1,0.0534,0.626,0,0.122,0.492,98.074,4,280693,FALSE,Resentment,10,B'Day,F#,major,F# major
+Beyoncé,2006-09-01,0.702,0.803,7,-6.86,1,0.266,0.0724,0,0.372,0.881,166.042,4,210840,FALSE,Check On It (feat. Bun B & Slim Thug),11,B'Day,G,major,G major
+Beyoncé,2006-09-01,0.634,0.642,8,-6.739,1,0.392,0.0111,0,0.196,0.409,103.129,4,232333,FALSE,Deja Vu (feat. Jay-Z) - The Remix,12,B'Day,G#,major,G# major
+Beyoncé,2006-09-01,0.722,0.0172,1,-27.214,1,0.837,0.136,0,0.134,0.676,115.81,1,39893,FALSE,Encore For The Fans,13,B'Day,C#,major,C# major
+Beyoncé,2006-09-01,0.456,0.587,11,-5.244,1,0.0414,0.266,0,0.164,0.161,121.929,4,217786,FALSE,"Listen (From the Motion Picture ""Dreamgirls"")",14,B'Day,B,major,B major
+Beyoncé,2006-09-01,0.908,0.724,10,-7.063,0,0.27,0.00957,0,0.0781,0.649,96.559,4,359560,FALSE,Get Me Bodied - Extended Mix,15,B'Day,A#,minor,A# minor
+Beyoncé,2006-08-29,0.763,0.728,7,-4.944,1,0.326,0.00677,1.22e-5,0.0915,0.362,105.923,4,239960,FALSE,Deja Vu (feat. Jay-Z),1,B'Day,G,major,G major
+Beyoncé,2006-08-29,0.865,0.829,0,-6.981,0,0.315,0.0673,0,0.253,0.651,96.511,4,205813,FALSE,Get Me Bodied,2,B'Day,C,minor,C minor
+Beyoncé,2006-08-29,0.682,0.939,9,-4.054,0,0.284,0.226,3.15e-4,0.346,0.615,93.81,4,204813,FALSE,Suga Mama,3,B'Day,A,minor,A minor
+Beyoncé,2006-08-29,0.474,0.683,7,-5.585,1,0.397,0.00161,1.23e-4,0.309,0.509,169.51,4,272706,FALSE,Upgrade U (feat. Jay-Z),4,B'Day,G,major,G major
+Beyoncé,2006-08-29,0.456,0.742,2,-8.39,1,0.481,0.0534,2.23e-4,0.0837,0.428,168.507,4,203200,FALSE,Ring The Alarm,5,B'Day,D,major,D major
+Beyoncé,2006-08-29,0.81,0.386,1,-7.846,1,0.311,0.0529,0.00944,0.0969,0.506,157.919,4,235386,FALSE,Kitty Kat,6,B'Day,C#,major,C# major
+Beyoncé,2006-08-29,0.683,0.703,1,-5.154,1,0.0585,0.0043,1.49e-5,0.0599,0.378,98.953,4,200533,FALSE,Freakum Dress,7,B'Day,C#,major,C# major
+Beyoncé,2006-08-29,0.796,0.568,10,-7.071,0,0.0631,0.0833,1.11e-5,0.256,0.729,107.034,4,209106,FALSE,Green Light,8,B'Day,A#,minor,A# minor
+Beyoncé,2006-08-29,0.576,0.697,10,-4.192,1,0.326,0.0286,1.15e-6,0.167,0.501,175.906,4,227666,FALSE,Irreplaceable,9,B'Day,A#,major,A# major
+Beyoncé,2006-08-29,0.378,0.565,6,-5.388,1,0.0493,0.648,0,0.13,0.482,102.131,3,280693,FALSE,Resentment,10,B'Day,F#,major,F# major
+Beyoncé,2006-08-29,0.705,0.796,7,-6.845,1,0.267,0.0708,0,0.388,0.864,166.042,4,210453,FALSE,Check On It (feat. Bun B & Slim Thug),11,B'Day,G,major,G major
+Beyoncé,2003-06-24,0.646,0.77,2,-6.596,0,0.226,0.00249,0,0.0715,0.681,99.165,4,236133,FALSE,Crazy In Love (feat. Jay-Z),1,Dangerously In Love,D,minor,D minor
+Beyoncé,2003-06-24,0.588,0.461,6,-8.686,0,0.161,0.237,1.54e-5,0.0913,0.659,200.053,4,208573,FALSE,Naughty Girl,2,Dangerously In Love,F#,minor,F# minor
+Beyoncé,2003-06-24,0.655,0.488,1,-9.17,1,0.22,0.0825,1.16e-6,0.221,0.791,91.025,4,244826,FALSE,Baby Boy (feat. Sean Paul),3,Dangerously In Love,C#,major,C# major
+Beyoncé,2003-06-24,0.736,0.651,6,-8.933,1,0.124,0.00265,2.38e-4,0.0838,0.971,166.572,3,222600,FALSE,Hip Hop Star (feat. Big Boi & Sleepy Brown),4,Dangerously In Love,F#,major,F# major
+Beyoncé,2003-06-24,0.711,0.454,0,-6.485,0,0.0904,0.125,2.15e-6,0.071,0.782,74.928,4,260200,FALSE,Be With You,5,Dangerously In Love,C,minor,C minor
+Beyoncé,2003-06-24,0.75,0.458,1,-9.092,1,0.0803,0.226,3.25e-5,0.137,0.536,83.61,4,301133,FALSE,"Me, Myself and I",6,Dangerously In Love,C#,major,C# major
+Beyoncé,2003-06-24,0.662,0.374,9,-11.19,1,0.34,0.114,3.59e-6,0.249,0.551,112.694,4,259066,FALSE,Yes,7,Dangerously In Love,A,major,A major
+Beyoncé,2003-06-24,0.447,0.395,7,-9.828,1,0.225,0.153,3.98e-6,0.133,0.411,76.758,3,298200,FALSE,Signs (feat. Missy Elliott),8,Dangerously In Love,G,major,G major
+Beyoncé,2003-06-24,0.568,0.282,10,-10.225,1,0.0313,0.158,0.00258,0.182,0.103,112.708,3,360493,FALSE,Speechless,9,Dangerously In Love,A#,major,A# major
+Beyoncé,2003-06-24,0.493,0.527,10,-9.752,1,0.33,0.167,0,0.288,0.697,103.451,3,219200,FALSE,That's How You Like It (feat. Jay-Z),10,Dangerously In Love,A#,major,A# major
+Beyoncé,2003-06-24,0.652,0.292,0,-9.603,0,0.0467,0.619,0,0.174,0.304,116.109,4,297733,FALSE,The Closer I Get to You (feat. Beyoncé Knowles),11,Dangerously In Love,C,minor,C minor
+Beyoncé,2003-06-24,0.609,0.407,6,-8.026,1,0.0808,0.345,0,0.19,0.459,99.982,4,293133,FALSE,Dangerously In Love,12,Dangerously In Love,F#,major,F# major
+Beyoncé,2003-06-24,0.65,0.0452,0,-20.854,1,0.7,0.485,0,0.121,0.542,152.48,1,16373,FALSE,Beyoncé Interlude,13,Dangerously In Love,C,major,C major
+Beyoncé,2003-06-24,0.388,0.265,11,-12.712,0,0.0499,0.901,0,0.194,0.32,137.24,1,163933,FALSE,Gift from Virgo,14,Dangerously In Love,B,minor,B minor
+Beyoncé,2003-06-24,0.469,0.446,1,-9.237,0,0.0753,0.255,1.49e-5,0.182,0.448,123.46,4,298333,FALSE,Daddy,15,Dangerously In Love,C#,minor,C# minor
+Beyoncé,2003-06-23,0.664,0.758,2,-6.583,0,0.21,0.00238,0,0.0598,0.701,99.259,4,235933,FALSE,Crazy In Love (feat. Jay-Z),1,Dangerously In Love (Alben für die Ewigkeit),D,minor,D minor
+Beyoncé,2003-06-23,0.735,0.466,6,-8.65,0,0.0857,0.239,6.24e-6,0.102,0.643,99.973,4,208600,FALSE,Naughty Girl,2,Dangerously In Love (Alben für die Ewigkeit),F#,minor,F# minor
+Beyoncé,2003-06-23,0.689,0.478,1,-9.142,1,0.231,0.0881,2.45e-6,0.357,0.774,91.039,4,244866,FALSE,Baby Boy (feat. Sean Paul),3,Dangerously In Love (Alben für die Ewigkeit),C#,major,C# major
+Beyoncé,2003-06-23,0.741,0.65,6,-8.99,1,0.131,0.00213,1.57e-4,0.0526,0.968,166.602,3,222533,FALSE,Hip Hop Star (feat. Big Boi & Sleepy Brown),4,Dangerously In Love (Alben für die Ewigkeit),F#,major,F# major
+Beyoncé,2003-06-23,0.71,0.451,0,-6.53,0,0.093,0.136,4.43e-6,0.0966,0.756,74.934,4,260160,FALSE,Be With You,5,Dangerously In Love (Alben für die Ewigkeit),C,minor,C minor
+Beyoncé,2003-06-23,0.747,0.47,1,-9.08,1,0.0819,0.228,9.86e-5,0.159,0.555,83.615,4,301173,FALSE,"Me, Myself and I",6,Dangerously In Love (Alben für die Ewigkeit),C#,major,C# major
+Beyoncé,2003-06-23,0.638,0.377,9,-11.195,1,0.346,0.114,9.19e-6,0.302,0.562,112.439,4,259093,FALSE,Yes,7,Dangerously In Love (Alben für die Ewigkeit),A,major,A major
+Beyoncé,2003-06-23,0.373,0.4,7,-9.81,1,0.249,0.151,8.4e-6,0.112,0.398,74.283,4,298533,FALSE,Signs (feat. Missy Elliott),8,Dangerously In Love (Alben für die Ewigkeit),G,major,G major
+Beyoncé,2003-06-23,0.542,0.283,10,-10.277,1,0.0321,0.159,0.00333,0.179,0.0992,112.726,3,360440,FALSE,Speechless,9,Dangerously In Love (Alben für die Ewigkeit),A#,major,A# major
+Beyoncé,2003-06-23,0.435,0.525,5,-9.753,1,0.363,0.168,0,0.22,0.681,84.2,5,219160,FALSE,That's How You Like It (feat. Jay-Z),10,Dangerously In Love (Alben für die Ewigkeit),F,major,F major
+Beyoncé,2003-06-23,0.63,0.3,0,-9.614,0,0.0521,0.639,0,0.17,0.278,116.153,4,297800,FALSE,The Closer I Get to You (feat. Beyoncé Knowles),11,Dangerously In Love (Alben für die Ewigkeit),C,minor,C minor
+Beyoncé,2003-06-23,0.619,0.402,6,-8.054,1,0.0915,0.334,0,0.177,0.489,99.947,4,293106,FALSE,Dangerously In Love,12,Dangerously In Love (Alben für die Ewigkeit),F#,major,F# major
+Beyoncé,2003-06-23,0.693,0.0457,5,-20.803,0,0.803,0.423,0,0.122,0.541,133.173,3,16360,FALSE,Beyoncé Interlude,13,Dangerously In Love (Alben für die Ewigkeit),F,minor,F minor
+Beyoncé,2003-06-23,0.349,0.265,11,-12.79,0,0.0542,0.904,0,0.241,0.311,93.615,3,163706,FALSE,Gift from Virgo,14,Dangerously In Love (Alben für die Ewigkeit),B,minor,B minor
+Beyoncé,2003-06-23,0.683,0.763,5,-6.588,1,0.191,0.427,0,0.184,0.948,173.954,4,246066,FALSE,Work It Out,15,Dangerously In Love (Alben für die Ewigkeit),F,major,F major
+Beyoncé,2003-06-23,0.515,0.705,4,-7.924,1,0.371,0.24,0,0.182,0.198,89.861,4,517120,FALSE,'03 Bonnie & Clyde (feat. Beyoncé),16,Dangerously In Love (Alben für die Ewigkeit),E,major,E major
+Beyoncé,2003-03-10,0.664,0.758,2,-6.583,0,0.21,0.00238,0,0.0598,0.701,99.259,4,235933,FALSE,Crazy In Love (feat. Jay-Z),1,Dangerously In Love,D,minor,D minor
+Beyoncé,2003-03-10,0.735,0.466,6,-8.65,0,0.0857,0.239,6.24e-6,0.102,0.643,99.973,4,208600,FALSE,Naughty Girl,2,Dangerously In Love,F#,minor,F# minor
+Beyoncé,2003-03-10,0.689,0.478,1,-9.142,1,0.231,0.0881,2.45e-6,0.357,0.774,91.039,4,244866,FALSE,Baby Boy (feat. Sean Paul),3,Dangerously In Love,C#,major,C# major
+Beyoncé,2003-03-10,0.741,0.65,6,-8.99,1,0.131,0.00213,1.57e-4,0.0526,0.968,166.602,3,222533,FALSE,Hip Hop Star (feat. Big Boi & Sleepy Brown),4,Dangerously In Love,F#,major,F# major
+Beyoncé,2003-03-10,0.71,0.451,0,-6.53,0,0.093,0.136,4.43e-6,0.0966,0.756,74.934,4,260160,FALSE,Be With You,5,Dangerously In Love,C,minor,C minor
+Beyoncé,2003-03-10,0.747,0.47,1,-9.08,1,0.0819,0.228,9.86e-5,0.159,0.555,83.615,4,301173,FALSE,"Me, Myself and I",6,Dangerously In Love,C#,major,C# major
+Beyoncé,2003-03-10,0.638,0.377,9,-11.195,1,0.346,0.114,9.19e-6,0.302,0.562,112.439,4,259093,FALSE,Yes,7,Dangerously In Love,A,major,A major
+Beyoncé,2003-03-10,0.373,0.4,7,-9.81,1,0.249,0.151,8.4e-6,0.112,0.398,74.283,4,298533,FALSE,Signs (feat. Missy Elliott),8,Dangerously In Love,G,major,G major
+Beyoncé,2003-03-10,0.542,0.283,10,-10.277,1,0.0321,0.159,0.00333,0.179,0.0992,112.726,3,360440,FALSE,Speechless,9,Dangerously In Love,A#,major,A# major
+Beyoncé,2003-03-10,0.435,0.525,5,-9.753,1,0.363,0.168,0,0.22,0.681,84.2,5,219160,FALSE,That's How You Like It (feat. Jay-Z),10,Dangerously In Love,F,major,F major
+Beyoncé,2003-03-10,0.63,0.3,0,-9.614,0,0.0521,0.639,0,0.17,0.278,116.153,4,297800,FALSE,The Closer I Get to You (feat. Beyoncé Knowles),11,Dangerously In Love,C,minor,C minor
+Beyoncé,2003-03-10,0.619,0.402,6,-8.054,1,0.0915,0.334,0,0.177,0.489,99.947,4,293106,FALSE,Dangerously In Love,12,Dangerously In Love,F#,major,F# major
+Beyoncé,2003-03-10,0.693,0.0457,5,-20.803,0,0.803,0.423,0,0.122,0.541,133.173,3,16360,FALSE,Beyoncé Interlude,13,Dangerously In Love,F,minor,F minor
+Beyoncé,2003-03-10,0.349,0.265,11,-12.79,0,0.0542,0.904,0,0.241,0.311,93.615,3,163706,FALSE,Gift from Virgo,14,Dangerously In Love,B,minor,B minor
+Beyoncé,2003-03-10,0.683,0.763,5,-6.588,1,0.191,0.427,0,0.184,0.948,173.954,4,246066,FALSE,Work It Out,15,Dangerously In Love,F,major,F major
+Beyoncé,2003-03-10,0.618,0.663,9,-6.138,0,0.341,0.238,0,0.142,0.334,86.877,4,204466,FALSE,'03 Bonnie & Clyde (feat. Beyoncé),16,Dangerously In Love,A,minor,A minor
