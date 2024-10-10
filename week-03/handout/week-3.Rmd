@@ -30,8 +30,8 @@ Let's also load some Spotify data, as we did last week.
 taylor <- read_csv("https://bit.ly/taylor-data-csv")
 adele <- read_csv("https://bit.ly/adele-data-csv")
 mcr <- read_csv("https://bit.ly/mcr-data-csv")
-ghost <- read_csv("https://bit.ly/SMI105Ghost")
-beyonce <- read_csv("https://bit.ly/SMI105BeyonceBig")
+ghost <- read_csv("https://bit.ly/ghost-data-csv")
+beyonce <- read_csv("https://bit.ly/beyonce-data-csv")
 ```
 
 ## Drawing some scatterplots

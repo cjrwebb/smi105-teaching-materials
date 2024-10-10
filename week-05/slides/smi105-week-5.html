@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>SMI105: Week 5 Visual design</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Calum Webb" />
+    <meta name="date" content="2024-10-04" />
+    <script src="smi105-week-5_files/header-attrs/header-attrs.js"></script>
+    <link href="smi105-week-5_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="smi105-week-5_files/tile-view/tile-view.js"></script>
+    <link href="smi105-week-5_files/panelset/panelset.css" rel="stylesheet" />
+    <script src="smi105-week-5_files/panelset/panelset.js"></script>
+    <script src="smi105-week-5_files/xaringanExtra-progressBar/progress-bar.js"></script>
+    <link href="smi105-week-5_files/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script src="smi105-week-5_files/clipboard/clipboard.min.js"></script>
+    <link href="smi105-week-5_files/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="smi105-week-5_files/shareon/shareon.min.js"></script>
+    <link href="smi105-week-5_files/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="smi105-week-5_files/xaringanExtra-shareagain/shareagain.js"></script>
+    <script src="smi105-week-5_files/mark.js/mark.min.js"></script>
+    <link href="smi105-week-5_files/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="smi105-week-5_files/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: middle, title
+background-size: contain
+
+
+&lt;br&gt;&lt;br&gt;
+
+# Visual Design
+#### SMI105: Week 5
+
+&lt;br&gt;&lt;br&gt;
+
+**Dr. Calum Webb**&lt;br&gt;
+Sheffield Methods Institute, the University of Sheffield&lt;br&gt;
+[c.j.webb@sheffield.ac.uk](mailto:c.j.webb@sheffield.ac.uk)
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 180px;
+height: 128px;
+z-index: 0;
+background-image: url(header/smi-logo-white.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:2em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+
+
+
+<style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #F8F8F8;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+
+
+
+---
+
+class: middle, inverse
+
+# Sign in
+
+---
+
+class: middle
+
+## Learning outcomes
+
+.panelset[
+
+.panel[.panel-name[What will I learn?]
+
+By the end of this week you will know:
+
+Tufte, then modern visual design principles
+
+* 
+
+
+]
+]
+
+---
+
+class: inverse, middle
+
+#### Part I
+
+# The history of good practice in information visual design
+
+
+
+---
+
+class: middle
+
+.pull-left[
+
+&lt;br&gt;
+
+## Tufte's (1983/2001) Graphical Excellence &amp; Elegance
+
+Edward Tufte's revolutionised the way that data visualisation was done by introducing principles of excellence and elegance:
+
+&gt; "Graphical excellence consists of complex ideas communicated with clarity, precision and efficiency." (p.51)
+
+&gt; "Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space." (p.51)
+
+For Tufte (at least in 1983/2001), we should aim to 'maximise the ink to information ratio' and avoid introducing extraneous stylistic elements that, at best, do nothing and, at worst, might influence perception of the data — communicate the most information in the least amount of ink. What does this mean?
+
+
+]
+
+.pull-right[
+
+
+.center[
+
+&lt;img src="images/tufte.jpg" width="70%" /&gt;
+
+]
+
+]
+
+
+---
+
+class: middle
+
+.pull-left[
+
+&lt;br&gt;
+
+## Tufte's (1983/2001) Graphical Excellence &amp; Elegance
+
+Edward Tufte's revolutionised the way that data visualisation was done by introducing principles of excellence and elegance:
+
+&gt; "Graphical excellence consists of complex ideas communicated with clarity, precision and efficiency." (p.51)
+
+&gt; "Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space." (p.51)
+
+For Tufte (at least in 1983/2001), we should aim to 'maximise the ink to information ratio' and avoid introducing extraneous stylistic elements that, at best, do nothing and, at worst, might influence perception of the data — communicate the most information in the least amount of ink. What does this mean?
+
+
+]
+
+.pull-right[
+
+
+.center[
+
+&lt;div class="figure"&gt;
+&lt;img src="images/tufte-boxplot-1.png" alt="Typical boxplot design (Tufte, 2001)" width="100%" /&gt;
+&lt;p class="caption"&gt;Typical boxplot design (Tufte, 2001)&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
+]
+
+---
+
+class: middle
+
+.pull-left[
+
+&lt;br&gt;
+
+## Tufte's (1983/2001) Graphical Excellence &amp; Elegance
+
+Edward Tufte's revolutionised the way that data visualisation was done by introducing principles of excellence and elegance:
+
+&gt; "Graphical excellence consists of complex ideas communicated with clarity, precision and efficiency." (p.51)
+
+&gt; "Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space." (p.51)
+
+For Tufte (at least in 1983/2001), we should aim to 'maximise the ink to information ratio' and avoid introducing extraneous stylistic elements that, at best, do nothing and, at worst, might influence perception of the data — communicate the most information in the least amount of ink. What does this mean?
+
+
+]
+
+.pull-right[
+
+
+.center[
+
+&lt;div class="figure"&gt;
+&lt;img src="images/tufte-boxplot-2.png" alt="Tufte's redesigned boxplot (Tufte, 2001)" width="100%" /&gt;
+&lt;p class="caption"&gt;Tufte's redesigned boxplot (Tufte, 2001)&lt;/p&gt;
+&lt;/div&gt;
+
+] 
+
+]
+
+
+---
+
+class: middle
+
+.pull-left[
+
+&lt;br&gt;
+
+## Tufte's (1983/2001) Graphical Excellence &amp; Elegance
+
+Edward Tufte's revolutionised the way that data visualisation was done by introducing principles of excellence and elegance:
+
+&gt; "Graphical excellence consists of complex ideas communicated with clarity, precision and efficiency." (p.51)
+
+&gt; "Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space." (p.51)
+
+For Tufte (at least in 1983/2001), we should aim to 'maximise the ink to information ratio' and avoid introducing extraneous stylistic elements that, at best, do nothing and, at worst, might influence perception of the data — communicate the most information in the least amount of ink. What does this mean?
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;
+
+.center[
+
+&lt;div class="figure"&gt;
+&lt;img src="images/tufte-bar-1.png" alt="A standard bar chart (Tufte, 2001)" width="100%" /&gt;
+&lt;p class="caption"&gt;A standard bar chart (Tufte, 2001)&lt;/p&gt;
+&lt;/div&gt;
+
+] 
+
+]
+
+
+---
+
+class: middle
+
+.pull-left[
+
+&lt;br&gt;
+
+## Tufte's (1983/2001) Graphical Excellence &amp; Elegance
+
+Edward Tufte's revolutionised the way that data visualisation was done by introducing principles of excellence and elegance:
+
+&gt; "Graphical excellence consists of complex ideas communicated with clarity, precision and efficiency." (p.51)
+
+&gt; "Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space." (p.51)
+
+For Tufte (at least in 1983/2001), we should aim to 'maximise the ink to information ratio' and avoid introducing extraneous stylistic elements that, at best, do nothing and, at worst, might influence perception of the data — communicate the most information in the least amount of ink. What does this mean?
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;
+
+.center[
+
+&lt;div class="figure"&gt;
+&lt;img src="images/tufte-bar-2.png" alt="Tufte's redesigned barchart (Tufte, 2001)" width="100%" /&gt;
+&lt;p class="caption"&gt;Tufte's redesigned barchart (Tufte, 2001)&lt;/p&gt;
+&lt;/div&gt;
+
+] 
+
+]
+
+---
+
+class: inverse, middle
+
+
+# The life and death(?) of chartjunk
+
+
+---
+
+class: middle
+
+.pull-left[
+
+
+## Chartjunk &amp; misrepresentation
+
+Edward Tufte particularly took issue with what he called **"chartjunk"**; the "interior decoration of graphics [that] does not tell the viewer anything new". In addition, he raised the issues of **misrepresentation and integrity** that often accompanied misuse of area/scale
+
+* **Integrity and misrepresentation of scale**: misrepresenting differences between things: a square with twice the area of one that measures 10cm x 10cm would measure ~14cm x 14cm, not 20cm x 20cm
+
+* .grey[Unintentional optical art: eye-straining effects that had "no place in data graphical design" (or arguably, any form of graphical design)]
+
+* .grey[Extraneous gridlines: gridlines that only exist as a relic from drawing visualisations by hand that distract the viewer.]
+
+* .grey[The graphical duck: unneccesary additions to the visualisation (e.g. colour) where it does not add any information, and is done just because "it can be done".]
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;
+
+.center[
+
+&lt;div class="figure"&gt;
+&lt;img src="images/tufte-cj1.png" alt="A lie factor of 2 (Tufte, 2001)" width="55%" /&gt;
+&lt;p class="caption"&gt;A lie factor of 2 (Tufte, 2001)&lt;/p&gt;
+&lt;/div&gt;
+
+] 
+
+]
+
+
+---
+
+class: middle
+
+.pull-left[
+
+
+## Chartjunk &amp; misrepresentation
+
+Edward Tufte particularly took issue with what he called **"chartjunk"**; the "interior decoration of graphics [that] does not tell the viewer anything new". In addition, he raised the issues of **misrepresentation and integrity** that often accompanied misuse of area/scale
+
+* .grey[Integrity and misrepresentation of scale: misrepresenting differences between things: a square with twice the area of one that measures 10cm x 10cm would measure ~14cm x 14cm, not 20cm x 20cm]
+
+* **Unintentional optical art**: eye-straining effects that had "no place in data graphical design" (or arguably, any form of graphical design)
+
+* .grey[Extraneous gridlines: gridlines that only exist as a relic from drawing visualisations by hand that distract the viewer.]
+
+* .grey[The graphical duck: unneccesary additions to the visualisation (e.g. colour) where it does not add any information, and is done just because "it can be done".]
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;
+
+.center[
+
+&lt;div class="figure"&gt;
+&lt;img src="images/tufte-cj2.png" alt="(Tufte, 2001: 108)" width="100%" /&gt;
+&lt;p class="caption"&gt;(Tufte, 2001: 108)&lt;/p&gt;
+&lt;/div&gt;
+
+] 
+
+]
+
+---
+
+class: middle
+
+.pull-left[
+
+
+## Chartjunk &amp; misrepresentation
+
+Edward Tufte particularly took issue with what he called **"chartjunk"**; the "interior decoration of graphics [that] does not tell the viewer anything new". In addition, he raised the issues of **misrepresentation and integrity** that often accompanied misuse of area/scale
+
+* .grey[Integrity and misrepresentation of scale: misrepresenting differences between things: a square with twice the area of one that measures 10cm x 10cm would measure ~14cm x 14cm, not 20cm x 20cm]
+
+* .grey[Unintentional optical art: eye-straining effects that had "no place in data graphical design" (or arguably, any form of graphical design)]
+
+* **Extraneous gridlines**: gridlines that only exist as a relic from drawing visualisations by hand that distract the viewer.
+
+* .grey[The graphical duck: unneccesary additions to the visualisation (e.g. colour) where it does not add any information, and is done just because "it can be done".]
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+.center[
+
+&lt;div class="figure"&gt;
+&lt;img src="images/tufte-cj3.png" alt="(Tufte, 2001: 115)" width="100%" /&gt;
+&lt;p class="caption"&gt;(Tufte, 2001: 115)&lt;/p&gt;
+&lt;/div&gt;
+
+] 
+
+]
+
+
+---
+
+class: middle
+
+.pull-left[
+
+
+## Chartjunk &amp; misrepresentation
+
+Edward Tufte particularly took issue with what he called **"chartjunk"**; the "interior decoration of graphics [that] does not tell the viewer anything new". In addition, he raised the issues of **misrepresentation and integrity** that often accompanied misuse of area/scale
+
+* .grey[Integrity and misrepresentation of scale: misrepresenting differences between things: a square with twice the area of one that measures 10cm x 10cm would measure ~14cm x 14cm, not 20cm x 20cm]
+
+* .grey[Unintentional optical art: eye-straining effects that had "no place in data graphical design" (or arguably, any form of graphical design)]
+
+* .grey[Extraneous gridlines: gridlines that only exist as a relic from drawing visualisations by hand that distract the viewer.]
+
+* **The graphical duck**: unneccesary additions to the visualisation (e.g. colour) where it does not add any information, and is done just because "it can be done".
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+.center[
+
+&lt;div class="figure"&gt;
+&lt;img src="images/tufte-cj4.png" alt="(Tufte, 2001: 120)" width="100%" /&gt;
+&lt;p class="caption"&gt;(Tufte, 2001: 120)&lt;/p&gt;
+&lt;/div&gt;
+
+] 
+
+]
+
+
+---
+
+class: middle
+
+.pull-left[
+
+## The influence of, and a critique of, Tufte's approach
+
+Note how, in the workshops, many of the defaults that are used by ggplot (and other packages) tend to use the same kind of best practice that Tufte recommended: **no more thick gridlines, no more unnecessary crosshatching, and you have to try quite hard to misrepresent your data**.
+
+However, of we remove everything that isn't strictly necessary, where does that leave **design, art, and the influence it can have on engagement and communication for different audiences**? What does "default ink" look like in a digital world? What if elegant isn't your aesthetic?
+
+&gt; "Embellishments can at times, when properly chosen and designed, represent information redundantly in useful ways, and even when they aren't information in and of themselves, can meaningfully support the display of information."
+
+.right[Stephen Few, quoted in Feigenbaum &amp; Alamalhodaei, 2020.]
+
+
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;
+
+.center[
+
+&lt;div class="figure"&gt;
+&lt;img src="images/tufte.jpg" alt="(Tufte, 2001: 120)" width="70%" /&gt;
+&lt;p class="caption"&gt;(Tufte, 2001: 120)&lt;/p&gt;
+&lt;/div&gt;
+
+] 
+
+]
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"sealed": false,
+"ratio": "16:9",
+"self_contained": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<style>
+.my-header {
+	background-color: #440099;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 70px;
+	width: 100%;
+	text-align: left;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.inverse)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="my-header"></div>';
+  });
+</script>
+
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>SMI105: Week 4 Chart Types</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Calum Webb" />
+    <meta name="date" content="2024-10-10" />
+    <script src="smi105-week-4_files/header-attrs/header-attrs.js"></script>
+    <link href="smi105-week-4_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="smi105-week-4_files/tile-view/tile-view.js"></script>
+    <link href="smi105-week-4_files/panelset/panelset.css" rel="stylesheet" />
+    <script src="smi105-week-4_files/panelset/panelset.js"></script>
+    <script src="smi105-week-4_files/xaringanExtra-progressBar/progress-bar.js"></script>
+    <link href="smi105-week-4_files/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script src="smi105-week-4_files/clipboard/clipboard.min.js"></script>
+    <link href="smi105-week-4_files/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="smi105-week-4_files/shareon/shareon.min.js"></script>
+    <link href="smi105-week-4_files/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="smi105-week-4_files/xaringanExtra-shareagain/shareagain.js"></script>
+    <script src="smi105-week-4_files/mark.js/mark.min.js"></script>
+    <link href="smi105-week-4_files/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="smi105-week-4_files/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
+    <script src="smi105-week-4_files/jquery/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="smi105-week-4_files/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="smi105-week-4_files/bootstrap/js/bootstrap.min.js"></script>
+    <script src="smi105-week-4_files/bootstrap/shim/html5shiv.min.js"></script>
+    <script src="smi105-week-4_files/bootstrap/shim/respond.min.js"></script>
+    <style>h1 {font-size: 34px;}
+           h1.title {font-size: 38px;}
+           h2 {font-size: 30px;}
+           h3 {font-size: 24px;}
+           h4 {font-size: 18px;}
+           h5 {font-size: 16px;}
+           h6 {font-size: 12px;}
+           code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+           pre:not([class]) { background-color: white }</style>
+    <script src="smi105-week-4_files/htmlwidgets/htmlwidgets.js"></script>
+    <script src="smi105-week-4_files/formattable_widget-binding/formattable_widget.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: middle, title
+background-size: contain
+
+
+&lt;br&gt;&lt;br&gt;
+
+# Chart Types
+#### SMI105: Week 4
+
+&lt;br&gt;&lt;br&gt;
+
+**Dr. Calum Webb**&lt;br&gt;
+Sheffield Methods Institute, the University of Sheffield&lt;br&gt;
+[c.j.webb@sheffield.ac.uk](mailto:c.j.webb@sheffield.ac.uk)
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 180px;
+height: 128px;
+z-index: 0;
+background-image: url(header/smi-logo-white.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:2em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+
+
+
+<style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #F8F8F8;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+
+
+
+---
+
+class: middle, inverse
+
+# Sign in
+
+---
+
+class: middle
+
+## Learning outcomes
+
+.panelset[
+
+.panel[.panel-name[What will I learn?]
+
+By the end of this week you will know:
+
+* Key terminology for working with quantitative data
+
+* Two different ways to help us think about which kind of data visualisation we should use:
+
+  * The "classic" approach, where the type of data informs the visualisation
+  * Some more modern approaches, where the data story helps inform the choice of the visualisation
+
+]
+]
+
+---
+
+class: inverse, middle
+
+# How do I choose what kind of data visualisation is appropriate for my data?
+
+---
+
+class: inverse, middle
+
+#### Part I
+
+# Some key terminology
+
+???
+
+Datasets, variables, types of variables
+
+---
+
+
+
+### This is a **dataset**
+
+.center[
+&lt;img src="images/terminology-1-dataset.png" width="90%" /&gt;
+]
+
+
+---
+
+### Each **row** is an **observation**, e.g. a song, person, measurement at a specific time
+
+.center[
+&lt;img src="images/terminology-2-observations.png" width="90%" /&gt;
+]
+
+---
+
+### Each **column** is a **variable**, e.g. the name of the song, the tempo, etc.
+
+.center[
+&lt;img src="images/terminology-3-variables.png" width="90%" /&gt;
+]
+
+---
+
+### Each **cell** is a **value**, e.g. the duration of the song *for this observation*
+
+.center[
+&lt;img src="images/terminology-4-values.png" width="90%" /&gt;
+]
+
+
+---
+
+class: inverse, middle
+
+# Variables (columns) can be put into three different categories: categorical (nominal), ordinal, and continuous
+
+---
+
+class: middle
+background-color: white
+
+.center[
+&lt;img src="images/continuous-ordinal-categorical.png" width="80%" /&gt;
+]
+
+.footnote[Art by Allison Horst]
+
+
+---
+
+### Examples of **categorical** variables might be track name, whether it is explicit, or album name
+
+.center[
+&lt;img src="images/terminology-5-categorical.png" width="90%" /&gt;
+]
+
+
+---
+
+### Examples of **ordinal** variables might be time signature or track number
+
+.center[
+&lt;img src="images/terminology-6-ordinal.png" width="90%" /&gt;
+]
+
+
+---
+
+### Examples of **continuous** variables might be duration or tempo
+
+.center[
+&lt;img src="images/terminology-7-continuous.png" width="90%" /&gt;
+]
+
+---
+
+### If you're struggling to recognise the difference, here's something that helps:
+
+### &lt;br&gt;
+
+.center[
+&lt;img src="images/three-runners-1.svg" width="60%" /&gt;
+]
+
+---
+
+### One variable we might have for runners is finish time: this is continuous because we know that if Runner 2 was 30 seconds slower than Runner 1, and Runner 3 was 1 minute slower than Runner 2, Runner 3 was behind by twice as much. 1 second means the same thing. 
+
+.center[
+&lt;img src="images/three-runners-2.svg" width="60%" /&gt;
+]
+
+---
+
+### Another variable might be the placement of the runners: 1st, 2nd, 3rd. We know that runner 2 was slower than runner 1, but we don't know *how much by*. 1st, 2nd, and 3rd also means different things depending on the *race*. 3rd in a Park Run ≠ 3rd in Olympics.  This is ordinal.
+
+.center[
+&lt;img src="images/three-runners-3.svg" width="60%" /&gt;
+]
+
+
+---
+
+### Lastly, another variable we could have is the country the runner is representing. There is no inherent ordering to countries, any ordering would depend on some other external variable (such as alphabetical order). 
+
+.center[
+&lt;img src="images/three-runners-4.svg" width="60%" /&gt;
+]
+
+
+
+
+---
+
+class: inverse, middle
+
+#### Part II
+
+# The 'classic' approach: visualisation determined by the type of variables
+
+.footnote[As found in many, many, introduction to quantitative research textbooks, but largely based on the work of John Tukey (1997) *Exploratory data analysis*]
+
+
+---
+
+class: middle
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Classic approaches to data visualisation
+
+These are data visualisations that are often driven by:
+
+* The types of the variables being visualised (how many, categorical, continuous, ordinal).
+* The computing power available at the time or even the effort to draw the visualisation by hand. 
+
+
+]
+
+.pull-right[
+
+
+.center[
+
+&lt;img src="images/tukey.jpg" width="70%" /&gt;
+
+]
+
+]
+
+
+---
+
+class: middle
+
+### In this approach, depending on the type of variable, we can identify an appropriate chart type:
+
+
+### One variable
+
+<div id="htmlwidget-abe55cb48fd326c408c1" class="formattable_widget html-widget" style="width:100%;height:252px;" width="100%" height="252"></div>
+<script type="application/json" data-for="htmlwidget-abe55cb48fd326c408c1">{"x":{"html":"<table class=\"table table-condensed\">\n <thead>\n  <tr>\n   <th style=\"text-align:right;\"> Variable Type <\/th>\n   <th style=\"text-align:right;\"> Visualisation <\/th>\n  <\/tr>\n <\/thead>\n<tbody>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Nominal   <\/span> <\/td>\n   <td style=\"text-align:right;\"> Bar Chart <\/td>\n  <\/tr>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Ordinal   <\/span> <\/td>\n   <td style=\"text-align:right;\"> Bar Chart <\/td>\n  <\/tr>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Continuous<\/span> <\/td>\n   <td style=\"text-align:right;\"> Histogram <\/td>\n  <\/tr>\n<\/tbody>\n<\/table>"},"evals":[],"jsHooks":[]}</script>
+
+
+### Two variables
+
+<div id="htmlwidget-bbd24351192d69ce7e25" class="formattable_widget html-widget" style="width:100%;height:252px;" width="100%" height="252"></div>
+<script type="application/json" data-for="htmlwidget-bbd24351192d69ce7e25">{"x":{"html":"<table class=\"table table-condensed\">\n <thead>\n  <tr>\n   <th style=\"text-align:right;\"> Variable Type <\/th>\n   <th style=\"text-align:right;\"> Nominal <\/th>\n   <th style=\"text-align:right;\"> Ordinal <\/th>\n   <th style=\"text-align:right;\"> Continuous <\/th>\n  <\/tr>\n <\/thead>\n<tbody>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Nominal   <\/span> <\/td>\n   <td style=\"text-align:right;\"> Bivariate Bar Chart <\/td>\n   <td style=\"text-align:right;\">  <\/td>\n   <td style=\"text-align:right;\">  <\/td>\n  <\/tr>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Ordinal   <\/span> <\/td>\n   <td style=\"text-align:right;\"> Bivariate Bar Chart <\/td>\n   <td style=\"text-align:right;\"> Bivariate Bar Chart <\/td>\n   <td style=\"text-align:right;\">  <\/td>\n  <\/tr>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Continuous<\/span> <\/td>\n   <td style=\"text-align:right;\"> Boxplot <\/td>\n   <td style=\"text-align:right;\"> Boxplot <\/td>\n   <td style=\"text-align:right;\"> Scatterplot <\/td>\n  <\/tr>\n<\/tbody>\n<\/table>"},"evals":[],"jsHooks":[]}</script>
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Some examples:
+
+* Favourite messaging platform (categorical)
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-17-1.png" width="500" height="500" /&gt;
+
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Some examples:
+
+* Favourite messaging platform (categorical)
+* Number of hours spent on social media per day (continuous)
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-18-1.png" width="500" height="500" /&gt;
+
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Some examples:
+
+* Favourite messaging platform (categorical)
+* Number of hours spent on social media per day (continuous)
+* Do students who use some instant messaging platforms meet up in person less often than others? (categorical ╳ ordinal)
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-19-1.png" width="500" height="500" /&gt;
+
+
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Some examples:
+
+* Favourite messaging platform (categorical)
+* Number of hours spent on social media per day (continuous)
+* Do students who use some instant messaging platforms meet up in person less often than others? (categorical ╳ ordinal)
+* Do students spend different amounts of time on instant messaging platforms depending on the platform they use? (categorical ╳ continuous)
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-20-1.png" width="500" height="500" /&gt;
+
+
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Some examples:
+
+* Favourite messaging platform (categorical)
+* Number of hours spent on social media per day (continuous)
+* Do students who use some instant messaging platforms meet up in person less often than others? (categorical ╳ ordinal)
+* Do students spend different amounts of time on instant messaging platforms depending on the platform they use? (categorical ╳ continuous)
+* Do students who spend more time on instant messaging platforms spend less time in-person with people they don't live with? (continuous ╳ continuous)
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-21-1.png" width="500" height="500" /&gt;
+
+
+]
+
+---
+
+class: middle
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Classic approaches to data visualisation
+
+* Easy to apply
+* Easy to remember
+* Quite restrictive, doesn't provide multiple options
+* Not always very appealing aesthetically
+* Some redundancy in visual presentation
+* Sometimes doesn't work so well with very large datasets (e.g. scatterplots)
+
+
+]
+
+.pull-right[
+
+
+.center[
+
+&lt;img src="images/tukey.jpg" width="70%" /&gt;
+
+]
+
+]
+
+
+---
+
+class: inverse, middle
+
+#### Part III
+
+# Story-driven choice of chart type
+
+.footnote[Using Andy Kirk's (2019) Data Visualisation A Handbook for Data Driven Design &amp; FT's Visual Vocabulary (Smith, et al. 2019)]
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* **Categorical**: Comparing categories and distributions of quantitative values.
+
+* **Hierarchical**: Revealing part-to-whole relationships and hierarchies.
+
+* **Relational**: Exploring correlations and connections.
+
+* **Temporal**: Plotting trends and intervals over time.
+
+* **Spatial**: Mapping spatial patterns through overlays and distortions.
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+.center[
+
+&lt;div class="figure"&gt;
+&lt;img src="images/kirk.jpg" alt="Kirk (2019)" width="70%" /&gt;
+&lt;p class="caption"&gt;Kirk (2019)&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* **Categorical**: Comparing categories and distributions of quantitative values.
+
+* .grey[Hierarchical: Revealing part-to-whole relationships and hierarchies.]
+
+* .grey[Relational: Exploring correlations and connections.]
+
+* .grey[Temporal: Plotting trends and intervals over time.]
+
+* .grey[Spatial: Mapping spatial patterns through overlays and distortions.]
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+bar chart: `geom_col` / `geom_bar`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-24-1.png" width="500" height="500" /&gt;
+
+]
+
+]
+
+
+
+---
+
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* **Categorical**: Comparing categories and distributions of quantitative values.
+
+* .grey[Hierarchical: Revealing part-to-whole relationships and hierarchies.]
+
+* .grey[Relational: Exploring correlations and connections.]
+
+* .grey[Temporal: Plotting trends and intervals over time.]
+
+* .grey[Spatial: Mapping spatial patterns through overlays and distortions.]
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+sunburst chart: `geom_col` / `geom_bar` + `coord_polar`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-25-1.png" width="500" height="500" /&gt;
+
+]
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* **Categorical**: Comparing categories and distributions of quantitative values.
+
+* .grey[Hierarchical: Revealing part-to-whole relationships and hierarchies.]
+
+* .grey[Relational: Exploring correlations and connections.]
+
+* .grey[Temporal: Plotting trends and intervals over time.]
+
+* .grey[Spatial: Mapping spatial patterns through overlays and distortions.]
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+dumbbell chart: `geom_point` x2 + `geom_segment`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-26-1.png" width="500" height="450" /&gt;
+
+]
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* .grey[Categorical: Comparing categories and distributions of quantitative values.]
+
+* **Hierarchical**: Revealing part-to-whole relationships and hierarchies.
+
+* .grey[Relational: Exploring correlations and connections.]
+
+* .grey[Temporal: Plotting trends and intervals over time.]
+
+* .grey[Spatial: Mapping spatial patterns through overlays and distortions.]
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+100% Stacked Bar Chart: `geom_col/bar` + `position = "fill"`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-27-1.png" width="500" height="450" /&gt;
+
+]
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* .grey[Categorical: Comparing categories and distributions of quantitative values.]
+
+* **Hierarchical**: Revealing part-to-whole relationships and hierarchies.
+
+* .grey[Relational: Exploring correlations and connections.]
+
+* .grey[Temporal: Plotting trends and intervals over time.]
+
+* .grey[Spatial: Mapping spatial patterns through overlays and distortions.]
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+Donut Chart: Horizontal 100% Stacked Bar`geom_col/bar` + `coord_polar`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-28-1.png" width="500" height="450" /&gt;
+
+]
+
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* .grey[Categorical: Comparing categories and distributions of quantitative values.]
+
+* **Hierarchical**: Revealing part-to-whole relationships and hierarchies.
+
+* .grey[Relational: Exploring correlations and connections.]
+
+* .grey[Temporal: Plotting trends and intervals over time.]
+
+* .grey[Spatial: Mapping spatial patterns through overlays and distortions.]
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+Dendrogram using `ggdendro`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-29-1.png" width="500" height="500" /&gt;
+
+]
+
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* .grey[Categorical: Comparing categories and distributions of quantitative values.]
+
+* .grey[Hierarchical: Revealing part-to-whole relationships and hierarchies.]
+
+* **Relational**: Exploring correlations and connections.
+
+* .grey[Temporal: Plotting trends and intervals over time.]
+
+* .grey[Spatial: Mapping spatial patterns through overlays and distortions.]
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+Scatterplot: `geom_point`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-30-1.png" width="500" height="500" /&gt;
+
+]
+
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* .grey[Categorical: Comparing categories and distributions of quantitative values.]
+
+* .grey[Hierarchical: Revealing part-to-whole relationships and hierarchies.]
+
+* **Relational**: Exploring correlations and connections.
+
+* .grey[Temporal: Plotting trends and intervals over time.]
+
+* .grey[Spatial: Mapping spatial patterns through overlays and distortions.]
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+Heatmap: `geom_bin2d`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-31-1.png" width="500" height="450" /&gt;
+
+]
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* .grey[Categorical: Comparing categories and distributions of quantitative values.]
+
+* .grey[Hierarchical: Revealing part-to-whole relationships and hierarchies.]
+
+* .grey[Relational: Exploring correlations and connections.]
+
+* **Temporal**: Plotting trends and intervals over time.
+
+* .grey[Spatial: Mapping spatial patterns through overlays and distortions.]
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+Line plot: `geom_line` + `group`/`colour` `aes`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-32-1.png" width="500" height="450" /&gt;
+
+]
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* .grey[Categorical: Comparing categories and distributions of quantitative values.]
+
+* .grey[Hierarchical: Revealing part-to-whole relationships and hierarchies.]
+
+* .grey[Relational: Exploring correlations and connections.]
+
+* **Temporal**: Plotting trends and intervals over time.
+
+* .grey[Spatial: Mapping spatial patterns through overlays and distortions.]
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+Line plot: `geom_line` + `group`/`colour` `aes`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-33-1.png" width="500" height="450" /&gt;
+
+]
+
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* .grey[Categorical: Comparing categories and distributions of quantitative values.]
+
+* .grey[Hierarchical: Revealing part-to-whole relationships and hierarchies.]
+
+* .grey[Relational: Exploring correlations and connections.]
+
+* **Temporal**: Plotting trends and intervals over time.
+
+* .grey[Spatial: Mapping spatial patterns through overlays and distortions.]
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+Moving plot: `gganimate`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-34-1.gif" width="500" height="450" /&gt;
+
+]
+
+]
+
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* .grey[Categorical: Comparing categories and distributions of quantitative values.]
+
+* .grey[Hierarchical: Revealing part-to-whole relationships and hierarchies.]
+
+* .grey[Relational: Exploring correlations and connections.]
+
+* .grey[Temporal: Plotting trends and intervals over time.]
+
+* **Spatial**: Mapping spatial patterns through overlays and distortions.
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+Choropleth: `geom_sf`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-35-1.png" width="500" height="450" /&gt;
+
+]
+
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Andy Kirk's CHRTS
+
+While the 'data-driven' approach to selecting a visualisation works well, we now have many, many, different types of visualisation we could choose for the same types of data. It can make more sense to start thinking about what kind of story we want to tell.
+
+* .grey[Categorical: Comparing categories and distributions of quantitative values.]
+
+* .grey[Hierarchical: Revealing part-to-whole relationships and hierarchies.]
+
+* .grey[Relational: Exploring correlations and connections.]
+
+* .grey[Temporal: Plotting trends and intervals over time.]
+
+* **Spatial**: Mapping spatial patterns through overlays and distortions.
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+Dorling Cartogram: `cartogram` package &amp; `geom_sf`
+
+.center[
+
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-36-1.png" width="500" height="450" /&gt;
+
+]
+
+]
+
+
+---
+
+class: hide-logo
+background-image: url("images/poster-1.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Easy example: Lollipop
+
+---
+
+class: inverse, middle
+
+## We can use both the types of data that we have and the type of story we are trying to tell to identify appropriate ways to visualise our data.
+
+
+---
+
+# The rest of this week:
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;
+
+**This week's workshop**:
+
+Let’s extend graphs where we show the relationship between a continuous and a categorical variable: box plots, density curves, histograms, and so on. What’s the easiest way to understand this information? Why would we use one of these graphs over another?
+
+
+]
+
+--
+
+.pull-right[
+
+**Before week 5**:
+
+Core tasks:
+
+* **Before lecture, read at least one of these**:
+  * On the basics of formatting charts: https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-charts/#section-6 (ignore the last section ‘Communicating quality and uncertainty in charts’)
+  * On working with text: https://blog.datawrapper.de/text-in-data-visualizations/
+  * On working with colour: https://blog.datawrapper.de/emphasize-with-color-in-data-visualizations/
+
+**Before workshop**: Read the assessment brief for assessment 1
+
+**Before workshop**: Work through the task at the end of the workshop handout
+
+**Supplementary tasks**: Before workshop: Read chapter 4/Show the right numbers of the Healy book
+
+]
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"sealed": false,
+"ratio": "16:9",
+"self_contained": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<style>
+.my-header {
+	background-color: #440099;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 70px;
+	width: 100%;
+	text-align: left;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.inverse)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="my-header"></div>';
+  });
+</script>
+
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
