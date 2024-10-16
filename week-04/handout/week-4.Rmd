@@ -28,9 +28,9 @@ library(lubridate)
 ... and let's load some data. (Everything we used last week is still available, I'm just leaving it out so that loading data is quicker!)
 
 ```{r, eval = FALSE}
-taylor <- read_csv("https://bit.ly/SMI105TS")
-queen <- read_csv("https://bit.ly/SMI105QueenStudio")
-maccas <- read.csv("https://bit.ly/SMI105BigMac")
+taylor <- read_csv("https://bit.ly/taylor-data-csv")
+queen <- read_csv("https://bit.ly/queen-data-csv")
+maccas <- read.csv("https://bit.ly/bigmac-data-csv")
 ```
 
 We're good to go! Let's look at some distributions.
@@ -114,7 +114,7 @@ ggplot(data = taylor) +
   facet_wrap(~ album_name)
 ```
 
-(Did you ever wonder what the tilde -- ~ -- was doing in the facet_wrap() parenthesis, when with most other parentheses it's OK to just have the variable name? As an example, let's look at how the tempo of Kendrick Lamar's tracks across his albums vary by whether they're in major or minor keys; this means we're faceting by two variables. It also means we're using facet_grid() rather than facet_wrap().)
+(Did you ever wonder what the tilde -- ~ -- was doing in the facet_wrap() parenthesis, when with most other parentheses it's OK to just have the variable name? As an example, let's look at how the tempo of Taylor Swift's tracks across her albums vary by whether they're in major or minor keys; this means we're faceting by two variables. It also means we're using facet_grid() rather than facet_wrap().)
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +

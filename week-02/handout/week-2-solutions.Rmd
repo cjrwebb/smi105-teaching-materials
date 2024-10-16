@@ -1,6 +1,5 @@
 ---
 title: "Solutions, week 2"
-author: "Mark Taylor"
 output: html_document
 ---
 
@@ -22,9 +21,9 @@ library(tidyverse)
 Let's load the data from the web!
 
 ```{r, message = FALSE}
-adele <- read_csv("https://bit.ly/AdeleAlbums")
-taylor <- read_csv("https://bit.ly/SMI105TS")
-mcr <- read_csv("https://bit.ly/SMI105MyChemicalRomance")
+taylor <- read_csv("https://bit.ly/taylor-data-csv")
+adele <- read_csv("https://bit.ly/adele-data-csv")
+mcr <- read_csv("https://bit.ly/mcr-data-csv")
 ```
 
 ## Task - Taylor Swift
