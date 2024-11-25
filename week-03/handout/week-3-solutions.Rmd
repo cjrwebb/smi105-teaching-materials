@@ -1,6 +1,5 @@
 ---
 title: "Week 3 solutions"
-author: "Mark Taylor"
 output: html_document
 ---
 
@@ -17,11 +16,11 @@ library(lubridate)
 
 
 ```{r}
-adele <- read_csv("https://bit.ly/AdeleAlbums")
-taylor <- read_csv("https://bit.ly/SMI105TS")
-mcr <- read_csv("https://bit.ly/SMI105MyChemicalRomance")
-ghost <- read_csv("https://bit.ly/SMI105Ghost")
-beyonce <- read_csv("https://bit.ly/SMI105BeyonceBig")
+taylor <- read_csv("https://bit.ly/taylor-data-csv")
+adele <- read_csv("https://bit.ly/adele-data-csv")
+mcr <- read_csv("https://bit.ly/mcr-data-csv")
+ghost <- read_csv("https://bit.ly/ghost-data-csv")
+beyonce <- read_csv("https://bit.ly/beyonce-data-csv")
 
 ```
 
@@ -69,7 +68,8 @@ taylor_levels <-
     "reputation",
     "Lover",
     "folklore",
-    "evermore")
+    "evermore",
+    "Midnights")
 
 ggplot(data = taylor) +
   aes(x = energy, y = speechiness) +
@@ -124,3 +124,12 @@ ggplot(data = mcr) +
        title = "MCR's tracks got weirder as their career developed",
        caption = "Data derived from Spotify")
 ```
+
+## General feedback
+
+- Remember to make your submissions 'stand-alone', with all of the code required to replicate them. For example, if you use a vector called 'taylor_levels', make sure you include the code used to create that vector in your submission.
+- When using technical terms to interpret the plot, you might also want to think about how you could interpret the plot for a more general audience (e.g. how would you describe it in a blog post for Taylor Swift fans compared to to academics?)
+- Remember to include your interpretation of the plots — it's common to underestimate how much practice is needed picking out the interesting things from data visualisations.
+- Remember that outliers and clusters ('islands') can be interesting things to point out when interpreting data visualisations, not least because they are the most obvious in data visualisations and the least obvious when they are 'hiding' in the data itself.
+- Not everyone had a go at practicing adding labels to their plots — I'd encourage you to have a go at this because it can help you learn how to write good active titles, etc.
+

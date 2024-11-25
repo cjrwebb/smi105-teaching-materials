@@ -218,6 +218,7 @@ ggplot(data = queen) +
   aes(x = tempo, 
       y = fct_reorder(album_name, track_popularity)) +
   geom_density_ridges() 
+
 ```
 
 ## Generating new variables

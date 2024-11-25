@@ -1,0 +1,87 @@
+---
+title: "Week 4 solutions"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+## What was the task?
+
+Let's remind ourselves of the task:
+
+> Please draw a ridgeline plot of the prices of a Big Mac in each country in the world, expressed as price in dollars as a fraction of GDP per head in dollars in each of those countries, sorted highest-to-lowest. 
+
+In order to do that, let's get set up, by loading some packages and some data.
+
+```{r}
+
+library(tidyverse)
+library(ggridges)
+library(lubridate)
+
+maccas <- read.csv("https://bit.ly/bigmac-data-csv")
+
+```
+
+## Making some variables
+
+
+This question requires you to generate two variables from the maccas dataset:
+
+1. The price of a Big Mac in dollars – we showed you this in the lab. Divide the price of a Big Mac in local currency (local_price) by the exchange rate (dollar_ex); in my example I’ve called this variable **price_dollars**
+2. The price in dollars as a percentage of GDP. So we have to divide the first variable we’ve generated (price_dollars) by GDP_dollar; in my example I’ve called this second variable **GDP_percent**
+
+If you're making *two* new variables, you can either run two separate mutate commands, or you can run a single mutate command where you make two new variables, separated by commas.
+
+To run two separate mutate commands, you could do this:
+
+```{r, eval = FALSE}
+maccas %>%
+  mutate(price_dollars = local_price / dollar_ex) %>%
+  mutate(GDP_percent = price_dollars/GDP_dollar) %>%
+  na.omit
+```         
+
+To run a single mutate command where you make two new variables, you could do this:
+
+```{r, eval = FALSE}
+maccas %>%
+  mutate(price_dollars = local_price / dollar_ex,
+         GDP_percent = price_dollars/GDP_dollar) %>%
+  na.omit
+```         
+
+OK, so our data now has the key variable we need. Let's use it to make a first graph:
+
+## Making an initial graph
+
+```{r}
+maccas %>%
+  mutate(price_dollars = local_price / dollar_ex,
+         GDP_percent = price_dollars/GDP_dollar) %>%
+  ggplot() +
+  aes(x = GDP_percent, 
+      y = name) +
+  geom_density_ridges() 
+```
+
+This looks OK. But the x-axis is hard to interpret, and the countries aren't ranked highest-to-lowest. Let's change that; let's also add a title, subtitle, and caption, and get rid of any missing values.
+
+```{r, fig.asp = 1.2}
+maccas %>%
+  mutate(price_dollars = local_price / dollar_ex,
+         GDP_percent = price_dollars/GDP_dollar) %>%
+  na.omit %>% 
+  ggplot() +
+  aes(x = GDP_percent, 
+      y = fct_reorder(name, GDP_percent)) +
+  geom_density_ridges(rel_min_height = 0.001) +
+  scale_x_continuous(labels = scales::percent) +
+  labs(x = "Big Mac price in dollars as a % of GDP", y = NULL,
+       title = "Remind me never to get a Big Mac in Pakistan",
+       caption = "Data from The Economist")
+```
+
+There's one new thing here: I've specified that I want the scale on the x-axis to be percent, rather than scientific notation. I don't expect you to have done this, don't worry!

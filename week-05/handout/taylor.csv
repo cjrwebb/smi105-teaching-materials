@@ -1,0 +1,145 @@
+artist_name,album_release_date,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,time_signature,duration_ms,explicit,track_name,track_number,album_name,key_name,mode_name,key_mode
+Taylor Swift,2006-10-24,0.58,0.491,0,-6.462,1,0.0251,0.575,0,0.121,0.425,76.009,4,232106,FALSE,Tim McGraw,1,Taylor Swift,C,major,C major
+Taylor Swift,2006-10-24,0.658,0.877,7,-2.098,1,0.0323,0.173,0,0.0962,0.821,105.586,4,173066,FALSE,Picture To Burn,2,Taylor Swift,G,major,G major
+Taylor Swift,2006-10-24,0.621,0.417,10,-6.941,1,0.0231,0.288,0,0.119,0.289,99.953,4,203040,FALSE,Teardrops On My Guitar - Radio Single Remix,3,Taylor Swift,A#,major,A# major
+Taylor Swift,2006-10-24,0.576,0.777,9,-2.881,1,0.0324,0.051,0,0.32,0.428,115.028,4,199200,FALSE,A Place in this World,4,Taylor Swift,A,major,A major
+Taylor Swift,2006-10-24,0.418,0.482,5,-5.769,1,0.0266,0.217,0,0.123,0.261,175.558,4,239013,FALSE,Cold As You,5,Taylor Swift,F,major,F major
+Taylor Swift,2006-10-24,0.589,0.805,5,-4.055,1,0.0293,0.00491,0,0.24,0.591,112.982,4,207106,FALSE,The Outside,6,Taylor Swift,F,major,F major
+Taylor Swift,2006-10-24,0.479,0.578,2,-4.963,1,0.0294,0.525,0,0.0841,0.192,146.165,4,248106,FALSE,Tied Together with a Smile,7,Taylor Swift,D,major,D major
+Taylor Swift,2006-10-24,0.594,0.629,8,-4.919,1,0.0246,0.0868,0,0.137,0.504,131.597,4,236053,FALSE,Stay Beautiful,8,Taylor Swift,G#,major,G# major
+Taylor Swift,2006-10-24,0.476,0.777,4,-3.771,0,0.0289,0.0103,0,0.196,0.472,167.964,4,242200,FALSE,Should've Said No,9,Taylor Swift,E,minor,E minor
+Taylor Swift,2006-10-24,0.403,0.627,2,-5.28,1,0.0292,0.0177,0,0.182,0.374,74.9,4,213080,FALSE,Mary's Song (Oh My My My),10,Taylor Swift,D,major,D major
+Taylor Swift,2006-10-24,0.668,0.672,2,-4.931,1,0.0303,0.111,0,0.329,0.539,89.011,4,201106,FALSE,Our Song,11,Taylor Swift,D,major,D major
+Taylor Swift,2008-11-11,0.598,0.705,5,-4.394,1,0.0275,0.037,0,0.304,0.433,100.019,4,242826,FALSE,Fearless,1,Fearless,F,major,F major
+Taylor Swift,2008-11-11,0.56,0.636,7,-4.453,1,0.0262,0.0602,0,0.148,0.209,95.431,4,294880,FALSE,Fifteen,2,Fearless,G,major,G major
+Taylor Swift,2008-11-11,0.622,0.637,2,-5.401,1,0.0289,0.021,1.44e-4,0.189,0.291,119.054,4,234213,FALSE,Love Story,3,Fearless,D,major,D major
+Taylor Swift,2008-11-11,0.843,0.555,6,-7.359,1,0.0316,0.177,1.34e-6,0.0977,0.815,116.001,4,254826,FALSE,Hey Stephen,4,Fearless,F#,major,F# major
+Taylor Swift,2008-11-11,0.578,0.349,0,-8.025,1,0.0257,0.318,0,0.1,0.247,92.354,4,234906,FALSE,White Horse,5,Fearless,C,major,C major
+Taylor Swift,2008-11-11,0.688,0.765,6,-4.451,1,0.0387,0.16,1.78e-5,0.103,0.431,129.967,4,231453,FALSE,You Belong With Me,6,Fearless,F#,major,F# major
+Taylor Swift,2008-11-11,0.491,0.479,1,-7.396,1,0.0269,0.395,0,0.122,0.16,148.305,4,264373,FALSE,Breathe,7,Fearless,C#,major,C# major
+Taylor Swift,2008-11-11,0.606,0.85,7,-3.057,1,0.038,0.0689,2.96e-6,0.363,0.512,99.978,4,200906,FALSE,Tell Me Why,8,Fearless,G,major,G major
+Taylor Swift,2008-11-11,0.467,0.456,6,-4.155,1,0.0271,0.158,0,0.111,0.252,134.059,4,262173,FALSE,You're Not Sorry,9,Fearless,F#,major,F# major
+Taylor Swift,2008-11-11,0.433,0.723,5,-3.751,1,0.0352,0.0345,0,0.125,0.406,160.92,4,244573,FALSE,The Way I Loved You,10,Fearless,F,major,F major
+Taylor Swift,2008-11-11,0.607,0.826,10,-4.989,1,0.0584,0.0767,0,0.104,0.501,128.048,4,225786,FALSE,Forever & Always,11,Fearless,A#,major,A# major
+Taylor Swift,2008-11-11,0.667,0.447,1,-8.572,1,0.0285,0.637,4.65e-6,0.138,0.36,126.189,4,245666,FALSE,The Best Day,12,Fearless,C#,major,C# major
+Taylor Swift,2008-11-11,0.536,0.768,5,-4.157,1,0.0361,0.00454,0,0.106,0.237,95.996,4,280333,FALSE,Change,13,Fearless,F,major,F major
+Taylor Swift,2010-10-25,0.696,0.768,7,-3.863,1,0.0308,0.00461,1.21e-6,0.101,0.692,121.05,4,230546,FALSE,Mine - POP Mix,1,Speak Now,G,major,G major
+Taylor Swift,2010-10-25,0.608,0.785,5,-2.976,1,0.0311,0.0387,0,0.158,0.376,114.985,4,260946,FALSE,Sparks Fly,2,Speak Now,F,major,F major
+Taylor Swift,2010-10-25,0.517,0.606,2,-5.797,1,0.0289,0.0202,0,0.324,0.296,141.929,4,293040,FALSE,Back To December,3,Speak Now,D,major,D major
+Taylor Swift,2010-10-25,0.708,0.601,7,-3.75,1,0.0306,0.101,0,0.0979,0.742,118.962,4,240773,FALSE,Speak Now,4,Speak Now,G,major,G major
+Taylor Swift,2010-10-25,0.583,0.468,4,-5.378,1,0.0278,0.183,1.65e-6,0.111,0.126,119.375,3,403933,FALSE,Dear John,5,Speak Now,E,major,E major
+Taylor Swift,2010-10-25,0.57,0.747,4,-3.978,1,0.0426,0.445,0,0.219,0.808,164.004,4,237746,FALSE,Mean,6,Speak Now,E,major,E major
+Taylor Swift,2010-10-25,0.575,0.855,9,-4.827,1,0.0467,3.15e-4,0.00161,0.0419,0.84,139.92,4,265680,FALSE,The Story Of Us,7,Speak Now,A,major,A major
+Taylor Swift,2010-10-25,0.715,0.308,2,-8.829,1,0.0305,0.829,0,0.16,0.547,124.899,4,290480,FALSE,Never Grow Up,8,Speak Now,D,major,D major
+Taylor Swift,2010-10-25,0.535,0.618,8,-3.913,1,0.0273,0.0716,3.88e-4,0.169,0.228,81.975,4,352200,FALSE,Enchanted,9,Speak Now,G#,major,G# major
+Taylor Swift,2010-10-25,0.519,0.917,11,-3.185,0,0.0887,0.0167,2.06e-5,0.359,0.652,145.882,4,217173,FALSE,Better Than Revenge,10,Speak Now,B,minor,B minor
+Taylor Swift,2010-10-25,0.553,0.604,1,-5.295,0,0.0258,0.202,0,0.125,0.186,133.989,4,302266,FALSE,Innocent,11,Speak Now,C#,minor,C# minor
+Taylor Swift,2010-10-25,0.434,0.944,5,-2.641,1,0.0581,0.0769,0,0.151,0.361,162.02,4,242093,FALSE,Haunted,12,Speak Now,F,major,F major
+Taylor Swift,2010-10-25,0.359,0.329,10,-9.531,1,0.0293,0.581,3.75e-5,0.0979,0.208,84.358,3,367146,FALSE,Last Kiss,13,Speak Now,A#,major,A# major
+Taylor Swift,2010-10-25,0.412,0.682,7,-4.319,1,0.0339,0.0426,7.47e-5,0.106,0.146,203.959,4,317960,FALSE,Long Live,14,Speak Now,G,major,G major
+Taylor Swift,2012-10-22,0.588,0.825,4,-5.882,1,0.0328,1.97e-4,0.00138,0.0885,0.397,129.968,4,295186,FALSE,State Of Grace,1,Red,E,major,E major
+Taylor Swift,2012-10-22,0.602,0.896,1,-4.267,0,0.0437,0.0773,8.87e-5,0.091,0.641,124.978,4,220826,FALSE,Red,2,Red,C#,minor,C# minor
+Taylor Swift,2012-10-22,0.705,0.621,2,-8.086,1,0.0334,0.101,4.3e-6,0.147,0.395,109.993,4,240773,FALSE,Treacherous,3,Red,D,major,D major
+Taylor Swift,2012-10-22,0.622,0.469,3,-6.798,0,0.0363,0.00454,2.25e-6,0.0398,0.679,77.019,4,217973,FALSE,I Knew You Were Trouble.,4,Red,D#,minor,D# minor
+Taylor Swift,2012-10-22,0.602,0.609,0,-7.803,1,0.0243,0.0382,2e-4,0.127,0.337,93.06,4,327893,FALSE,All Too Well,5,Red,C,major,C major
+Taylor Swift,2012-10-22,0.658,0.729,7,-6.561,1,0.0378,0.00215,0.0013,0.0752,0.668,104.007,4,230133,FALSE,22,6,Red,G,major,G major
+Taylor Swift,2012-10-22,0.567,0.481,4,-7.357,1,0.027,0.0173,4.13e-5,0.182,0.233,145.865,4,242573,FALSE,I Almost Do,7,Red,E,major,E major
+Taylor Swift,2012-10-22,0.628,0.676,7,-5.911,1,0.0916,0.00957,2.65e-5,0.102,0.75,85.984,4,191880,FALSE,We Are Never Ever Getting Back Together,8,Red,G,major,G major
+Taylor Swift,2012-10-22,0.729,0.748,0,-6.67,1,0.0245,0.307,1.29e-6,0.09,0.928,99.981,4,204826,FALSE,Stay Stay Stay,9,Red,C,major,C major
+Taylor Swift,2012-10-22,0.505,0.443,2,-7.039,1,0.0276,0.035,3.15e-6,0.0921,0.123,94.069,4,298293,FALSE,The Last Time,10,Red,D,major,D major
+Taylor Swift,2012-10-22,0.627,0.816,4,-6.698,1,0.0774,0.0162,0.00208,0.0966,0.648,157.043,4,201853,FALSE,Holy Ground,11,Red,E,major,E major
+Taylor Swift,2012-10-22,0.624,0.34,7,-12.411,1,0.029,0.632,0.0337,0.121,0.261,129.987,3,283680,FALSE,Sad Beautiful Tragic,12,Red,G,major,G major
+Taylor Swift,2012-10-22,0.706,0.499,4,-7.675,1,0.0369,0.0371,0,0.132,0.545,117.937,4,240133,FALSE,The Lucky One,13,Red,E,major,E major
+Taylor Swift,2012-10-22,0.624,0.458,6,-6.755,1,0.0287,0.36,3.89e-6,0.303,0.436,80.017,4,243933,FALSE,Everything Has Changed,14,Red,F#,major,F# major
+Taylor Swift,2012-10-22,0.649,0.777,9,-5.804,1,0.0406,0.0213,3.35e-4,0.221,0.587,126.018,4,217826,FALSE,Starlight,15,Red,A,major,A major
+Taylor Swift,2012-10-22,0.53,0.526,7,-8.349,1,0.0263,0.199,3.52e-6,0.232,0.323,79.025,4,237613,FALSE,Begin Again,16,Red,G,major,G major
+Taylor Swift,2014-10-27,0.793,0.634,7,-4.807,1,0.0324,0.038,1.76e-6,0.304,0.615,117.024,4,212600,FALSE,Welcome To New York,1,1989,G,major,G major
+Taylor Swift,2014-10-27,0.753,0.678,5,-5.421,1,0.0644,0.085,1.64e-6,0.13,0.583,96.006,4,231826,FALSE,Blank Space,2,1989,F,major,F major
+Taylor Swift,2014-10-27,0.598,0.786,2,-5.572,1,0.0383,0.00253,0.0016,0.117,0.456,95.019,4,231000,FALSE,Style,3,1989,D,major,D major
+Taylor Swift,2014-10-27,0.552,0.842,7,-6.938,1,0.0373,0.00103,1.17e-5,0.337,0.343,91.991,4,235800,FALSE,Out Of The Woods,4,1989,G,major,G major
+Taylor Swift,2014-10-27,0.602,0.736,5,-5.778,1,0.0338,0.00196,4.57e-5,0.105,0.471,96.969,4,193293,FALSE,All You Had To Do Was Stay,5,1989,F,major,F major
+Taylor Swift,2014-10-27,0.647,0.785,7,-5.414,1,0.165,0.0561,0,0.148,0.943,160.015,4,219200,FALSE,Shake It Off,6,1989,G,major,G major
+Taylor Swift,2014-10-27,0.648,0.898,0,-5.963,1,0.0513,0.016,9.91e-5,0.109,0.502,118.02,4,207440,FALSE,I Wish You Would,7,1989,C,major,C major
+Taylor Swift,2014-10-27,0.65,0.802,7,-6.114,1,0.181,0.0871,6.54e-6,0.148,0.295,170.146,4,211933,FALSE,Bad Blood,8,1989,G,major,G major
+Taylor Swift,2014-10-27,0.554,0.666,8,-7.414,1,0.0747,0.0702,0.00593,0.106,0.472,140.056,4,220440,FALSE,Wildest Dreams,9,1989,G#,major,G# major
+Taylor Swift,2014-10-27,0.764,0.66,5,-6.136,1,0.0494,0.00461,0.00477,0.0915,0.524,119.988,4,247533,FALSE,How You Get The Girl,10,1989,F,major,F major
+Taylor Swift,2014-10-27,0.475,0.459,4,-8.768,1,0.0333,0.635,0,0.101,0.0828,143.988,4,250093,FALSE,This Love,11,1989,E,major,E major
+Taylor Swift,2014-10-27,0.596,0.763,0,-4.99,1,0.0661,0.231,0,0.2,0.507,159.958,4,195706,FALSE,I Know Places,12,1989,C,major,C major
+Taylor Swift,2014-10-27,0.81,0.379,4,-7.771,1,0.0349,0.241,0,0.113,0.22,103.981,4,271000,FALSE,Clean,13,1989,E,major,E major
+Taylor Swift,2017-11-10,0.613,0.764,2,-6.509,1,0.136,0.0527,0,0.197,0.417,160.015,4,208186,FALSE,...Ready For It?,1,reputation,D,major,D major
+Taylor Swift,2017-11-10,0.649,0.589,2,-6.237,1,0.0558,0.00845,0,0.108,0.151,159.073,4,244826,FALSE,End Game,2,reputation,D,major,D major
+Taylor Swift,2017-11-10,0.696,0.602,0,-6.156,0,0.159,0.0679,2.11e-5,0.0696,0.305,82.989,4,238253,FALSE,I Did Something Bad,3,reputation,C,minor,C minor
+Taylor Swift,2017-11-10,0.615,0.534,9,-6.719,0,0.0386,0.106,1.76e-5,0.0607,0.193,135.917,4,236413,FALSE,Don’t Blame Me,4,reputation,A,minor,A minor
+Taylor Swift,2017-11-10,0.75,0.404,9,-10.178,0,0.0682,0.216,3.57e-4,0.0911,0.0499,95.045,4,232253,FALSE,Delicate,5,reputation,A,minor,A minor
+Taylor Swift,2017-11-10,0.766,0.709,9,-6.471,0,0.123,0.204,1.41e-5,0.126,0.506,128.07,4,211853,FALSE,Look What You Made Me Do,6,reputation,A,minor,A minor
+Taylor Swift,2017-11-10,0.574,0.61,2,-7.283,1,0.0732,0.122,1.1e-6,0.13,0.374,74.957,4,227906,FALSE,So It Goes...,7,reputation,D,major,D major
+Taylor Swift,2017-11-10,0.8,0.535,7,-6.684,1,0.135,0.0713,9.48e-6,0.213,0.451,92.027,4,209680,FALSE,Gorgeous,8,reputation,G,major,G major
+Taylor Swift,2017-11-10,0.562,0.689,2,-6.745,1,0.127,0.00465,2.23e-6,0.0888,0.351,172.054,4,233626,FALSE,Getaway Car,9,reputation,D,major,D major
+Taylor Swift,2017-11-10,0.675,0.703,0,-7.902,1,0.0382,0.00882,2.21e-6,0.0391,0.314,110.01,4,214320,FALSE,King Of My Heart,10,reputation,C,major,C major
+Taylor Swift,2017-11-10,0.624,0.691,0,-6.686,0,0.196,0.0604,1.1e-5,0.138,0.284,160.024,4,211506,FALSE,Dancing With Our Hands Tied,11,reputation,C,minor,C minor
+Taylor Swift,2017-11-10,0.719,0.469,0,-8.792,1,0.0533,0.0329,0,0.169,0.0851,120.085,4,230373,FALSE,Dress,12,reputation,C,major,C major
+Taylor Swift,2017-11-10,0.567,0.789,5,-5.986,1,0.115,0.0156,0,0.382,0.438,163.96,4,207133,FALSE,This Is Why We Can't Have Nice Things,13,reputation,F,major,F major
+Taylor Swift,2017-11-10,0.598,0.504,9,-9.874,1,0.0731,0.186,2.21e-4,0.34,0.252,163.954,4,203506,FALSE,Call It What You Want,14,reputation,A,major,A major
+Taylor Swift,2017-11-10,0.661,0.151,0,-12.864,1,0.0354,0.921,0,0.13,0.23,94.922,4,235466,FALSE,New Year’s Day,15,reputation,C,major,C major
+Taylor Swift,2019-08-23,0.664,0.316,5,-10.345,1,0.519,0.298,2.03e-6,0.0812,0.541,92.875,4,170640,FALSE,I Forgot That You Existed,1,Lover,F,major,F major
+Taylor Swift,2019-08-23,0.552,0.702,9,-5.707,1,0.157,0.117,2.06e-5,0.105,0.564,169.994,4,178426,FALSE,Cruel Summer,2,Lover,A,major,A major
+Taylor Swift,2019-08-23,0.359,0.543,7,-7.582,1,0.0919,0.492,1.58e-5,0.118,0.453,68.534,4,221306,FALSE,Lover,3,Lover,G,major,G major
+Taylor Swift,2019-08-23,0.777,0.658,0,-5.191,1,0.054,0.0767,0,0.0901,0.633,110.048,4,190360,FALSE,The Man,4,Lover,C,major,C major
+Taylor Swift,2019-08-23,0.292,0.574,0,-9.375,1,0.0401,0.12,0.00569,0.0663,0.166,124.344,4,211240,FALSE,The Archer,5,Lover,C,major,C major
+Taylor Swift,2019-08-23,0.897,0.366,0,-8.029,1,0.0569,0.00889,3.53e-4,0.0715,0.416,100.003,4,173386,FALSE,I Think He Knows,6,Lover,C,major,C major
+Taylor Swift,2019-08-23,0.662,0.747,11,-6.926,0,0.0736,0.028,0.00615,0.138,0.487,150.088,4,234146,FALSE,Miss Americana & The Heartbreak Prince,7,Lover,B,minor,B minor
+Taylor Swift,2019-08-23,0.811,0.719,9,-6.553,1,0.0497,0.0129,1.36e-5,0.0742,0.865,103.979,4,222400,FALSE,Paper Rings,8,Lover,A,major,A major
+Taylor Swift,2019-08-23,0.824,0.624,0,-9.728,1,0.0827,0.781,1.89e-4,0.1,0.248,102.012,4,287266,FALSE,Cornelia Street,9,Lover,C,major,C major
+Taylor Swift,2019-08-23,0.712,0.732,4,-6.754,1,0.0629,0.454,0,0.319,0.313,94.071,4,198533,FALSE,Death By A Thousand Cuts,10,Lover,E,major,E major
+Taylor Swift,2019-08-23,0.695,0.71,1,-6.639,1,0.05,0.0246,1.04e-4,0.133,0.557,157.925,4,190240,FALSE,London Boy,11,Lover,C#,major,C# major
+Taylor Swift,2019-08-23,0.433,0.182,0,-12.566,1,0.0641,0.907,0,0.123,0.421,207.476,4,201586,FALSE,Soon You’ll Get Better (feat. The Chicks),12,Lover,C,major,C major
+Taylor Swift,2019-08-23,0.739,0.32,11,-10.862,0,0.239,0.736,1.47e-4,0.111,0.351,79.97,4,200306,FALSE,False God,13,Lover,B,minor,B minor
+Taylor Swift,2019-08-23,0.771,0.671,2,-5.617,1,0.0553,0.00929,0,0.0637,0.714,85.026,4,171360,FALSE,You Need To Calm Down,14,Lover,D,major,D major
+Taylor Swift,2019-08-23,0.756,0.449,9,-8.746,1,0.0344,0.13,0,0.114,0.399,111.011,4,223293,FALSE,Afterglow,15,Lover,A,major,A major
+Taylor Swift,2019-08-23,0.61,0.83,0,-4.105,1,0.0571,0.033,0,0.118,0.728,182.162,4,193000,FALSE,ME! (feat. Brendon Urie of Panic! At The Disco),16,Lover,C,major,C major
+Taylor Swift,2019-08-23,0.737,0.175,10,-9.912,1,0.0401,0.971,3.37e-4,0.171,0.545,70.008,4,150440,FALSE,It’s Nice To Have A Friend,17,Lover,A#,major,A# major
+Taylor Swift,2019-08-23,0.557,0.496,0,-9.602,1,0.0563,0.808,1.73e-4,0.0772,0.265,149.983,4,293453,FALSE,Daylight,18,Lover,C,major,C major
+Taylor Swift,2020-07-24,0.777,0.357,0,-6.942,1,0.0522,0.757,7.28e-6,0.108,0.172,139.883,4,210251,TRUE,the 1,1,folklore,C,major,C major
+Taylor Swift,2020-07-24,0.613,0.581,0,-8.588,0,0.0424,0.537,3.45e-4,0.25,0.551,130.033,4,239560,FALSE,cardigan,2,folklore,C,minor,C minor
+Taylor Swift,2020-07-24,0.686,0.662,7,-8.505,1,0.0413,0.467,0.0023,0.109,0.706,147.922,4,230999,TRUE,the last great american dynasty,3,folklore,G,major,G major
+Taylor Swift,2020-07-24,0.298,0.38,6,-8.426,1,0.0287,0.778,5.62e-5,0.11,0.152,75.602,4,285634,FALSE,exile (feat. Bon Iver),4,folklore,F#,major,F# major
+Taylor Swift,2020-07-24,0.456,0.263,0,-10.63,1,0.0332,0.806,0,0.0749,0.111,129.86,4,255893,FALSE,my tears ricochet,5,folklore,C,major,C major
+Taylor Swift,2020-07-24,0.553,0.413,2,-10.037,1,0.0334,0.687,2.33e-6,0.0594,0.379,110.107,4,208977,FALSE,mirrorball,6,folklore,D,major,D major
+Taylor Swift,2020-07-24,0.596,0.488,4,-10.769,1,0.0274,0.9,2.7e-5,0.091,0.415,94.926,4,208906,FALSE,seven,7,folklore,E,major,E major
+Taylor Swift,2020-07-24,0.532,0.623,5,-9.208,1,0.0331,0.538,7.28e-5,0.0925,0.403,89.937,4,261922,FALSE,august,8,folklore,F,major,F major
+Taylor Swift,2020-07-24,0.515,0.476,9,-9.843,1,0.0328,0.314,4.74e-5,0.171,0.412,135.886,4,195097,FALSE,this is me trying,9,folklore,A,major,A major
+Taylor Swift,2020-07-24,0.559,0.31,10,-10.445,1,0.0338,0.881,0,0.106,0.46,119.845,4,190898,FALSE,illicit affairs,10,folklore,A#,major,A# major
+Taylor Swift,2020-07-24,0.653,0.452,4,-11.143,0,0.055,0.838,7.73e-5,0.108,0.45,83.433,4,252880,FALSE,invisible string,11,folklore,E,minor,E minor
+Taylor Swift,2020-07-24,0.592,0.699,3,-8.995,1,0.0471,0.655,1.68e-5,0.114,0.506,141.916,4,237258,TRUE,mad woman,12,folklore,D#,major,D# major
+Taylor Swift,2020-07-24,0.354,0.267,1,-13.69,1,0.0281,0.731,4.02e-4,0.0858,0.113,94.219,4,289749,FALSE,epiphany,13,folklore,C#,major,C# major
+Taylor Swift,2020-07-24,0.593,0.377,0,-8.761,1,0.0253,0.6,0,0.0976,0.502,95.939,4,294521,TRUE,betty,14,folklore,C,major,C major
+Taylor Swift,2020-07-24,0.647,0.272,5,-12.906,1,0.0916,0.918,1.73e-5,0.0918,0.339,150.044,4,234000,TRUE,peace,15,folklore,F,major,F major
+Taylor Swift,2020-07-24,0.662,0.181,8,-15.065,1,0.0415,0.966,3.86e-6,0.133,0.429,118.819,4,220042,FALSE,hoax,16,folklore,G#,major,G# major
+Taylor Swift,2020-12-11,0.392,0.574,7,-9.195,1,0.17,0.833,0.00179,0.145,0.529,81.112,4,214706,FALSE,willow,1,evermore,G,major,G major
+Taylor Swift,2020-12-11,0.462,0.24,0,-12.077,1,0.0377,0.92,0,0.113,0.32,171.319,4,244000,TRUE,champagne problems,2,evermore,C,major,C major
+Taylor Swift,2020-12-11,0.512,0.462,9,-10.491,1,0.0408,0.83,0.166,0.121,0.353,112.05,4,185320,TRUE,gold rush,3,evermore,A,major,A major
+Taylor Swift,2020-12-11,0.575,0.434,5,-8.193,1,0.0312,0.735,6.59e-5,0.105,0.348,145.916,4,229840,FALSE,‘tis the damn season,4,evermore,F,major,F major
+Taylor Swift,2020-12-11,0.316,0.361,9,-10.381,1,0.0488,0.878,2.67e-5,0.0797,0.221,74.952,5,245440,TRUE,tolerate it,5,evermore,A,major,A major
+Taylor Swift,2020-12-11,0.546,0.613,7,-7.589,0,0.0264,0.418,0,0.103,0.535,79.015,4,215626,FALSE,"no body, no crime (feat. HAIM)",6,evermore,G,minor,G minor
+Taylor Swift,2020-12-11,0.559,0.334,11,-10.733,1,0.0376,0.87,0,0.114,0.211,122.079,4,315146,TRUE,happiness,7,evermore,B,major,B major
+Taylor Swift,2020-12-11,0.605,0.488,4,-8.322,1,0.0264,0.696,0,0.129,0.354,119.966,4,225880,FALSE,dorothea,8,evermore,E,major,E major
+Taylor Swift,2020-12-11,0.537,0.537,8,-11.266,1,0.0617,0.819,9.04e-4,0.142,0.292,107.895,4,275320,FALSE,coney island (feat. The National),9,evermore,G#,major,G# major
+Taylor Swift,2020-12-11,0.515,0.545,2,-9.277,1,0.0353,0.855,1.97e-5,0.0921,0.535,88.856,4,260440,TRUE,ivy,10,evermore,D,major,D major
+Taylor Swift,2020-12-11,0.604,0.517,0,-9.014,1,0.0347,0.768,1.55e-4,0.123,0.511,127.967,4,275040,TRUE,cowboy like me,11,evermore,C,major,C major
+Taylor Swift,2020-12-11,0.546,0.73,0,-7.704,1,0.0417,0.66,0.179,0.0972,0.573,157.895,4,215920,FALSE,long story short,12,evermore,C,major,C major
+Taylor Swift,2020-12-11,0.535,0.561,5,-11.609,1,0.0484,0.876,1.36e-4,0.115,0.287,96.103,4,257773,FALSE,marjorie,13,evermore,F,major,F major
+Taylor Swift,2020-12-11,0.689,0.704,9,-10.813,1,0.245,0.835,4.83e-6,0.134,0.92,151.884,5,180653,FALSE,closure,14,evermore,A,major,A major
+Taylor Swift,2020-12-11,0.39,0.27,1,-10.673,1,0.0308,0.937,0.00227,0.111,0.32,125.177,5,304106,FALSE,evermore (feat. Bon Iver),15,evermore,C#,major,C# major
+Taylor Swift,2022-10-21,0.733,0.436,10,-10.489,1,0.08,0.258,5.73e-4,0.157,0.0976,96.985,4,202395,TRUE,Lavender Haze,1,Midnights,A#,major,A# major
+Taylor Swift,2022-10-21,0.637,0.398,7,-8.294,1,0.0564,0.0573,1.03e-6,0.101,0.0374,108.075,4,218270,TRUE,Maroon,2,Midnights,G,major,G major
+Taylor Swift,2022-10-21,0.637,0.643,4,-6.571,1,0.0519,0.13,1.8e-6,0.142,0.533,97.008,4,200690,FALSE,Anti-Hero,3,Midnights,E,major,E major
+Taylor Swift,2022-10-21,0.663,0.319,9,-13.481,1,0.0375,0.69,9.93e-4,0.117,0.193,109.957,4,256124,TRUE,Snow On The Beach (feat. Lana Del Rey),4,Midnights,A,major,A major
+Taylor Swift,2022-10-21,0.696,0.396,2,-10.289,1,0.0656,0.401,5.2e-6,0.125,0.38,120.041,4,194206,FALSE,"You're On Your Own, Kid",5,Midnights,D,major,D major
+Taylor Swift,2022-10-21,0.643,0.363,0,-11.738,1,0.0767,0.69,5.17e-5,0.115,0.23,139.865,4,174782,FALSE,Midnight Rain,6,Midnights,C,major,C major
+Taylor Swift,2022-10-21,0.751,0.502,7,-8.763,1,0.167,0.2,0,0.296,0.106,108.943,4,210556,TRUE,Question...?,7,Midnights,G,major,G major
+Taylor Swift,2022-10-21,0.798,0.277,4,-11.096,0,0.39,0.173,5.25e-5,0.121,0.163,79.846,4,164801,TRUE,Vigilante Shit,8,Midnights,E,minor,E minor
+Taylor Swift,2022-10-21,0.696,0.559,7,-9.19,1,0.0693,0.0618,5.58e-5,0.0887,0.433,163.999,4,194165,FALSE,Bejeweled,9,Midnights,G,major,G major
+Taylor Swift,2022-10-21,0.406,0.306,0,-15.48,1,0.0517,0.785,0.488,0.122,0.122,110.014,4,247962,FALSE,Labyrinth,10,Midnights,C,major,C major
+Taylor Swift,2022-10-21,0.642,0.62,8,-7.091,1,0.0666,0.0734,0,0.483,0.0969,90.02,4,204852,TRUE,Karma,11,Midnights,G#,major,G# major
+Taylor Swift,2022-10-21,0.337,0.156,0,-14.919,1,0.0518,0.964,7.72e-5,0.115,0.39,176.655,4,188496,FALSE,Sweet Nothing,12,Midnights,C,major,C major
+Taylor Swift,2022-10-21,0.662,0.357,4,-14.064,1,0.154,0.553,0.00129,0.0837,0.124,125.966,4,191039,FALSE,Mastermind,13,Midnights,E,major,E major
