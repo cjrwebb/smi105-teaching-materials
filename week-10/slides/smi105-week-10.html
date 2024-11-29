@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>SMI105: Week 10 Best practice for whom?</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Calum Webb" />
+    <meta name="date" content="2024-11-29" />
+    <script src="smi105-week-10_files/header-attrs/header-attrs.js"></script>
+    <link href="smi105-week-10_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="smi105-week-10_files/tile-view/tile-view.js"></script>
+    <link href="smi105-week-10_files/panelset/panelset.css" rel="stylesheet" />
+    <script src="smi105-week-10_files/panelset/panelset.js"></script>
+    <script src="smi105-week-10_files/xaringanExtra-progressBar/progress-bar.js"></script>
+    <link href="smi105-week-10_files/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script src="smi105-week-10_files/clipboard/clipboard.min.js"></script>
+    <link href="smi105-week-10_files/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="smi105-week-10_files/shareon/shareon.min.js"></script>
+    <link href="smi105-week-10_files/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="smi105-week-10_files/xaringanExtra-shareagain/shareagain.js"></script>
+    <script src="smi105-week-10_files/mark.js/mark.min.js"></script>
+    <link href="smi105-week-10_files/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="smi105-week-10_files/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
+    <script src="smi105-week-10_files/htmlwidgets/htmlwidgets.js"></script>
+    <script src="smi105-week-10_files/plotly-binding/plotly.js"></script>
+    <script src="smi105-week-10_files/typedarray/typedarray.min.js"></script>
+    <script src="smi105-week-10_files/jquery/jquery.min.js"></script>
+    <link href="smi105-week-10_files/crosstalk/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="smi105-week-10_files/crosstalk/js/crosstalk.min.js"></script>
+    <link href="smi105-week-10_files/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+    <script src="smi105-week-10_files/plotly-main/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: middle, title
+background-size: contain
+
+
+&lt;br&gt;&lt;br&gt;
+
+# Best Practice for Whom?
+#### SMI105: Week 10
+
+&lt;br&gt;&lt;br&gt;
+
+**Dr. Calum Webb**&lt;br&gt;
+Sheffield Methods Institute, the University of Sheffield&lt;br&gt;
+[c.j.webb@sheffield.ac.uk](mailto:c.j.webb@sheffield.ac.uk)
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 180px;
+height: 128px;
+z-index: 0;
+background-image: url(header/smi-logo-white.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:2em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+
+
+
+<style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #F8F8F8;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+
+
+
+---
+
+class: middle, inverse
+
+# Sign in
+
+---
+
+class: middle
+
+## Learning outcomes
+
+.panelset[
+
+.panel[.panel-name[What will I learn?]
+
+By the end of this week you will know:
+
+* So far we've been talking about best practice in terms of graphic design and coding. This week, we're going to focus specifically on good practice for critically reflecting on **the role that data visualisations play in society**.
+
+* You'll learn some core principles from data feminism and other critical scholarly research so that we can **do better** when we make data visualisations, and **ensure that our data visualisations play a more positive role in society than a negative one**. 
+
+]
+]
+
+
+---
+
+class: middle, inverse
+
+## Both the data used in our data visualisations, and our data visualisations themselves, often use processes that often reinforce and reproduce societal biases.
+
+---
+
+class: middle, inverse
+
+## More critical awareness of those biases and their impact can help us improve our data visualisations to benefit society more equitably.
+
+---
+
+class: middle
+
+.middle-left[
+
+
+### (Some) Principles of Feminist Data (D'Ignazio &amp; Klein, 2016; D'Ignazio, 2024) and further challenges (Feigenbaum &amp; Alamalhodaei, 2020)
+
+* Rethink binaries &amp; classification
+* Embrace pluralism
+* Examine power &amp; encourage empowerment
+* Consider context
+* Legitimise embodiment &amp; affect
+* Inclusion, exclusion &amp; accessibility
+* Sanitisation &amp; impersonalisation
+
+]
+
+.pull-right[
+
+
+.center[
+&lt;img src="images/dignazio24.jpg" width="90%" /&gt;
+]
+
+
+]
+
+---
+
+class: middle
+
+.middle-left[
+
+### Rethinking binaries and classification
+
+Often for the sake of convenience or simplicity, data collection and data visualisations will use limited numbers of categories and, often **binaries**.
+
+**These often compress and do not fully represent peoples' opinions, identities, or experiences**
+
+Some examples of binaries/limited classification:
+
+* Thumbs up / Thumbs down
+* Ethnicity and nationality
+* Disability 
+* Gender and sexuality
+
+
+]
+
+.pull-right[
+
+<div class="plotly html-widget html-fill-item" id="htmlwidget-002032f5fc41c18509f0" style="width:500px;height:500px;"></div>
+<script type="application/json" data-for="htmlwidget-002032f5fc41c18509f0">{"x":{"data":[{"orientation":"v","width":54,"base":0.59999999999999998,"x":[27],"y":[0.79999999999999993],"text":"","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(237,74,109,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Black British/Black","legendgroup":"Black British/Black","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":50,"base":1.6000000000000001,"x":[25],"y":[0.79999999999999982],"text":"","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(74,135,237,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"White British","legendgroup":"White British","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":37.260273972602747,"l":122.00913242009135},"plot_bgcolor":"rgba(248,248,248,1)","paper_bgcolor":"rgba(248,248,248,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2.7000000000000002,56.700000000000003],"tickmode":"array","ticktext":["0","20","40"],"tickvals":[0,20,40],"categoryorder":"array","categoryarray":["0","20","40"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Rate of Children per 10,000 on Child Protection<br>Plans","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,2.6000000000000001],"tickmode":"array","ticktext":["Black British/Black","White British"],"tickvals":[1,2],"categoryorder":"array","categoryarray":["Black British/Black","White British"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(248,248,248,1)","bordercolor":"rgba(248,248,248,1)","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1186a6081f08":{"x":{},"y":{},"fill":{},"type":"bar"}},"cur_data":"1186a6081f08","visdat":{"1186a6081f08":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+
+
+]
+
+---
+
+class: middle
+
+.middle-left[
+
+
+### Rethinking binaries and classification
+
+Often for the sake of convenience or simplicity, data collection and data visualisations will use limited numbers of categories and, often **binaries**.
+
+**These often compress and do not fully represent peoples' opinions, identities, or experiences**
+
+Some examples of binaries/limited classification:
+
+* Thumbs up / Thumbs down
+* Ethnicity and nationality
+* Disability 
+* Gender and sexuality
+
+
+]
+
+.pull-right[
+
+<div class="plotly html-widget html-fill-item" id="htmlwidget-d20e7bffaf96fd84e3d4" style="width:500px;height:500px;"></div>
+<script type="application/json" data-for="htmlwidget-d20e7bffaf96fd84e3d4">{"x":{"data":[{"orientation":"v","width":31,"base":0.59999999999999998,"x":[15.5],"y":[0.79999999999999993],"text":"","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(237,74,109,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Black African","legendgroup":"Black African","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":61,"base":1.6000000000000001,"x":[30.5],"y":[0.79999999999999982],"text":"","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(237,120,74,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Black Caribbean","legendgroup":"Black Caribbean","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":71,"base":2.6000000000000001,"x":[35.5],"y":[0.79999999999999982],"text":"","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(237,92,74,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Black Other","legendgroup":"Black Other","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":50,"base":3.6000000000000001,"x":[25],"y":[0.80000000000000027],"text":"","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(74,135,237,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"White British","legendgroup":"White British","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":37.260273972602747,"l":98.630136986301395},"plot_bgcolor":"rgba(248,248,248,1)","paper_bgcolor":"rgba(248,248,248,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-3.5500000000000003,74.549999999999997],"tickmode":"array","ticktext":["0","20","40","60"],"tickvals":[0,20,39.999999999999993,60],"categoryorder":"array","categoryarray":["0","20","40","60"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Rate of Children per 10,000 on Child Protection<br>Plans","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,4.5999999999999996],"tickmode":"array","ticktext":["Black African","Black Caribbean","Black Other","White British"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["Black African","Black Caribbean","Black Other","White British"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(248,248,248,1)","bordercolor":"rgba(248,248,248,1)","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1186a2235ad6e":{"x":{},"y":{},"fill":{},"type":"bar"}},"cur_data":"1186a2235ad6e","visdat":{"1186a2235ad6e":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+.small[
+.right[
+[Based on Bywaters, et al. 2019.](https://www.sciencedirect.com/science/article/abs/pii/S019074091830728X)
+]
+]
+
+]
+
+---
+
+class: middle
+
+.middle-left[
+
+### Embrace pluralism
+
+When we visualise certain data, **what is it we are actually trying to talk about**, and what other ways might it be considered?
+
+For example, we often use GDP growth when **what we are talking about** is prosperity and quality of life; how else might these concepts be represented and **who benefits most from our emphasis on GDP**?
+
+How can we create ranges of data visualisations that recognise multiple points of view?
+
+]
+
+.pull-right[
+
+&lt;img src="smi105-week-10_files/figure-html/unnamed-chunk-4-1.png" width="500" height="500" /&gt;
+
+
+.small[
+.right[
+[Helliwell, et al. (2024). World Happiness Report 2024.](https://worldhappiness.report/data/)
+]
+]
+
+
+]
+
+---
+
+class: middle
+
+.middle-left[
+
+### Embrace pluralism
+
+When we visualise certain data, **what is it we are actually trying to talk about**, and what other ways might it be considered?
+
+For example, we often use GDP growth when **what we are talking about** is prosperity and quality of life; how else might these concepts be represented and **who benefits most from our emphasis on GDP**?
+
+How can we create ranges of data visualisations that recognise multiple points of view?
+
+]
+
+.pull-right[
+
+&lt;img src="images/suomilose.png" width="100%" /&gt;
+
+
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Embrace pluralism
+
+When we visualise certain data, **what is it we are actually trying to talk about**, and what other ways might it be considered?
+
+For example, we often use GDP growth when **what we are talking about** is prosperity and quality of life; how else might these concepts be represented and **who benefits most from our emphasis on GDP**?
+
+How can we create ranges of data visualisations that recognise multiple points of view?
+
+]
+
+.pull-right[
+
+&lt;img src="smi105-week-10_files/figure-html/unnamed-chunk-6-1.png" width="500" height="500" /&gt;
+
+
+.small[
+.right[
+[Helliwell, et al. (2024). World Happiness Report 2024.](https://worldhappiness.report/data/)
+]
+]
+
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Embrace pluralism
+
+When we visualise certain data, **what is it we are actually trying to talk about**, and what other ways might it be considered?
+
+For example, we often use GDP growth when **what we are talking about** is prosperity and quality of life; how else might these concepts be represented and **who benefits most from our emphasis on GDP**?
+
+How can we create ranges of data visualisations that recognise multiple points of view?
+
+]
+
+.pull-right[
+
+&lt;img src="images/suomimainittu.png" width="100%" /&gt;
+
+
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Examine power &amp; encourage empowerment
+
+Do your data visualisations, or the data visualisations of others, consider **which groups in society might be most effected by the topic being visualised**? 
+
+In what ways are you trying to make your data visualisations a tool that *they* can use to challenge unjust outcomes and experiences?
+
+* **Are your data visualisations accessible**: do they clearly tell a story? Is technical language explained? Are they likely to attract the engagement of those groups most affected? Are they accessible to the groups most affected (especially in terms of publication method)?
+* Is there a **call to action**? What can people do to create a change when something there is a problem in society that you have visualised?
+* Are people being **included** in the process of creating and critiquing a data visualisation, or in the process of collecting data? How could they be included (e.g. through participatory methods)?
+
+
+]
+
+.pull-right[
+
+&lt;img src="smi105-week-10_files/figure-html/unnamed-chunk-8-1.png" width="500" height="500" /&gt;
+
+
+.small[
+.right[
+[Munot, et al. (2024). Bystander cardiopulmonary resuscitation differences by sex.](https://www.resuscitationjournal.com/article/S0300-9572%2824%2900117-5/fulltext)
+]
+]
+
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Examine power &amp; encourage empowerment
+
+Do your data visualisations, or the data visualisations of others, consider **which groups in society might be most effected by the topic being visualised**? 
+
+In what ways are you trying to make your data visualisations a tool that *they* can use to challenge unjust outcomes and experiences?
+
+* **Are your data visualisations accessible**: do they clearly tell a story? Is technical language explained? Are they likely to attract the engagement of those groups most affected? Are they accessible to the groups most affected (especially in terms of publication method)?
+* Is there a **call to action**? What can people do to create a change when something there is a problem in society that you have visualised?
+* Are people being **included** in the process of creating and critiquing a data visualisation, or in the process of collecting data? How could they be included (e.g. through participatory methods)?
+
+
+]
+
+.pull-right[
+
+&lt;img src="smi105-week-10_files/figure-html/unnamed-chunk-9-1.png" width="500" height="500" /&gt;
+
+
+.small[
+.right[
+[Munot, et al. (2024). Bystander cardiopulmonary resuscitation differences by sex.](https://www.resuscitationjournal.com/article/S0300-9572%2824%2900117-5/fulltext)
+]
+]
+
+
+]
+
+---
+
+class: middle
+
+.middle-left[
+
+### Consider context
+
+What is the context in which data is generated, and **how would better engagement with the people who the data represents change our understanding of the data being generated** and what matters to them?
+
+For what reason is the data collected, why are some types of data not collected, and who does that benefit or disadvantage?
+
+Could we do the following:
+
+* Work together with the people who the data is about to find out what things matter to them and how they should be measured and visualised?
+* Consider the complexity of the data that *is* collected: e.g. when a child is truant from school, do we assume that this is misbehaviour/bad parenting and ignore that it might be related to factors such as having to care for relatives, avoiding bullying, or social anxiety?
+
+
+]
+
+.pull-right[
+
+&lt;img src="smi105-week-10_files/figure-html/unnamed-chunk-10-1.png" width="500" height="500" /&gt;
+
+
+]
+
+---
+
+class: middle
+
+.middle-left[
+
+### Consider context
+
+What is the context in which data is generated, and **how would better engagement with the people who the data represents change our understanding of the data being generated** and what matters to them?
+
+For what reason is the data collected, why are some types of data not collected, and who does that benefit or disadvantage?
+
+Could we do the following:
+
+* Work together with the people who the data is about to find out what things matter to them and how they should be measured and visualised?
+* Consider the complexity of the data that *is* collected: e.g. when a child is truant from school, do we assume that this is misbehaviour/bad parenting and ignore that it might be related to factors such as having to care for relatives, avoiding bullying, or social anxiety?
+
+
+]
+
+.pull-right[
+
+&lt;img src="smi105-week-10_files/figure-html/unnamed-chunk-11-1.png" width="500" height="500" /&gt;
+
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Legitimise embodiment and affect
+
+**Don't be a data visualisation snob**.
+
+The principles and practice of data visualisation can be applied to many different materialities that draw upon individual peoples' skills and strengths. 
+
+Data visualisation is often a rapid, fast process of creating and publishing data visualisations — that may be good for some things, but as part of the way that data and data visualisation fits within our daily lives, "slow" forms of data science and analysis can also help is "**reflect on everyday events that happen all around us**" ([Schoof, 2022](https://datasciencebydesign.org/blog/the-future-of-data-science-includes-slow-data-science))
+
+These types of "**data visceralisations**" can also cause people who might otherwise not be engaged with data visualisations to **feel** engaged and curious about what they represent. 
+
+
+]
+
+.pull-right[
+
+&gt; This graph shows the length of daily delays on one woman’s 40-minute commute between Munich and a town in the German countryside during 2018... &lt;br&gt;&lt;br&gt; The commuter knitted two rows each day. Gray for delays under five minutes, pink for up to 30 minutes, and red for a delay of more than a half-hour or delays in both directions.
+
+&lt;img src="images/data-scarf.jpg" width="100%" /&gt;
+
+
+.small[
+.right[
+[New York Times (2019). What’s Going On in This Graph? | Feb. 27, 2019](https://www.nytimes.com/2019/02/21/learning/whats-going-on-in-this-graph-feb-27-2019.html)
+]
+]
+
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Legitimise embodiment and affect
+
+**Don't be a data visualisation snob**.
+
+The principles and practice of data visualisation can be applied to many different materialities that draw upon individual peoples' skills and strengths. 
+
+Data visualisation is often a rapid, fast process of creating and publishing data visualisations — that may be good for some things, but as part of the way that data and data visualisation fits within our daily lives, "slow" forms of data science and analysis can also help is "**reflect on everyday events that happen all around us**" ([Schoof, 2022](https://datasciencebydesign.org/blog/the-future-of-data-science-includes-slow-data-science))
+
+These types of "**data visceralisations**" can also cause people who might otherwise not be engaged with data visualisations to **feel** engaged and curious about what they represent. 
+
+]
+
+.pull-right[
+
+&gt; Just 158 families have provided nearly half of the early money for efforts to capture the White House. 
+
+&lt;img src="images/party-600.png" width="100%" /&gt;
+
+
+.small[
+.right[
+[New York Times (Oct. 10, 2015). Buying Power](https://www.nytimes.com/interactive/2015/10/11/us/politics/2016-presidential-election-super-pac-donors.html?mtrref=www.google.com&amp;assetType=REGIWALL&amp;mtrref=undefined&amp;gwh=092CFD934F2939747834F4BA0B6A5FCB&amp;gwt=pay&amp;assetType=REGIWALL)
+]
+]
+
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Legitimise embodiment and affect
+
+**Don't be a data visualisation snob**.
+
+The principles and practice of data visualisation can be applied to many different materialities that draw upon individual peoples' skills and strengths. 
+
+Data visualisation is often a rapid, fast process of creating and publishing data visualisations — that may be good for some things, but as part of the way that data and data visualisation fits within our daily lives, "slow" forms of data science and analysis can also help is "**reflect on everyday events that happen all around us**" ([Schoof, 2022](https://datasciencebydesign.org/blog/the-future-of-data-science-includes-slow-data-science))
+
+These types of "**data visceralisations**" can also cause people who might otherwise not be engaged with data visualisations to **feel** engaged and curious about what they represent. 
+
+]
+
+.pull-right[
+
+&gt; This group of students in my class decided to experiment with flavor as a way to represent air quality data. ... To surprise the audience they invite participants to taste different brownies but didn’t telling them that the amount of salt had been increased based on how much pollution in the air there is in different cities. 
+
+&lt;img src="images/airquality.jpeg" width="100%" /&gt;
+
+
+.small[
+.right[
+[Rahul Bhargava, MIT Media Lab (2019). Thoughts On Designing Data Sculptures](https://civic.mit.edu/index.html%3Fp=2555.html)
+]
+]
+
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Inclusion, exclusion &amp; accessibility
+
+What don't you need to make data visualisations and tell stories using data?
+
+**You don't need to be a statistician, computer scientist, a graphic designer, or to have a lot of money to make data visualisations.**
+
+**You are all proof of this.**
+
+* R is free
+* RStudio is free
+* All of the data we have been visualising is free
+* Many of the books we have been using (e.g. [Healy, 2018](https://socviz.co), [Wickham, et al., 2023](https://r4ds.hadley.nz)) have free versions online.
+
+
+]
+
+--
+
+.pull-right[
+
+What **do** you need to make data visualisations and tell stories using data?
+
+* A story that you want to tell.
+* A willingness to learn how to create.
+* A commitment to representing data in an accessible, fair, way.
+* The empathy to put yourselves into the shoes of your audience.
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+]
+
+---
+
+class: middle
+
+.middle-left[
+
+### Sanitisation &amp; impersonalisation
+
+The process of data collection, analysis and visualisation often **divorces the data subjects from their data**. Data become sterilised: we often lose any sense of identity, personality, or emotion from the "data subjects" — a.k.a. the people who the data is about.
+
+This means that typical *best practice* approaches to data visualisations often make it **difficult or impossible to develop empathy for the people whom it is about** — removing us from the positionalities of the subjects ([Kennedy, et al. 2016](https://doi.org/10.1080/1369118X.2016.1153126)). Data depersonalises individuals.
+
+Lack of incorporation of voice and identity invites us to project our own, or dominant, narratives about the people concerned. Interactivity is one (limited) way to incorporate voice into visualisation.
+
+]
+
+
+.pull-right[
+
+
+<div class="plotly html-widget html-fill-item" id="htmlwidget-15f8829c713e74bfa14b" style="width:500px;height:500px;"></div>
+<script type="application/json" data-for="htmlwidget-15f8829c713e74bfa14b">{"x":{"data":[{"x":[-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,null,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,null,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,null,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,null,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,null,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,null,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,null,-0.60222195000000001,-0.59090909090909083,-0.54545454545454541,-0.5,-0.45454545454545459,-0.40909090909090906,-0.36363636363636365,-0.31818181818181812,-0.27272727272727271,-0.22727272727272729,-0.18181818181818177,-0.1363636363636363,-0.090909090909090828,-0.045454545454545414,0,0.045454545454545525,0.090909090909090828,0.13636363636363646,0.18181818181818188,0.22727272727272729,0.27272727272727282,0.31818181818181812,0.36363636363636387,0.40909090909090928,0.4545454545454547,0.50000000000000011,0.54545454545454553,0.59090909090909094,0.63636363636363658,0.68181818181818177,0.72727272727272718,0.77272727272727282,0.81818181818181845,0.86363636363636387,0.90909090909090928,0.95454545454545492,1,1.0454545454545454,1.0909090909090913,1.1363636363636362,1.1818181818181817,1.2272727272727275,1.2727272727272734,1.3181818181818183,1.3636363636363638,1.4090909090909092,1.4545454545454546,1.5,1.5454545454545454,1.5909090909090908,1.6363636363636362,1.6818181818181821,1.7272727272727275,1.7727272727272729,1.8181818181818188,1.8636363636363638,1.9090909090909092,1.954545454545455,2,2.0454545454545454,2.0909090909090913,2.1363636363636362,2.1818181818181821,2.2272727272727275,2.2727272727272729,2.3181818181818183,2.3636363636363638,2.4090909090909092,2.454545454545455,2.5,2.5454545454545454,2.5909090909090913,2.6363636363636367,2.6818181818181821,2.727272727272728,2.7727272727272729,2.8181818181818183,2.8636363636363642,2.9090909090909092,2.9545454545454546,3.0000000000000004,3.0454545454545459,3.0909090909090913,3.1363636363636367,3.1818181818181817,3.227272727272728,3.2727272727272725,3.3181818181818183,3.3636363636363638,3.4077609500000006,null,-0.60222195000000001,-0.59090909090909083,-0.54545454545454541,-0.5,-0.45454545454545459,-0.40909090909090906,-0.36363636363636365,-0.31818181818181812,-0.27272727272727271,-0.22727272727272729,-0.18181818181818177,-0.1363636363636363,-0.090909090909090828,-0.045454545454545414,0,0.045454545454545525,0.090909090909090828,0.13636363636363646,0.18181818181818188,0.22727272727272729,0.27272727272727282,0.31818181818181812,0.36363636363636387,0.40909090909090928,0.4545454545454547,0.50000000000000011,0.54545454545454553,0.59090909090909094,0.63636363636363658,0.68181818181818177,0.72727272727272718,0.77272727272727282,0.81818181818181845,0.86363636363636387,0.90909090909090928,0.95454545454545492,1,1.0454545454545454,1.0909090909090913,1.1363636363636362,1.1818181818181817,1.2272727272727275,1.2727272727272734,1.3181818181818183,1.3636363636363638,1.4090909090909092,1.4545454545454546,1.5,1.5454545454545454,1.5909090909090908,1.6363636363636362,1.6818181818181821,1.7272727272727275,1.7727272727272729,1.8181818181818188,1.8636363636363638,1.9090909090909092,1.954545454545455,2,2.0454545454545454,2.0909090909090913,2.1363636363636362,2.1818181818181821,2.2272727272727275,2.2727272727272729,2.3181818181818183,2.3636363636363638,2.4090909090909092,2.454545454545455,2.5,2.5454545454545454,2.5909090909090913,2.6363636363636367,2.6818181818181821,2.727272727272728,2.7727272727272729,2.8181818181818183,2.8636363636363642,2.9090909090909092,2.9545454545454546,3.0000000000000004,3.0454545454545459,3.0909090909090913,3.1363636363636367,3.1818181818181817,3.227272727272728,3.2727272727272725,3.3181818181818183,3.3636363636363638,3.4077609500000006,null,-0.60222195000000001,-0.59090909090909083,-0.54545454545454541,-0.5,-0.45454545454545459,-0.40909090909090906,-0.36363636363636365,-0.31818181818181812,-0.27272727272727271,-0.22727272727272729,-0.18181818181818177,-0.1363636363636363,-0.090909090909090828,-0.045454545454545414,0,0.045454545454545525,0.090909090909090828,0.13636363636363646,0.18181818181818188,0.22727272727272729,0.27272727272727282,0.31818181818181812,0.36363636363636387,0.40909090909090928,0.4545454545454547,0.50000000000000011,0.54545454545454553,0.59090909090909094,0.63636363636363658,0.68181818181818177,0.72727272727272718,0.77272727272727282,0.81818181818181845,0.86363636363636387,0.90909090909090928,0.95454545454545492,1,1.0454545454545454,1.0909090909090913,1.1363636363636362,1.1818181818181817,1.2272727272727275,1.2727272727272734,1.3181818181818183,1.3636363636363638,1.4090909090909092,1.4545454545454546,1.5,1.5454545454545454,1.5909090909090908,1.6363636363636362,1.6818181818181821,1.7272727272727275,1.7727272727272729,1.8181818181818188,1.8636363636363638,1.9090909090909092,1.954545454545455,2,2.0454545454545454,2.0909090909090913,2.1363636363636362,2.1818181818181821,2.2272727272727275,2.2727272727272729,2.3181818181818183,2.3636363636363638,2.4090909090909092,2.454545454545455,2.5,2.5454545454545454,2.5909090909090913,2.6363636363636367,2.6818181818181821,2.727272727272728,2.7727272727272729,2.8181818181818183,2.8636363636363642,2.9090909090909092,2.9545454545454546,3.0000000000000004,3.0454545454545459,3.0909090909090913,3.1363636363636367,3.1818181818181817,3.227272727272728,3.2727272727272725,3.3181818181818183,3.3636363636363638,3.4077609500000006,null,-0.60222195000000001,-0.59090909090909083,-0.54545454545454541,-0.5,-0.45454545454545459,-0.40909090909090906,-0.36363636363636365,-0.31818181818181812,-0.27272727272727271,-0.22727272727272729,-0.18181818181818177,-0.1363636363636363,-0.090909090909090828,-0.045454545454545414,0,0.045454545454545525,0.090909090909090828,0.13636363636363646,0.18181818181818188,0.22727272727272729,0.27272727272727282,0.31818181818181812,0.36363636363636387,0.40909090909090928,0.4545454545454547,0.50000000000000011,0.54545454545454553,0.59090909090909094,0.63636363636363658,0.68181818181818177,0.72727272727272718,0.77272727272727282,0.81818181818181845,0.86363636363636387,0.90909090909090928,0.95454545454545492,1,1.0454545454545454,1.0909090909090913,1.1363636363636362,1.1818181818181817,1.2272727272727275,1.2727272727272734,1.3181818181818183,1.3636363636363638,1.4090909090909092,1.4545454545454546,1.5,1.5454545454545454,1.5909090909090908,1.6363636363636362,1.6818181818181821,1.7272727272727275,1.7727272727272729,1.8181818181818188,1.8636363636363638,1.9090909090909092,1.954545454545455,2,2.0454545454545454,2.0909090909090913,2.1363636363636362,2.1818181818181821,2.2272727272727275,2.2727272727272729,2.3181818181818183,2.3636363636363638,2.4090909090909092,2.454545454545455,2.5,2.5454545454545454,2.5909090909090913,2.6363636363636367,2.6818181818181821,2.727272727272728,2.7727272727272729,2.8181818181818183,2.8636363636363642,2.9090909090909092,2.9545454545454546,3.0000000000000004,3.0454545454545459,3.0909090909090913,3.1363636363636367,3.1818181818181817,3.227272727272728,3.2727272727272725,3.3181818181818183,3.3636363636363638,3.4077609500000006,null,-0.60222195000000001,-0.59090909090909083,-0.54545454545454541,-0.5,-0.45454545454545459,-0.40909090909090906,-0.36363636363636365,-0.31818181818181812,-0.27272727272727271,-0.22727272727272729,-0.18181818181818177,-0.1363636363636363,-0.090909090909090828,-0.045454545454545414,0,0.045454545454545525,0.090909090909090828,0.13636363636363646,0.18181818181818188,0.22727272727272729,0.27272727272727282,0.31818181818181812,0.36363636363636387,0.40909090909090928,0.4545454545454547,0.50000000000000011,0.54545454545454553,0.59090909090909094,0.63636363636363658,0.68181818181818177,0.72727272727272718,0.77272727272727282,0.81818181818181845,0.86363636363636387,0.90909090909090928,0.95454545454545492,1,1.0454545454545454,1.0909090909090913,1.1363636363636362,1.1818181818181817,1.2272727272727275,1.2727272727272734,1.3181818181818183,1.3636363636363638,1.4090909090909092,1.4545454545454546,1.5,1.5454545454545454,1.5909090909090908,1.6363636363636362,1.6818181818181821,1.7272727272727275,1.7727272727272729,1.8181818181818188,1.8636363636363638,1.9090909090909092,1.954545454545455,2,2.0454545454545454,2.0909090909090913,2.1363636363636362,2.1818181818181821,2.2272727272727275,2.2727272727272729,2.3181818181818183,2.3636363636363638,2.4090909090909092,2.454545454545455,2.5,2.5454545454545454,2.5909090909090913,2.6363636363636367,2.6818181818181821,2.727272727272728,2.7727272727272729,2.8181818181818183,2.8636363636363642,2.9090909090909092,2.9545454545454546,3.0000000000000004,3.0454545454545459,3.0909090909090913,3.1363636363636367,3.1818181818181817,3.227272727272728,3.2727272727272725,3.3181818181818183,3.3636363636363638,3.4077609500000006,null,-0.60222195000000001,-0.59090909090909083,-0.54545454545454541,-0.5,-0.45454545454545459,-0.40909090909090906,-0.36363636363636365,-0.31818181818181812,-0.27272727272727271,-0.22727272727272729,-0.18181818181818177,-0.1363636363636363,-0.090909090909090828,-0.045454545454545414,0,0.045454545454545525,0.090909090909090828,0.13636363636363646,0.18181818181818188,0.22727272727272729,0.27272727272727282,0.31818181818181812,0.36363636363636387,0.40909090909090928,0.4545454545454547,0.50000000000000011,0.54545454545454553,0.59090909090909094,0.63636363636363658,0.68181818181818177,0.72727272727272718,0.77272727272727282,0.81818181818181845,0.86363636363636387,0.90909090909090928,0.95454545454545492,1,1.0454545454545454,1.0909090909090913,1.1363636363636362,1.1818181818181817,1.2272727272727275,1.2727272727272734,1.3181818181818183,1.3636363636363638,1.4090909090909092,1.4545454545454546,1.5,1.5454545454545454,1.5909090909090908,1.6363636363636362,1.6818181818181821,1.7272727272727275,1.7727272727272729,1.8181818181818188,1.8636363636363638,1.9090909090909092,1.954545454545455,2,2.0454545454545454,2.0909090909090913,2.1363636363636362,2.1818181818181821,2.2272727272727275,2.2727272727272729,2.3181818181818183,2.3636363636363638,2.4090909090909092,2.454545454545455,2.5,2.5454545454545454,2.5909090909090913,2.6363636363636367,2.6818181818181821,2.727272727272728,2.7727272727272729,2.8181818181818183,2.8636363636363642,2.9090909090909092,2.9545454545454546,3.0000000000000004,3.0454545454545459,3.0909090909090913,3.1363636363636367,3.1818181818181817,3.227272727272728,3.2727272727272725,3.3181818181818183,3.3636363636363638,3.4077609500000006],"y":[49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,null,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,null,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,null,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,null,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,null,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52],"type":"scatter","mode":"lines","line":{"width":null,"color":"transparent","dash":null},"hoveron":"points","hoverinfo":"none","showlegend":false,"_isGraticule":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[-0.41994999999999993,-0.20390624999998866,0.205078125,0.29970703125002274,0.41474609375001137,0.53232421875000568,0.68437500000001705,0.77236328125002274,0.96015625000001148,0.97861328125000546,1.0444335937499998,1.3655273437500171,1.3975585937500059,1.4156250000000059,1.4149414062500232,1.3734375000000227,1.2571289062500171,1.0149414062500173,0.88935546875001126,0.6865234375,0.6455078125,0.60029296875001148,0.5283203125,0.42451171875001137,0.50722656250002274,0.59345703125001137,0.69755859375001705,0.79921875000002274,0.89091796875001705,0.92744140625001159,0.89804687500000602,0.75224609375001694,0.955078125,1.1011718750000057,1.1884765624999998,1.2744140625,1.273828125000023,1.2278320312500171,1.2324218750000002,1.2759765625000057,1.3167968750000227,1.4134765625000225,1.533874589394798,-0.41994999999999999,-0.41994999999999993,-0.41994999999999993,null,3.2254890000000005,3.1820312500000232,3.1548828125000057,3.1068359375000227,3.0228515625000227,2.9219726562500057,2.8624023437500061,2.8397460937500232,2.7593750000000061,2.6691406250000114,2.5967773437500057,2.5792968750000114,2.6014648437500227,2.5748046875000061,2.5360351562500227,2.52490234375,2.4457031250000227,1.9125000000000225,1.7676757812500059,1.6722656250000225,1.6095703125000118,1.5794921875000227,1.5515625000000171,1.5927734375000002,1.5484375000000059,1.514062500000023,1.4072265625,1.245507812500023,0.92412109375001716,0.6162109375,0.18671875000001137,0.12656250000000571,0.10937500000000001,0.12939453124999997,0.25060836422684796,3.2254890000000005,3.2254890000000005,3.2254890000000005,null,3.2254889999999996,3.2251953125000061,2.9601562500000114,2.52490234375,2.5360351562500227,2.5748046875000061,2.6014648437500227,2.5792968750000114,2.5967773437500057,2.6691406250000114,2.7593750000000061,2.8397460937500232,2.8624023437500061,2.9219726562500057,3.0228515625000227,3.1068359375000227,3.1548828125000057,3.1820312500000232,3.2254890000000005,3.2254889999999996,3.2254889999999996],"y":[50.810709184163926,50.814355468749994,50.763037109374991,50.775976562499999,50.819189453124999,50.853417968749994,50.885546874999996,50.933984374999994,50.925878906249999,50.9716796875,51.047265624999994,51.155468750000004,51.182031249999987,51.310839843750003,51.36328125,51.37470703124999,51.375097656249999,51.359716796874991,51.359521484374994,51.386572265624999,51.404687499999994,51.467968749999997,51.484472656249991,51.465624999999996,51.501074218749999,51.51948242187499,51.523046874999999,51.537890624999989,51.571435546874987,51.646630859375001,51.689404296874997,51.729589843749999,51.807812499999997,51.785449218749989,51.803369140624994,51.845361328125009,51.902099609375,51.949121093750001,51.971240234374996,51.973535156249994,51.956933593749994,51.994775390625001,52.071013463054548,52.057026,50.810709184163926,50.810709184163926,null,50.675259060887683,50.731689453125,50.748925781249994,50.779443359374994,50.766894531249989,50.727050781250007,50.71601562499999,50.711767578124991,50.750634765625001,50.811425781249994,50.87592773437499,50.911767578124994,50.95527343749999,50.988574218749996,51.049511718749997,51.097119140624997,51.066503906249999,50.990624999999994,50.935693359374987,50.885009765624993,50.819482421874987,50.739257812499993,50.293945312499993,50.252197265624993,50.230712890625007,50.205078125,50.088525390624994,49.99824218749999,49.910205078124996,49.862939453124987,49.703027343749994,49.6015625,49.557519531249994,49.508447265624987,49.471536512843969,49.462935999999999,50.675259060887683,50.675259060887683,null,51.351672828051697,51.351611328124996,51.265429687499989,51.097119140624997,51.049511718749997,50.988574218749996,50.95527343749999,50.911767578124994,50.87592773437499,50.811425781249994,50.750634765625001,50.711767578124991,50.71601562499999,50.727050781250007,50.766894531249989,50.779443359374994,50.748925781249994,50.731689453125,50.675259060887683,51.351672828051697,51.351672828051697],"text":"","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(248,248,248,1)","dash":"solid"},"fill":"toself","fillcolor":"rgba(28,69,92,1)","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.9069909999999997,1.9451309999999997,1.636039,1.6175919999999999,2.2254890000000001,1.8846689999999999,1.76684,1.5800500000000002],"y":[50.93877074000001,50.969059220000005,50.696527760000002,51.057025999999993,50.990381300000003,50.941037789999996,50.950847549999985,50.462935980000012],"text":"","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(223,38,108,1)","opacity":1,"size":7.559055118110237,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(223,38,108,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":120,"r":20,"b":10,"l":20},"paper_bgcolor":"rgba(0,0,0,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"  Thirteen people were reported as having died trying<br>to cross the English channel in 2023.","font":{"color":"rgba(248,248,248,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.60222195000000001,3.4077609500000006],"tickmode":"array","ticktext":["0.5 &#176; W","0.0 &#176;","0.5 &#176; E","1.0 &#176; E","1.5 &#176; E","2.0 &#176; E","2.5 &#176; E","3.0 &#176; E"],"tickvals":[-0.5,0,0.50000000000000011,1,1.5,2,2.5,3],"categoryorder":"array","categoryarray":["0.5 &#176; W","0.0 &#176;","0.5 &#176; E","1.0 &#176; E","1.5 &#176; E","2.0 &#176; E","2.5 &#176; E","3.0 &#176; E"],"nticks":null,"ticks":"outside","tickcolor":null,"ticklen":0,"tickwidth":0,"showticklabels":false,"tickfont":{"color":null,"family":null,"size":0},"tickangle":-0,"showline":true,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"scaleanchor":"y","scaleratio":0.63247587539698336,"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[49.332532126847269,52.201417336207278],"tickmode":"array","ticktext":["49.5 &#176; N","50.0 &#176; N","50.5 &#176; N","51.0 &#176; N","51.5 &#176; N","52.0 &#176; N"],"tickvals":[49.5,50,50.5,51,51.5,52],"categoryorder":"array","categoryarray":["49.5 &#176; N","50.0 &#176; N","50.5 &#176; N","51.0 &#176; N","51.5 &#176; N","52.0 &#176; N"],"nticks":null,"ticks":"outside","tickcolor":null,"ticklen":0,"tickwidth":0,"showticklabels":false,"tickfont":{"color":null,"family":null,"size":0},"tickangle":-0,"showline":true,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"scaleanchor":"x","scaleratio":1.5810879733117638,"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative","plot_bgcolor":"rgb(0, 0, 0)"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1186a4f15c899":{"type":"scatter"},"1186a1f24dd5f":[],"1186a2d4197f2":{"text":{}}},"cur_data":"1186a4f15c899","visdat":{"1186a4f15c899":["function (y) ","x"],"1186a1f24dd5f":["function (y) ","x"],"1186a2d4197f2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+
+.small[
+.right[
+Data on incidents from [The Missing Migrants Project](https://missingmigrants.iom.int/downloads)
+]
+]
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Sanitisation &amp; impersonalisation
+
+The process of data collection, analysis and visualisation often **divorces the data subjects from their data**. Data become sterilised: we often lose any sense of identity, personality, or emotion from the "data subjects" — a.k.a. the people who the data is about.
+
+This means that typical *best practice* approaches to data visualisations often make it **difficult or impossible to develop empathy for the people whom it is about** — removing us from the positionalities of the subjects ([Kennedy, et al. 2016](https://doi.org/10.1080/1369118X.2016.1153126)). Data depersonalises individuals.
+
+Lack of incorporation of voice and identity invites us to project our own, or dominant, narratives about the people concerned. Interactivity is one (limited) way to incorporate voice into visualisation.
+
+]
+
+
+.pull-right[
+
+
+<div class="plotly html-widget html-fill-item" id="htmlwidget-552934619c6a3090a191" style="width:500px;height:475px;"></div>
+<script type="application/json" data-for="htmlwidget-552934619c6a3090a191">{"x":{"data":[{"x":[-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,null,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,0.50000000000000011,null,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,null,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,null,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,null,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,null,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,3.0000000000000004,null,-0.60222195000000001,-0.59090909090909083,-0.54545454545454541,-0.5,-0.45454545454545459,-0.40909090909090906,-0.36363636363636365,-0.31818181818181812,-0.27272727272727271,-0.22727272727272729,-0.18181818181818177,-0.1363636363636363,-0.090909090909090828,-0.045454545454545414,0,0.045454545454545525,0.090909090909090828,0.13636363636363646,0.18181818181818188,0.22727272727272729,0.27272727272727282,0.31818181818181812,0.36363636363636387,0.40909090909090928,0.4545454545454547,0.50000000000000011,0.54545454545454553,0.59090909090909094,0.63636363636363658,0.68181818181818177,0.72727272727272718,0.77272727272727282,0.81818181818181845,0.86363636363636387,0.90909090909090928,0.95454545454545492,1,1.0454545454545454,1.0909090909090913,1.1363636363636362,1.1818181818181817,1.2272727272727275,1.2727272727272734,1.3181818181818183,1.3636363636363638,1.4090909090909092,1.4545454545454546,1.5,1.5454545454545454,1.5909090909090908,1.6363636363636362,1.6818181818181821,1.7272727272727275,1.7727272727272729,1.8181818181818188,1.8636363636363638,1.9090909090909092,1.954545454545455,2,2.0454545454545454,2.0909090909090913,2.1363636363636362,2.1818181818181821,2.2272727272727275,2.2727272727272729,2.3181818181818183,2.3636363636363638,2.4090909090909092,2.454545454545455,2.5,2.5454545454545454,2.5909090909090913,2.6363636363636367,2.6818181818181821,2.727272727272728,2.7727272727272729,2.8181818181818183,2.8636363636363642,2.9090909090909092,2.9545454545454546,3.0000000000000004,3.0454545454545459,3.0909090909090913,3.1363636363636367,3.1818181818181817,3.227272727272728,3.2727272727272725,3.3181818181818183,3.3636363636363638,3.4077609500000006,null,-0.60222195000000001,-0.59090909090909083,-0.54545454545454541,-0.5,-0.45454545454545459,-0.40909090909090906,-0.36363636363636365,-0.31818181818181812,-0.27272727272727271,-0.22727272727272729,-0.18181818181818177,-0.1363636363636363,-0.090909090909090828,-0.045454545454545414,0,0.045454545454545525,0.090909090909090828,0.13636363636363646,0.18181818181818188,0.22727272727272729,0.27272727272727282,0.31818181818181812,0.36363636363636387,0.40909090909090928,0.4545454545454547,0.50000000000000011,0.54545454545454553,0.59090909090909094,0.63636363636363658,0.68181818181818177,0.72727272727272718,0.77272727272727282,0.81818181818181845,0.86363636363636387,0.90909090909090928,0.95454545454545492,1,1.0454545454545454,1.0909090909090913,1.1363636363636362,1.1818181818181817,1.2272727272727275,1.2727272727272734,1.3181818181818183,1.3636363636363638,1.4090909090909092,1.4545454545454546,1.5,1.5454545454545454,1.5909090909090908,1.6363636363636362,1.6818181818181821,1.7272727272727275,1.7727272727272729,1.8181818181818188,1.8636363636363638,1.9090909090909092,1.954545454545455,2,2.0454545454545454,2.0909090909090913,2.1363636363636362,2.1818181818181821,2.2272727272727275,2.2727272727272729,2.3181818181818183,2.3636363636363638,2.4090909090909092,2.454545454545455,2.5,2.5454545454545454,2.5909090909090913,2.6363636363636367,2.6818181818181821,2.727272727272728,2.7727272727272729,2.8181818181818183,2.8636363636363642,2.9090909090909092,2.9545454545454546,3.0000000000000004,3.0454545454545459,3.0909090909090913,3.1363636363636367,3.1818181818181817,3.227272727272728,3.2727272727272725,3.3181818181818183,3.3636363636363638,3.4077609500000006,null,-0.60222195000000001,-0.59090909090909083,-0.54545454545454541,-0.5,-0.45454545454545459,-0.40909090909090906,-0.36363636363636365,-0.31818181818181812,-0.27272727272727271,-0.22727272727272729,-0.18181818181818177,-0.1363636363636363,-0.090909090909090828,-0.045454545454545414,0,0.045454545454545525,0.090909090909090828,0.13636363636363646,0.18181818181818188,0.22727272727272729,0.27272727272727282,0.31818181818181812,0.36363636363636387,0.40909090909090928,0.4545454545454547,0.50000000000000011,0.54545454545454553,0.59090909090909094,0.63636363636363658,0.68181818181818177,0.72727272727272718,0.77272727272727282,0.81818181818181845,0.86363636363636387,0.90909090909090928,0.95454545454545492,1,1.0454545454545454,1.0909090909090913,1.1363636363636362,1.1818181818181817,1.2272727272727275,1.2727272727272734,1.3181818181818183,1.3636363636363638,1.4090909090909092,1.4545454545454546,1.5,1.5454545454545454,1.5909090909090908,1.6363636363636362,1.6818181818181821,1.7272727272727275,1.7727272727272729,1.8181818181818188,1.8636363636363638,1.9090909090909092,1.954545454545455,2,2.0454545454545454,2.0909090909090913,2.1363636363636362,2.1818181818181821,2.2272727272727275,2.2727272727272729,2.3181818181818183,2.3636363636363638,2.4090909090909092,2.454545454545455,2.5,2.5454545454545454,2.5909090909090913,2.6363636363636367,2.6818181818181821,2.727272727272728,2.7727272727272729,2.8181818181818183,2.8636363636363642,2.9090909090909092,2.9545454545454546,3.0000000000000004,3.0454545454545459,3.0909090909090913,3.1363636363636367,3.1818181818181817,3.227272727272728,3.2727272727272725,3.3181818181818183,3.3636363636363638,3.4077609500000006,null,-0.60222195000000001,-0.59090909090909083,-0.54545454545454541,-0.5,-0.45454545454545459,-0.40909090909090906,-0.36363636363636365,-0.31818181818181812,-0.27272727272727271,-0.22727272727272729,-0.18181818181818177,-0.1363636363636363,-0.090909090909090828,-0.045454545454545414,0,0.045454545454545525,0.090909090909090828,0.13636363636363646,0.18181818181818188,0.22727272727272729,0.27272727272727282,0.31818181818181812,0.36363636363636387,0.40909090909090928,0.4545454545454547,0.50000000000000011,0.54545454545454553,0.59090909090909094,0.63636363636363658,0.68181818181818177,0.72727272727272718,0.77272727272727282,0.81818181818181845,0.86363636363636387,0.90909090909090928,0.95454545454545492,1,1.0454545454545454,1.0909090909090913,1.1363636363636362,1.1818181818181817,1.2272727272727275,1.2727272727272734,1.3181818181818183,1.3636363636363638,1.4090909090909092,1.4545454545454546,1.5,1.5454545454545454,1.5909090909090908,1.6363636363636362,1.6818181818181821,1.7272727272727275,1.7727272727272729,1.8181818181818188,1.8636363636363638,1.9090909090909092,1.954545454545455,2,2.0454545454545454,2.0909090909090913,2.1363636363636362,2.1818181818181821,2.2272727272727275,2.2727272727272729,2.3181818181818183,2.3636363636363638,2.4090909090909092,2.454545454545455,2.5,2.5454545454545454,2.5909090909090913,2.6363636363636367,2.6818181818181821,2.727272727272728,2.7727272727272729,2.8181818181818183,2.8636363636363642,2.9090909090909092,2.9545454545454546,3.0000000000000004,3.0454545454545459,3.0909090909090913,3.1363636363636367,3.1818181818181817,3.227272727272728,3.2727272727272725,3.3181818181818183,3.3636363636363638,3.4077609500000006,null,-0.60222195000000001,-0.59090909090909083,-0.54545454545454541,-0.5,-0.45454545454545459,-0.40909090909090906,-0.36363636363636365,-0.31818181818181812,-0.27272727272727271,-0.22727272727272729,-0.18181818181818177,-0.1363636363636363,-0.090909090909090828,-0.045454545454545414,0,0.045454545454545525,0.090909090909090828,0.13636363636363646,0.18181818181818188,0.22727272727272729,0.27272727272727282,0.31818181818181812,0.36363636363636387,0.40909090909090928,0.4545454545454547,0.50000000000000011,0.54545454545454553,0.59090909090909094,0.63636363636363658,0.68181818181818177,0.72727272727272718,0.77272727272727282,0.81818181818181845,0.86363636363636387,0.90909090909090928,0.95454545454545492,1,1.0454545454545454,1.0909090909090913,1.1363636363636362,1.1818181818181817,1.2272727272727275,1.2727272727272734,1.3181818181818183,1.3636363636363638,1.4090909090909092,1.4545454545454546,1.5,1.5454545454545454,1.5909090909090908,1.6363636363636362,1.6818181818181821,1.7272727272727275,1.7727272727272729,1.8181818181818188,1.8636363636363638,1.9090909090909092,1.954545454545455,2,2.0454545454545454,2.0909090909090913,2.1363636363636362,2.1818181818181821,2.2272727272727275,2.2727272727272729,2.3181818181818183,2.3636363636363638,2.4090909090909092,2.454545454545455,2.5,2.5454545454545454,2.5909090909090913,2.6363636363636367,2.6818181818181821,2.727272727272728,2.7727272727272729,2.8181818181818183,2.8636363636363642,2.9090909090909092,2.9545454545454546,3.0000000000000004,3.0454545454545459,3.0909090909090913,3.1363636363636367,3.1818181818181817,3.227272727272728,3.2727272727272725,3.3181818181818183,3.3636363636363638,3.4077609500000006,null,-0.60222195000000001,-0.59090909090909083,-0.54545454545454541,-0.5,-0.45454545454545459,-0.40909090909090906,-0.36363636363636365,-0.31818181818181812,-0.27272727272727271,-0.22727272727272729,-0.18181818181818177,-0.1363636363636363,-0.090909090909090828,-0.045454545454545414,0,0.045454545454545525,0.090909090909090828,0.13636363636363646,0.18181818181818188,0.22727272727272729,0.27272727272727282,0.31818181818181812,0.36363636363636387,0.40909090909090928,0.4545454545454547,0.50000000000000011,0.54545454545454553,0.59090909090909094,0.63636363636363658,0.68181818181818177,0.72727272727272718,0.77272727272727282,0.81818181818181845,0.86363636363636387,0.90909090909090928,0.95454545454545492,1,1.0454545454545454,1.0909090909090913,1.1363636363636362,1.1818181818181817,1.2272727272727275,1.2727272727272734,1.3181818181818183,1.3636363636363638,1.4090909090909092,1.4545454545454546,1.5,1.5454545454545454,1.5909090909090908,1.6363636363636362,1.6818181818181821,1.7272727272727275,1.7727272727272729,1.8181818181818188,1.8636363636363638,1.9090909090909092,1.954545454545455,2,2.0454545454545454,2.0909090909090913,2.1363636363636362,2.1818181818181821,2.2272727272727275,2.2727272727272729,2.3181818181818183,2.3636363636363638,2.4090909090909092,2.454545454545455,2.5,2.5454545454545454,2.5909090909090913,2.6363636363636367,2.6818181818181821,2.727272727272728,2.7727272727272729,2.8181818181818183,2.8636363636363642,2.9090909090909092,2.9545454545454546,3.0000000000000004,3.0454545454545459,3.0909090909090913,3.1363636363636367,3.1818181818181817,3.227272727272728,3.2727272727272725,3.3181818181818183,3.3636363636363638,3.4077609500000006],"y":[49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.332532126847269,49.353535353535356,49.388888888888886,49.424242424242422,49.459595959595958,49.494949494949495,49.530303030303031,49.565656565656568,49.601010101010104,49.636363636363633,49.671717171717169,49.707070707070706,49.742424242424242,49.777777777777779,49.813131313131315,49.848484848484851,49.883838383838381,49.919191919191917,49.954545454545453,49.98989898989899,50.025252525252526,50.060606060606062,50.095959595959599,50.131313131313128,50.166666666666664,50.202020202020201,50.237373737373737,50.272727272727273,50.30808080808081,50.343434343434346,50.378787878787875,50.414141414141412,50.449494949494948,50.484848484848484,50.520202020202021,50.555555555555557,50.590909090909093,50.62626262626263,50.661616161616159,50.696969696969695,50.732323232323232,50.767676767676768,50.803030303030305,50.838383838383841,50.87373737373737,50.909090909090907,50.944444444444443,50.979797979797979,51.015151515151516,51.050505050505052,51.085858585858588,51.121212121212125,51.156565656565654,51.19191919191919,51.227272727272727,51.262626262626263,51.297979797979799,51.333333333333336,51.368686868686865,51.404040404040401,51.439393939393938,51.474747474747474,51.51010101010101,51.545454545454547,51.580808080808083,51.616161616161619,51.651515151515149,51.686868686868685,51.722222222222221,51.757575757575758,51.792929292929294,51.828282828282831,51.86363636363636,51.898989898989896,51.934343434343432,51.969696969696969,52.005050505050505,52.040404040404042,52.075757575757578,52.111111111111114,52.146464646464644,52.18181818181818,52.201417336207278,null,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,49.5,null,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,null,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,50.5,null,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,null,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,51.5,null,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52,52],"type":"scatter","mode":"lines","line":{"width":null,"color":"transparent","dash":null},"hoveron":"points","hoverinfo":"none","showlegend":false,"_isGraticule":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[-0.41994999999999993,-0.20390624999998866,0.205078125,0.29970703125002274,0.41474609375001137,0.53232421875000568,0.68437500000001705,0.77236328125002274,0.96015625000001148,0.97861328125000546,1.0444335937499998,1.3655273437500171,1.3975585937500059,1.4156250000000059,1.4149414062500232,1.3734375000000227,1.2571289062500171,1.0149414062500173,0.88935546875001126,0.6865234375,0.6455078125,0.60029296875001148,0.5283203125,0.42451171875001137,0.50722656250002274,0.59345703125001137,0.69755859375001705,0.79921875000002274,0.89091796875001705,0.92744140625001159,0.89804687500000602,0.75224609375001694,0.955078125,1.1011718750000057,1.1884765624999998,1.2744140625,1.273828125000023,1.2278320312500171,1.2324218750000002,1.2759765625000057,1.3167968750000227,1.4134765625000225,1.533874589394798,-0.41994999999999999,-0.41994999999999993,-0.41994999999999993,null,3.2254890000000005,3.1820312500000232,3.1548828125000057,3.1068359375000227,3.0228515625000227,2.9219726562500057,2.8624023437500061,2.8397460937500232,2.7593750000000061,2.6691406250000114,2.5967773437500057,2.5792968750000114,2.6014648437500227,2.5748046875000061,2.5360351562500227,2.52490234375,2.4457031250000227,1.9125000000000225,1.7676757812500059,1.6722656250000225,1.6095703125000118,1.5794921875000227,1.5515625000000171,1.5927734375000002,1.5484375000000059,1.514062500000023,1.4072265625,1.245507812500023,0.92412109375001716,0.6162109375,0.18671875000001137,0.12656250000000571,0.10937500000000001,0.12939453124999997,0.25060836422684796,3.2254890000000005,3.2254890000000005,3.2254890000000005,null,3.2254889999999996,3.2251953125000061,2.9601562500000114,2.52490234375,2.5360351562500227,2.5748046875000061,2.6014648437500227,2.5792968750000114,2.5967773437500057,2.6691406250000114,2.7593750000000061,2.8397460937500232,2.8624023437500061,2.9219726562500057,3.0228515625000227,3.1068359375000227,3.1548828125000057,3.1820312500000232,3.2254890000000005,3.2254889999999996,3.2254889999999996],"y":[50.810709184163926,50.814355468749994,50.763037109374991,50.775976562499999,50.819189453124999,50.853417968749994,50.885546874999996,50.933984374999994,50.925878906249999,50.9716796875,51.047265624999994,51.155468750000004,51.182031249999987,51.310839843750003,51.36328125,51.37470703124999,51.375097656249999,51.359716796874991,51.359521484374994,51.386572265624999,51.404687499999994,51.467968749999997,51.484472656249991,51.465624999999996,51.501074218749999,51.51948242187499,51.523046874999999,51.537890624999989,51.571435546874987,51.646630859375001,51.689404296874997,51.729589843749999,51.807812499999997,51.785449218749989,51.803369140624994,51.845361328125009,51.902099609375,51.949121093750001,51.971240234374996,51.973535156249994,51.956933593749994,51.994775390625001,52.071013463054548,52.057026,50.810709184163926,50.810709184163926,null,50.675259060887683,50.731689453125,50.748925781249994,50.779443359374994,50.766894531249989,50.727050781250007,50.71601562499999,50.711767578124991,50.750634765625001,50.811425781249994,50.87592773437499,50.911767578124994,50.95527343749999,50.988574218749996,51.049511718749997,51.097119140624997,51.066503906249999,50.990624999999994,50.935693359374987,50.885009765624993,50.819482421874987,50.739257812499993,50.293945312499993,50.252197265624993,50.230712890625007,50.205078125,50.088525390624994,49.99824218749999,49.910205078124996,49.862939453124987,49.703027343749994,49.6015625,49.557519531249994,49.508447265624987,49.471536512843969,49.462935999999999,50.675259060887683,50.675259060887683,null,51.351672828051697,51.351611328124996,51.265429687499989,51.097119140624997,51.049511718749997,50.988574218749996,50.95527343749999,50.911767578124994,50.87592773437499,50.811425781249994,50.750634765625001,50.711767578124991,50.71601562499999,50.727050781250007,50.766894531249989,50.779443359374994,50.748925781249994,50.731689453125,50.675259060887683,51.351672828051697,51.351672828051697],"text":"","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(248,248,248,1)","dash":"solid"},"fill":"toself","fillcolor":"rgba(28,69,92,1)","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.9069909999999997,1.9451309999999997,1.636039,1.6175919999999999,2.2254890000000001,1.8846689999999999,1.76684,1.5800500000000002],"y":[50.93877074000001,50.969059220000005,50.696527760000002,51.057025999999993,50.990381300000003,50.941037789999996,50.950847549999985,50.462935980000012],"text":"","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,248,248,1)","opacity":1,"size":15.118110236220474,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,248,248,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.9069909999999997,1.9451309999999997,1.636039,1.6175919999999999,2.2254890000000001,1.8846689999999999,1.76684,1.5800500000000002],"y":[50.93877074000001,50.969059220000005,50.696527760000002,51.057025999999993,50.990381300000003,50.941037789999996,50.950847549999985,50.462935980000012],"text":["It has to be better than here.","People who come here are looking to you as their<br />last chance – they hope you respect humanity.","...if there was no war, no Taliban, we would never<br />come here.","If I wanted to go back to my country - what would<br />be waiting for me? A cruel government, and their<br />welcome would be bullets.","I have no other option. My husband is in UK, and<br />I’ve been in a refugee camp for a long time. I<br />can’t survive without him. I need to join him.","I have family members in the UK who could support<br />me once I arrived: far from home and unable to<br />return, I wouldn’t be all alone.","I had a profession, a community, a good life,<br />an identity, I had everything. I am here not by<br />choice.","We are treated like we don't matter and that<br />hurts. Nobody plans to leave their home countries<br />to seek asylum. Our situations are not in our<br />control, but we get blamed and scorned for seeking<br />safety. We thrive in our communities if given the<br />chance."],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(223,38,108,1)","opacity":1,"size":7.559055118110237,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(223,38,108,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":100,"r":20,"b":10,"l":20},"paper_bgcolor":"rgba(0,0,0,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"  Thirteen people were reported as having died trying<br>to cross the English channel in 2023.","font":{"color":"rgba(248,248,248,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.60222195000000001,3.4077609500000006],"tickmode":"array","ticktext":["0.5 &#176; W","0.0 &#176;","0.5 &#176; E","1.0 &#176; E","1.5 &#176; E","2.0 &#176; E","2.5 &#176; E","3.0 &#176; E"],"tickvals":[-0.5,0,0.50000000000000011,1,1.5,2,2.5,3],"categoryorder":"array","categoryarray":["0.5 &#176; W","0.0 &#176;","0.5 &#176; E","1.0 &#176; E","1.5 &#176; E","2.0 &#176; E","2.5 &#176; E","3.0 &#176; E"],"nticks":null,"ticks":"outside","tickcolor":null,"ticklen":0,"tickwidth":0,"showticklabels":false,"tickfont":{"color":null,"family":null,"size":0},"tickangle":-0,"showline":true,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"scaleanchor":"y","scaleratio":0.63247587539698336,"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[49.332532126847269,52.201417336207278],"tickmode":"array","ticktext":["49.5 &#176; N","50.0 &#176; N","50.5 &#176; N","51.0 &#176; N","51.5 &#176; N","52.0 &#176; N"],"tickvals":[49.5,50,50.5,51,51.5,52],"categoryorder":"array","categoryarray":["49.5 &#176; N","50.0 &#176; N","50.5 &#176; N","51.0 &#176; N","51.5 &#176; N","52.0 &#176; N"],"nticks":null,"ticks":"outside","tickcolor":null,"ticklen":0,"tickwidth":0,"showticklabels":false,"tickfont":{"color":null,"family":null,"size":0},"tickangle":-0,"showline":true,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"scaleanchor":"x","scaleratio":1.5810879733117638,"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative","plot_bgcolor":"rgb(0, 0, 0)"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1186a48378eba":{"type":"scatter"},"1186a377b7a60":[],"1186ab9f5115":{"text":{}}},"cur_data":"1186a48378eba","visdat":{"1186a48378eba":["function (y) ","x"],"1186a377b7a60":["function (y) ","x"],"1186ab9f5115":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+
+.small[
+.right[
+Data on incidents from [The Missing Migrants Project](https://missingmigrants.iom.int/downloads), overlayed with quotes from migrants and refugees sourced from [ITV.com](https://www.itv.com/news/meridian/2022-10-04/asylum-seeker-thought-he-was-going-to-die-crossing-english-channel), [Big Issue](https://www.bigissue.com/opinion/afghanistan-refugee-channel-crossing-small-boat-uk-asylum/), [Migrant Voice](https://www.migrantvoice.org/home/editorials/channel-crossings-what-about-the-261121141118), [The Voices Network](https://thevoicesnetwork.org/reports/), [Ordinary Things](https://www.youtube.com/watch?v=nlncZp1iJks)
+]
+]
+
+]
+
+---
+
+class: middle, inverse
+
+
+## It's impossible to make a perfect data visualisation. But thinking about these things can help us *do better*. 
+
+---
+
+class: middle, inverse
+
+
+## Best practice is not just about good design principles, but being a good and conscientious member of society. That means paying due respect to all of the people who are affected by data visualisation.
+
+
+---
+
+
+class: middle
+
+.middle-left[
+
+## Workshop this week
+
+This week — our last workshop where we'll be learning something new — I promised you a novel approach to data visualisation. We'll be learning how to scrape data from the internet — **without getting into trouble** — and how to create interactive data visualisations using the `plotly` package. 
+
+
+]
+
+
+.pull-right[
+
+#### TASKS TO LOOK AT IN ADVANCE OF WEEK 11:
+
+**Core tasks:**
+
+* **Before lecture**: Read the assessment brief for assessment 2, including any articles you might be asked to critique. This will mean that you can come prepared for week 11. (I’m not expecting as much from you this week, as I know you've got imminent deadlines.)
+
+]
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"sealed": false,
+"ratio": "16:9",
+"self_contained": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<style>
+.my-header {
+	background-color: #440099;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 70px;
+	width: 100%;
+	text-align: left;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.inverse)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="my-header"></div>';
+  });
+</script>
+
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

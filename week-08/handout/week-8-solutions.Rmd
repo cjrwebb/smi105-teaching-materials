@@ -1,0 +1,320 @@
+---
+title: "Week 8 Solutions"
+output: html_document
+---
+
+```{r, eval = TRUE, include = FALSE}
+
+library(tidyverse) 
+library(sf)
+westminster <- read_sf(dsn = ".", layer = "westminster_const_region")
+age_structure <- read.csv("age_structure.csv")
+age_structure_renamed <-
+   age_structure %>%
+   rename(date = date,
+          geography = geography,
+          CODE = geography.code,
+          rural = Rural.Urban,
+          population = Age..All.usual.residents..measures..Value,
+          between0and4 = Age..Age.0.to.4..measures..Value,
+          between5and7 = Age..Age.5.to.7..measures..Value,
+          between8and9 = Age..Age.8.to.9..measures..Value,
+          between10and14 = Age..Age.10.to.14..measures..Value,
+          between15 = Age..Age.15..measures..Value,
+          between16and17 = Age..Age.16.to.17..measures..Value,
+          between18and19 = Age..Age.18.to.19..measures..Value,
+          between20and24 = Age..Age.20.to.24..measures..Value,
+          between25and29 = Age..Age.25.to.29..measures..Value,
+          between30and44 = Age..Age.30.to.44..measures..Value,
+          between45and59 = Age..Age.45.to.59..measures..Value,
+          between60and64 = Age..Age.60.to.64..measures..Value,
+          between65and74 = Age..Age.65.to.74..measures..Value,
+          between75and84 = Age..Age.75.to.84..measures..Value,
+          between85and89 = Age..Age.85.to.89..measures..Value,
+          between90andmore = Age..Age.90.and.over..measures..Value,
+          mean_age = Age..Mean.Age..measures..Value,
+          median_age = Age..Median.Age..measures..Value)
+ short_names <- c(
+   "date", "geo", "geo_code", "rural_urb", "age_all",
+   "age_0_4", "age_5_7", "age_8_9", "age_10_14", "age_15",
+   "age_16_17", "age_18_19", "age_20_24", "age_25_29", "age_30_44",
+   "age_45_59", "age_60_64", "age_65_74", "age_75_84", "age_85_89",
+   "age_90_plus", "mean_age", "med_age"
+)
+ age_structure_ai <- age_structure %>% set_names(short_names)
+ age_with_map <-
+   left_join(westminster, age_structure_renamed, by = "CODE")
+
+```
+
+Okay, we had a set of quite difficult tasks to do last week. I hope you attempted at least some of them. These tasks were best suited as a continuation of your week 8 handout, so I'm assuming here that you've run all of the code from that handout and are doing the tasks after having run that. As a reminder, I'll repeat the task before giving a solution to each one:
+
+> Repeat the left_join we did earlier, but this time try joining the spatial data to the data where we use generative AI to create short variable names (hint: you might come across some difficulties with the key variable, check the lecture slides about how you join data with two different names for the key!)
+
+In this case I'll use the example of the AI-generated short names that I got on the handout. The trick to this task is that, unless you're very very lucky, the generative AI model probably created a name for your "key" variable that was different to the one in the westminster data. As a reminder, in the westminster dataset the "key" variable was called CODE, but in the AI generated names (for me anyway) it was called geo_code.
+
+That means, in order to join the westminster spatial data to the age_structure data with the AI generated labels you needed to tell it that the codes had two different labels. The clue to doing this was in the lecture slides. Something like the following would work:
+
+```{r, eval = TRUE}
+ age_with_map_ai <-
+   left_join(westminster, age_structure_ai, by = c("CODE"="geo_code"))
+```
+
+In other words, CODE on the left (westminster) is equal to geo_code on the right (age_structure_ai).
+
+
+> please draw a map of the fraction of people in each parliamentary constituency who are 65 or older. Which constituencies in England and Wales have the smallest fractions of people aged 65+; which have the largest?=-09o-980oop-=
+
+In this case, we didn't have a variable that contained all of the people aged 65 and over, but we did have variables for the number of people between 65 and 74, between 75 and 84, and so on. So, in order to complete this task, we know we're going to need to create at least one new variable that represents the number of people aged over 65, and then we're going to want to divide that by the size of the population as a whole to make a fraction:
+
+```{r, eval = TRUE}
+age_with_map %>%
+  drop_na(population) %>%
+  mutate(
+    frac_65plus = (between65and74+between75and84+between85and89+between90andmore)/population
+  ) %>%
+  ggplot() +
+  aes(fill = frac_65plus) +
+  geom_sf() +
+  scale_fill_viridis_c()
+```
+
+Note that in this case we need to use addition (add across columns), the function `sum` wouldn't work because it refers only to adding up down rows.
+
+That's the first part of the task complete. The second part asked us to find out which constituencies have the smallest and largest fraction of people aged over 65. To do that we can use arrange:
+
+```{r, eval = TRUE}
+age_with_map %>%
+  mutate(
+    frac_65plus = (between65and74+between75and84+between85and89+between90andmore)/population
+  ) %>%
+  select(frac_65plus, NAME, CODE) %>%
+  arrange(frac_65plus)
+```
+
+So, the constituencies with the lowest proportion of people aged 65 and over were in Poplar and Limehouse, East Ham, and Bethnal Green.
+
+```{r, eval = TRUE}
+age_with_map %>%
+  mutate(
+    frac_65plus = (between65and74+between75and84+between85and89+between90andmore)/population
+  ) %>%
+  select(frac_65plus, NAME, CODE) %>%
+  arrange(desc(frac_65plus))
+```
+
+The places with the highest proportion were in Christchurch, Clacton (one of the few places where Reform UK won a seat — Nigel Farage's), and North Norfolk.
+
+> please draw a scatterplot of the percentage of people in each constituency aged over 65, and of the percentage of voters who voted for Reform UK in 2024 (hint: you had a copy of that data in your assessment — check whether it has a variable you can use as a key to join it to this data!)
+
+Again, this task is testing your ability to read in data and to join it using two different codes. I downloaded a copy of the ge_2024.csv file that was on the assessment pages and copied it into my R project directory:
+
+```{r, eval = TRUE}
+
+ge2024 <- read_csv("ge_2024.csv")
+names(ge2024)
+
+```
+
+Now I can try and left_join that data. I can see from this file that the key I want to join the data by is called "ons_id", I don't want "one_region_id" because that refers to region rather than parliamentary constituency. I'd expect some of these to be missing due to the mismatch between the 2024 election boundaries and the census boundaries.
+
+```{r, eval = TRUE}
+
+age_with_map_votes <- left_join(age_with_map, ge2024, by = c("CODE" = "ons_id"))
+
+```
+
+Now that the data has been joined, I can recreate my fraction of people aged 65+ variable and then create a scatterplot of that variable against the proportion of people who voted for Reform UK (ruk_pc):
+
+```{r, eval = TRUE}
+
+age_with_map_votes %>%
+  mutate(
+    frac_65plus = (between65and74+between75and84+between85and89+between90andmore)/population
+  ) %>%
+  ggplot() +
+  aes(x = frac_65plus, y = ruk_pc) +
+  geom_point()
+
+```
+
+Oh no, what's happened? Where is our scatterplot? If you read the warning message, we can see that R has removed 632 rows of data because they were missing information about one or the other data. 
+
+Okay, so this task was a little more deceptive than it first sounded... How can we map these together? In 2024 the parliamentary constituencies all changed boundaries, so they call got a new set of codes. What we need to do is first search for what is called a "lookup" file — a file that tells us which of the 2024 parliamentary constituencies match up closest to the 2010 ones. There is just such a lookup file here called "Westminster PCON (May 2010) to Westminster PCON (July 2024) Lookup in the UK (V2)": https://geoportal.statistics.gov.uk/datasets/c776b66c0e534b849cae5a5121b7a16a_0/explore
+
+If we download a copy of that file and move it into our project directory, we can read it into R as follows (I renamed the file to lookup.csv to make the typing a bit easier):
+
+```{r, eval = TRUE}
+
+lookup <- read_csv("lookup.csv")
+names(lookup)
+head(lookup)
+
+```
+
+So, this file has a list of the parliamentary constituency codes from 2010 (PCON10CD) and then the closest matching codes from 2024 (PCON24CD). What we want to do is *add the old codes to the new codes* in our election dataset. Let's start by selecting only those two and giving them slightly more informative names:
+
+```{r, eval = TRUE}
+
+lookup <- lookup %>%
+  select(
+    old_code = PCON10CD,
+    new_code = PCON24CD
+  )
+
+```
+
+Now let's join the old_code's onto our data that contains the new codes:
+
+```{r, eval = TRUE}
+
+ge2024_oldcodes <- left_join(ge2024, lookup, by = c("ons_id" = "new_code"))
+
+```
+
+And finally, let's try re-running our first attempt but this time joining the data using the "old_code" variable in our election date:
+
+```{r, eval = TRUE}
+
+age_with_map_votes <- left_join(age_with_map, ge2024_oldcodes, by = c("CODE" = "old_code"))
+
+age_with_map_votes %>%
+  mutate(
+    frac_65plus = (between65and74+between75and84+between85and89+between90andmore)/population
+  ) %>%
+  ggplot() +
+  aes(x = frac_65plus, y = ruk_pc) +
+  geom_point()
+
+```
+
+Hooray — we finally got there! I don't expect many people to have gotten past the first bit where you saw it deleted all of the rows, but I hope this gives you some insight into the challenges of working with relational data and how useful lookups can be. 
+
+
+> please draw a map of the fraction of people in each constituency who don’t have passports (you’ll need to find and download this data — excellent practice for your second assessment)
+
+To complete this task, we needed to go back to our Census 2011 Key Statistics page (https://www.nomisweb.co.uk/sources/census_2011_ks) and see if there were any key statistics about passport ownership. You should find table ID KS205EW, where you can download another "bulk.csv" and rename it before adding it to your R project. If we read it in, we get the following (I renamed it to passports.csv):
+
+```{r, eval = TRUE}
+
+passports <- read.csv("passports.csv")
+names(passports)
+head(passports)
+
+```
+
+This has some pretty horrendous names. To save time, I'm just going to select the variables I need and rename them on the go:
+
+```{r, eval = TRUE}
+
+passports <- passports %>%
+  select(
+    CODE = geography.code,
+    population = Passports.Held..All.usual.residents..measures..Value,
+    no_passport = Passports.Held..No.passport..measures..Value
+  )
+
+```
+
+I may as well create my new variable, fraction of people who do not have passports, before I join my data to my spatial dataset:
+
+```{r, eval = TRUE}
+
+passports <- passports %>%
+  mutate(
+    frac_nopass = no_passport/population
+  )
+
+```
+
+Okay, now I can join my data together:
+
+```{r, eval = TRUE}
+
+age_with_map_passports <- left_join(age_with_map, passports, by="CODE")
+
+```
+
+And finally, create my map:
+
+```{r, eval = TRUE}
+
+age_with_map_passports %>%
+  drop_na(frac_nopass) %>%
+  ggplot() +
+  aes(fill = frac_nopass) +
+  geom_sf() +
+  scale_fill_viridis_c(option = "A")
+
+```
+
+What does this tell us about how peoples' ability to travel out of the country differs depending on where they live?
+
+
+> Recreate one of your maps using the House of Commons Non-Contiguous Cartogram of the UK for constituencies (https://github.com/houseofcommonslibrary/uk-hex-cartograms-noncontiguous? tab=readme-ov-file (https://github.com/houseofcommonslibrary/uk-hex-cartograms- noncontiguous?tab=readme-ov-file)), and post it to Blackboard. This is a “GEOPACKAGE” type mapping file, so you might want to check the lecture slides about this to find out how to read it into R!
+
+Okay, this very last task involved downloading the geopackage file for the House of Commons hex map for the parliamentary constituencies for 2010. This is the "Constituencies.gpkg" file inside the geopackage directory of the House of Commons github pages. If I take that file and move it into my project directory, I can read it in using the following code (adapted from the lecture slides for week 8)...
+
+First, I check which layers are available to use:
+
+```{r, eval = TRUE}
+
+st_layers("Constituencies.gpkg")
+
+```
+
+At the very least, what I probably want is the "5 Background" layer and the "4 Constituencies" layer:
+
+```{r, eval = TRUE}
+
+background <- st_read("Constituencies.gpkg",
+                      layer = "5 Background")
+head(background)
+
+constituencies <- st_read("Constituencies.gpkg",
+                      layer = "4 Constituencies")
+head(constituencies)
+
+```
+
+As we can see, where we want to join our data onto is the constutuencies object. If you check our the first few rows of the data, you can see that we have our key this time in a variable called "pcon.code". For simplicities sake, let's just repeat our last map by joining our passports data onto the file:
+
+```{r, eval = TRUE}
+
+passport_hexmap <- left_join(constituencies, passports, by=c("pcon.code" = "CODE"))
+
+```
+
+Okay, now let's try creating our map. Because we have two "layers" here: the background and the "hexes" representing our parliamentary constituencies, we need to use two different datasets within our ggplot code:
+
+```{r, eval = TRUE}
+
+ggplot() +
+  geom_sf(data = background) +
+  geom_sf(data = passport_hexmap, 
+          aes(fill = frac_nopass),
+          colour = "transparent") +
+  scale_fill_viridis_c(option = "A",
+                       labels = scales::label_percent()) +
+  theme_void() +
+  theme(legend.position = "bottom") +
+  labs(fill = "% without\npassports")
+
+```
+
+I've added a couple of other niceities to improve the appearance of the map here. What are the benefits of using this kind of map over the choropleths we've been using so far?
+
+
+
+### Feedback
+
+If you attempted any of the above tasks — well done! As I said in the workshop, I'd really encourage you to not take an "all or nothing" approach to these tasks. Doing something, even if it's not perfect or doesn't work, will still help you learn and get feedback. The only way we learn to improve is by repeatedly trying, failing, and improving on what we did before. We can't do that if we never start the process. I'd much rather have you try and fail on a weekly task — where it doesn't really matter as it's not graded — than your first time trying and failing being in your graded assessment!
+
+Some specific things people struggled with:
+
+* Remember that your key names either need to be identical across two relational datasets, or you need to use the format for the argument: by = c("keyname1" = "keyname2") when they differ.
+* Remember that your spatial data needs to be the first thing that is joined in any kind of join, otherwise the resultant object loses its spatial characteristics. 
+* To add across columns you need to use + rather than sum, since sum is for adding down rows. 
+* Remember when you download new data and want to read it you **need to move it into your R project folder**, otherwise R won't be able to find it.
+
+

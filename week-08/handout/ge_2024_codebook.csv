@@ -1,0 +1,43 @@
+Variable Name,Variable Description
+ons_id,ONS Constituency ID
+ons_region_id,ONS Region ID
+constituency_name,Constituency Name
+region_name,Region Name
+country_name,Country Name
+constituency_type,Constituency type
+member_first_name,Elected member of parliament first name
+member_surname,Elected member of parliament surname
+member_gender,Gender of the elected member of parliament
+result,"Result of the election (party hold, party gain)"
+first_party,Party with the highest number of votes in constituency
+second_party,Party with the second number of votes in constituency
+electorate,Number of people living within the constituency who are eligible to vote
+valid_votes,Number of valid votes cast
+invalid_votes,Number of invalid votes cast
+majority,Number of votes the winning party received above the second position party
+con,Number of votes cast for the Conservative party
+lab,Number of votes cast for the Labour party
+ld,Number of votes cast for the Liberal Democrat party
+ruk,Number of votes cast for the Reform UK party
+green,Number of votes cast for the Green party
+snp,Number of votes cast for the Scottish National Party
+pc,Number of votes cast for Plaid Cymru
+dup,Number of votes cast for the Democratic Unionist Party
+sf,Number of votes cast for Sinn Féin
+sdlp,Number of votes cast for the Social Democratic and Labour Party
+uup,Number of votes cast for the Ulster Unionist Party
+apni,Number of votes cast for the Alliance Party of Northern Ireland
+all_other_candidates,Number of votes cast for the all other candidates
+con_pc,Percentage of votes cast for the Conservative party
+lab_pc,Percentage of votes cast for the Labour party
+ld_pc,Percentage of votes cast for the Liberal Democrat party
+ruk_pc,Percentage of votes cast for the Reform UK party
+green_pc,Percentage of votes cast for the Green party
+snp_pc,Percentage of votes cast for the Scottish National Party
+pc_pc,Percentage of votes cast for Plaid Cymru
+dup_pc,Percentage of votes cast for the Democratic Unionist Party
+sf_pc,Percentage of votes cast for Sinn Féin
+sdlp_pc,Percentage of votes cast for the Social Democratic and Labour Party
+uup_pc,Percentage of votes cast for the Ulster Unionist Party
+apni_pc,Percentage of votes cast for the Alliance Party of Northern Ireland
+all_other_candidates_pc,Percentage of votes cast for the all other candidates
