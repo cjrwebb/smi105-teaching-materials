@@ -1,0 +1,652 @@
+---
+title: "SMI105: Week 11 Wrapping up & assessment preparation?"
+subtitle: ""  
+author: 
+  - "Dr. Calum Webb"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: ["xaringan-themer.css", "css/custom.css"]
+    seal: false
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      sealed: false
+      ratio: 16:9
+      self_contained: true
+      countIncrementalSlides: true
+    includes:
+      after_body: header/insert-header-violet.html
+---
+
+class: middle, title
+background-size: contain
+
+
+<br><br>
+
+# Wrapping up and assessment preparation.
+#### SMI105: Week 11
+
+<br><br>
+
+**Dr. Calum Webb**<br>
+Sheffield Methods Institute, the University of Sheffield<br>
+[c.j.webb@sheffield.ac.uk](mailto:c.j.webb@sheffield.ac.uk)
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+# These packages are required for creating the slides
+# Many will need to be installed from Github
+library(icons)
+library(tidyverse)
+library(xaringan)
+library(xaringanExtra)
+library(xaringanthemer)
+
+# Defaults for code
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  fig.show = TRUE,
+  hiline = TRUE
+)
+
+# set global theme for ggplot to make background #F8F8F8F8 (off white),
+# but otherwise keep all ggplot themes default (better for teaching)
+theme_set(
+  theme(plot.background = element_rect(fill = "#F8F8F8", colour = "#F8F8F8"), 
+        panel.background = element_rect(fill = "#F8F8F8", colour = "#F8F8F8"),
+        legend.background = element_rect(fill = "#F8F8F8", colour = "#F8F8F8")
+        )
+  )
+
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+# Use tile overview by hitting the o key when presenting
+xaringanExtra::use_tile_view()
+```
+
+```{r xaringan-logo, echo=FALSE}
+# Add logo to top right
+xaringanExtra::use_logo(
+  image_url = "header/smi-logo-white.png",
+  exclude_class = c("inverse", "hide_logo"), 
+  width = "180px", position = css_position(top = "1em", right = "2em")
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+
+# Set some global objects containing the colours
+# of the university's branding
+primary_color <- "#131E29"
+secondary_color <- "#440099"
+tuos_blue <- "#9ADBE8"
+white = "#F8F8F8"
+tuos_yellow <- "#FCF281"
+tuos_purple <- "#440099"
+tuos_red <- "#E7004C"
+tuos_midnight <- "#131E29"
+
+# The bulk of the styling is handled by xaringanthemer
+style_uos <- style_duo_accent(
+  primary_color = "#131E29",
+  secondary_color = "#440099",
+  colors = c(tuos_purple = "#440099", 
+             white = "#F8F8F8",
+             grey = "#131E2960", 
+             tuos_blue ="#9ADBE8",
+             tuos_mint = "#00CE7C",
+             ac_yellow = '#FEC740'),
+  header_font_google = xaringanthemer::google_font("Source Serif Pro", "600", "600i"),
+  text_font_google   = xaringanthemer::google_font("Source Sans Pro", "300", "300i", "600", "600i"),
+  code_font_google   = xaringanthemer::google_font("Lucida Console"),
+  header_h1_font_size = "2rem",
+  header_h2_font_size = "1.5rem", 
+  header_h3_font_size = "1.25rem", 
+  text_font_size = "0.9rem",
+  code_font_size = "0.65rem", 
+  code_inline_font_size = "0.85rem",
+  inverse_text_color = "#9ADBE8", 
+  background_color = "#F8F8F8", 
+  text_color = "#131E29", 
+  link_color = "#005A8F", 
+  inverse_link_color = "#F8F8F8",
+  text_slide_number_color = "#44009970",
+  table_row_even_background_color = "transparent", 
+  table_border_color = "#44009970",
+  text_bold_font_weight = 600
+)
+
+style_uos
+
+```
+
+
+```{r xaringan-panelset, echo=FALSE}
+# Allow for adding panelsets (see example on slide 2)
+xaringanExtra::use_panelset()
+```
+
+```{r xaringanExtra, echo = FALSE}
+# Adds white progress bar to top
+xaringanExtra::use_progress_bar(color = "#F8F8F8", location = "top")
+```
+
+```{r xaringan-extra-styles, echo = FALSE}
+# Allow for code to be highlighted on hover
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+```
+
+```{r share-again, echo=FALSE}
+# Add sharing links and other embedding tools
+xaringanExtra::use_share_again()
+```
+
+```{r xaringanExtra-search, echo=FALSE}
+# Add magnifying glass search function to bottom left for quick
+# searching of slides
+xaringanExtra::use_search(show_icon = TRUE, auto_search = FALSE)
+```
+
+---
+
+class: middle, inverse
+
+# Sign in
+
+---
+
+class: middle
+
+## Learning outcomes
+
+.panelset[
+
+.panel[.panel-name[What will I learn?]
+
+By the end of this week you will know:
+
+* How the skills you have learned relate to the current skills shortage in the U.K. and globally, and how you can record your skills on [MySkills](https://students.sheffield.ac.uk/skills/myskills) — I'd recommend doing this now, as you might have forgotten by third year!
+
+* What the second and final assessment for SMI105 requires you to do. 
+
+* **How** to go about critiquing a data visualisation and thinking of how you would improve it **using the skills we have developed on this module and the module materials**
+
+* Some top tips for your assessment: how to give yourself the best chance of succeeding.
+
+
+]
+]
+
+
+---
+
+class: inverse, middle
+
+
+# What skills do you have after finishing SMI105 that you didn't have before?
+
+
+---
+
+class: middle
+
+.middle-left[
+
+**Analysis skills**
+
+* How to visualise data and interpret data visualisations 
+* How to choose the right kind of visualisation to analyse your data 
+* How to summarise and aggregate data 
+* How to create new variables from data in order to improve analysis
+
+**Communication skills**
+
+* How to apply best graphic design principles to clearly communicate messages using data visualisation
+* How to make data visualisations accessible (e.g. contrast, colour choice, fonts)
+* How to use data storytelling principles such as active titles to consider your audience and clearly communicate the story behind the data visualisation
+* How to publish your data visualisations so that they are effective across different platforms
+* How to use interactivity to efficiently communicate specific information in data visualisations
+
+]
+
+--
+
+.pull-right[
+
+**Data processing skills**
+
+* How to work with various data formats within `R`
+* How to join and work with relational data
+* How to scrape data from the web
+* How to tidy data and prepare it for analysis and visualisation
+
+**Critical thinking skills**
+
+* How to critically assess the design of data visualisations
+* How to critically assess the impact of data visualisation on various groups and audiences, and in wider society
+
+**IT skills**
+
+* How to manage a data visualisation project from start to finish using `R` projects
+* Basic programming skills in the `R` statistical programming language
+* Knowledge of optimal data formats for data visualisation (tidy data)
+* How to export data visualisations to be suitable for publication (different technical export formats, e.g. svg, png)
+* How to use generative AI within data tidying workflows
+
+
+]
+
+---
+
+class: inverse, middle
+
+
+# Will these skills help you get a job?
+
+---
+
+class: middle
+
+.middle-left[
+
+## Your skills will be in demand.
+
+> The research found that there is significant demand for data skills with UK companies recruiting for 178,000 to 234,000 roles requiring hard data skills. Almost half of businesses (48%) are recruiting for roles that require hard data skills but under half (46%) have struggled to recruit for these roles over the last 2 years. **The supply of graduates with specialist data skills from universities is limited.**
+
+> When recruiting for data roles, businesses were most often looking for a “data analyst” (12% of businesses surveyed were recruiting for this role), especially at junior or entry level.
+
+.right[[Quantifying the UK Data Skills Gap. (2021)](https://www.gov.uk/government/publications/quantifying-the-uk-data-skills-gap/quantifying-the-uk-data-skills-gap-full-report#the-demand-for-data-skills)]
+
+]
+
+.pull-right[
+
+```{r, echo = FALSE, out.height=500, out.width=500, fig.height=5, fig.width=5}
+
+library(polite)
+library(rvest)
+library(plotly)
+url <- bow("https://www.gov.uk/government/publications/quantifying-the-uk-data-skills-gap/quantifying-the-uk-data-skills-gap-full-report#the-demand-for-data-skills")
+
+scraped <- scrape(url)
+
+skills_tab <- html_element(scraped, xpath = '//*[@id="contents"]/div[1]/div[3]/div/div/div/table[1]') %>%
+  html_table(header = TRUE)
+
+skills_plot <- skills_tab %>%
+  rename(
+    skill = 1,
+    percent_inefficient = `% of businesses saying skills are insufficient`
+    ) %>%
+  mutate(
+    skill = ifelse(skill == "Knowledge of emerging technologies and solutions", "Knowledge of emerging technologies", skill)
+  ) %>%
+  mutate(
+   percent_inefficient = parse_number(percent_inefficient),
+   skill = fct_reorder(skill, percent_inefficient),
+   fillcol = c("grey70", tuos_purple, "grey70", "grey70", tuos_purple, tuos_purple, tuos_purple, tuos_purple, "grey70", tuos_purple)
+  ) %>%
+  ggplot() +
+  geom_col(aes(x = skill, y = percent_inefficient, fill = fillcol)) +
+  scale_fill_identity() +
+  geom_text(aes(x = skill, y = 0.5, label = paste0(percent_inefficient, "%")), hjust = 0, colour = white) +
+  geom_text(aes(x = skill, y = percent_inefficient-1, label = skill), hjust = 1, colour = white) +
+  coord_flip() +
+  theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.line = element_blank(), panel.grid = element_blank(), axis.title = element_blank()) +
+  ggtitle("% of businesses saying skills are insufficient\nin their sector")
+
+skills_plot
+
+```
+
+]
+
+---
+
+class: middle
+
+.middle-left[
+
+## Your skills will be in demand.
+
+> The research found that there is significant demand for data skills with UK companies recruiting for 178,000 to 234,000 roles requiring hard data skills. Almost half of businesses (48%) are recruiting for roles that require hard data skills but under half (46%) have struggled to recruit for these roles over the last 2 years. **The supply of graduates with specialist data skills from universities is limited.**
+
+> When recruiting for data roles, businesses were most often looking for a “data analyst” (12% of businesses surveyed were recruiting for this role), especially at junior or entry level.
+
+.right[[Quantifying the UK Data Skills Gap. (2021)](https://www.gov.uk/government/publications/quantifying-the-uk-data-skills-gap/quantifying-the-uk-data-skills-gap-full-report#the-demand-for-data-skills)]
+
+]
+
+.pull-right[
+
+```{r, echo = FALSE, out.height=500, out.width=500, fig.height=5, fig.width=5}
+
+gradskills_tab <- html_element(scraped, xpath = '//*[@id="contents"]/div[1]/div[3]/div/div/div/table[2]') %>%
+  html_table(header = TRUE)
+
+gradskills_plot <- gradskills_tab %>%
+  rename(
+    skill = 1,
+    percent_lacking = `% of businesses saying Graduates lack these skills`
+    ) %>%
+  mutate(
+    skill = ifelse(skill == "Knowledge of emerging technologies and solutions", "Knowledge of emerging technologies", skill)
+  ) %>%
+  mutate(
+   percent_lacking = parse_number(percent_lacking),
+   skill = fct_reorder(skill, percent_lacking),
+   fillcol = c(tuos_purple, "grey70", "grey70", tuos_purple, tuos_purple, tuos_purple, "grey70", "grey70", tuos_purple, tuos_purple)
+  ) %>%
+  ggplot() +
+  geom_col(aes(x = skill, y = percent_lacking, fill = fillcol)) +
+  scale_fill_identity() +
+  geom_text(aes(x = skill, y = 0.35, label = paste0(percent_lacking, "%")), hjust = 0, colour = white) +
+  geom_text(aes(x = skill, y = percent_lacking-1, label = skill), hjust = 1, colour = white) +
+  coord_flip() +
+  theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.line = element_blank(), panel.grid = element_blank(), axis.title = element_blank()) +
+  ggtitle("% of businesses saying graduates lack these\nskills")
+
+gradskills_plot
+
+```
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+## Your skills will be in demand.
+
+> The research found that there is significant demand for data skills with UK companies recruiting for 178,000 to 234,000 roles requiring hard data skills. Almost half of businesses (48%) are recruiting for roles that require hard data skills but under half (46%) have struggled to recruit for these roles over the last 2 years. **The supply of graduates with specialist data skills from universities is limited.**
+
+> When recruiting for data roles, businesses were most often looking for a “data analyst” (12% of businesses surveyed were recruiting for this role), especially at junior or entry level.
+
+.right[[Quantifying the UK Data Skills Gap. (2021)](https://www.gov.uk/government/publications/quantifying-the-uk-data-skills-gap/quantifying-the-uk-data-skills-gap-full-report#the-demand-for-data-skills)]
+
+]
+
+.pull-right[
+
+```{r, echo = FALSE, out.height=500, out.width=500, fig.height=5, fig.width=5}
+
+nationalskills_tab <- html_element(scraped, xpath = '//*[@id="contents"]/div[1]/div[3]/div/div/div/table[10]') %>%
+  html_table(header = FALSE)
+
+nationalskills_plot <- nationalskills_tab %>%
+  rename(
+    skill = 1,
+    percent_in_need = 2
+    ) %>%
+  mutate(
+   percent_in_need = parse_number(percent_in_need),
+   skill = fct_reorder(skill, percent_in_need),
+   fillcol = c(tuos_purple, "grey70", "grey70", tuos_purple, tuos_purple, tuos_purple, "grey70", "grey70", tuos_purple, tuos_purple)
+  ) %>%
+  ggplot() +
+  geom_col(aes(x = skill, y = percent_in_need, fill = fillcol)) +
+  scale_fill_identity() +
+  geom_text(aes(x = skill, y = 0.5, label = paste0(percent_in_need, "%")), hjust = 0, colour = white) +
+  geom_text(aes(x = skill, y = percent_in_need-1, label = skill), hjust = 1, colour = white) +
+  coord_flip() +
+  theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.line = element_blank(), panel.grid = element_blank(), axis.title = element_blank()) +
+  ggtitle("Top 10 skills UK businesses are in\nneed of")
+
+nationalskills_plot
+
+```
+
+]
+
+---
+
+class: inverse, middle
+
+
+# “There [are] not many people qualified to work with big data”
+
+.right[.white[
+[Quantifying the UK Data Skills Gap (2021)](https://www.gov.uk/government/publications/quantifying-the-uk-data-skills-gap/quantifying-the-uk-data-skills-gap-full-report#the-demand-for-data-skills)
+]]
+
+---
+
+class: inverse, middle
+
+
+# “Less people are training for this type of job and not enough qualified ones are available”
+
+.right[.white[
+[Quantifying the UK Data Skills Gap (2021)](https://www.gov.uk/government/publications/quantifying-the-uk-data-skills-gap/quantifying-the-uk-data-skills-gap-full-report#the-demand-for-data-skills)
+]]
+
+---
+
+class: inverse, middle
+
+
+# “Our market is quite niche, and finding good data analysts who can put things into context has been difficult.”
+
+.right[.white[
+[Quantifying the UK Data Skills Gap (2021)](https://www.gov.uk/government/publications/quantifying-the-uk-data-skills-gap/quantifying-the-uk-data-skills-gap-full-report#the-demand-for-data-skills)
+]]
+
+---
+
+class: inverse, middle
+
+
+# "There are simply too few people with the right skillset available."
+
+.right[.white[
+[Quantifying the UK Data Skills Gap (2021)](https://www.gov.uk/government/publications/quantifying-the-uk-data-skills-gap/quantifying-the-uk-data-skills-gap-full-report#the-demand-for-data-skills)
+]]
+
+---
+
+class: inverse, middle
+
+
+# Gaps exist across all soft skills, but most notably for ‘communication’, ‘adaptability’ and 'critical thinking'
+
+.right[.white[
+[Quantifying the UK Data Skills Gap (2021)](https://www.gov.uk/government/publications/quantifying-the-uk-data-skills-gap/quantifying-the-uk-data-skills-gap-full-report#the-demand-for-data-skills)
+]]
+
+---
+
+class: middle
+
+# **Final Assessment**
+
+‘In the second and final assessment you’ll be asked to reflect on a published article that contains a data visualisation, to assess the data visualisation’s strengths and weaknesses, and consider how it might be improved. Then, remaining with the same topic, you’ll be asked to tell a relevant story by creating your own data visualisation(s), and then explain the decisions you made about which data and which type of visualisation you thought were most appropriate for the audience.’
+
+---
+
+class: middle
+
+### **1. Select a data visualisation on a specific topic**
+
+Pick one of the five options on the Blackboard page for Assessment 2.
+
+--
+
+### **2. Critique the presentation of data you have chosen**
+
+Write a critique of the presentation of data in the web page you choose (up to 500 words).
+
+--
+
+### **3. Visualise data to answer a question on a related topic**
+
+Using either the same data as the page you've chosen, or different data, describe how the data in question can be used to answer a question on a related topic, including whichever graphs and maps you find appropriate. This problem should be related to the discussion in the page you've chosen, and your presentation must include at least one data visualisation you've created yourself using R (and include the code you used). Include an explanation of how your presentation of this data improves on that of the page you critiqued above (500-750 words).
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Final assessment guidance: How to use what we have learned to critique and improve on a data visualisation
+
+1\. **Is the data visualisation clearly interpretable?** (Week 2). Is there a title? Does it tell you what the visualisation shows? Does the data support what the title claims? Are axes clearly labelled? Are axes readable? Does the visualisation have a title? Does the visualisation provide a source? Does the visualisation contain a key/legend or are all colours, shapes, shading, etc. used without a clear explanation of what they mean? Have scales been transformed or otherwise changed in any way, and what impact does this have on the interpretation? Key reading: [Healy, K. (2018)](https://socviz.co)
+
+
+]
+
+--
+
+
+
+.pull-right[
+
+### .white[<br><br>]
+
+2\. **Does the data visualisation effectively tell a story?** (Week 3). Is there a story underlying the data visualisation? Is that story clearly communicated in the design choices made around the data visualisation? Are colours, shapes, titles, used to effectively focus the audience on the data story? Is the visualisation and story clearly focused on a target audience? How could the data visualisation be changed to target a different audience? Does the data visualisation use a specific style of narrative plot? How would the use of a narrative plot improve the audience's engagement with the data visualisation? Is there a clear "character" in the data visualisation? Key reading: [Feigenbaum & Alamalhodaei, 2020](https://doi.org/10.4324/9781315168012)
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Final assessment guidance: How to use what we have learned to critique and improve on a data visualisation
+
+3\. **Does the data visualisation use an appropriate type of chart?** (Week 4). Does the data visualisation use an appropriate type of chart for the underlying data (continuous, categorical, ordinal)? Would a different type of visualisation do a better job of illustrating certain things about the data, such as how it varies? Would a different type of visualisation be better suited for telling the story (e.g. Categorical, Hierarchical, Relational, Temporal, Spatial)? Key reading: [Kirk, A. (2024)](https://uk.sagepub.com/en-gb/eur/data-visualisation/book266150)
+
+
+]
+
+--
+
+.pull-right[
+
+### .white[<br><br>]
+
+4\. **Does the data visualisation follow good information graphic design practice?** (Week 5). Is the data visualisation free from chart-junk? Is the visualisation elegant and clear, letting the data speak for itself? Is the visualisation free of misrepresentation? Does the data visualisation make appropriate use of colour and text? Do colours complement one another, and are colour palettes chosen to complement the data story? Is the layout of the data visualisation able to guide the reader's eye comfortably? Is the data visualisation accessible, with appropriate contrast levels, text size, and colour-blind friendly colour use? Key reading: [Tufte, 2001](https://kyl.neocities.org/books/%5BTEC%20TUF%5D%20the%20visual%20display%20of%20quantitative%20information.pdf), Muth, [2022](https://blog.datawrapper.de/text-in-data-visualizations/), [2023](https://blog.datawrapper.de/emphasize-with-color-in-data-visualizations/)
+
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Final assessment guidance: How to use what we have learned to critique and improve on a data visualisation
+
+5\. **Has the data visualisation been published in a way that is most appropriate for its platform?** (Week 7). Does the data visualisation "work" on the web or in print? If not, why not and how could it be changed to work better? Would it work on social media (i.e. is it available in the right aspect ratios)? How might it be adjusted to work better for some platforms? Is the data visualisation at a high enough resolution? Is it in an appropriate format (vector versus raster)? Key reading: [Chang, W. (2024), Chapter 14](https://r-graphics.org/)
+
+
+]
+
+--
+
+.pull-right[
+
+### .white[<br><br>]
+
+6\. **Does your data visualisation relate to space: is it a map or could it be a map?** (Week 8). Does the data in the data visualisation refer to space in any way? Is the data presented as a map? If yes, is it appropriate to visualise this data as a map or not (i.e. does it suffer from the "land doesn't vote" problem)? If yes, would the map be better presented as a cartogram than a choropleth? If the data is not a map, would it benefit from being a map? In what ways? Is the colour scheme in the map appropriate, or does it overstate differences? Key reading: [Healy, K. (2018) Chapter 7](https://socviz.co); [Ericson, (2011)](http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/)
+
+
+]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+### Final assessment guidance: How to use what we have learned to critique and improve on a data visualisation
+
+
+]
+
+.pull-right[
+
+7\. **What impact does this data visualisation have on society?** (Week 10). How could this data visualisation be changed in *content*, *form*, or *process* in order to engage with feminist principles? How have identities or opinions been simplified into binaries or limited groups and could the data visualisation be recreated with more complex categorisations (or none)? How could multiple perspectives on the matter be presented to promote pluralism? How can the data visualisation interrogate power and oppression? How could data be recontextualised? How can the process of data visualisation involve greater participation of "data subjects"? How could the form of the data visualisation be changed to create affect and embodiment? How could the data visualisation better represent the voices of those it relates to, to push back on impersonalisation? Key reading: [D'Ignazio & Klein, 2016](https://direct.mit.edu/books/book/4660/Data-Feminism)
+
+]
+
+
+---
+
+class: inverse, middle
+
+## Look at the example student assessments (Example 1 - Spotify Article and Example 2 - FT article) that are attached to the assessment brief to get an idea of how to complete the assessment. 
+
+
+---
+
+class: inverse, middle
+
+## In your first assessment, you were being tested on being able to create specific data visualisations that were appropriate for the type of data. In *this* assessment, you will be marked *more heavily* based on your ability to use data storytelling, graphic design, presentational, and critical thinking skills. 
+
+
+---
+
+class: inverse, middle
+
+## Don't try to critique *everything* from the list of options I just went through — you will not have enough words to do so. Pick three or four things *maximum* to critique about the original data visualisation and to use to inform your improved data visualisation.
+
+---
+
+class: inverse, middle
+
+## Remember that you can critique *both* "bad" things about the visualisation in the article *and* good things. Critique is not just about weaknesses, but also strengths. What did they do *well* in their visualisation?
+
+
+---
+
+class: inverse, middle
+
+## All of the materials that you need to succeed in this assessment *have been provided in the module*. Look in the slides and worksheets from each week that you have been given in order to try and solve a problem *first*, and only consult Google, etc. afterwards.
+
+
+---
+
+
+class: middle
+
+.middle-left[
+
+## Workshop this week
+
+This week we will use our workshop time in order to work through some of the assessment options, so you can make a decision about which article you choose to critique and how you might go about it. A very good goal for this is to decide on an article in advance, and then focus in the workshop on how to get the data into `R` and tidied, ready for you to work on your data visualisation. That way we can help with any coding problems. 
+
+
+]
+
+
+.pull-right[
+
+#### That's all!
+
+This is our last lecture together, but I'll see you again in the workshop and you can still meet with me in my office hours. A reminder that there will be an additional drop-in session next week where you can get support with some of the trickier parts of your assessment, such as finding, reading in, and tidying data related to the topic. 
+
+**If you don't take advantage of the workshop this week and the drop-in next week, you might find that you will have to figure a lot of these difficult things out on your own!** While I always do my best to help everyone, there will be limited opportunities for support with the assessment over the holiday period — you have to meet me halfway and use the opportunities for support that are available.
+
+]
