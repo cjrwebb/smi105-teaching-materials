@@ -400,7 +400,7 @@ How can we create ranges of data visualisations that recognise multiple points o
 
 ```{r, echo = FALSE}
 
-knitr::include_graphics("images/suomilose.png")
+knitr::include_graphics("images/muumipeikkosurullinen.gif")
 
 ```
 
@@ -493,7 +493,7 @@ How can we create ranges of data visualisations that recognise multiple points o
 
 ```{r, echo = FALSE}
 
-knitr::include_graphics("images/suomimainittu.png")
+knitr::include_graphics("images/muumipeikko-tanssi.gif")
 
 ```
 
