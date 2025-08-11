@@ -42,7 +42,7 @@ The first step is for us to take our url and introduce ourself to the web host â
 
 tea <- "https://en.wikipedia.org/wiki/List_of_countries_by_tea_consumption_per_capita"
 
-tea_bow <- bow(url)
+tea_bow <- bow(tea)
 tea_bow
 
 ```
