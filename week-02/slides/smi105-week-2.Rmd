@@ -1,5 +1,5 @@
 ---
-title: "SMI105: Week 2 Interpreting a Data Visualisation"
+title: "EDC101: Week 2 Interpreting a Data Visualisation"
 subtitle: ""  
 author: 
   - "Dr. Calum Webb"
@@ -23,11 +23,16 @@ output:
 class: middle, title
 background-size: contain
 
+<!----- Make a pdf using:
+
+decktape generic --key=ArrowRight --load-pause 1800 --slides '1-39' --size '1216x684'  "week-02/slides/smi105-week-2.html" week-02/slides/smi105-week-2.pdf
+
+----->
 
 <br><br>
 
 # Interpreting a Data Visualisation
-#### SMI105: Week 2
+#### EDC101: Week 2
 
 <br><br>
 
@@ -1717,7 +1722,7 @@ Let’s extend bar charts. Last week we drew our first bar chart, but we can do 
 
 **Core tasks**:
 
-* **Before lecture**: Give yourself two minutes. See how many different ways you can visualise this dataset: 75, 37 (yes, it is a dataset that only has two numbers in it). Use pen and paper to sketch all the different ways you can think of to visually compare these two numbers. Share (on Piazza) the total number of ways you find.
+* **Before lecture**: Give yourself two minutes. See how many different ways you can visualise this dataset: 75, 37 (yes, it is a dataset that only has two numbers in it). Use pen and paper to sketch all the different ways you can think of to visually compare these two numbers. Share (on the Blackboard Discussion thread) the total number of ways you find.
 
 * **Before lecture**: Read the first half of the second chapter, pages 17-42, A Narrative Approach to Data Storytelling, in Feigenbaum, A. and Alamalhodaei, A. (2020) The Data Storytelling Workbook, Routledge
 

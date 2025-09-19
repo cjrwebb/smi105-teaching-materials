@@ -1,5 +1,5 @@
 ---
-title: "SMI105: Week 5 Visual design"
+title: "EDC101: Week 5 Visual design"
 subtitle: ""  
 author: 
   - "Dr. Calum Webb"
@@ -23,11 +23,17 @@ output:
 class: middle, title
 background-size: contain
 
+<!----- Make a pdf using:
+
+decktape generic --key=ArrowRight --load-pause 1800 --slides '1-53' --size '1216x684' --url-load-timeout 80000 --page-load-timeout 40000 "week-05/slides/smi105-week-5.html" week-05/slides/smi105-week-5.pdf
+
+----->
+
 
 <br><br>
 
 # Visual Design
-#### SMI105: Week 5
+#### EDC101: Week 5
 
 <br><br>
 

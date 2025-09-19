@@ -1,5 +1,5 @@
 ---
-title: "SMI105: Week 10 Best practice for whom?"
+title: "EDC101: Week 10 Best practice for whom?"
 subtitle: ""  
 author: 
   - "Dr. Calum Webb"
@@ -23,11 +23,16 @@ output:
 class: middle, title
 background-size: contain
 
+<!----- Make a pdf using:
+
+decktape generic --key=ArrowRight --load-pause 1800 --slides '1-27' --size '1216x684' --url-load-timeout 80000 --page-load-timeout 40000 "week-10/slides/smi105-week-10.html" week-10/slides/smi105-week-10.pdf
+
+----->
 
 <br><br>
 
 # Best Practice for Whom?
-#### SMI105: Week 10
+#### EDC101: Week 10
 
 <br><br>
 

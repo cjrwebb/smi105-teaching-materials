@@ -1,5 +1,5 @@
 ---
-title: "SMI105: Week 8 Maps"
+title: "EDC101: Week 8 Maps"
 subtitle: ""  
 author: 
   - "Dr. Calum Webb"
@@ -23,11 +23,18 @@ output:
 class: middle, title
 background-size: contain
 
+<!----- Make a pdf using:
+
+decktape generic --key=ArrowRight --load-pause 1800 --slides '1-62' --size '1216x684' --url-load-timeout 80000 --page-load-timeout 40000 "week-08/slides/smi105-week-8.html" week-08/slides/smi105-week-8.pdf
+
+----->
+
+
 
 <br><br>
 
 # Maps
-#### SMI105: Week 8
+#### EDC101: Week 8
 
 <br><br>
 

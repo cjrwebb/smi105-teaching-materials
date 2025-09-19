@@ -1,5 +1,5 @@
 ---
-title: "SMI105: Week 11 Wrapping up & assessment preparation?"
+title: "EDC101: Week 11 Wrapping up & assessment preparation?"
 subtitle: ""  
 author: 
   - "Dr. Calum Webb"
@@ -23,11 +23,16 @@ output:
 class: middle, title
 background-size: contain
 
+<!----- Make a pdf using:
+
+decktape generic --key=ArrowRight --load-pause 1800 --slides '1-34' --size '1216x684' --url-load-timeout 80000 --page-load-timeout 80000 "week-11/slides/smi105-week-11.html" week-11/slides/smi105-week-11.pdf
+
+----->
 
 <br><br>
 
 # Wrapping up and assessment preparation.
-#### SMI105: Week 11
+#### EDC101: Week 11
 
 <br><br>
 
@@ -180,7 +185,7 @@ By the end of this week you will know:
 
 * How the skills you have learned relate to the current skills shortage in the U.K. and globally, and how you can record your skills on [MySkills](https://students.sheffield.ac.uk/skills/myskills) — I'd recommend doing this now, as you might have forgotten by third year!
 
-* What the second and final assessment for SMI105 requires you to do. 
+* What the second and final assessment for EDC101 requires you to do. 
 
 * **How** to go about critiquing a data visualisation and thinking of how you would improve it **using the skills we have developed on this module and the module materials**
 
@@ -196,7 +201,7 @@ By the end of this week you will know:
 class: inverse, middle
 
 
-# What skills do you have after finishing SMI105 that you didn't have before?
+# What skills do you have after finishing EDC101 that you didn't have before?
 
 
 ---
@@ -473,6 +478,39 @@ class: inverse, middle
 
 class: middle
 
+.pull-left-big[
+
+.center[
+
+<iframe id="kaltura_player" type="text/javascript"  src='https://cdnapisec.kaltura.com/p/2103181/embedPlaykitJs/uiconf_id/53345422?iframeembed=true&entry_id=1_hi47ii81&config[provider]={"widgetId":"1_wfx7k4md"}'  style="width: 608px;height: 402px;border: 0;" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" title="Kaltura Player"></iframe>
+
+]
+
+]
+
+.pull-right-small[
+
+.center[
+
+Record a new development experience on MySkills for Data Visualisation overall
+
+```{r, echo = FALSE}
+
+knitr::include_graphics("images/qrcode_careerconnect.sheffield.ac.uk.png")
+
+```
+
+]
+
+]
+
+
+
+
+---
+
+class: middle
+
 # **Final Assessment**
 
 ‘In the second and final assessment you’ll be asked to reflect on a published article that contains a data visualisation, to assess the data visualisation’s strengths and weaknesses, and consider how it might be improved. Then, remaining with the same topic, you’ll be asked to tell a relevant story by creating your own data visualisation(s), and then explain the decisions you made about which data and which type of visualisation you thought were most appropriate for the audience.’
@@ -645,8 +683,8 @@ This week we will use our workshop time in order to work through some of the ass
 
 #### That's all!
 
-This is our last lecture together, but I'll see you again in the workshop and you can still meet with me in my office hours. A reminder that there will be an additional drop-in session next week where you can get support with some of the trickier parts of your assessment, such as finding, reading in, and tidying data related to the topic. 
+This is our last lecture together, but I'll see you again in the workshop and you can still meet with me in my office hours. The purpose of the workshop this week will be to help you with some of the trickier parts of your assessment, such as finding, reading in, and tidying data related to the topic, so that you can focus on the visualisation. 
 
-**If you don't take advantage of the workshop this week and the drop-in next week, you might find that you will have to figure a lot of these difficult things out on your own!** While I always do my best to help everyone, there will be limited opportunities for support with the assessment over the holiday period — you have to meet me halfway and use the opportunities for support that are available.
+**If you don't take advantage of the workshop this week you might find that you will have to figure a lot of these difficult things out on your own!** While I always do my best to help everyone, there will be limited opportunities for support with the assessment over the holiday period. 
 
 ]

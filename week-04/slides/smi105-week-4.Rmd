@@ -1,5 +1,5 @@
 ---
-title: "SMI105: Week 4 Chart Types"
+title: "EDC101: Week 4 Chart Types"
 subtitle: ""  
 author: 
   - "Dr. Calum Webb"
@@ -23,11 +23,17 @@ output:
 class: middle, title
 background-size: contain
 
+<!----- Make a pdf using:
+
+decktape generic --key=ArrowRight --load-pause 1800 --slides '1-47' --size '1216x684' --url-load-timeout 80000 --page-load-timeout 40000 "week-04/slides/smi105-week-4.html" week-04/slides/smi105-week-4.pdf
+
+----->
+
 
 <br><br>
 
 # Chart Types
-#### SMI105: Week 4
+#### EDC101: Week 4
 
 <br><br>
 
@@ -1358,7 +1364,7 @@ While the 'data-driven' approach to selecting a visualisation works well, we now
 
 <br><br><br>
 
-Heatmap: `geom_bin2d`
+Heatmap: `geom_tile`
 
 .center[
 
@@ -1380,8 +1386,8 @@ heatmapex <- brics_dsp %>%
     )
   ) %>%
   ggplot() +
-  geom_bin_2d(aes(x = country_name, y = name,
-                 fill = value)) +
+  geom_tile(aes(x = country_name, y = name,
+                 fill = value), colour = "#f8f8f8") +
   ylab("Digital Control") +
   xlab("Country") +
   ggeasy::easy_add_legend_title("Score") +

@@ -1,5 +1,5 @@
 ---
-title: "SMI105: Week 7 Publishing a data visualisation"
+title: "EDC101: Week 7 Publishing a data visualisation"
 subtitle: ""  
 author: 
   - "Dr. Calum Webb"
@@ -23,11 +23,17 @@ output:
 class: middle, title
 background-size: contain
 
+<!----- Make a pdf using:
+
+decktape generic --key=ArrowRight --load-pause 1800 --slides '1-55' --size '1216x684' --url-load-timeout 80000 --page-load-timeout 40000 "week-07/slides/smi105-week-7.html" week-07/slides/smi105-week-7.pdf
+
+----->
+
 
 <br><br>
 
 # Publishing a data visualisation
-#### SMI105: Week 7
+#### EDC101: Week 7
 
 <br><br>
 
@@ -1581,7 +1587,7 @@ Let’s start drawing **maps**. We’re going to work with some existing data th
 
 #### Core tasks:
 
-**Before lecture**: Find a map in the news that is being used to present some data. Then, share on **Piazza**: (i) the map you find, (ii) where it was published (if that’s not obvious) and (iii) one observation about how well, or not, you think it is integrated into the place where it has been published (one sentence will do).
+**Before lecture**: Find a map in the news that is being used to present some data. Then, share on Blackboard: (i) the map you find, (ii) where it was published (if that’s not obvious) and (iii) one observation about how well, or not, you think it is integrated into the place where it has been published (one sentence will do).
 
 **Before lecture**: Read [When maps shouldn’t be maps](http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/) http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/
 
