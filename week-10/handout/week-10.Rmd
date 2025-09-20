@@ -1,5 +1,5 @@
 ---
-title: "SMI105, week 10"
+title: "Data Visualisation Week 10: Web scraping and interactive plots"
 output: html_document
 ---
 

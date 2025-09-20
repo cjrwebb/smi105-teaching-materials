@@ -11,7 +11,7 @@
 
 
 
-<title>SMI105, week 8</title>
+<title>Data Visualisation Week 8: Extending maps &amp; basic data tidying</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -348,7 +348,8 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">SMI105, week 8</h1>
+<h1 class="title toc-ignore">Data Visualisation Week 8: Extending maps
+&amp; basic data tidying</h1>
 
 </div>
 
@@ -365,23 +366,22 @@ were working with in the first half of this semester was of this
 format.) So, today, what we’re going to do is download some data from
 the web as it comes, in a format that’s a tiny bit messy (it’ll probably
 get messier next week).</p>
-</div>
-<div id="getting-set-up" class="section level2">
-<h2>Getting set up</h2>
+<div id="getting-set-up" class="section level3">
+<h3>Getting set up</h3>
 <p>Let’s start, as we always do, by loading some packages. We’re going
-to continue drawing maps using the <strong>sf</strong> package.</p>
-<pre class="r"><code>library(tidyverse)
+to continue drawing maps using the sf package.</p>
+<pre class="r"><code>library(tidyverse) 
 library(sf)</code></pre>
 <p>As with last week, we’re running from an R project folder. It’s
 exactly the same file as last week, and it can be found under the “Week
 7” bit of the Blackboard page. If this has worked, you’ll be able to run
 the following line:</p>
-<pre class="r"><code>westminster &lt;- read_sf(dsn = &quot;.&quot;, layer = &quot;westminster_const_region&quot;)</code></pre>
+<pre class="r"><code> westminster &lt;- read_sf(dsn = &quot;.&quot;, layer = &quot;westminster_const_region&quot;)</code></pre>
 <p>and a shapefile of parliamentary constituencies should load. (It’s
 the same file as last week.)</p>
 </div>
-<div id="switch-to-the-web" class="section level2">
-<h2>Switch to the web</h2>
+<div id="switch-to-the-web" class="section level3">
+<h3>Switch to the web</h3>
 <p>Let’s download some data! Specifically, let’s download some data that
 relates to England and Wales from the 2011 Census. (The data for
 Scotland, and for Northern Ireland, are a bit different, for tedious
@@ -389,37 +389,36 @@ reasons, which is why we’re sticking with England and Wales for
 now.)</p>
 <p>Please navigate as follows:</p>
 <ul>
-<li>navigate to <a href="https://www.nomisweb.co.uk/census/2011" class="uri">https://www.nomisweb.co.uk/census/2011</a> (sadly, we are
+<li><p>navigate to <a href="https://www.nomisweb.co.uk/census/2011" class="uri">https://www.nomisweb.co.uk/census/2011</a> (<a href="https://www.nomisweb.co.uk/census/2011" class="uri">https://www.nomisweb.co.uk/census/2011</a>) (sadly, we are
 still stuck using 2011 Census data as 2021 Census data is not up on
-Nomis yet by Westminster Parliamentary Constituencies);</li>
-<li>from the wide range of options, click on <strong>Key
-Statistics</strong>;</li>
-<li>from the wide range of options, click on <strong>KS102EW</strong>,
-described as “Age Structure”;</li>
-<li>the page you end up with gives you some information about the
+Nomis yet by Westminster Parliamentary Constituencies);</p></li>
+<li><p>from the wide range of options, click on Key Statistics;</p></li>
+<li><p>from the wide range of options, click on KS102EW, described as
+“Age Structure”;</p></li>
+<li><p>the page you end up with gives you some information about the
 variables associated with age structure for different areas. Under
-<strong>Download (.csv)</strong>, on the bottom left, when you’re
-presented with a range of different types of areas, scroll down to
-<strong>parliamentary constituencies 2010</strong></li>
-<li>hit <strong>Download</strong></li>
+Download (.csv), on the bottom left, when you’re presented with a range
+of different types of areas, scroll down to parliamentary constituencies
+2010</p></li>
+<li><p>hit Download</p></li>
 </ul>
-<p>This should download you a file called <strong>bulk.csv</strong> (or,
-if you’re anything like me with a disorganised Downloads folder,
-something like <strong>bulk(16).csv</strong>).</p>
+<p>This should download you a file called bulk.csv (or, if you’re
+anything like me with a disorganised Downloads folder, something like
+bulk(16).csv).</p>
+</div>
 <div id="using-computers" class="section level3">
 <h3>Using computers</h3>
 <p>Please now move your new file to the folder that contains the .Rproj
-file, and rename it to <strong>age_structure.csv</strong>.</p>
+file, and rename it to age_structure.csv.</p>
 </div>
-</div>
-<div id="loading-the-new-data" class="section level2">
-<h2>Loading the new data</h2>
+<div id="loading-the-new-data" class="section level3">
+<h3>Loading the new data</h3>
 <p>Let’s load the new data! If you’ve managed to move it successfully,
 the following should work:</p>
-<pre class="r"><code>age_structure &lt;- read.csv(&quot;age_structure.csv&quot;)</code></pre>
+<pre class="r"><code> age_structure &lt;- read.csv(&quot;age_structure.csv&quot;)</code></pre>
 <p>and we can have a look at what it looks like.</p>
-<pre class="r"><code>names(age_structure)
-head(age_structure)</code></pre>
+<pre class="r"><code> names(age_structure)
+ head(age_structure)</code></pre>
 <p>OK, this is pretty usable (compared with some other data that we can
 download from the web, this is astonishingly well put-together and
 accessible. We’ll contrast this next time…)</p>
@@ -430,163 +429,156 @@ going on.</p>
 <p>So, what we can do is just go through and rename the variables. What
 we’re not doing here is adding new variables with shorter names: by
 renaming them, the old variable names are disappearing. We can do this
-with the <strong>rename</strong> command, like so:</p>
-<pre class="r"><code>age_structure_renamed &lt;- 
-  age_structure %&gt;% 
-  rename(date = date,
-         geography = geography,
-         CODE = geography.code,
-         rural = Rural.Urban,
-         population = Age..All.usual.residents..measures..Value,
-         between0and4 = Age..Age.0.to.4..measures..Value,
-         between5and7 = Age..Age.5.to.7..measures..Value,
-         between8and9 = Age..Age.8.to.9..measures..Value,
-         between10and14 = Age..Age.10.to.14..measures..Value,
-         between15 = Age..Age.15..measures..Value,
-         between16and17 = Age..Age.16.to.17..measures..Value,
-         between18and19 = Age..Age.18.to.19..measures..Value,
-         between20and24 = Age..Age.20.to.24..measures..Value,
-         between25and29 = Age..Age.25.to.29..measures..Value,
-         between30and44 = Age..Age.30.to.44..measures..Value,
-         between45and59 = Age..Age.45.to.59..measures..Value,
-         between60and64 = Age..Age.60.to.64..measures..Value,
-         between65and74 = Age..Age.65.to.74..measures..Value,
-         between75and84 = Age..Age.75.to.84..measures..Value,
-         between85and89 = Age..Age.85.to.89..measures..Value,
-         between90andmore = Age..Age.90.and.over..measures..Value,
-         mean_age = Age..Mean.Age..measures..Value,
-         median_age = Age..Median.Age..measures..Value)</code></pre>
+with the rename command, like so:</p>
+<pre class="r"><code>   age_structure_renamed &lt;-
+   age_structure %&gt;%
+   rename(date = date,
+          geography = geography,
+          CODE = geography.code,
+          rural = Rural.Urban,
+          population = Age..All.usual.residents..measures..Value,
+          between0and4 = Age..Age.0.to.4..measures..Value,
+          between5and7 = Age..Age.5.to.7..measures..Value,
+          between8and9 = Age..Age.8.to.9..measures..Value,
+          between10and14 = Age..Age.10.to.14..measures..Value,
+          between15 = Age..Age.15..measures..Value,
+          between16and17 = Age..Age.16.to.17..measures..Value,
+          between18and19 = Age..Age.18.to.19..measures..Value,
+          between20and24 = Age..Age.20.to.24..measures..Value,
+          between25and29 = Age..Age.25.to.29..measures..Value,
+          between30and44 = Age..Age.30.to.44..measures..Value,
+          between45and59 = Age..Age.45.to.59..measures..Value,
+          between60and64 = Age..Age.60.to.64..measures..Value,
+          between65and74 = Age..Age.65.to.74..measures..Value,
+          between75and84 = Age..Age.75.to.84..measures..Value,
+          between85and89 = Age..Age.85.to.89..measures..Value,
+          between90andmore = Age..Age.90.and.over..measures..Value,
+          mean_age = Age..Mean.Age..measures..Value,
+          median_age = Age..Median.Age..measures..Value)</code></pre>
 <p>That was a lot. (You might wonder whether we needed all the variable
-names that I’ve started with <strong>between</strong>: in practice, it
-might have been overkill to rename every single variable, rather than
-just the variables I was going to use. But we’ve come this far; we might
-as well carry on.)</p>
-<p><strong>This</strong> is a task that might benefit from some
-automation — in SMI105’s Module Guidance, I prohibit you from using
-generative AI to help you write code and suggest that you only use it to
-help with error checking, while carefully prompting it to not generate
-any code.</p>
-<p>Let’s see if Google Gemini can create a list of short names from our
+names that I’ve started with between: in practice, it might have been
+overkill to rename every single variable, rather than just the variables
+I was going to use. But we’ve come this far; we might as well carry
+on.)</p>
+<p>This is a task that might benefit from some automation — in SMI105’s
+Module Guidance, I prohibit you from using generative AI to help you
+write code and suggest that you only use it to help with error checking,
+while carefully prompting it to not generate any code.</p>
+<p>Let’s see if Chat GPT can create a list of short names from our
 dataset using a prompt. First, let’s get our names:</p>
-<pre class="r"><code>names(age_structure)</code></pre>
+<pre class="r"><code> names(age_structure)</code></pre>
 <p>Now, let’s give the following prompt to ChatGPT. Go to chatgpt.com
-and sign in via Google using your University account. Ask ChatGPT:</p>
+and sign in via Google using your University account.</p>
+<p>Ask ChatGPT:</p>
+<blockquote>
 <p>“Take this list of long, untidy variable names and provide me with a
 vector in R code of short variable names (less than 15 characters) that
-are all unique:</p>
-<p><em>Copy and paste the names of the variables from the names()
-function above</em></p>
-<p>”</p>
+are all unique: <em>Copy and paste the names of the variables from the
+names() function above</em>”</p>
+</blockquote>
 <p>Of course, you will probably get a slightly different output from me,
 but you should get something like this (or you can re-generate the
 output until you do):</p>
-<pre class="r"><code># Don&#39;t write these labels - use the ones that ChatGPT generated for you!
-short_names &lt;- c(
-  &quot;date&quot;, &quot;geo&quot;, &quot;geo_code&quot;, &quot;rural_urb&quot;, &quot;age_all&quot;, 
-  &quot;age_0_4&quot;, &quot;age_5_7&quot;, &quot;age_8_9&quot;, &quot;age_10_14&quot;, &quot;age_15&quot;, 
-  &quot;age_16_17&quot;, &quot;age_18_19&quot;, &quot;age_20_24&quot;, &quot;age_25_29&quot;, &quot;age_30_44&quot;, 
-  &quot;age_45_59&quot;, &quot;age_60_64&quot;, &quot;age_65_74&quot;, &quot;age_75_84&quot;, &quot;age_85_89&quot;, 
-  &quot;age_90_plus&quot;, &quot;mean_age&quot;, &quot;med_age&quot;
+<pre class="r"><code>   # Don&#39;t write these labels - use the ones that ChatGPT generated for you!
+ short_names &lt;- c(
+   &quot;date&quot;, &quot;geo&quot;, &quot;geo_code&quot;, &quot;rural_urb&quot;, &quot;age_all&quot;,
+   &quot;age_0_4&quot;, &quot;age_5_7&quot;, &quot;age_8_9&quot;, &quot;age_10_14&quot;, &quot;age_15&quot;,
+   &quot;age_16_17&quot;, &quot;age_18_19&quot;, &quot;age_20_24&quot;, &quot;age_25_29&quot;, &quot;age_30_44&quot;,
+   &quot;age_45_59&quot;, &quot;age_60_64&quot;, &quot;age_65_74&quot;, &quot;age_75_84&quot;, &quot;age_85_89&quot;,
+   &quot;age_90_plus&quot;, &quot;mean_age&quot;, &quot;med_age&quot;
 )</code></pre>
-<p>If we run this, it creates a vectore called short names which is
-stored in our environment. <strong>Make sure you double check that these
-all look correct!</strong> To change all of the variable names in our
-dataset to these generated ones, we can use the following code (though
-remember, your object may also be different to
-<code>short_names</code>!)</p>
+<p>If we run this, it creates a vector called short names which is
+stored in our environment. Make sure you double check that these all
+look correct! To change all of the variable names in our dataset to
+these generated ones, we can use the following code (though remember,
+your object may also be different to short_names!)</p>
 <pre class="r"><code>age_structure_ai &lt;- age_structure %&gt;% set_names(short_names)</code></pre>
 <p>If you get an “incorrect number” error, this probably means that
 ChatGPT failed to generate the right number of variables that we need.
 It is prone to mistakes!</p>
 <p>Right, let’s join the data.</p>
 </div>
-<div id="joining-the-data" class="section level2">
-<h2>Joining the data</h2>
+<div id="joining-the-data" class="section level3">
+<h3>Joining the data</h3>
 <p>We did some joining last week. This week, let’s look at it in a bit
 more detail.</p>
-<pre class="r"><code>age_with_map &lt;- 
-  left_join(westminster, age_structure_renamed, by = &quot;CODE&quot;)</code></pre>
+<pre class="r"><code>age_with_map &lt;-
+   left_join(westminster, age_structure_renamed, by = &quot;CODE&quot;)</code></pre>
 <p>What have we got here? Let’s go through the steps one-by-one.</p>
 <ul>
 <li>age_with_map is the name of our new object;</li>
-<li>the arrow means it’s going to consist of the thing on the
-right;</li>
-<li>the <strong>left_join</strong> command means we’re combining
-<strong>two</strong> datasets. (Some people might have tried joining
-three datasets in one join function in the Week 7 task; this won’t work,
-but you can pipe joins together to join the first two together, and then
-the third to the result, and then the fourth, and so on,
-e.g. left_join(dataset1, dataset2, by = “CODE”) %&gt;%
+<li>the arrow means it’s going to consist of the thing on the right; the
+left_join command means we’re combining two datasets. (Some people might
+have tried joining three datasets in one join function in the Week 7
+task; this won’t work, but you can pipe joins together to join the first
+two together, and then the third to the result, and then the fourth, and
+so on, e.g. left_join(dataset1, dataset2, by = “CODE”) %&gt;%
 left_join(dataset3, by = “CODE”) %&gt;% and so on );</li>
 <li>left_join is different to the inner_join we were using before, as it
-will keep all of the unique IDs in the left-hand side dataset;</li>
-<li>following the left_join function, we’re specifying the two datasets
-we want to combine;</li>
-<li>finally, we’re specifying the <strong>key</strong> variable that
-both datasets have using <strong>by</strong>. R can use this to match up
-observations. Crucially, this means that a dataset with a common id
-variable, but a flaky label variable (eg a difference between
-<strong>Cheshire West and Chester</strong> and <strong>Cheshire West
-&amp; Chester</strong>) is a real problem if you’re using the name field
-to join, but not a big deal if you’re using the id field;</li>
-<li>you’ll note that when we renamed our variables earlier we renamed
-<strong>geography_code</strong> to <strong>CODE</strong>; this was so
-that the common variable was called the same thing in both data
+will keep all of the unique IDs in the left-hand side dataset; following
+the left_join function, we’re specifying the two datasets we want to
+combine;</li>
+<li>finally, we’re specifying the key variable that both datasets have
+using by. R can use this to match up observations. Crucially, this means
+that a dataset with a common id variable, but a flaky label variable (eg
+a difference between Cheshire West and Chester and Cheshire West &amp;
+Chester) is a real problem if you’re using the name field to join, but
+not a big deal if you’re using the id field; you’ll note that when we
+renamed our variables earlier we renamed geography_code to CODE; this
+was so that the common variable was called the same thing in both data
 frames.</li>
 </ul>
 </div>
-<div id="arranging-variables-in-order" class="section level2">
-<h2>Arranging variables in order</h2>
+<div id="arranging-variables-in-order" class="section level3">
+<h3>Arranging variables in order</h3>
 <p>Has it worked? To find out, let’s see which parliamentary
-constituency has the highest mean age.</p>
-<p>We’re going to use two new dplyr functions to do this –
-<strong>select</strong> and <strong>arrange</strong>.</p>
-<p><strong>select</strong> is used to choose variables. You can use it
-to reduce your dataset down to only a few variables (or even one). Or
-you can use it to reorder the variables. We’ll use it below to show how
-we can reduce it down to a few variables.</p>
-<pre class="r"><code>age_with_map %&gt;% 
-  select(mean_age, NAME, CODE)</code></pre>
+constituency has the highest mean age. We’re going to use two new dplyr
+functions to do this – select and arrange.</p>
+<p><code>select</code> is used to choose variables. You can use it to
+reduce your dataset down to only a few variables (or even one). Or you
+can use it to reorder the variables. We’ll use it below to show how we
+can reduce it down to a few variables.</p>
+<pre class="r"><code> age_with_map %&gt;%
+   select(mean_age, NAME, CODE)</code></pre>
 <p>This code has taken our dataset, and selected three variables to keep
 – mean_age, NAME, CODE – the rest have been discarded. It’s also put
-them in the order that we’ve specified within the
-<strong>select</strong> function. But this doesn’t tell us which
-constituency has the highest mean age, we need to use
-<strong>arrange</strong> for that.</p>
-<p><strong>arrange</strong> sorts variables into ascending order. Pass
-the name of the variable you want to sort to the arrange function like
+them in the order that we’ve specified within the select function. But
+this doesn’t tell us which constituency has the highest mean age, we
+need to use arrange for that.</p>
+<p><code>arrange</code> sorts variables into ascending order. Pass the
+name of the variable you want to sort to the arrange function like
 so…</p>
-<pre class="r"><code>age_with_map %&gt;% 
-  select(mean_age, NAME, CODE) %&gt;% 
-  arrange(mean_age)</code></pre>
+<pre class="r"><code> age_with_map %&gt;%
+   select(mean_age, NAME, CODE) %&gt;%
+   arrange(mean_age)</code></pre>
 <p>This has sorted all the observations in the dataset in ascending
 order according to mean_age. But this still doesn’t give us the highest
 mean age, instead we’ve got the constituencies with the lowest mean age.
-To solve this, we can use the <strong>desc</strong> function within
-arrange.</p>
-<pre class="r"><code>age_with_map %&gt;% 
-  select(mean_age, NAME, CODE) %&gt;% 
-  arrange(desc(mean_age))</code></pre>
+To solve this, we can use the desc function within arrange.</p>
+<pre class="r"><code> age_with_map %&gt;%
+   select(mean_age, NAME, CODE) %&gt;%
+   arrange(desc(mean_age))</code></pre>
 <p>This has now sorted the observations in descending order by mean_age,
 so the top observation in the dataset is the constituency with the
 highest average age – Christchurch.</p>
 </div>
-<div id="lets-draw-some-maps" class="section level2">
-<h2>Let’s draw some maps</h2>
+<div id="lets-draw-some-maps" class="section level3">
+<h3>Let’s draw some maps</h3>
 <p>Now let’s draw a map of the constituencies, colouring constituencies
 based on their mean age.</p>
-<pre class="r"><code>ggplot(data = age_with_map) +
-  aes(fill = mean_age) +
-  geom_sf() +
-  scale_fill_viridis_c()</code></pre>
+<pre class="r"><code> ggplot(data = age_with_map) +
+   aes(fill = mean_age) +
+   geom_sf() +
+   scale_fill_viridis_c()</code></pre>
 <p>As we did in previous workshops, if we wanted to get rid of the
-missing areas we could use <strong>drop_na</strong></p>
-<pre class="r"><code>age_with_map %&gt;%
-  drop_na(mean_age) %&gt;%
-  ggplot() +
-  aes(fill = mean_age) +
-  geom_sf() +
-  scale_fill_viridis_c()</code></pre>
+missing areas we could use drop_na</p>
+<pre class="r"><code> age_with_map %&gt;%
+   drop_na(mean_age) %&gt;%
+   ggplot() +
+   aes(fill = mean_age) +
+   geom_sf() +
+   scale_fill_viridis_c()</code></pre>
+</div>
 <div id="lets-try-some-different-bins" class="section level3">
 <h3>Let’s try some different bins</h3>
 <p>OK, this looks interesting. Let’s do some binning to understand the
@@ -596,23 +588,22 @@ binning: one where there were equal intervals, one where there were
 equal numbers. Let’s try specifying the bins ourselves: maybe we’re
 interested in particular ranges, such as areas that have mean ages of
 under 35.</p>
-<pre class="r"><code>age_with_map %&gt;%
-  drop_na(mean_age) %&gt;%
-  ggplot() +
-  aes(fill = cut(mean_age, 
-                 breaks = c(0, 35, 40, 45, 100),
-                 labels = c(&quot;Under 35&quot;,
-                            &quot;35-40&quot;,
-                            &quot;40-45&quot;,
-                            &quot;45+&quot;))) +
-  geom_sf() +
-  scale_fill_viridis_d() + 
-  labs(fill = &quot;Mean age&quot;)</code></pre>
+<pre class="r"><code> age_with_map %&gt;%
+   drop_na(mean_age) %&gt;%
+   ggplot() +
+   aes(fill = cut(mean_age,
+                  breaks = c(0, 35, 40, 45, 100),
+                  labels = c(&quot;Under 35&quot;,
+                             &quot;35-40&quot;,
+                             &quot;40-45&quot;,
+                             &quot;45+&quot;))) +
+   geom_sf() +
+   scale_fill_viridis_d() +
+   labs(fill = &quot;Mean age&quot;)</code></pre>
 <p>This looks OK. What does this show?</p>
 </div>
-</div>
-<div id="task" class="section level2">
-<h2>Task</h2>
+<div id="task" class="section level3">
+<h3>Task</h3>
 <p>A few more things for the task this week.</p>
 <ul>
 <li>repeat the left_join we did earlier, but this time try joining the
@@ -624,20 +615,22 @@ different names for the key!)</li>
 constituency who are 65 or older. Which constituencies in England and
 Wales have the smallest fractions of people aged 65+; which have the
 largest?</li>
-<li>please draw a <strong>scatterplot</strong> of the percentage of
-people in each constituency aged over 65, and of the percentage of
-voters who voted for Reform UK in 2024 (hint: you had a copy of that
-data in your assessment — check whether it has a variable you can use as
-a key to join it to this data!)</li>
+<li>please draw a scatterplot of the percentage of people in each
+constituency aged over 65, and of the percentage of voters who voted for
+Reform UK in 2024 (hint: you had a copy of that data in your assessment
+— check whether it has a variable you can use as a key to join it to
+this data!)</li>
 <li>please draw a map of the fraction of people in each constituency who
 don’t have passports (you’ll need to find and download this data —
 excellent practice for your second assessment)</li>
 <li>Recreate one of your maps using the House of Commons Non-Contiguous
-Cartogram of the UK for <strong>constituencies</strong> (<a href="https://github.com/houseofcommonslibrary/uk-hex-cartograms-noncontiguous?tab=readme-ov-file" class="uri">https://github.com/houseofcommonslibrary/uk-hex-cartograms-noncontiguous?tab=readme-ov-file</a>),
-and post it to Blackboard. This is a “GEOPACKAGE” type mapping file, so
-you might want to check the lecture slides about this to find out how to
-read it into R!</li>
+Cartogram of the UK for constituencies (<a href="https://github.com/houseofcommonslibrary/uk-hex-cartograms-noncontiguous" class="uri">https://github.com/houseofcommonslibrary/uk-hex-cartograms-noncontiguous</a>?
+tab=readme-ov-file (<a href="https://github.com/houseofcommonslibrary/uk-hex-cartograms-" class="uri">https://github.com/houseofcommonslibrary/uk-hex-cartograms-</a>
+noncontiguous?tab=readme-ov-file)), and post it to Blackboard. This is a
+“GEOPACKAGE” type mapping file, so you might want to check the lecture
+slides about this to find out how to read it into R!</li>
 </ul>
+</div>
 </div>
 
 

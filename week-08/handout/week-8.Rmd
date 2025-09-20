@@ -1,5 +1,5 @@
 ---
-title: "Week 8, handout"
+title: "Data Visualisation Week 8: Extending maps & basic data tidying"
 output: html_document
 ---
 

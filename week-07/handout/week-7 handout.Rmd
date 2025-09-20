@@ -1,9 +1,9 @@
 ---
-title: "SMI105, week 7"
+title: "Data Visualisation Week 7: Making maps"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, eval = FALSE, include=FALSE}
 
 library(tidyverse)
 library(sf)

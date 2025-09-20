@@ -1,5 +1,5 @@
 ---
-title: "SMI105, week 9 solutions"
+title: "Week 9 Solutions"
 output: html_document
 ---
 
@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Week 9's tasks were all designed to really test your ability to apply the more complex data tidying we did in the workshop. Some of these tasks were quite difficult, but if you tried them you will hopefully have gotten a good start on practicing the skills you'll likely need to use to complete your final assessment for SMI105. 
+Week 9's tasks were all designed to really test your ability to apply the more complex data tidying we did in the workshop. Some of these tasks were quite difficult, but if you tried them you will hopefully have gotten a good start on practicing the skills you'll likely need to use to complete your final assessment. 
 
 The first task was:
 
