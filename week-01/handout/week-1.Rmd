@@ -1,5 +1,5 @@
 ---
-title: "SMI105, Week 1: Introduction to ggplot2"
+title: "Data Visualisation, Week 1: Introduction to ggplot2"
 output: html_document
 ---
 
@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## What is this document?
 
-Welcome to SMI105: Data Visualisation! This document accompanies the first workshop.
+Welcome to EDC101: Data Visualisation! This document accompanies the first workshop.
 
 There'll be a document like this every week on Thursday. Each Thursday, we'll work through how to do different bits of data viz, and each week will build on the previous week. 
 
@@ -112,7 +112,6 @@ ggplot(data = diamonds)+
 Let's also use the **diamonds** data to make a graph of how diamond prices vary by what colour they are...
 
 ```{r, eval = FALSE}
-
 ggplot(data = diamonds) +
   aes(x = color, y = price) + 
   geom_boxplot()
@@ -126,7 +125,7 @@ ggplot(data = diamonds) +
   geom_density()
 ```
 
-Finallly, the **mpg** data contains information on cars, including the miles per gallon they get on highways, and their engine displacement. (I don't know anything about cars). Let's look at the relationship between those two variables.
+Finally, the **mpg** data contains information on cars, including the miles per gallon they get on highways, and their engine displacement. (I don't know anything about cars). Let's look at the relationship between those two variables.
 
 ```{r, eval = FALSE}
 ggplot(data = mpg) +

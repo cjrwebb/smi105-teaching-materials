@@ -1,5 +1,5 @@
 ---
-title: "SMI105 week 2"
+title: "Data Visualisation: Week 2 Bar Charts"
 output: html_document
 ---
 

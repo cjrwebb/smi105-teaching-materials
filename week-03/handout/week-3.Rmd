@@ -1,5 +1,5 @@
 ---
-title: "SMI105, week 3"
+title: "Data Visualisation, Week 3: Scatterplots"
 output: html_document
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "SMI105 week 4"
+title: "Data Visualisation Week 4: Box plots and ridgeline plots"
 output: html_document
 ---
 
