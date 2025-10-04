@@ -35,9 +35,7 @@ library(ggthemes)
 
 ```{r, eval = FALSE}
 
-taylor <- read_csv("https://bit.ly/taylor-data-csv")
-queen <- read_csv("https://bit.ly/queen-data-csv")
-maccas <- read.csv("https://bit.ly/bigmac-data-csv")
+taylor <- read_csv("https://bit.ly/swifty-data")
 
 ```
 
@@ -49,8 +47,8 @@ Let's remind ourselves of the relationship between tempo and danceability among 
 ggplot(data = taylor) +
   aes(x = tempo,
       y = danceability,
-      colour = reorder(album_name, 
-                       ymd(album_release_date))) +
+      colour = reorder(album, 
+                       ymd(release_date))) +
   geom_point()
 ```
 
@@ -62,8 +60,8 @@ Here we're going to introduce two approaches to colour palettes that are quite e
 ggplot(data = taylor) +
   aes(x = tempo,
       y = danceability,
-      colour = reorder(album_name, 
-                       ymd(album_release_date))) +
+      colour = reorder(album, 
+                       ymd(release_date))) +
   geom_point() +
   scale_colour_brewer(palette = "Paired") 
 ```
@@ -74,8 +72,8 @@ ggplot(data = taylor) +
 ggplot(data = taylor) +
   aes(x = tempo,
       y = danceability,
-      colour = reorder(album_name, 
-                       ymd(album_release_date))) +
+      colour = reorder(album, 
+                       ymd(release_date))) +
   geom_point() +
   scale_colour_viridis_d(option = "D")
 ```
@@ -109,9 +107,9 @@ Let's revisit another graph, from a few weeks ago: the balance between major and
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = fct_reorder(album_name,
-                  ymd(album_release_date)), 
-      fill = mode_name) +
+  aes(x = fct_reorder(album,
+                  ymd(release_date)), 
+      fill = mode) +
   geom_bar(position = "dodge") 
 ```
 
@@ -119,9 +117,9 @@ What if you wanted your own colour scheme? What if you thought of major tracks b
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = fct_reorder(album_name,
-                  ymd(album_release_date)),
-      fill = mode_name) + 
+  aes(x = fct_reorder(album,
+                  ymd(release_date)),
+      fill = mode) + 
   geom_bar(position = "dodge") +
   scale_fill_manual(values = c("darkorchid2",
                                  "forestgreen"))
@@ -133,9 +131,9 @@ An alternative to using named colours is to use **HEX codes**. These start with 
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = fct_reorder(album_name,
-                  ymd(album_release_date)),
-      fill = mode_name) + 
+  aes(x = fct_reorder(album,
+                  ymd(release_date)),
+      fill = mode) + 
   geom_bar(position = "dodge") +
   scale_fill_manual(values = c("#5AD9ED",
                                  "#5AED9F"))
@@ -148,9 +146,9 @@ Let's revisit facets, by looking at how the distribution of keys varies across T
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = key_name) +
+  aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album_name)
+  facet_wrap(~ album)
 ```
 
 Any problems with this?
@@ -161,26 +159,26 @@ What we can do is free up the axes: x, y, or both. Here's how we do it. Compare 
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = key_name) +
+  aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album_name)
+  facet_wrap(~ album)
 
 ggplot(data = taylor) +
-  aes(x = key_name) +
+  aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album_name, 
+  facet_wrap(~ album, 
              scales = "free_x")
 
 ggplot(data = taylor) +
-  aes(x = key_name) +
+  aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album_name, 
+  facet_wrap(~ album, 
              scales = "free_y")
 
 ggplot(data = taylor) +
-  aes(x = key_name) +
+  aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album_name, 
+  facet_wrap(~ album, 
              scales = "free")
 ```
 
@@ -193,8 +191,8 @@ If you want to look at how the tempo across Taylor Swift's different albums have
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = reorder(album_name, 
-                  ymd(album_release_date)),
+  aes(x = reorder(album, 
+                  ymd(release_date)),
       y = tempo) +
   geom_boxplot() 
 ```
@@ -203,8 +201,8 @@ with:
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = reorder(album_name, 
-                  ymd(album_release_date)),
+  aes(x = reorder(album, 
+                  ymd(release_date)),
       y = tempo) +
   geom_tufteboxplot() 
 ```
@@ -247,14 +245,14 @@ ggplot(data = taylor) +
   annotate("text", 
            x=175, 
            y=0.8, 
-           label="No Taylor songs
-are both fast
-and danceable")
+           label="No Taylor songs \n are both fast \n and danceable")
 ```
 
 Here, what I've done is add an annotate() in my ggplot2 code. You can see it needs four arguments: what kind of annotation it is, where it's going on each of the x and y axes, and a label. (You'll also note I've broken the label up into three lines.)
 
 You'll often want to annotate graphs if you think particular areas of them are interesting. (You might also want to annotate particular points, and you won't always want to do this manually. We won't go over this now, but if this is likely to be a focus for you, I'd recommend the **ggrepel** package.)
+
+You'll also probably be thinking — what's with the "backslash n"s in the middle of the text? These are a way to indicate to ggplot that you want to put a line break (new line) in your text.
 
 ## Exporting graphics
 

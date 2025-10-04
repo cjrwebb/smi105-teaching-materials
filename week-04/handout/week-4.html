@@ -379,8 +379,8 @@ library(ggridges)
 library(lubridate)</code></pre>
 <p>… and let’s load some data. (Everything we used last week is still
 available, I’m just leaving it out so that loading data is quicker!)</p>
-<pre class="r"><code>taylor &lt;- read_csv(&quot;https://bit.ly/taylor-data-csv&quot;)
-queen &lt;- read_csv(&quot;https://bit.ly/queen-data-csv&quot;)
+<pre class="r"><code>taylor &lt;- read_csv(&quot;https://bit.ly/swifty-data&quot;)
+fleet &lt;- read_csv(&quot;https://bit.ly/fleetwood-mac-data&quot;)
 maccas &lt;- read.csv(&quot;https://bit.ly/bigmac-data-csv&quot;)</code></pre>
 <p>We’re good to go! Let’s look at some distributions.</p>
 </div>
@@ -413,12 +413,12 @@ ggplot(data = taylor) +
 <p>Time for a second variable. Are Taylor Swift’s minor tracks slower
 than her major tracks?</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = tempo, fill = mode_name) +
+  aes(x = tempo, fill = mode) +
   geom_histogram()</code></pre>
 <p>We’ve talked about stacked bar charts before, and this seems even
 more severe. Let’s tweak this so that we can compare better.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = tempo, fill = mode_name) +
+  aes(x = tempo, fill = mode) +
   geom_histogram(bins = 15, 
                  position = &quot;identity&quot;,
                  alpha = .5)</code></pre>
@@ -428,7 +428,7 @@ more severe. Let’s tweak this so that we can compare better.</p>
 <p>Let’s try answering that same question – are Taylor Swift’s minor or
 major tracks quicker? – with some density curves instead.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = tempo, colour = mode_name) +
+  aes(x = tempo, colour = mode) +
   geom_density()</code></pre>
 <p>This is a bit more like it. These curves adjust for the fact that
 there’s different numbers of tracks in major and minor keys, and because
@@ -436,19 +436,19 @@ they’re <em>curves</em> rather than histograms we can see how they fit
 together more straightforwardly.</p>
 <p>What about albums? Are Taylor Swift’s more recent albums quicker?</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = tempo, colour = album_name) +
+  aes(x = tempo, colour = album) +
   geom_density()</code></pre>
 <p>This doesn’t work as well. Comparing two overlapping density curves
-is fairly straightforward to do, but comparing <em>nine</em> is tricky;
-it’s not as easy to identify the overall trends for all nine. (It’s also
-worth noting this comparison is a bit easier than it is for other
-artists - try it with the other data we’ve loaded). As ever, a good way
-to deal with nine lots of information in one graph is to turn it into
-nine graphs, with the facet_wrap() command.</p>
+is fairly straightforward to do, but comparing <em>eleven</em> is
+tricky; it’s not as easy to identify the overall trends for all eleven
+(It’s also worth noting this comparison is a bit easier than it is for
+other artists - try it with the other data we’ve loaded). As ever, a
+good way to deal with eleven lots of information in one graph is to turn
+it into eleven graphs, with the facet_wrap() command.</p>
 <pre class="r"><code>ggplot(data = taylor) +
   aes(x = tempo) +
   geom_density() +
-  facet_wrap(~ album_name)</code></pre>
+  facet_wrap(~ album)</code></pre>
 <p>(Did you ever wonder what the tilde – ~ – was doing in the
 facet_wrap() parenthesis, when with most other parentheses it’s OK to
 just have the variable name? As an example, let’s look at how the tempo
@@ -458,34 +458,34 @@ means we’re using facet_grid() rather than facet_wrap().)</p>
 <pre class="r"><code>ggplot(data = taylor) +
   aes(x = tempo) +
   geom_density() +
-  facet_grid(mode_name ~ album_name)</code></pre>
+  facet_grid(mode ~ album)</code></pre>
 <p>OK, we’re making progress. (This isn’t as successful as it could be,
 though – as we’ve seen already, Taylor Swift has far more major than
 minor tracks. Try another artist with more minor tracks – does that work
 better?) Let’s also consider two other ways to communicate this
 information: box plots and violin plots.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = album_name, y = tempo) +
+  aes(x = album, y = tempo) +
   geom_boxplot()
 
 ggplot(data = taylor) +
-  aes(x = album_name, y = tempo) +
+  aes(x = album, y = tempo) +
   geom_violin()</code></pre>
 </div>
 </div>
-<div id="moving-to-queen" class="section level2">
-<h2>Moving to Queen</h2>
+<div id="moving-to-fleetwood-mac" class="section level2">
+<h2>Moving to Fleetwood Mac</h2>
 <p>What happens when we’re looking at a categorical variable with more
-than four levels? Queen released a lot of albums, let’s look at
-Queen.</p>
-<pre class="r"><code>ggplot(data = queen) +
-  aes(album_name, tempo) +
+than four levels? Fleetwood Mac released a lot of albums, let’s look at
+them.</p>
+<pre class="r"><code>ggplot(data = fleet) +
+  aes(album, tempo) +
   geom_boxplot()</code></pre>
 <p>This is basically impossible to read because of the number of
 different albums. One easy way around this problem is just to swap our
 axes over.</p>
-<pre class="r"><code>ggplot(data = queen) +
-  aes(album_name, tempo) +
+<pre class="r"><code>ggplot(data = fleet) +
+  aes(album, tempo) +
   geom_boxplot() + 
   coord_flip()</code></pre>
 <p>But we want them in a different order; here, they’re just
@@ -494,8 +494,8 @@ powerful way of organising your categorical variables. What I
 <em>didn’t</em> show you is that sometimes it’s easier. We can reorder
 our factor levels using the reorder() command. If we want to reorganise
 our albums based on when they came out, we can do it like so.</p>
-<pre class="r"><code>ggplot(data = queen) +
-  aes(fct_reorder(album_name, dmy(album_release_date)), 
+<pre class="r"><code>ggplot(data = fleet) +
+  aes(fct_reorder(album, ymd(release_date)), 
       tempo) +
   geom_boxplot() + 
   coord_flip()</code></pre>
@@ -506,37 +506,37 @@ in the aes() parenthesis, so let’s look through that.</p>
 categorical (or <em>factor</em>) variable, with levels that are
 different from the defaults.</li>
 <li>the first thing in the fct_reorder() bracket is the variable we want
-to put on that axis: album_name. But while we’d normally close the
-bracket here, instead we have a comma, anticipating…</li>
+to put on that axis: album. But while we’d normally close the bracket
+here, instead we have a comma, anticipating…</li>
 <li>the variable the basis on which we’re reordering that categorical
 variable. Here, we want to reorder according to when the album came out;
 that information’s contained in album_release_date…</li>
-<li>which we need to surround with dmy(), to indicate it’s a date of the
-format DD-MM-YYYY.</li>
+<li>which we need to surround with ymd(), to indicate it’s a date of the
+format YYYY-MM-DD.</li>
 </ul>
 <p>Exhausting? But, again, none of these individual bits is that
 complicated, there’s just a lot of them.</p>
 <p>And if we want to reorder the categories so that we’re reorganising
 the boxplots from highest to lowest, we can do that with another
 reorder() command.</p>
-<pre class="r"><code>ggplot(data = queen) +
-  aes(fct_reorder(album_name, tempo), tempo) +
+<pre class="r"><code>ggplot(data = fleet) +
+  aes(fct_reorder(album, tempo), tempo) +
   geom_boxplot() +
   coord_flip()</code></pre>
 <p>The difference here is that earlier we were reordering according to
-album_release_date; here, we’re reordering according to tempo.</p>
+release_date; here, we’re reordering according to tempo.</p>
 </div>
 <div id="ridgeline-plots" class="section level2">
 <h2>Ridgeline plots</h2>
 <p>(Also known as <strong>joyplots</strong>.)</p>
 <p>Did you manage to load ggridges earlier? Let’s find out.</p>
-<pre class="r"><code>ggplot(data = queen) +
+<pre class="r"><code>ggplot(data = fleet) +
   aes(x = tempo, 
-      y = fct_reorder(album_name, dmy(album_release_date))) +
+      y = fct_reorder(album, ymd(release_date))) +
   geom_density_ridges()</code></pre>
 <p>I really like ridgeline plots, which are a fairly new innovation in
 data visualisation. I think they make it more straightforward to compare
-distributions of a continouus variable across lots of different
+distributions of a continuous variable across lots of different
 categories, as in this case. (I like them for fewer categories as well,
 but I think they’re particularly useful here).</p>
 <p>However, one issue is that, by default, the y axis goes from smaller
@@ -544,22 +544,22 @@ numbers at the bottom to bigger numbers at the top. Normally, when we’re
 presenting a chronological list, the earliest items go at the top, and
 the latest at the bottom; here, we’ve effectively got the opposite.
 Let’s turn this graph upside down.</p>
-<pre class="r"><code>ggplot(data = queen) +
+<pre class="r"><code>ggplot(data = fleet) +
   aes(x = tempo, 
-      y = fct_rev(fct_reorder(album_name, 
-                          dmy(album_release_date)))) +
+      y = fct_rev(fct_reorder(album, 
+                          ymd(release_date)))) +
   geom_density_ridges() </code></pre>
 <p>This is clumsy, but it works. What we’ve done is we’ve wrapped the
 existing y aesthetic mapping – reorder(album_name,
-dmy(album_release_date)) – which included a lot more brackets than we’re
+ymd(album_release_date)) – which included a lot more brackets than we’re
 used to, in <em>yet another</em> set of brackets, preceded by the
 <strong>fct_rev()</strong> command. fct_rev() <em>reverses</em> the
 order of levels in a factor, so it’s often useful in this kind of
 context.</p>
 <p>We can also reorder from high to low, as we did before.</p>
-<pre class="r"><code>ggplot(data = queen) +
+<pre class="r"><code>ggplot(data = fleet) +
   aes(x = tempo, 
-      y = fct_reorder(album_name, track_popularity)) +
+      y = fct_reorder(album, popularity)) +
   geom_density_ridges() </code></pre>
 </div>
 <div id="generating-new-variables" class="section level2">
@@ -647,7 +647,7 @@ the country where a Big Mac costs the largest proportion of GDP per head
 at the top, and the country where a Big Mac costs the largest proportion
 of GDP per head at the bottom.</p>
 <p>Please also show me something interesting about how a continuous
-variable varies by a continuous variable in one of the bits of Spotify
+variable varies by a categorical variable in one of the bits of Spotify
 data, and post it to the discussion board before next week’s
 session.</p>
 </div>

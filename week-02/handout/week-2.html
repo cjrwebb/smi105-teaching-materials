@@ -392,9 +392,11 @@ the data come from? The datasets we used – <em>economics</em>,
 ggplot2. But most of the time, we want to use our own data to find out
 interesting things about the world. Let’s load some data on Taylor
 Swift, Adele, and My Chemical Romance.</p>
-<pre class="r"><code>taylor &lt;- read_csv(&quot;https://bit.ly/taylor-data-csv&quot;)
-adele &lt;- read_csv(&quot;https://bit.ly/adele-data-csv&quot;)
-mcr &lt;- read_csv(&quot;https://bit.ly/mcr-data-csv&quot;)</code></pre>
+<p>Let’s load some data on Taylor Swift, Fleetwood Mac, and the Arctic
+Monkeys.</p>
+<pre class="r"><code>taylor &lt;- read_csv(&quot;https://bit.ly/swifty-data&quot;)
+fleet &lt;- read_csv(&quot;https://bit.ly/fleetwood-mac-data&quot;)
+monkeys &lt;- read_csv(&quot;https://bit.ly/arctic-monkeys-data&quot;)</code></pre>
 <p>What’s happening here?</p>
 <p>We have a bunch of URLs. These URLs consist of .csv files with
 information from Spotify about each of the relevant artists. (If you’re
@@ -403,7 +405,7 @@ what the files look like in Excel.) These URLs are nested in (brackets)
 and “quotes”, to indicate that R’s dealing with <strong>strings</strong>
 rather than <strong>objects</strong> (you’ll pick this distinction up,
 don’t worry).</p>
-<p>Preceding the URLs is the read_csv() command. read.csv means that
+<p>Preceding the URLs is the read_csv() command. read_csv means that
 we’re telling R that the thing inside the bracket is a .csv file and not
 any other kind of file – .xlsx, .txt, whatever else you like.</p>
 <p>Preceding <strong>that</strong> is an arrow: &lt;-. The arrow is used
@@ -411,8 +413,8 @@ to tell R that we want to turn the thing on the right-hand side into the
 thing on the left hand side, which is what we’re calling our new
 <strong>object</strong> (I told you these terms would come back).</p>
 <p>Finally, on the left-hand side we’ve got the objects we want to
-create. I’ve called them <strong>adele</strong>,
-<strong>taylor</strong>, and <strong>mcr</strong>, largely for
+create. I’ve called them <strong>taylor</strong>,
+<strong>fleet</strong>, and <strong>monkeys</strong>, largely for
 simplicity, but I could have called them more-or-less whatever I
 wanted.</p>
 <p>Having run the commands, we’ve got a bunch of red text. If your red
@@ -441,53 +443,52 @@ popularity, some you can ignore for the moment.</p>
 <p>Let’s draw a graph of how many songs there are on each Taylor Swift
 album.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = album_name) + 
+  aes(x = album) + 
   geom_bar()</code></pre>
 <p>Now, let’s draw a graph of how many of Taylor Swift’s songs are in
 major keys, and how many are in minor keys.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = mode_name) + 
+  aes(x = mode) + 
   geom_bar()</code></pre>
 <p>What’s the relationship like between these two variables? Do some
 albums skew more towards major keys, and others more towards minor keys?
 Let’s find out by colouring in the first graph according to how many
 songs <em>on each album</em> are major, and how many are minor.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = album_name, fill = mode_name) + 
+  aes(x = album, fill = mode) + 
   geom_bar()</code></pre>
 <p>So, we’ve changed what we did before by adding a second aesthetic
 mapping, in the shape of <strong>fill</strong>. You might ask why it’s
 called fill rather than colour: see what happens when you use colour
 instead and you’ll figure out why.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = album_name, colour = mode_name) + 
+  aes(x = album, colour = mode) + 
   geom_bar()</code></pre>
 <p>However, this isn’t the only way to communicate this information.
-You’ll remember <strong>position adjustments</strong> from Monday Let’s
-see how they work in practice. We’re going to look at
+Let’s see position adjustments work in practice. We’re going to look at
 <strong>four</strong> position adjustments: <em>stack</em>,
 <em>identity</em>, <em>dodge</em>, and <em>jitter</em>. You’ll note that
 the first one looks exactly the same as the earlier graph – that’s
 because it’s the default, and doesn’t need to be manually specified. The
 others aren’t the defaults, which is why they need to be specified.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = album_name, fill = mode_name) + 
+  aes(x = album, fill = mode) + 
   geom_bar(position = &quot;stack&quot;)
 
 ggplot(data = taylor) +
-  aes(x = album_name, fill = mode_name) +
+  aes(x = album, fill = mode) +
   geom_bar(position = &quot;identity&quot;)
 
 ggplot(data = taylor) +
-  aes(x = album_name, fill = mode_name) +
+  aes(x = album, fill = mode) +
   geom_bar(position = &quot;dodge&quot;)
 
 ggplot(data = taylor) +
-  aes(x = album_name, fill = mode_name) +
+  aes(x = album, fill = mode) +
   geom_bar(position = &quot;fill&quot;)
 
 ggplot(data = taylor) +
-  aes(x = album_name, fill = mode_name) +
+  aes(x = album, fill = mode) +
   geom_bar(position = &quot;jitter&quot;)</code></pre>
 <p>What are the pros and cons of each? (In what circumstances can you
 imagine jitter being useful?)</p>
@@ -495,9 +496,9 @@ imagine jitter being useful?)</p>
 keys on each album is through the use of <strong>faceting</strong>. We
 can do this like so.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = mode_name) +
+  aes(x = mode) +
   geom_bar() +
-  facet_wrap(~ album_name)</code></pre>
+  facet_wrap(~ album)</code></pre>
 <p>We’ve now hit a <em>fourth</em> line in a ggplot command for the
 first time. This facet_wrap() command indicates we want to facet based
 on <em>album_name</em>. (The tilde - ~ - is for reasons we’ll come back
@@ -519,7 +520,7 @@ that?). It’s not the only way to do so, but it’s a way that I like
 using, and it’s a way that’s included in the Healy book. We can start by
 getting the means like so:</p>
 <pre class="r"><code>taylor %&gt;% 
-  group_by(album_name) %&gt;% 
+  group_by(album) %&gt;% 
   summarise(mean_tempo = mean(tempo))</code></pre>
 <p>You can see this has given us a small table with the information we
 were hoping for. What’s going on here?</p>
@@ -530,9 +531,9 @@ added what’s referred to as a <strong>pipe</strong>, in the shape of
 nesting things in loads of brackets, which is what you normally get in
 programming. (If you type ctrl-shift-m on a Windows machine, or
 cmd-shift-m on a Mac, it’ll appear)</li>
-<li>we’ve then typed group_by(album_name), which means we’re grouping
-all the observations, or tracks, according to the variable album_name.
-The relevance of which is…</li>
+<li>we’ve then typed group_by(album), which means we’re grouping all the
+observations, or tracks, according to the variable album_name. The
+relevance of which is…</li>
 <li>we’ve used the summarise() command to generate a new variable, mean
 track popularity. We’ve done that by specifying our name of our new
 variable – <em>mean_tempo</em> – on the left-hand side of the equals
@@ -544,10 +545,10 @@ in major or minor keys were more popular, for example.</li>
 <p>Now what?</p>
 <p>Now let’s draw a graph.</p>
 <pre class="r"><code>taylor %&gt;% 
-  group_by(album_name) %&gt;% 
+  group_by(album) %&gt;% 
   summarise(mean_tempo = mean(tempo)) %&gt;% 
   ggplot() +
-  aes(x = album_name, y = mean_tempo) +
+  aes(x = album, y = mean_tempo) +
   geom_col()</code></pre>
 <p>So, a couple of things to note here.</p>
 <ul>
@@ -572,20 +573,18 @@ the answer.</p>
 <ul>
 <li>how many of each of Taylor Swift’s songs are in each <em>key</em>?
 (C sharp, E, etc)</li>
-<li>on which Taylor Swift albums are there tracks with <em>time
-signatures</em> other than 4/4? (You might find some of the limits of
-Spotify here.)</li>
+<li>on which Taylor Swift albums are there the biggest number of tracks
+that are labelled as “explicit”?</li>
 <li>which Taylor Swift album has the highest average
 <em>danceability</em>?</li>
 </ul>
 <p>Following this, please answer those same questions, as well as the
-question of balance between album and mode (major/minor) for either
-Adele or My Chemical Romance. (You’ll run into a slightly fiddly issue
-if you select Adele – why has this happened?) Finally, please come up
-with <em>another</em> question you’re interested in answering using the
-available data; having answered it, please post both the question and
-the answer to Blackboard. You can find out more about the variables that
-are available <a href="https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/">at
+question of balance between album and mode (major/minor) for either the
+Arctic Monkeys or Fleetwood Mac.</p>
+<p>Finally, please come up with <em>another</em> question you’re
+interested in answering using the available data; having answered it,
+please post both the question and the answer to Blackboard. You can find
+out more about the variables that are available <a href="https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/">at
 this link</a>.</p>
 </div>
 

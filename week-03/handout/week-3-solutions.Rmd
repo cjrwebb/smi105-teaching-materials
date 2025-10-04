@@ -16,12 +16,9 @@ library(lubridate)
 
 
 ```{r}
-taylor <- read_csv("https://bit.ly/taylor-data-csv")
-adele <- read_csv("https://bit.ly/adele-data-csv")
-mcr <- read_csv("https://bit.ly/mcr-data-csv")
-ghost <- read_csv("https://bit.ly/ghost-data-csv")
+taylor <- read_csv("https://bit.ly/swifty-data")
 beyonce <- read_csv("https://bit.ly/beyonce-data-csv")
-
+monkeys <- read_csv("https://bit.ly/arctic-monkeys-data")
 ```
 
 ## Q1: What’s the relationship between energy and speechiness in Taylor Swift’s albums?
@@ -42,7 +39,7 @@ ggplot(data = beyonce) +
   geom_point()
 ```
 
-This is the figure that you generate when you use all of Beyonce's songs. You can see there's an "island" of sorts up at the top left with tracks with high speechiness and low energy. 
+This is the figure that you generate when you use all of Beyonce's songs. You can see there's an "island" or "cluster" of sorts up at the top left with tracks with high speechiness and low energy. 
 
 ## Q3: How do these relationships vary by album?
 
@@ -53,76 +50,88 @@ For simplicity, let's look at Taylor Swift again.
 ggplot(data = taylor) +
   aes(x = energy, y = speechiness) +
   geom_point() + 
-  facet_wrap(~ album_name)
+  facet_wrap(~ album)
 ```
 
 This shows us that the majority of Taylor Swift's albums have super-low speechiness. However, as before, it's hard to interpret this data give the albums are in alphabetical order. Let's reorganise the plot so we can see how this has changed over her career, by generating a **levels** object again.
 
 ```{r}
-taylor_levels <- 
-  c("Taylor Swift",
-    "Fearless",
-    "Speak Now",
-    "Red",
-    "1989",
-    "reputation",
-    "Lover",
-    "folklore",
-    "evermore",
-    "Midnights")
+taylor_levels <- c(
+  "Taylor Swift",
+  "Fearless",
+  "Speak Now",
+  "Red",
+  "1989",
+  "reputation",
+  "Lover",
+  "folklore",
+  "evermore",
+  "Midnights",
+  "THE TORTURED POETS DEPARTMENT",
+  "The Life of a Showgirl"
+  )
 
 ggplot(data = taylor) +
   aes(x = energy, y = speechiness) +
   geom_point() + 
-  facet_wrap(~ factor(album_name,
+  facet_wrap(~ factor(album,
                       levels = taylor_levels))
 ```
 
 This shows that her earlier albums had super-low speechiness, while her more recent albums have been more of a mix of high and low speechiness, with Lover featuring the track we saw earlier with super-high speechiness.
 
-## Q4:  What about for My Chemical Romance?
+## Q4:  What about for the Arctic Monkeys?
 
-In this case, I asked you to put the albums in chronological order. However, the data's inconsistent. Let's have a look at the data:
+In this case, I asked you to put the albums in chronological order. Let's have a look at the data:
 
 ```{r}
-head(mcr)
+head(monkeys)
 ```
 
-You can see that **album_release_date** here is a character variable, rather than a date: that's because their first album is just specified as having been released at some point in 2002, rather than sharing the specific date. 
+We can specify our levels in the same way we did with the Taylor Swift dataset. However, we need to pay careful attention to the case sensitivity and the punctuation, because it we don't write the album titles exactly the same way as they are written in the data, we won't be able to reorder them correctly.
 
-There's a few ways we can resolve this issue, but the most straightforward is just to order the tracks ourselves manually, as we did for Taylor Swift. If you don't know what order these albums were released in, the easiest thing is to just Google it.
+It can be helpful to print out a list of all of the unique album names using the code below:
+
+```{r}
+unique(monkeys$album)
+```
+
+In this case, our task is quite simple as the albums are in reverse chronological order already. 
 
 ```{r}
 
-mcr_levels <- 
-  c("I Brought You My Bullets, You Brought Me Your Love",
-    "Three Cheers for Sweet Revenge",
-    "The Black Parade",
-    "Danger Days: The True Lives of the Fabulous Killjoys")
+am_levels <- 
+  c("Whatever People Say I Am, That's What I'm Not",
+    "Favourite Worst Nightmare",
+    "Humbug",
+    "Suck It and See",
+    "AM",
+    "Tranquility Base Hotel & Casino",
+    "The Car")
 
-ggplot(data = mcr) +
+ggplot(data = monkeys) +
   aes(x = energy, y = speechiness) +
   geom_point() + 
-  facet_wrap(~ factor(album_name,
-                      levels = mcr_levels))
+  facet_wrap(~ factor(album,
+                      levels = am_levels))
 ```
 
-We can see some extreme outliers here -- on Three Cheers for Sweet Revenge, the majority of tracks have high energy and low speechiness, but there's one track with super-low energy.
+We can see at least one extreme outlier here -- there is one track with extremely high speechiness on the Humbug Album (Pretty Visitors). While all of the albums have quite low speechiness scores, we can see that the energy of the average Arctic Monkeys album has changed quite a lot as their career has gone on! Their earlier albums were all quite high in energy, but AM marked a significant change and their most recent album, The Car, has incredibly low speechiness and energy.
 
 ## Let's clean up
 
 We need to add labels! Let's do that now.
 
 ```{r}
-ggplot(data = mcr) +
+ggplot(data = monkeys) +
   aes(x = energy, y = speechiness) +
   geom_point() + 
-  facet_wrap(~ factor(album_name,
-                      levels = mcr_levels)) +
+  facet_wrap(~ factor(album,
+                      levels = am_levels)) +
   labs(x = "Energy",
        y = "Speechiness",
-       title = "MCR's tracks got weirder as their career developed",
-       caption = "Data derived from Spotify")
+       title = "The energy of Arctic Monkey's albums decreased as their career developed",
+       caption = "Data from Spotify")
 ```
 
 ## General feedback

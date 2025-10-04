@@ -381,11 +381,9 @@ library(lubridate)</code></pre>
 <strong>lubridate</strong>, which is a helpful package for working with
 <em>dates</em>. (This’ll become clear in due course.)</p>
 <p>Let’s also load some Spotify data, as we did last week.</p>
-<pre class="r"><code>taylor &lt;- read_csv(&quot;https://bit.ly/taylor-data-csv&quot;)
-adele &lt;- read_csv(&quot;https://bit.ly/adele-data-csv&quot;)
-mcr &lt;- read_csv(&quot;https://bit.ly/mcr-data-csv&quot;)
-ghost &lt;- read_csv(&quot;https://bit.ly/ghost-data-csv&quot;)
-beyonce &lt;- read_csv(&quot;https://bit.ly/beyonce-data-csv&quot;)</code></pre>
+<pre class="r"><code>taylor &lt;- read_csv(&quot;https://bit.ly/swifty-data&quot;)
+beyonce &lt;- read_csv(&quot;https://bit.ly/beyonce-data-csv&quot;)
+monkeys &lt;- read_csv(&quot;https://bit.ly/arctic-monkeys-data&quot;)</code></pre>
 </div>
 <div id="drawing-some-scatterplots" class="section level2">
 <h2>Drawing some scatterplots</h2>
@@ -432,7 +430,7 @@ than continuous variables, like so:</p>
 <pre class="r"><code>ggplot(data = taylor) +
   aes(x = danceability,
       y = energy,
-      colour = album_name) +
+      colour = album) +
   geom_point()</code></pre>
 <p>You’ll note that the earlier colour ramp went obviously from low to
 high, while this one uses a categorical set of colours. This is done
@@ -450,16 +448,16 @@ different albums had come out. This can be a bit fiddly, as R can read
 this data in alphabetical order, while we really want it in date order.
 Let’s see if Taylor Swift’s more recent tracks are quicker.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = ymd(album_release_date),
+  aes(x = ymd(release_date),
       y = tempo) +
   geom_point()</code></pre>
 <p>OK, a couple of things to note here, first.</p>
 <ul>
-<li>you’ll note that the variable <em>album_release_date</em> is wrapped
-in ymd(). This is so we’re declaring to R that that values of that
-variable are of the format <em>year-month-day</em>. Try swapping dmy()
-for as.factor() and see what happens. (If this doesn’t work, you
-probably didn’t load the <strong>lubridate</strong> package.)</li>
+<li>you’ll note that the variable <em>release_date</em> is wrapped in
+ymd(). This is so we’re declaring to R that that values of that variable
+are of the format <em>year-month-day</em>. Try swapping ymd() for
+as.factor() and see what happens. (If this doesn’t work, you probably
+didn’t load the <strong>lubridate</strong> package.)</li>
 <li>scatterplots don’t really work when some of the continuous variables
 only hold particular values: it should come as no surprise that the
 album release date is the same for each of the tracks on evermore (and
@@ -467,7 +465,7 @@ so on).</li>
 </ul>
 <p>So, let’s add some <em>jitter</em>.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = ymd(album_release_date),
+  aes(x = ymd(release_date),
       y = tempo) +
   geom_point(position = &quot;jitter&quot;)</code></pre>
 <p>What’s the value in having done that?</p>
@@ -477,29 +475,33 @@ albums the different tracks are on.</p>
 <pre class="r"><code>ggplot(data = taylor) +
   aes(x = tempo,
       y = danceability,
-      colour = album_name) +
+      colour = album) +
   geom_point()</code></pre>
 </div>
 </div>
 <div id="playing-around-with-factors" class="section level2">
 <h2>Playing around with <strong>factors</strong></h2>
-<p>So. One issue with this data so far is that, while I know the order
-that Taylor Swift’s albums came out in, not everyone does. If I looked
-at that previous graph without that knowledge, I wouldn’t know whether
-her more recent albums were more popular or not. At the moment, the
-albums are just in alphabetical order. Let’s change that.</p>
+<p>So. One issue with this data so far is that, while you might know the
+order that Taylor Swift’s albums came out in, not everyone does. If I
+looked at that previous graph without that knowledge, I wouldn’t know
+whether her more recent albums were more popular or not. At the moment,
+the albums are just in alphabetical order. Let’s change that.</p>
 <p>First, let’s create a <strong>vector</strong> of albums. This just
 involves specifying a list of albums in the order we want them.</p>
-<pre class="r"><code>taylor_levels &lt;- 
-  c(&quot;Taylor Swift&quot;,
-    &quot;Fearless&quot;,
-    &quot;Speak Now&quot;,
-    &quot;Red&quot;,
-    &quot;1989&quot;,
-    &quot;reputation&quot;,
-    &quot;Lover&quot;,
-    &quot;folklore&quot;,
-    &quot;evermore&quot;)</code></pre>
+<pre class="r"><code>taylor_levels &lt;- c(
+  &quot;Taylor Swift&quot;,
+  &quot;Fearless&quot;,
+  &quot;Speak Now&quot;,
+  &quot;Red&quot;,
+  &quot;1989&quot;,
+  &quot;reputation&quot;,
+  &quot;Lover&quot;,
+  &quot;folklore&quot;,
+  &quot;evermore&quot;,
+  &quot;Midnights&quot;,
+  &quot;THE TORTURED POETS DEPARTMENT&quot;,
+  &quot;The Life of a Showgirl&quot;
+  )</code></pre>
 <p>What’s this?</p>
 <ul>
 <li>I want a new object called <strong>taylor_levels</strong>. So far,
@@ -516,7 +518,7 @@ album’s in quotes, and they’re separated by commas.</li>
 <pre class="r"><code>ggplot(data = taylor) +
   aes(x = tempo,
       y = danceability,
-      colour = factor(album_name, 
+      colour = factor(album, 
                       levels = taylor_levels)) +
   geom_point()</code></pre>
 <p>The difference between the code for this and for the earlier graph is
@@ -532,7 +534,7 @@ that out now.</p>
 <pre class="r"><code>ggplot(data = taylor) +
   aes(x = tempo,
       y = danceability,
-      colour = factor(album_name, 
+      colour = factor(album, 
                       levels = taylor_levels)) +
   geom_point() +
   labs(x = &quot;Tempo&quot;, 
@@ -692,8 +694,8 @@ and command to see what’s revealed.</p>
 Swift’s albums? In Beyonce’s?</li>
 <li>how do these relationships vary by album? (please <em>facet</em> in
 answering this question)</li>
-<li>what about for My Chemical Romance? (please ensure that the albums
-are in chronological order)</li>
+<li>what about for Arctic Monkeys? (please ensure that the albums are in
+chronological order)</li>
 </ul>
 <p>Then, as with last week, please come up with <em>another</em>
 question you’re interested in answering using the available data that

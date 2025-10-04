@@ -382,9 +382,7 @@ them once only. Let’s do so now.</p>
 <pre class="r"><code>library(tidyverse)
 library(lubridate)
 library(ggthemes)</code></pre>
-<pre class="r"><code>taylor &lt;- read_csv(&quot;https://bit.ly/taylor-data-csv&quot;)
-queen &lt;- read_csv(&quot;https://bit.ly/queen-data-csv&quot;)
-maccas &lt;- read.csv(&quot;https://bit.ly/bigmac-data-csv&quot;)</code></pre>
+<pre class="r"><code>taylor &lt;- read_csv(&quot;https://bit.ly/swifty-data&quot;)</code></pre>
 </div>
 </div>
 <div id="back-to-scatterplots-with-some-colour" class="section level2">
@@ -395,8 +393,8 @@ album they’re on.</p>
 <pre class="r"><code>ggplot(data = taylor) +
   aes(x = tempo,
       y = danceability,
-      colour = reorder(album_name, 
-                       ymd(album_release_date))) +
+      colour = reorder(album, 
+                       ymd(release_date))) +
   geom_point()</code></pre>
 <p>This looks OK (except for the legend taking up more than half the
 space, but you’ll remember how we can deal with this issue.) But what if
@@ -409,16 +407,16 @@ scheme from ColorBrewer:</p>
 <pre class="r"><code>ggplot(data = taylor) +
   aes(x = tempo,
       y = danceability,
-      colour = reorder(album_name, 
-                       ymd(album_release_date))) +
+      colour = reorder(album, 
+                       ymd(release_date))) +
   geom_point() +
   scale_colour_brewer(palette = &quot;Paired&quot;) </code></pre>
 <p>… and follow it up with a colour scheme from viridis.</p>
 <pre class="r"><code>ggplot(data = taylor) +
   aes(x = tempo,
       y = danceability,
-      colour = reorder(album_name, 
-                       ymd(album_release_date))) +
+      colour = reorder(album, 
+                       ymd(release_date))) +
   geom_point() +
   scale_colour_viridis_d(option = &quot;D&quot;)</code></pre>
 <p>With viridis, guessing how you might find the other colour schemes is
@@ -452,17 +450,17 @@ so:</li>
 <p>Let’s revisit another graph, from a few weeks ago: the balance
 between major and minor on each of Taylor Swift’s albums.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = fct_reorder(album_name,
-                  ymd(album_release_date)), 
-      fill = mode_name) +
+  aes(x = fct_reorder(album,
+                  ymd(release_date)), 
+      fill = mode) +
   geom_bar(position = &quot;dodge&quot;) </code></pre>
 <p>What if you wanted your own colour scheme? What if you thought of
 major tracks being a particular shade of purple, and minor tracks being
 a particular shade of green?</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = fct_reorder(album_name,
-                  ymd(album_release_date)),
-      fill = mode_name) + 
+  aes(x = fct_reorder(album,
+                  ymd(release_date)),
+      fill = mode) + 
   geom_bar(position = &quot;dodge&quot;) +
   scale_fill_manual(values = c(&quot;darkorchid2&quot;,
                                  &quot;forestgreen&quot;))</code></pre>
@@ -477,9 +475,9 @@ codes</strong>. These start with a # and are used to represent different
 colours in digital applications. Let’s instead change our colours to
 “#5AD9ED” and “#5AED9F” and see what happens:</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = fct_reorder(album_name,
-                  ymd(album_release_date)),
-      fill = mode_name) + 
+  aes(x = fct_reorder(album,
+                  ymd(release_date)),
+      fill = mode) + 
   geom_bar(position = &quot;dodge&quot;) +
   scale_fill_manual(values = c(&quot;#5AD9ED&quot;,
                                  &quot;#5AED9F&quot;))</code></pre>
@@ -490,9 +488,9 @@ colours in digital applications. Let’s instead change our colours to
 <p>Let’s revisit facets, by looking at how the distribution of keys
 varies across Taylor Swift albums.</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = key_name) +
+  aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album_name)</code></pre>
+  facet_wrap(~ album)</code></pre>
 <p>Any problems with this?</p>
 <p>One issue is that there’s several albums that don’t include every
 key. This isnt a problem per se, but you can imagine other settings
@@ -505,26 +503,26 @@ difficult to understand what’s going on in some facets.</p>
 it. Compare the following four options: which one works best? Which
 might work best in other contexts?</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = key_name) +
+  aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album_name)
+  facet_wrap(~ album)
 
 ggplot(data = taylor) +
-  aes(x = key_name) +
+  aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album_name, 
+  facet_wrap(~ album, 
              scales = &quot;free_x&quot;)
 
 ggplot(data = taylor) +
-  aes(x = key_name) +
+  aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album_name, 
+  facet_wrap(~ album, 
              scales = &quot;free_y&quot;)
 
 ggplot(data = taylor) +
-  aes(x = key_name) +
+  aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album_name, 
+  facet_wrap(~ album, 
              scales = &quot;free&quot;)</code></pre>
 </div>
 <div id="who-likes-tufte" class="section level2">
@@ -538,14 +536,14 @@ from the start of this workshop).</p>
 <p>If you want to look at how the tempo across Taylor Swift’s different
 albums have varied, why not compare:</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = reorder(album_name, 
-                  ymd(album_release_date)),
+  aes(x = reorder(album, 
+                  ymd(release_date)),
       y = tempo) +
   geom_boxplot() </code></pre>
 <p>with:</p>
 <pre class="r"><code>ggplot(data = taylor) +
-  aes(x = reorder(album_name, 
-                  ymd(album_release_date)),
+  aes(x = reorder(album, 
+                  ymd(release_date)),
       y = tempo) +
   geom_tufteboxplot() </code></pre>
 <p>(As I mentioned last week, my instinct is that there are better ways
@@ -603,9 +601,7 @@ and this is how.</p>
   annotate(&quot;text&quot;, 
            x=175, 
            y=0.8, 
-           label=&quot;No Taylor songs
-are both fast
-and danceable&quot;)</code></pre>
+           label=&quot;No Taylor songs \n are both fast \n and danceable&quot;)</code></pre>
 <p>Here, what I’ve done is add an annotate() in my ggplot2 code. You can
 see it needs four arguments: what kind of annotation it is, where it’s
 going on each of the x and y axes, and a label. (You’ll also note I’ve
@@ -615,6 +611,9 @@ them are interesting. (You might also want to annotate particular
 points, and you won’t always want to do this manually. We won’t go over
 this now, but if this is likely to be a focus for you, I’d recommend the
 <strong>ggrepel</strong> package.)</p>
+<p>You’ll also probably be thinking — what’s with the “backslash n”s in
+the middle of the text? These are a way to indicate to ggplot that you
+want to put a line break (new line) in your text.</p>
 </div>
 <div id="exporting-graphics" class="section level2">
 <h2>Exporting graphics</h2>

@@ -29,11 +29,15 @@ library(tidyverse)
 
 Last week, we talked about graphs in a ggplot2 context having a minimum of three explicit elements: data, aesthetic mappings, and geometric objects. The aesthetic mappings and geometric objects we explicitly specified from the data that were available, but where did the data come from? The datasets we used -- *economics*, *midwest*, *diamonds*, etc -- all come preloaded with ggplot2. But most of the time, we want to use our own data to find out interesting things about the world. Let's load some data on Taylor Swift, Adele, and My Chemical Romance.
 
+Let's load some data on Taylor Swift, Fleetwood Mac, and the Arctic Monkeys.
+
+
+
 ```{r, eval = FALSE}
 
-taylor <- read_csv("https://bit.ly/taylor-data-csv")
-adele <- read_csv("https://bit.ly/adele-data-csv")
-mcr <- read_csv("https://bit.ly/mcr-data-csv")
+taylor <- read_csv("https://bit.ly/swifty-data")
+fleet <- read_csv("https://bit.ly/fleetwood-mac-data")
+monkeys <- read_csv("https://bit.ly/arctic-monkeys-data")
 
 ```
 
@@ -41,11 +45,11 @@ What's happening here?
 
 We have a bunch of URLs. These URLs consist of .csv files with information from Spotify about each of the relevant artists. (If you're interested, you can copy the URLs and open them in a web browser to see what the files look like in Excel.) These URLs are nested in (brackets) and "quotes", to indicate that R's dealing with **strings** rather than **objects** (you'll pick this distinction up, don't worry).
 
-Preceding the URLs is the read_csv() command. read.csv means that we're telling R that the thing inside the bracket is a .csv file and not any other kind of file -- .xlsx, .txt, whatever else you like. 
+Preceding the URLs is the read_csv() command. read_csv means that we're telling R that the thing inside the bracket is a .csv file and not any other kind of file -- .xlsx, .txt, whatever else you like. 
 
 Preceding **that** is an arrow: <-. The arrow is used to tell R that we want to turn the thing on the right-hand side into the thing on the left hand side, which is what we're calling our new **object** (I told you these terms would come back).
 
-Finally, on the left-hand side we've got the objects we want to create. I've called them **adele**, **taylor**, and **mcr**, largely for simplicity, but I could have called them more-or-less whatever I wanted.
+Finally, on the left-hand side we've got the objects we want to create. I've called them **taylor**, **fleet**, and **monkeys**, largely for simplicity, but I could have called them more-or-less whatever I wanted.
 
 Having run the commands, we've got a bunch of red text. If your red text starts with something like "Parsed with column specification", you're fine; the important differences between character, double, and numeric, etc, will become clear, and most of the differences aren't important for the purposes of this module.
 
@@ -70,7 +74,7 @@ Let's draw a graph of how many songs there are on each Taylor Swift album.
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = album_name) + 
+  aes(x = album) + 
   geom_bar()
 ```
 
@@ -78,7 +82,7 @@ Now, let's draw a graph of how many of Taylor Swift's songs are in major keys, a
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = mode_name) + 
+  aes(x = mode) + 
   geom_bar()
 ```
 
@@ -86,7 +90,7 @@ What's the relationship like between these two variables? Do some albums skew mo
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = album_name, fill = mode_name) + 
+  aes(x = album, fill = mode) + 
   geom_bar()
 ```
 
@@ -94,31 +98,31 @@ So, we've changed what we did before by adding a second aesthetic mapping, in th
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = album_name, colour = mode_name) + 
+  aes(x = album, colour = mode) + 
   geom_bar()
 ```
 
-However, this isn't the only way to communicate this information. You'll remember **position adjustments** from Monday Let's see how they work in practice. We're going to look at **four** position adjustments: *stack*, *identity*, *dodge*, and *jitter*.  You'll note that the first one looks exactly the same as the earlier graph -- that's because it's the default, and doesn't need to be manually specified. The others aren't the defaults, which is why they need to be specified.
+However, this isn't the only way to communicate this information. Let's see position adjustments work in practice. We're going to look at **four** position adjustments: *stack*, *identity*, *dodge*, and *jitter*.  You'll note that the first one looks exactly the same as the earlier graph -- that's because it's the default, and doesn't need to be manually specified. The others aren't the defaults, which is why they need to be specified.
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = album_name, fill = mode_name) + 
+  aes(x = album, fill = mode) + 
   geom_bar(position = "stack")
 
 ggplot(data = taylor) +
-  aes(x = album_name, fill = mode_name) +
+  aes(x = album, fill = mode) +
   geom_bar(position = "identity")
 
 ggplot(data = taylor) +
-  aes(x = album_name, fill = mode_name) +
+  aes(x = album, fill = mode) +
   geom_bar(position = "dodge")
 
 ggplot(data = taylor) +
-  aes(x = album_name, fill = mode_name) +
+  aes(x = album, fill = mode) +
   geom_bar(position = "fill")
 
 ggplot(data = taylor) +
-  aes(x = album_name, fill = mode_name) +
+  aes(x = album, fill = mode) +
   geom_bar(position = "jitter")
 ```
 
@@ -128,9 +132,9 @@ One alternative way we can communicate the balance of major and minor keys on ea
 
 ```{r, eval = FALSE}
 ggplot(data = taylor) +
-  aes(x = mode_name) +
+  aes(x = mode) +
   geom_bar() +
-  facet_wrap(~ album_name)
+  facet_wrap(~ album)
 ```
 
 We've now hit a *fourth* line in a ggplot command for the first time. This facet_wrap() command indicates we want to facet based on *album_name*. (The tilde - ~ - is for reasons we'll come back to.)
@@ -145,14 +149,14 @@ We can do this using the **dplyr** package (remember that?). It's not the only w
 
 ```{r, eval = FALSE}
 taylor %>% 
-  group_by(album_name) %>% 
+  group_by(album) %>% 
   summarise(mean_tempo = mean(tempo))
 ```
 
 You can see this has given us a small table with the information we were hoping for. What's going on here?
 
 - we've started with the object **taylor**. We've then added what's referred to as a **pipe**, in the shape of %>%, which basically means "and then" -- it's an alternative to nesting things in loads of brackets, which is what you normally get in programming. (If you type ctrl-shift-m on a Windows machine, or cmd-shift-m on a Mac, it'll appear)
-- we've then typed group_by(album_name), which means we're grouping all the observations, or tracks, according to the variable album_name. The relevance of which is...
+- we've then typed group_by(album), which means we're grouping all the observations, or tracks, according to the variable album_name. The relevance of which is...
 - we've used the summarise() command to generate a new variable, mean track popularity. We've done that by specifying our name of our new variable -- *mean_tempo* -- on the left-hand side of the equals sign, and the way we want to generate it -- *mean(tempo)* on the right-hand side. The relevance of group_by was to identify mean popularity *by what* - we also could have looked at whether songs in major or minor keys were more popular, for example.
 
 Now what?
@@ -161,10 +165,10 @@ Now let's draw a graph.
 
 ```{r, eval = FALSE}
 taylor %>% 
-  group_by(album_name) %>% 
+  group_by(album) %>% 
   summarise(mean_tempo = mean(tempo)) %>% 
   ggplot() +
-  aes(x = album_name, y = mean_tempo) +
+  aes(x = album, y = mean_tempo) +
   geom_col()
 ```
 
@@ -180,7 +184,9 @@ So, a couple of things to note here.
 Please answer the following questions by drawing a graph that reveals the answer.
 
 - how many of each of Taylor Swift's songs are in each *key*? (C sharp, E, etc)
-- on which Taylor Swift albums are there tracks with *time signatures* other than 4/4? (You might find some of the limits of Spotify here.)
+- on which Taylor Swift albums are there the biggest number of tracks that are labelled as "explicit"?
 - which Taylor Swift album has the highest average *danceability*?
 
-Following this, please answer those same questions, as well as the question of balance between album and mode (major/minor) for either Adele or My Chemical Romance. (You'll run into a slightly fiddly issue if you select Adele -- why has this happened?) Finally, please come up with *another* question you're interested in answering using the available data; having answered it, please post both the question and the answer to Blackboard. You can find out more about the variables that are available [at this link](https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/).
+Following this, please answer those same questions, as well as the question of balance between album and mode (major/minor) for either the Arctic Monkeys or Fleetwood Mac. 
+
+Finally, please come up with *another* question you're interested in answering using the available data; having answered it, please post both the question and the answer to Blackboard. You can find out more about the variables that are available [at this link](https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/).
