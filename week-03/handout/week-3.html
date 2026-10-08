@@ -381,16 +381,17 @@ library(lubridate)</code></pre>
 <strong>lubridate</strong>, which is a helpful package for working with
 <em>dates</em>. (This’ll become clear in due course.)</p>
 <p>Let’s also load some Spotify data, as we did last week.</p>
-<pre class="r"><code>taylor &lt;- read_csv(&quot;https://bit.ly/swifty-data&quot;)
+<pre class="r"><code>amy &lt;- read_csv(&quot;https://bit.ly/amy-w&quot;)
 beyonce &lt;- read_csv(&quot;https://bit.ly/beyonce-data-csv&quot;)
 monkeys &lt;- read_csv(&quot;https://bit.ly/arctic-monkeys-data&quot;)</code></pre>
 </div>
 <div id="drawing-some-scatterplots" class="section level2">
 <h2>Drawing some scatterplots</h2>
-<p>Are Taylor Swift’s quicker tracks more danceable? Let’s find out.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<p>Are Amy Winehouse’s quicker tracks more cheerful (higher valence)?
+Let’s find out.</p>
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo, 
-      y = danceability) +
+      y = valence) +
   geom_point()</code></pre>
 <p>So, this is similar to the kinds of things that we’ve seen before.
 Three elements to the command:</p>
@@ -402,9 +403,9 @@ by:</li>
 them)</li>
 </ul>
 <p>What does this show?</p>
-<p>Let’s draw another scatterplot. Are Taylor Swift’s quicker tracks
+<p>Let’s draw another scatterplot. Are Amy Winehouse’s quicker tracks
 more energetic? Let’s find out.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo, 
       y = energy) +
   geom_point()</code></pre>
@@ -413,24 +414,24 @@ manageable exercise. We can also add encode more information in
 scatterplots, through more aesthetic mappings. Let’s see the
 relationship between danceability, energy, and tempo, by making quicker
 tracks bigger.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = danceability, 
       y = energy,
       size = tempo) +
   geom_point()</code></pre>
 <p>As an alternative, we can vary points’ colours by how quick they
 are:</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = danceability, 
       y = energy,
       colour = tempo) +
   geom_point()</code></pre>
 <p>We can also colour points using <em>categorical</em> variables rather
 than continuous variables, like so:</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = danceability,
       y = energy,
-      colour = album) +
+      colour = album_name) +
   geom_point()</code></pre>
 <p>You’ll note that the earlier colour ramp went obviously from low to
 high, while this one uses a categorical set of colours. This is done
@@ -446,8 +447,8 @@ work with dates in future…)</p>
 <p>A few of you showed me findings last week that related to when
 different albums had come out. This can be a bit fiddly, as R can read
 this data in alphabetical order, while we really want it in date order.
-Let’s see if Taylor Swift’s more recent tracks are quicker.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+Let’s see if Amy Winehouse’s more recent tracks are quicker.</p>
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = ymd(release_date),
       y = tempo) +
   geom_point()</code></pre>
@@ -464,7 +465,7 @@ album release date is the same for each of the tracks on evermore (and
 so on).</li>
 </ul>
 <p>So, let’s add some <em>jitter</em>.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = ymd(release_date),
       y = tempo) +
   geom_point(position = &quot;jitter&quot;)</code></pre>
@@ -472,41 +473,33 @@ so on).</li>
 <p>Let’s now combine that information with the earlier graph. Maybe the
 relationship between tempo and danceability is actually driven by which
 albums the different tracks are on.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
-      colour = album) +
+      colour = album_name) +
   geom_point()</code></pre>
 </div>
 </div>
 <div id="playing-around-with-factors" class="section level2">
 <h2>Playing around with <strong>factors</strong></h2>
 <p>So. One issue with this data so far is that, while you might know the
-order that Taylor Swift’s albums came out in, not everyone does. If I
+order that Amy Winehouse’s albums came out in, not everyone does. If I
 looked at that previous graph without that knowledge, I wouldn’t know
-whether her more recent albums were more popular or not. At the moment,
-the albums are just in alphabetical order. Let’s change that.</p>
+whether her more recent albums were more danceable or not. At the
+moment, the albums are just in alphabetical order. Let’s change
+that.</p>
 <p>First, let’s create a <strong>vector</strong> of albums. This just
 involves specifying a list of albums in the order we want them.</p>
-<pre class="r"><code>taylor_levels &lt;- c(
-  &quot;Taylor Swift&quot;,
-  &quot;Fearless&quot;,
-  &quot;Speak Now&quot;,
-  &quot;Red&quot;,
-  &quot;1989&quot;,
-  &quot;reputation&quot;,
-  &quot;Lover&quot;,
-  &quot;folklore&quot;,
-  &quot;evermore&quot;,
-  &quot;Midnights&quot;,
-  &quot;THE TORTURED POETS DEPARTMENT&quot;,
-  &quot;The Life of a Showgirl&quot;
+<pre class="r"><code>amy_levels &lt;- c(
+  &quot;Frank&quot;,
+  &quot;Back To Black&quot;,
+  &quot;Lioness: Hidden Treasures&quot;
   )</code></pre>
 <p>What’s this?</p>
 <ul>
-<li>I want a new object called <strong>taylor_levels</strong>. So far,
-when we’ve created objects, they’ve been matrices, but here we just want
-a vector (or list).</li>
+<li>I want a new object called <strong>amy_levels</strong>. So far, when
+we’ve created objects, they’ve been matrices, but here we just want a
+vector (or list).</li>
 <li>we’ve used the arrow, to convey that the new object is to be made up
 of something on the right hand side of the arrow.</li>
 <li>we’ve used the c() command to indicate a list of several elements.
@@ -515,27 +508,27 @@ c() here stands for concatenate.</li>
 album’s in quotes, and they’re separated by commas.</li>
 </ul>
 <p>Now what?</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
-      colour = factor(album, 
-                      levels = taylor_levels)) +
+      colour = factor(album_name, 
+                      levels = amy_levels)) +
   geom_point()</code></pre>
 <p>The difference between the code for this and for the earlier graph is
 in the line beginning colour =. Instead of just specifying album_name,
-we’ve written <strong>factor(album_name, levels =
-taylor_levels)</strong>, which means that we’ve manually specified the
-order of levels of the factor to be that found in our new object,
-<strong>taylor_levels</strong>.</p>
+we’ve written <strong>factor(album_name, levels = amy_levels)</strong>,
+which means that we’ve manually specified the order of levels of the
+factor to be that found in our new object,
+<strong>amy_levels</strong>.</p>
 <p>However, it doesn’t look great. The legend is now taking up loads of
 space, and the title of the legend doesn’t make sense. In general,
 though, our graphs could look better with better labelling. Let’s sort
 that out now.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
-      colour = factor(album, 
-                      levels = taylor_levels)) +
+      colour = factor(album_name, 
+                      levels = amy_levels)) +
   geom_point() +
   labs(x = &quot;Tempo&quot;, 
        y = &quot;Danceability&quot;,
@@ -552,7 +545,8 @@ be.)</p>
 </div>
 <div id="moving-to-beyoncé" class="section level2">
 <h2>Moving to Beyoncé</h2>
-<p>We’re looking good on Taylor Swift. Let’s look at Beyoncé.</p>
+<p>We’re looking good on Amy Winehouse. Let’s look at Beyoncé, because
+she has truly heinous album names.</p>
 <pre class="r"><code>ggplot(data = beyonce) +
   aes(x = tempo,
       y = danceability) +
@@ -690,20 +684,20 @@ and command to see what’s revealed.</p>
 <h2>Task</h2>
 <p>Please answer the following questions:</p>
 <ul>
-<li>what’s the relationship between energy and speechiness in Taylor
-Swift’s albums? In Beyonce’s?</li>
+<li>what’s the relationship between energy and speechiness in Amy
+Winehouse’s albums? In Beyonce’s?</li>
 <li>how do these relationships vary by album? (please <em>facet</em> in
 answering this question)</li>
-<li>what about for Arctic Monkeys? (please ensure that the albums are in
-chronological order)</li>
+<li>what about for Arctic Monkeys (the monkeys dataset)? (please ensure
+that the albums are in chronological order)</li>
 </ul>
 <p>Then, as with last week, please come up with <em>another</em>
 question you’re interested in answering using the available data that
 includes drawing a scatterplot; having answered it, please submit your
 answer to Blackboard under the “Weekly task submission” header, along
 with the graph that communicates that information. You can find out more
-about the variables that are available <a href="https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/">at
-this link</a>.</p>
+about the variables that are available <a href="https://reccobeats.com/docs/apis/get-track-audio-features">at this
+link</a>.</p>
 </div>
 
 

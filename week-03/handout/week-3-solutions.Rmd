@@ -9,27 +9,27 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 
 Before we start, let's load some packages and some data.
 
-```{r}
+```{r, warning=FALSE}
 library(tidyverse)
 library(lubridate)
 ```
 
 
 ```{r}
-taylor <- read_csv("https://bit.ly/swifty-data")
+amy <- read_csv("https://bit.ly/amy-w")
 beyonce <- read_csv("https://bit.ly/beyonce-data-csv")
 monkeys <- read_csv("https://bit.ly/arctic-monkeys-data")
 ```
 
-## Q1: What’s the relationship between energy and speechiness in Taylor Swift’s albums?
+## Q1: What’s the relationship between energy and speechiness in Amy Winehouse's albums?
 
 ```{r}
-ggplot(data = taylor) +
+ggplot(data = amy) +
   aes(x = energy, y = speechiness) +
   geom_point()
 ```
 
-We can see that very few of Taylor Swift's songs have high speechiness, but there's one that's very high, up at the top left.
+We can see that very few of Amy Winehouse's songs have high speechiness, but there's one that's very high, up at the top right. How could we find out which one this is?
 
 ## Q2: ...and Beyonce's?
 
@@ -43,52 +43,43 @@ This is the figure that you generate when you use all of Beyonce's songs. You ca
 
 ## Q3: How do these relationships vary by album?
 
-For simplicity, let's look at Taylor Swift again.
+For simplicity, let's look at Amy Winehouse again.
 
 
 ```{r}
-ggplot(data = taylor) +
+ggplot(data = amy) +
   aes(x = energy, y = speechiness) +
   geom_point() + 
-  facet_wrap(~ album)
+  facet_wrap(~ album_name)
 ```
 
-This shows us that the majority of Taylor Swift's albums have super-low speechiness. However, as before, it's hard to interpret this data give the albums are in alphabetical order. Let's reorganise the plot so we can see how this has changed over her career, by generating a **levels** object again.
+This shows us that the majority of Amy Winehouse's albums have super-low speechiness. However, as before, it's hard to interpret this data give the albums are in alphabetical order. Let's reorganise the plot so we can see how this changed over her career, by generating a **levels** object again.
 
 ```{r}
-taylor_levels <- c(
-  "Taylor Swift",
-  "Fearless",
-  "Speak Now",
-  "Red",
-  "1989",
-  "reputation",
-  "Lover",
-  "folklore",
-  "evermore",
-  "Midnights",
-  "THE TORTURED POETS DEPARTMENT",
-  "The Life of a Showgirl"
+amy_levels <- c(
+  "Frank",
+  "Back To Black",
+  "Lioness: Hidden Treasures"
   )
 
-ggplot(data = taylor) +
+ggplot(data = amy) +
   aes(x = energy, y = speechiness) +
   geom_point() + 
-  facet_wrap(~ factor(album,
-                      levels = taylor_levels))
+  facet_wrap(~ factor(album_name,
+                      levels = amy_levels))
 ```
 
-This shows that her earlier albums had super-low speechiness, while her more recent albums have been more of a mix of high and low speechiness, with Lover featuring the track we saw earlier with super-high speechiness.
+This shows that Amy Winehouse's first album had more of a mix of high and low speechiness and energy, including featuring a track with super-high speechiness according to these metrics. We see a large drop off in speechiness in Back to Black, but much higher average energy than in Frank. We also see that speechiness tends to increase when energy increases in Back to Black. In Lioness, we have quite a wide variety in energy but low speechiness throughout.
 
 ## Q4:  What about for the Arctic Monkeys?
 
 In this case, I asked you to put the albums in chronological order. Let's have a look at the data:
 
 ```{r}
-head(monkeys)
+glimpse(monkeys)
 ```
 
-We can specify our levels in the same way we did with the Taylor Swift dataset. However, we need to pay careful attention to the case sensitivity and the punctuation, because it we don't write the album titles exactly the same way as they are written in the data, we won't be able to reorder them correctly.
+We can specify our levels in the same way we did with the Amy Winehouse dataset. However, we need to pay careful attention to the case sensitivity and the punctuation, because if we don't write the album titles exactly the same way as they are written in the data, we won't be able to reorder them correctly.
 
 It can be helpful to print out a list of all of the unique album names using the code below:
 
@@ -116,7 +107,7 @@ ggplot(data = monkeys) +
                       levels = am_levels))
 ```
 
-We can see at least one extreme outlier here -- there is one track with extremely high speechiness on the Humbug Album (Pretty Visitors). While all of the albums have quite low speechiness scores, we can see that the energy of the average Arctic Monkeys album has changed quite a lot as their career has gone on! Their earlier albums were all quite high in energy, but AM marked a significant change and their most recent album, The Car, has incredibly low speechiness and energy.
+We can see at least one extreme outlier here -- there is one track with extremely high speechiness on the Humbug Album (Pretty Visitors). While all of the albums have quite low speechiness scores, we can see that the energy of the average Arctic Monkeys album has changed quite a lot as their career has gone on! Their earlier albums were all quite high in energy, but AM marked a significant change and their most recent album, The Car, has incredibly low speechiness and energy (I don't like it, I think it's a pretty boring listen).
 
 ## Let's clean up
 
@@ -136,8 +127,8 @@ ggplot(data = monkeys) +
 
 ## General feedback
 
-- Remember to make your submissions 'stand-alone', with all of the code required to replicate them. For example, if you use a vector called 'taylor_levels', make sure you include the code used to create that vector in your submission.
-- When using technical terms to interpret the plot, you might also want to think about how you could interpret the plot for a more general audience (e.g. how would you describe it in a blog post for Taylor Swift fans compared to to academics?)
+- Remember to make your submissions 'stand-alone', with all of the code required to replicate them. For example, if you use a vector called 'amy_levels', make sure you include the code used to create that vector in your submission.
+- When using technical terms to interpret the plot, you might also want to think about how you could interpret the plot for a more general audience (e.g. how would you describe it in a blog post for Amy Winehouse fans compared to for academics/university students?)
 - Remember to include your interpretation of the plots — it's common to underestimate how much practice is needed picking out the interesting things from data visualisations.
 - Remember that outliers and clusters ('islands') can be interesting things to point out when interpreting data visualisations, not least because they are the most obvious in data visualisations and the least obvious when they are 'hiding' in the data itself.
 - Not everyone had a go at practicing adding labels to their plots — I'd encourage you to have a go at this because it can help you learn how to write good active titles, etc.

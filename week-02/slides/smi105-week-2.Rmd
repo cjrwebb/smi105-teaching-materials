@@ -1,5 +1,5 @@
 ---
-title: "EDC101: Week 2 Interpreting a Data Visualisation"
+title: "EDC117: Week 2 Interpreting a Data Visualisation"
 subtitle: ""  
 author: 
   - "Dr. Calum Webb"
@@ -32,7 +32,7 @@ decktape generic --key=ArrowRight --load-pause 1800 --slides '1-39' --size '1216
 <br><br>
 
 # Interpreting a Data Visualisation
-#### EDC101: Week 2
+#### EDC117: Week 2
 
 <br><br>
 
@@ -251,7 +251,7 @@ pollplot <- polling_data %>%
   geom_smooth(aes(x = end_date, y = pct, colour = candidate_name), se = FALSE) +
   scale_colour_manual(values = c("#E81B23", "#00AEF3")) +
   scale_y_continuous(labels = scales::percent_format(scale = 1)) +
-  ggtitle("Current polling data for 2024 US Presidential Election",
+  ggtitle("Polling data for 2024 US Presidential Election Oct 2024",
            subtitle = "Line indicates average of polls, dots indicate individual poll results") +
   ylab("Percent of Votes") +
   xlab("Poll Date") +
@@ -310,7 +310,7 @@ polling_data %>%
   geom_smooth(aes(x = end_date, y = pct, colour = candidate_name), se = FALSE) +
   scale_colour_manual(values = c("grey50", "grey50")) +
   scale_y_continuous(labels = scales::percent_format(scale = 1)) +
-  ggtitle("Current polling data for 2024 US Presidential Election",
+  ggtitle("Polling data for 2024 US Presidential Election Oct 2024",
            subtitle = "Line indicates average of polls, dots indicate individual poll results") +
   ylab("Percent of Votes") +
   xlab("Poll Date") +
@@ -369,7 +369,7 @@ polling_data %>%
   geom_smooth(aes(x = end_date, y = pct, group = candidate_name), colour = "grey50", se = FALSE) +
   scale_colour_manual(values = c("#E81B23", "#00AEF3")) +
   scale_y_continuous(labels = scales::percent_format(scale = 1)) +
-  ggtitle("Current polling data for 2024 US Presidential Election",
+  ggtitle("Polling data for 2024 US Presidential Election Oct 2024",
            subtitle = "Line indicates average of polls, dots indicate individual poll results") +
   ylab("Percent of Votes") +
   xlab("Poll Date") +
@@ -433,7 +433,7 @@ pollplot <- polling_data %>%
   geom_smooth(aes(x = end_date, y = pct, colour = candidate_name), se = FALSE) +
   scale_colour_manual(values = c("grey50", "grey50")) +
   scale_y_continuous(labels = scales::percent_format(scale = 1)) +
-  ggtitle("Current polling data for 2024 US Presidential Election",
+  ggtitle("Polling data for 2024 US Presidential Election Oct 2024",
            subtitle = "Line indicates average of polls, dots indicate individual poll results") +
   ylab("Percent of Votes") +
   xlab("Poll Date") +
@@ -498,7 +498,7 @@ pollplot <- polling_data %>%
   geom_smooth(aes(x = end_date, y = pct, colour = candidate_name), se = FALSE) +
   scale_colour_manual(values = c("#E81B23", "#00AEF3")) +
   scale_y_continuous(labels = scales::percent_format(scale = 1)) +
-  ggtitle("Current polling data for 2024 US Presidential Election",
+  ggtitle("Polling data for 2024 US Presidential Election Oct 2024",
            subtitle = "Line indicates average of polls, dots indicate individual poll results") +
   ylab("Percent of Votes") +
   xlab("Poll Date") +
@@ -563,7 +563,7 @@ pollplot <- polling_data %>%
   geom_smooth(aes(x = end_date, y = pct, colour = candidate_name), se = FALSE) +
   scale_colour_manual(values = c("grey50", "grey50")) +
   scale_y_continuous(labels = scales::percent_format(scale = 1)) +
-  ggtitle("Current polling data for 2024 US Presidential Election",
+  ggtitle("Polling data for 2024 US Presidential Election Oct 2024",
            subtitle = "Line indicates average of polls, dots indicate individual poll results") +
   ylab("Percent of Votes") +
   xlab("Poll Date") +
@@ -629,7 +629,7 @@ pollplot <- polling_data %>%
   geom_smooth(aes(x = end_date, y = pct, colour = candidate_name), se = FALSE) +
   scale_colour_manual(values = c("grey50", "grey50")) +
   scale_y_continuous(labels = scales::percent_format(scale = 1)) +
-  ggtitle("Current polling data for 2024 US Presidential Election",
+  ggtitle("Polling data for 2024 US Presidential Election Oct 2024",
            subtitle = "Line indicates average of polls, dots indicate individual poll results") +
   ylab("Percent of Votes") +
   xlab("Poll Date") +
@@ -721,7 +721,7 @@ pollplot <- polling_data %>%
   geom_smooth(aes(x = end_date, y = pct, colour = candidate_name), se = FALSE) +
   scale_colour_manual(values = c("#E81B23", "#00AEF3")) +
   scale_y_continuous(labels = scales::percent_format(scale = 1)) +
-  ggtitle("Current polling data for 2024 US Presidential Election",
+  ggtitle("Polling data for 2024 US Presidential Election Oct 2024",
            subtitle = "Line indicates average of polls, dots indicate individual poll results") +
   ylab("Percent of Votes") +
   xlab("Poll Date") +
@@ -793,7 +793,7 @@ kamala_plot <- polling_data %>%
   geom_smooth(aes(x = end_date, y = pct, colour = candidate_name), se = FALSE) +
   scale_colour_manual(values = c("#E81B23", "#00AEF3")) +
   scale_y_continuous(labels = scales::percent_format(scale = 1)) +
-  ggtitle("Current polling data for 2024 US Presidential Election",
+  ggtitle("Polling data for 2024 US Presidential Election Oct 2024",
            subtitle = "Line indicates average of polls, dots indicate individual poll results") +
   ylab("Percent of Votes") +
   xlab("Poll Date") +
@@ -1170,6 +1170,8 @@ trumpplot +
 <br>
 
 ```{r, echo=FALSE, out.height=520, out.width=520, fig.height=5.2, fig.width=5.2}
+
+# CLASS ACTIVITY
 
 polling_data %>%
   ggplot() +

@@ -21,37 +21,37 @@ library(tidyverse)
 Let's load the data from the web!
 
 ```{r, message = FALSE}
+amy <- read_csv("https://bit.ly/amy-w")
 taylor <- read_csv("https://bit.ly/swifty-data")
 fleet <- read_csv("https://bit.ly/fleetwood-mac-data")
-monkeys <- read_csv("https://bit.ly/arctic-monkeys-data")
 ```
 
-## Task - Taylor Swift
+## Task
 
-- Question 1 - How many of each of Taylor Swift’s songs are in each key? (C sharp, E, etc)
+- Question 1 - How many of each of Amy Winehouse’s songs are in each key? (C sharp, E, etc)
 
 The first thing I would do is look at the data, to find a variable that describes the key. I can do this using some of the code from last week. For example, I can look at the names of each variable:
 
 ```{r, eval = FALSE}
-names(taylor)
+names(amy)
 ```
 
 I can get a summary of the dataset.
 
 ```{r, eval = FALSE}
-summary(taylor)
+summary(amy)
 ```
 
 I can look at the dataset in a window.
 
 ```{r, eval = FALSE}
-View(taylor)
+View(amy)
 ```
 
 And here’s a bit of code I use all the time! Don’t worry about understanding the mechanics of this code chunk. All you need to know is that it gives you the name of each variable and what type of variable it is (e.g. numeric, categorical, character etc.). You need to have tidyverse loaded to use it.
 
 ```{r, eval = FALSE}
-taylor %>% 
+amy %>% 
   map_chr(class)
 ```
 
@@ -59,14 +59,14 @@ From this exploration of the data, I’ve found the right variable: key. I know 
 
 So let’s make the graph.
 ```{r}
-ggplot(data = taylor) +
+ggplot(data = amy) +
   aes(x = key) +
   geom_bar()
 ```
 
 - Question 2 - on which Taylor Swift albums are there the biggest number of tracks that are labelled as "explicit"?
 
-The relevant variable in this question is explicit. But I also have to include album somewhere in my graph, as the question is asking for me to break it down by album.
+The relevant variable in this question is explicit. But I also have to include album somewhere in my graph, as the question is asking for me to break it down by album. Note that the album variable is just called album in this dataset, not album_name!
 
 There’s a few ways to do this. First I’ll show the most popular way in your submissions. And I think this is a great solution. So if you got it, well done!
 
@@ -86,42 +86,42 @@ ggplot(data = taylor) +
   geom_bar(position = "dodge")
 ```
 
-- Question 3 - Which Taylor Swift album has the highest average danceability?
+- Question 3 - Which Amy Winehouse album has the lowest valence?
 
-The relevant variables here are danceability and album. But there’s another key word, average. If you don’t calculate an average per album, you will most likely produce a bar plot that sums all the values for danceability per album. Instead we need to use some dplyr commands to produce an average of danceability per album. The code below does this using group_by and summarise.
+The relevant variables here are valence and album_name. But there’s another key word, average. If you don’t calculate an average per album, you will most likely produce a bar plot that sums all the values for valence per album. Instead we need to use some dplyr commands to produce an average of valence per album. The code below does this using group_by and summarise. Remember also that we need to use na.rm = TRUE for Lionness due to the missing track information!
 
 ```{r}
-taylor %>% 
-  group_by(album) %>% 
-  summarise(mean_danceability = mean(danceability)) %>% 
+amy %>% 
+  group_by(album_name) %>% 
+  summarise(mean_valence = mean(valence, na.rm = TRUE)) %>% 
   ggplot() +
-  aes(x = album, y = mean_danceability) +
+  aes(x = album_name, y = mean_valence) +
   geom_col()
 ```
 
 ### Task - do the same for another artist
 
-- Question 4 - How many of each of Arctic Monkeys' songs are in each key? (C sharp, E, etc)
+- Question 4 - How many of each of Fleetwood Mac's songs are in each key? (C sharp, E, etc)
 
 ```{r}
-ggplot(data = monkeys) +
+ggplot(data = fleet) +
   aes(x = key) +
   geom_bar()
 ```
 
-- Question 5 - on which Arctic Monkeys' albums are there the biggest number of tracks that are labelled as "explicit"?
+- Question 5 - on which Fleetwood Mac albums are there the biggest number of tracks that are labelled as "explicit"?
 
 ```{r}
-ggplot(data = monkeys) +
+ggplot(data = fleet) +
   aes(x = explicit) +
   geom_bar() +
   facet_wrap(~album)
 ```
 
-- Question 6 - Which Arctic Monkeys album has the highest average danceability?
+- Question 6 - Which Taylor Swift album has the highest average danceability?
 
 ```{r}
-monkeys %>% 
+taylor %>% 
   group_by(album) %>% 
   summarise(mean_danceability = mean(danceability)) %>% 
   ggplot() +

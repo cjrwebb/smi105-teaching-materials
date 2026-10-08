@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## What is this document?
 
-Welcome to EDC101: Data Visualisation! This document accompanies the first workshop.
+Welcome to EDC117: Data Visualisation - Coding & Design! This document accompanies the first workshop.
 
 There'll be a document like this every week on Thursday. Each Thursday, we'll work through how to do different bits of data viz, and each week will build on the previous week. 
 
