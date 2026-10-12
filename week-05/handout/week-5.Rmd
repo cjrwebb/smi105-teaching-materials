@@ -4,7 +4,8 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      results='hide', fig.show='hide')
 ```
 
 ## What's happening today?
@@ -27,14 +28,15 @@ install.packages("ggthemes")
 
 As a reminder, **you only have to do that once.**
 
-```{r, eval = FALSE}
+```{r}
 library(tidyverse)
 library(lubridate)
 library(ggthemes)
 ```
 
-```{r, eval = FALSE}
+```{r}
 
+amy <- read_csv("https://bit.ly/amy-w")
 taylor <- read_csv("https://bit.ly/swifty-data")
 
 ```
@@ -43,11 +45,11 @@ taylor <- read_csv("https://bit.ly/swifty-data")
 
 Let's remind ourselves of the relationship between tempo and danceability among Taylor Swift's tracks, coloured according to which album they're on.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
-      colour = reorder(album, 
+      colour = reorder(album_name, 
                        ymd(release_date))) +
   geom_point()
 ```
@@ -56,11 +58,11 @@ This looks OK (except for the legend taking up more than half the space, but you
 
 Here we're going to introduce two approaches to colour palettes that are quite easy to use in R -- **ColorBrewer** and **viridis**. Both come preloaded with ggplot2, so we don't need to do anything special to load them. Let's start with a colour scheme from ColorBrewer:
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
-      colour = reorder(album, 
+      colour = reorder(album_name, 
                        ymd(release_date))) +
   geom_point() +
   scale_colour_brewer(palette = "Paired") 
@@ -68,11 +70,11 @@ ggplot(data = taylor) +
 
 ... and follow it up with a colour scheme from viridis.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
-      colour = reorder(album, 
+      colour = reorder(album_name, 
                        ymd(release_date))) +
   geom_point() +
   scale_colour_viridis_d(option = "D")
@@ -82,7 +84,7 @@ With viridis, guessing how you might find the other colour schemes is easy: you 
 
 Alternatively, you can run the following command and the available palettes will be plotted for you:
 
-```{r, eval = FALSE}
+```{r}
 
 RColorBrewer::display.brewer.all()
 
@@ -90,10 +92,12 @@ RColorBrewer::display.brewer.all()
 
 Note that here the two colons (::) are telling R to pull the function from the RColorBrewer library, even when that library is not loaded directly. 
 
+If you want to see how the palettes look with real data where we have a few more groups to colour in, you could try creating one of the above graphs using the Taylor Swift data instead.
+
 - One other thing to mention on these colour schemes is that, with ColorBrewer, you specify the colour scheme to use in the same way regardless of whether you're using a continuous or discrete colour scheme. With viridis, it's a bit different; if you're mapping colour to a categorical, factor, or **discrete** variable, you want to add scale_colour_viridis_d(); if you're mapping colour to a continuous variable, you want to add scale_colour_viridis_c(). Like so:
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
       colour = acousticness) +
@@ -103,11 +107,11 @@ ggplot(data = taylor) +
 
 ### Back to bar charts, with some colour
 
-Let's revisit another graph, from a few weeks ago: the balance between major and minor on each of Taylor Swift's albums.
+Let's revisit another graph, from a few weeks ago: the balance between major and minor on each of Amy Winehouse's albums.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
-  aes(x = fct_reorder(album,
+```{r}
+ggplot(data = amy) +
+  aes(x = fct_reorder(album_name,
                   ymd(release_date)), 
       fill = mode) +
   geom_bar(position = "dodge") 
@@ -115,9 +119,9 @@ ggplot(data = taylor) +
 
 What if you wanted your own colour scheme? What if you thought of major tracks being a particular shade of purple, and minor tracks being a particular shade of green? 
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
-  aes(x = fct_reorder(album,
+```{r}
+ggplot(data = amy) +
+  aes(x = fct_reorder(album_name,
                   ymd(release_date)),
       fill = mode) + 
   geom_bar(position = "dodge") +
@@ -129,9 +133,9 @@ You could do something like this, with scale_fill_manual. (You can imagine a sim
 
 An alternative to using named colours is to use **HEX codes**. These start with a # and are used to represent different colours in digital applications. Let's instead change our colours to "#5AD9ED" and "#5AED9F" and see what happens:
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
-  aes(x = fct_reorder(album,
+```{r}
+ggplot(data = amy) +
+  aes(x = fct_reorder(album_name,
                   ymd(release_date)),
       fill = mode) + 
   geom_bar(position = "dodge") +
@@ -144,11 +148,11 @@ ggplot(data = taylor) +
 
 Let's revisit facets, by looking at how the distribution of keys varies across Taylor Swift albums.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album)
+  facet_wrap(~ album_name)
 ```
 
 Any problems with this?
@@ -157,29 +161,26 @@ One issue is that there's several albums that don't include every key. This isnt
 
 What we can do is free up the axes: x, y, or both. Here's how we do it. Compare the following four options: which one works best? Which might work best in other contexts?
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
-  aes(x = key) +
-  geom_bar() +
-  facet_wrap(~ album)
+```{r}
 
-ggplot(data = taylor) +
+ggplot(data = amy) +
   aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album, 
+  facet_wrap(~ album_name, 
              scales = "free_x")
 
-ggplot(data = taylor) +
+ggplot(data = amy) +
   aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album, 
+  facet_wrap(~ album_name, 
              scales = "free_y")
 
-ggplot(data = taylor) +
+ggplot(data = amy) +
   aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album, 
+  facet_wrap(~ album_name, 
              scales = "free")
+
 ```
 
 
@@ -187,11 +188,11 @@ ggplot(data = taylor) +
 
 Who likes Tufte? Some people like Tufte. If you're one of them, you might find yourself thinking "these boxplots use up too much ink, I wish ggplot2 would let me use the Tufte approach". It's easier to make your graphics look like Tufte's if you've loaded the **ggthemes** package (which hopefully you were able to do from the start of this workshop).
 
-If you want to look at how the tempo across Taylor Swift's different albums have varied, why not compare:
+If you want to look at how the tempo across Amy Winehouse's different albums have varied, why not compare:
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
-  aes(x = reorder(album, 
+```{r}
+ggplot(data = amy) +
+  aes(x = reorder(album_name, 
                   ymd(release_date)),
       y = tempo) +
   geom_boxplot() 
@@ -199,9 +200,9 @@ ggplot(data = taylor) +
 
 with:
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
-  aes(x = reorder(album, 
+```{r}
+ggplot(data = amy) +
+  aes(x = reorder(album_name, 
                   ymd(release_date)),
       y = tempo) +
   geom_tufteboxplot() 
@@ -217,8 +218,8 @@ You can also use prepackaged themes, if there are particular styles that you wan
 
 Let's say we want to tweak our last graph so that we lose the grey grid, swapping it for something a bit more minimal.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
       colour = acousticness) +
@@ -235,17 +236,17 @@ Having done that, type it out again, but pause once you've typed as far as theme
 
 Quickly: annotations. Our graphics have been fairly sparse so far. This isn't a problem per se -- sparse graphs are often clear graphs -- but you might find yourself wondering how it is that you sometimes see graphics with text on them. This is broadly pretty easy to do in ggplot, and this is how.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
       colour = acousticness) +
   geom_point() +
   theme_light() +
   annotate("text", 
-           x=175, 
+           x=150, 
            y=0.8, 
-           label="No Taylor songs \n are both fast \n and danceable")
+           label="Few Amy Winehouse \nsongs are both \nfast and danceable")
 ```
 
 Here, what I've done is add an annotate() in my ggplot2 code. You can see it needs four arguments: what kind of annotation it is, where it's going on each of the x and y axes, and a label. (You'll also note I've broken the label up into three lines.)
@@ -272,22 +273,22 @@ You can also set the working directory. Here's how it works on the computer I'm 
 setwd("~/Library/Mobile Documents/com~apple~CloudDocs/r/smi105-data_viz_materials/smi105-teaching-materials/week-05/handout")
 ```
 
-Now I've done this, I can both load data from this folder, like so (imagine I've saved **taylor.csv** in this folder):
+Now I've done this, I can both load data from this folder, like so (imagine I've saved **amy.csv** in this folder):
 
 ```{r, eval = FALSE}
-taylor_again <- read_csv("taylor.csv")
+amy_again <- read_csv("amy.csv")
 ```
 
 but I can also *save* the graphic I plotted most recently:
 
 ```{r, eval = FALSE}
-ggsave("taylor_plot_01.png")
+ggsave("amy_plot_01.png")
 ```
 
-You'll note this is fairly sparse. The **ggsave** command is flexible, but simple to use if you want it to be. (I normally want it to be simple.) One thing you'll sometimes want to do is change the dimensions of the graph -- maybe you want a long and thin graph, maybe you want a short and fit graph. By default ggsave uses inches as its units, but you can tweak this. Here's how you can change the dimensions of a graph.
+You'll note this is fairly sparse. The **ggsave** command is flexible, but simple to use if you want it to be. (I normally want it to be simple.) One thing you'll sometimes want to do is change the dimensions of the graph -- maybe you want a long and thin graph, maybe you want a short and fat graph. By default ggsave uses inches as its units, but you can tweak this. Here's how you can change the dimensions of a graph.
 
 ```{r, eval = FALSE}
-ggsave("taylor_plot_01.png", width = 10, height = 5)
+ggsave("amy_plot_01.png", width = 10, height = 5)
 ```
 
 And so on. (You can also export to different file formats, like .jpg, and .eps; if you want to do this, just change the file extension in the command.)
@@ -298,4 +299,4 @@ How do I write these handouts? How might you effectively integrate graphics, and
 
 ## Task
 
-No task this week -- you've got an assessment due in for me soon, so please dedicate the rest of the week to working on that assessment. 
+No task this week -- you've got an assessment due in soon, so please dedicate the rest of the week to working on that assessment. 

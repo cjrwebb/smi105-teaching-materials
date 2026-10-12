@@ -4,7 +4,8 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      results='hide', fig.show='hide')
 ```
 
 ## What's happening today?
@@ -19,7 +20,7 @@ As with the last few weeks, we're going to start by loading some packages and so
 
 So, let's load some packages...
 
-```{r, eval = FALSE}
+```{r}
 library(tidyverse)
 library(ggridges)
 library(lubridate)
@@ -27,8 +28,8 @@ library(lubridate)
 
 ... and let's load some data. (Everything we used last week is still available, I'm just leaving it out so that loading data is quicker!)
 
-```{r, eval = FALSE}
-taylor <- read_csv("https://bit.ly/swifty-data")
+```{r}
+amy <- read_csv("https://bit.ly/amy-w")
 fleet <- read_csv("https://bit.ly/fleetwood-mac-data")
 maccas <- read.csv("https://bit.ly/bigmac-data-csv")
 ```
@@ -37,46 +38,46 @@ We're good to go! Let's look at some distributions.
 
 ## Looking at distributions
 
-We've spent the last few weeks with the Taylor Swift data. Let's continue this by looking at the distribution of tempo of her tracks.
+We've spent the last few weeks with the Amy Winehouse data. Let's continue this by looking at the distribution of tempo of her tracks.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo) +
   geom_density()
 ```
 
-If we want to look at the distribution of a single continuous variable, one approach is to use a density curve. Another's to use a histogram. Let's look at the same data with a histogram.
+If we want to look at the distribution of a single continuous variable, one approach is to use a density curve. Another is to use a histogram. Let's look at the same data with a histogram.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo) +
   geom_histogram()
 ```
 
 Once we run this, we end up with some red text in the console. This is fine, but it might invite us to think about *bins* (effectively, the bars that make up the histogram) -- do we want them to be wider or narrower? Do we want more or fewer of them? Let's play around with bins and see what happens. We can play around with them by specifying either the number or the width of the bins, like so.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo) +
   geom_histogram(bins = 15)
 
-ggplot(data = taylor) +
+ggplot(data = amy) +
   aes(x = tempo) +
   geom_histogram(binwidth = 15)
 ```
 
-Time for a second variable. Are Taylor Swift's minor tracks slower than her major tracks?
+Time for a second variable. Are Amy Winehouse's minor tracks slower than her major tracks?
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo, fill = mode) +
   geom_histogram()
 ```
 
 We've talked about stacked bar charts before, and this seems even more severe. Let's tweak this so that we can compare better.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo, fill = mode) +
   geom_histogram(bins = 15, 
                  position = "identity",
@@ -87,79 +88,81 @@ This helps, but has its own issues. Let's try some alternatives.
 
 ### Back to density curves 
 
-Let's try answering that same question -- are Taylor Swift's minor or major tracks quicker? -- with some density curves instead.
+Let's try answering that same question -- are Amy Winehouse's minor or major tracks quicker? -- with some density curves instead.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo, colour = mode) +
   geom_density()
 ```
 
 This is a bit more like it. These curves adjust for the fact that there's different numbers of tracks in major and minor keys, and because they're *curves* rather than histograms we can see how they fit together more straightforwardly. 
 
-What about albums? Are Taylor Swift's more recent albums quicker?
+What about albums? Are Amy Winehouse's more recent albums quicker?
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
-  aes(x = tempo, colour = album) +
+```{r}
+ggplot(data = amy) +
+  aes(x = tempo, colour = album_name) +
   geom_density()
 ```
 
-This doesn't work as well. Comparing two overlapping density curves is fairly straightforward to do, but comparing *eleven* is tricky; it's not as easy to identify the overall trends for all eleven (It's also worth noting this comparison is a bit easier than it is for other artists - try it with the other data we've loaded). As ever, a good way to deal with eleven lots of information in one graph is to turn it into eleven graphs, with the facet_wrap() command.
+This works pretty well for Amy Winehouse's discography, as she only released three albums. However, we could easily imagine how trying to use the same strategy with something like Taylor Swift's albums would be very difficult to read. Comparing two or three overlapping density curves is fairly straightforward to do, but comparing *ten or more* is tricky; it's not as easy to identify the overall trends. As ever, a good way to deal with lots of information in one graph is to turn it into lots of smaller graphs, with the facet_wrap() command.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo) +
   geom_density() +
-  facet_wrap(~ album)
+  facet_wrap(~ album_name)
 ```
 
-(Did you ever wonder what the tilde -- ~ -- was doing in the facet_wrap() parenthesis, when with most other parentheses it's OK to just have the variable name? As an example, let's look at how the tempo of Taylor Swift's tracks across her albums vary by whether they're in major or minor keys; this means we're faceting by two variables. It also means we're using facet_grid() rather than facet_wrap().)
+(Did you ever wonder what the tilde -- ~ -- was doing in the facet_wrap() parenthesis, when with most other parentheses it's OK to just have the variable name? As an example, let's look at how the tempo of Amy Winehouse's tracks across her albums vary by whether they're in major or minor keys; this means we're faceting by two variables. It also means we're using facet_grid() rather than facet_wrap().)
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
+```{r}
+ggplot(data = amy) +
   aes(x = tempo) +
   geom_density() +
-  facet_grid(mode ~ album)
+  facet_grid(mode ~ album_name, )
 ```
 
-OK, we're making progress. (This isn't as successful as it could be, though -- as we've seen already, Taylor Swift has far more major than minor tracks. Try another artist with more minor tracks -- does that work better?) Let's also consider two other ways to communicate this information: box plots and violin plots.
+OK, we're making progress. (This isn't as successful as it could be, though -- it's not ideal that we have an NA row taking up loads of space. We'll go through a way to get rid of NA values later on.) Let's also consider two other ways to communicate this information: box plots and violin plots.
 
-```{r, eval = FALSE}
-ggplot(data = taylor) +
-  aes(x = album, y = tempo) +
+```{r}
+ggplot(data = amy) +
+  aes(x = album_name, y = tempo) +
   geom_boxplot()
 
-ggplot(data = taylor) +
-  aes(x = album, y = tempo) +
+ggplot(data = amy) +
+  aes(x = album_name, y = tempo) +
   geom_violin()
 ```
 
+Astrophysicist and youtuber Angela Collier has a fantastic video about how much she hates violin plots that I very much recommend. You can watch it [here](https://www.youtube.com/watch?v=_0QMKFzW9fw): https://www.youtube.com/watch?v=_0QMKFzW9fw 
+
 ## Moving to Fleetwood Mac
 
-What happens when we're looking at a categorical variable with more than four levels? Fleetwood Mac released a lot of albums, let's look at them. 
+What happens when we're looking at a categorical variable with more than three levels? Fleetwood Mac released a lot of albums, let's look at them. 
 
-```{r, eval = FALSE}
+```{r}
 ggplot(data = fleet) +
-  aes(album, tempo) +
+  aes(x = album, y = tempo) +
   geom_boxplot()
 ```
 
 This is basically impossible to read because of the number of different albums. One easy way around this problem is just to swap our axes over.
 
-```{r, eval = FALSE}
+```{r}
 ggplot(data = fleet) +
-  aes(album, tempo) +
+  aes(x = album, y = tempo) +
   geom_boxplot() + 
   coord_flip()
 ``` 
 
-But we want them in a different order; here, they're just alphabetical Last week, I showed you the factor() command, which is a powerful way of organising your categorical variables. What I *didn't* show you is that sometimes it's easier. We can reorder our factor levels using the reorder() command. If we want to reorganise our albums based on when they came out, we can do it like so.
+But we want them in a different order; here, they're just alphabetical. Last week, I showed you the factor() command, which is a powerful way of organising your categorical variables. What I *didn't* show you is that sometimes it's easier. We can reorder our factor levels using the reorder() command. If we want to reorganise our albums based on when they came out, we can do it like so.
 
-```{r, eval = FALSE}
+```{r}
 ggplot(data = fleet) +
-  aes(fct_reorder(album, ymd(release_date)), 
-      tempo) +
+  aes(x = fct_reorder(album, ymd(release_date)), 
+      y = tempo) +
   geom_boxplot() + 
   coord_flip()
 ```
@@ -175,9 +178,10 @@ Exhausting? But, again, none of these individual bits is that complicated, there
 
 And if we want to reorder the categories so that we're reorganising the boxplots from highest to lowest, we can do that with another reorder() command. 
 
-```{r, eval = FALSE}
+```{r}
 ggplot(data = fleet) +
-  aes(fct_reorder(album, tempo), tempo) +
+  aes(x = fct_reorder(album, tempo), 
+      y = tempo) +
   geom_boxplot() +
   coord_flip()
 ```
@@ -190,7 +194,7 @@ The difference here is that earlier we were reordering according to release_date
 
 Did you manage to load ggridges earlier? Let's find out.
 
-```{r, eval = FALSE}
+```{r}
 ggplot(data = fleet) +
   aes(x = tempo, 
       y = fct_reorder(album, ymd(release_date))) +
@@ -201,7 +205,7 @@ I really like ridgeline plots, which are a fairly new innovation in data visuali
 
 However, one issue is that, by default, the y axis goes from smaller numbers at the bottom to bigger numbers at the top. Normally, when we're presenting a chronological list, the earliest items go at the top, and the latest at the bottom; here, we've effectively got the opposite. Let's turn this graph upside down.
 
-```{r, eval = FALSE}
+```{r}
 ggplot(data = fleet) +
   aes(x = tempo, 
       y = fct_rev(fct_reorder(album, 
@@ -213,7 +217,7 @@ This is clumsy, but it works. What we've done is we've wrapped the existing y ae
 
 We can also reorder from high to low, as we did before.
 
-```{r, eval = FALSE}
+```{r}
 ggplot(data = fleet) +
   aes(x = tempo, 
       y = fct_reorder(album, popularity)) +
@@ -227,7 +231,7 @@ Did you notice some new data at the top? There's some new data this week.
 
 A lot of the time, we can make all the visualisations we want based not only on a single dataset, but also on variables provided in the dataset. Sometimes, though, we need to generate new variables. Let's look at an example.
 
-```{r, eval = FALSE}
+```{r}
 names(maccas)
 ```
 
@@ -239,7 +243,7 @@ One variable that isn't included is the price of a Big Mac in US dollars. A poun
 
 Let's start by generating a new variable, using the **mutate()** command.
 
-```{r, eval = FALSE}
+```{r}
 maccas %>% 
   mutate(price_dollars = local_price/dollar_ex) %>% 
   ggplot() +
@@ -251,7 +255,7 @@ This is similar to what we've seen before; we've started with data, added a pipe
 
 A problem here, though, is the number of observations. What if we just want the *current* relationship? To do this, we can limit our observations to the most recent wave of data, by going back to filter():
 
-```{r, eval = FALSE}
+```{r}
 maccas %>% 
   mutate(price_dollars = local_price/dollar_ex) %>% 
   filter(date == "2022-07-01") %>% 
@@ -264,7 +268,7 @@ maccas %>%
 
 What if we wanted to know how this relationship had changed over time? An obvious starting point is to facet by date.
 
-```{r, eval = FALSE}
+```{r}
 maccas %>% 
   mutate(price_dollars = local_price/dollar_ex) %>% 
   ggplot() +
@@ -273,17 +277,19 @@ maccas %>%
   facet_wrap(~ date)
 ```
 
-There's an obvious problem here, though. Not all the observations include all the data we want, which is why loads of our facets are empty. To get around this problem, we can use **na.omit**: this means we're just looking at *complete cases*, rather than cases with missing data. Here's how we use it.
+There's an obvious problem here, though. Not all the observations include all the data we want, which is why loads of our facets are empty. To get around this problem, we can use **drop_na**: this means we're just looking at *complete cases* for our data, rather than cases with missing data. Here's how we use it.
 
-```{r, eval = FALSE}
+```{r}
 maccas %>%
-  na.omit %>% 
+  drop_na(GDP_dollar, local_price, dollar_ex) %>% 
   mutate(price_dollars = local_price/dollar_ex) %>% 
   ggplot() +
   aes(x = GDP_dollar, y = price_dollars) +
   geom_point() +
   facet_wrap(~ date)
 ```
+
+What is important here is that we included the variables we are using in our visualisation in our drop_na function as arguments. We *could* just use drop_na() without any arguments here, which would drop all data with *any* missing values — however, we generally don't want to get into the practice of throwing away perfectly good data (data that has values for all of the variables we *are* interested in).
 
 
 ## Task

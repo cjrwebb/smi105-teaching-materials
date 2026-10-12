@@ -379,22 +379,22 @@ library(ggridges)
 library(lubridate)</code></pre>
 <p>… and let’s load some data. (Everything we used last week is still
 available, I’m just leaving it out so that loading data is quicker!)</p>
-<pre class="r"><code>taylor &lt;- read_csv(&quot;https://bit.ly/swifty-data&quot;)
+<pre class="r"><code>amy &lt;- read_csv(&quot;https://bit.ly/amy-w&quot;)
 fleet &lt;- read_csv(&quot;https://bit.ly/fleetwood-mac-data&quot;)
 maccas &lt;- read.csv(&quot;https://bit.ly/bigmac-data-csv&quot;)</code></pre>
 <p>We’re good to go! Let’s look at some distributions.</p>
 </div>
 <div id="looking-at-distributions" class="section level2">
 <h2>Looking at distributions</h2>
-<p>We’ve spent the last few weeks with the Taylor Swift data. Let’s
+<p>We’ve spent the last few weeks with the Amy Winehouse data. Let’s
 continue this by looking at the distribution of tempo of her tracks.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo) +
   geom_density()</code></pre>
 <p>If we want to look at the distribution of a single continuous
-variable, one approach is to use a density curve. Another’s to use a
+variable, one approach is to use a density curve. Another is to use a
 histogram. Let’s look at the same data with a histogram.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo) +
   geom_histogram()</code></pre>
 <p>Once we run this, we end up with some red text in the console. This
@@ -403,21 +403,20 @@ is fine, but it might invite us to think about <em>bins</em>
 be wider or narrower? Do we want more or fewer of them? Let’s play
 around with bins and see what happens. We can play around with them by
 specifying either the number or the width of the bins, like so.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo) +
-  geom_histogram(bins = 15)
-
-ggplot(data = taylor) +
+  geom_histogram(bins = 15)</code></pre>
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo) +
   geom_histogram(binwidth = 15)</code></pre>
-<p>Time for a second variable. Are Taylor Swift’s minor tracks slower
+<p>Time for a second variable. Are Amy Winehouse’s minor tracks slower
 than her major tracks?</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo, fill = mode) +
   geom_histogram()</code></pre>
 <p>We’ve talked about stacked bar charts before, and this seems even
 more severe. Let’s tweak this so that we can compare better.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo, fill = mode) +
   geom_histogram(bins = 15, 
                  position = &quot;identity&quot;,
@@ -425,78 +424,82 @@ more severe. Let’s tweak this so that we can compare better.</p>
 <p>This helps, but has its own issues. Let’s try some alternatives.</p>
 <div id="back-to-density-curves" class="section level3">
 <h3>Back to density curves</h3>
-<p>Let’s try answering that same question – are Taylor Swift’s minor or
+<p>Let’s try answering that same question – are Amy Winehouse’s minor or
 major tracks quicker? – with some density curves instead.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo, colour = mode) +
   geom_density()</code></pre>
 <p>This is a bit more like it. These curves adjust for the fact that
 there’s different numbers of tracks in major and minor keys, and because
 they’re <em>curves</em> rather than histograms we can see how they fit
 together more straightforwardly.</p>
-<p>What about albums? Are Taylor Swift’s more recent albums quicker?</p>
-<pre class="r"><code>ggplot(data = taylor) +
-  aes(x = tempo, colour = album) +
+<p>What about albums? Are Amy Winehouse’s more recent albums
+quicker?</p>
+<pre class="r"><code>ggplot(data = amy) +
+  aes(x = tempo, colour = album_name) +
   geom_density()</code></pre>
-<p>This doesn’t work as well. Comparing two overlapping density curves
-is fairly straightforward to do, but comparing <em>eleven</em> is
-tricky; it’s not as easy to identify the overall trends for all eleven
-(It’s also worth noting this comparison is a bit easier than it is for
-other artists - try it with the other data we’ve loaded). As ever, a
-good way to deal with eleven lots of information in one graph is to turn
-it into eleven graphs, with the facet_wrap() command.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<p>This works pretty well for Amy Winehouse’s discography, as she only
+released three albums. However, we could easily imagine how trying to
+use the same strategy with something like Taylor Swift’s albums would be
+very difficult to read. Comparing two or three overlapping density
+curves is fairly straightforward to do, but comparing <em>ten or
+more</em> is tricky; it’s not as easy to identify the overall trends. As
+ever, a good way to deal with lots of information in one graph is to
+turn it into lots of smaller graphs, with the facet_wrap() command.</p>
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo) +
   geom_density() +
-  facet_wrap(~ album)</code></pre>
+  facet_wrap(~ album_name)</code></pre>
 <p>(Did you ever wonder what the tilde – ~ – was doing in the
 facet_wrap() parenthesis, when with most other parentheses it’s OK to
 just have the variable name? As an example, let’s look at how the tempo
-of Taylor Swift’s tracks across her albums vary by whether they’re in
+of Amy Winehouse’s tracks across her albums vary by whether they’re in
 major or minor keys; this means we’re faceting by two variables. It also
 means we’re using facet_grid() rather than facet_wrap().)</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo) +
   geom_density() +
-  facet_grid(mode ~ album)</code></pre>
+  facet_grid(mode ~ album_name, )</code></pre>
 <p>OK, we’re making progress. (This isn’t as successful as it could be,
-though – as we’ve seen already, Taylor Swift has far more major than
-minor tracks. Try another artist with more minor tracks – does that work
-better?) Let’s also consider two other ways to communicate this
-information: box plots and violin plots.</p>
-<pre class="r"><code>ggplot(data = taylor) +
-  aes(x = album, y = tempo) +
-  geom_boxplot()
-
-ggplot(data = taylor) +
-  aes(x = album, y = tempo) +
+though – it’s not ideal that we have an NA row taking up loads of space.
+We’ll go through a way to get rid of NA values later on.) Let’s also
+consider two other ways to communicate this information: box plots and
+violin plots.</p>
+<pre class="r"><code>ggplot(data = amy) +
+  aes(x = album_name, y = tempo) +
+  geom_boxplot()</code></pre>
+<pre class="r"><code>ggplot(data = amy) +
+  aes(x = album_name, y = tempo) +
   geom_violin()</code></pre>
+<p>Astrophysicist and youtuber Angela Collier has a fantastic video
+about how much she hates violin plots that I very much recommend. You
+can watch it <a href="https://www.youtube.com/watch?v=_0QMKFzW9fw">here</a>: <a href="https://www.youtube.com/watch?v=_0QMKFzW9fw" class="uri">https://www.youtube.com/watch?v=_0QMKFzW9fw</a></p>
 </div>
 </div>
 <div id="moving-to-fleetwood-mac" class="section level2">
 <h2>Moving to Fleetwood Mac</h2>
 <p>What happens when we’re looking at a categorical variable with more
-than four levels? Fleetwood Mac released a lot of albums, let’s look at
+than three levels? Fleetwood Mac released a lot of albums, let’s look at
 them.</p>
 <pre class="r"><code>ggplot(data = fleet) +
-  aes(album, tempo) +
+  aes(x = album, y = tempo) +
   geom_boxplot()</code></pre>
 <p>This is basically impossible to read because of the number of
 different albums. One easy way around this problem is just to swap our
 axes over.</p>
 <pre class="r"><code>ggplot(data = fleet) +
-  aes(album, tempo) +
+  aes(x = album, y = tempo) +
   geom_boxplot() + 
   coord_flip()</code></pre>
 <p>But we want them in a different order; here, they’re just
-alphabetical Last week, I showed you the factor() command, which is a
+alphabetical. Last week, I showed you the factor() command, which is a
 powerful way of organising your categorical variables. What I
 <em>didn’t</em> show you is that sometimes it’s easier. We can reorder
 our factor levels using the reorder() command. If we want to reorganise
 our albums based on when they came out, we can do it like so.</p>
 <pre class="r"><code>ggplot(data = fleet) +
-  aes(fct_reorder(album, ymd(release_date)), 
-      tempo) +
+  aes(x = fct_reorder(album, ymd(release_date)), 
+      y = tempo) +
   geom_boxplot() + 
   coord_flip()</code></pre>
 <p>What’s happened here? Everything’s the same except the first mapping
@@ -520,7 +523,8 @@ complicated, there’s just a lot of them.</p>
 the boxplots from highest to lowest, we can do that with another
 reorder() command.</p>
 <pre class="r"><code>ggplot(data = fleet) +
-  aes(fct_reorder(album, tempo), tempo) +
+  aes(x = fct_reorder(album, tempo), 
+      y = tempo) +
   geom_boxplot() +
   coord_flip()</code></pre>
 <p>The difference here is that earlier we were reordering according to
@@ -623,16 +627,23 @@ time? An obvious starting point is to facet by date.</p>
   facet_wrap(~ date)</code></pre>
 <p>There’s an obvious problem here, though. Not all the observations
 include all the data we want, which is why loads of our facets are
-empty. To get around this problem, we can use <strong>na.omit</strong>:
-this means we’re just looking at <em>complete cases</em>, rather than
-cases with missing data. Here’s how we use it.</p>
+empty. To get around this problem, we can use <strong>drop_na</strong>:
+this means we’re just looking at <em>complete cases</em> for our data,
+rather than cases with missing data. Here’s how we use it.</p>
 <pre class="r"><code>maccas %&gt;%
-  na.omit %&gt;% 
+  drop_na(GDP_dollar, local_price, dollar_ex) %&gt;% 
   mutate(price_dollars = local_price/dollar_ex) %&gt;% 
   ggplot() +
   aes(x = GDP_dollar, y = price_dollars) +
   geom_point() +
   facet_wrap(~ date)</code></pre>
+<p>What is important here is that we included the variables we are using
+in our visualisation in our drop_na function as arguments. We
+<em>could</em> just use drop_na() without any arguments here, which
+would drop all data with <em>any</em> missing values — however, we
+generally don’t want to get into the practice of throwing away perfectly
+good data (data that has values for all of the variables we <em>are</em>
+interested in).</p>
 </div>
 </div>
 <div id="task" class="section level2">

@@ -41,7 +41,7 @@ To run two separate mutate commands, you could do this:
 maccas %>%
   mutate(price_dollars = local_price / dollar_ex) %>%
   mutate(GDP_percent = price_dollars/GDP_dollar) %>%
-  na.omit
+  drop_na(price_dollars, GDP_percent)
 ```         
 
 To run a single mutate command where you make two new variables, you could do this:
@@ -50,7 +50,7 @@ To run a single mutate command where you make two new variables, you could do th
 maccas %>%
   mutate(price_dollars = local_price / dollar_ex,
          GDP_percent = price_dollars/GDP_dollar) %>%
-  na.omit
+  drop_na(price_dollars, GDP_percent)
 ```         
 
 OK, so our data now has the key variable we need. Let's use it to make a first graph:
@@ -61,6 +61,7 @@ OK, so our data now has the key variable we need. Let's use it to make a first g
 maccas %>%
   mutate(price_dollars = local_price / dollar_ex,
          GDP_percent = price_dollars/GDP_dollar) %>%
+  drop_na(price_dollars, GDP_percent) %>%
   ggplot() +
   aes(x = GDP_percent, 
       y = name) +
@@ -73,7 +74,7 @@ This looks OK. But the x-axis is hard to interpret, and the countries aren't ran
 maccas %>%
   mutate(price_dollars = local_price / dollar_ex,
          GDP_percent = price_dollars/GDP_dollar) %>%
-  na.omit %>% 
+  drop_na(price_dollars, GDP_percent) %>%
   ggplot() +
   aes(x = GDP_percent, 
       y = fct_reorder(name, GDP_percent)) +
@@ -85,3 +86,9 @@ maccas %>%
 ```
 
 There's one new thing here: I've specified that I want the scale on the x-axis to be percent, rather than scientific notation. I don't expect you to have done this, don't worry!
+
+If you're wondering why we no longer have the intrusive black lines that run all the way to the end of the plot, it is because of the rel_min_height = 0.001 argument that we added to the geom_density_ridges function. You can find out more about the argument by checking the help documentation for the geom by running: ?geom_density_ridges
+
+# Week 3 Group Task Feedback
+
+

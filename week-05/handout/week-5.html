@@ -382,7 +382,8 @@ them once only. Let’s do so now.</p>
 <pre class="r"><code>library(tidyverse)
 library(lubridate)
 library(ggthemes)</code></pre>
-<pre class="r"><code>taylor &lt;- read_csv(&quot;https://bit.ly/swifty-data&quot;)</code></pre>
+<pre class="r"><code>amy &lt;- read_csv(&quot;https://bit.ly/amy-w&quot;)
+taylor &lt;- read_csv(&quot;https://bit.ly/swifty-data&quot;)</code></pre>
 </div>
 </div>
 <div id="back-to-scatterplots-with-some-colour" class="section level2">
@@ -390,10 +391,10 @@ library(ggthemes)</code></pre>
 <p>Let’s remind ourselves of the relationship between tempo and
 danceability among Taylor Swift’s tracks, coloured according to which
 album they’re on.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
-      colour = reorder(album, 
+      colour = reorder(album_name, 
                        ymd(release_date))) +
   geom_point()</code></pre>
 <p>This looks OK (except for the legend taking up more than half the
@@ -404,18 +405,18 @@ are quite easy to use in R – <strong>ColorBrewer</strong> and
 <strong>viridis</strong>. Both come preloaded with ggplot2, so we don’t
 need to do anything special to load them. Let’s start with a colour
 scheme from ColorBrewer:</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
-      colour = reorder(album, 
+      colour = reorder(album_name, 
                        ymd(release_date))) +
   geom_point() +
   scale_colour_brewer(palette = &quot;Paired&quot;) </code></pre>
 <p>… and follow it up with a colour scheme from viridis.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
-      colour = reorder(album, 
+      colour = reorder(album_name, 
                        ymd(release_date))) +
   geom_point() +
   scale_colour_viridis_d(option = &quot;D&quot;)</code></pre>
@@ -429,6 +430,9 @@ palettes will be plotted for you:</p>
 <p>Note that here the two colons (::) are telling R to pull the function
 from the RColorBrewer library, even when that library is not loaded
 directly.</p>
+<p>If you want to see how the palettes look with real data where we have
+a few more groups to colour in, you could try creating one of the above
+graphs using the Taylor Swift data instead.</p>
 <ul>
 <li>One other thing to mention on these colour schemes is that, with
 ColorBrewer, you specify the colour scheme to use in the same way
@@ -439,7 +443,7 @@ to add scale_colour_viridis_d(); if you’re mapping colour to a
 continuous variable, you want to add scale_colour_viridis_c(). Like
 so:</li>
 </ul>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
       colour = acousticness) +
@@ -448,17 +452,17 @@ so:</li>
 <div id="back-to-bar-charts-with-some-colour" class="section level3">
 <h3>Back to bar charts, with some colour</h3>
 <p>Let’s revisit another graph, from a few weeks ago: the balance
-between major and minor on each of Taylor Swift’s albums.</p>
-<pre class="r"><code>ggplot(data = taylor) +
-  aes(x = fct_reorder(album,
+between major and minor on each of Amy Winehouse’s albums.</p>
+<pre class="r"><code>ggplot(data = amy) +
+  aes(x = fct_reorder(album_name,
                   ymd(release_date)), 
       fill = mode) +
   geom_bar(position = &quot;dodge&quot;) </code></pre>
 <p>What if you wanted your own colour scheme? What if you thought of
 major tracks being a particular shade of purple, and minor tracks being
 a particular shade of green?</p>
-<pre class="r"><code>ggplot(data = taylor) +
-  aes(x = fct_reorder(album,
+<pre class="r"><code>ggplot(data = amy) +
+  aes(x = fct_reorder(album_name,
                   ymd(release_date)),
       fill = mode) + 
   geom_bar(position = &quot;dodge&quot;) +
@@ -474,8 +478,8 @@ guide</a>.</p>
 codes</strong>. These start with a # and are used to represent different
 colours in digital applications. Let’s instead change our colours to
 “#5AD9ED” and “#5AED9F” and see what happens:</p>
-<pre class="r"><code>ggplot(data = taylor) +
-  aes(x = fct_reorder(album,
+<pre class="r"><code>ggplot(data = amy) +
+  aes(x = fct_reorder(album_name,
                   ymd(release_date)),
       fill = mode) + 
   geom_bar(position = &quot;dodge&quot;) +
@@ -487,10 +491,10 @@ colours in digital applications. Let’s instead change our colours to
 <h2>Tidying up facets</h2>
 <p>Let’s revisit facets, by looking at how the distribution of keys
 varies across Taylor Swift albums.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album)</code></pre>
+  facet_wrap(~ album_name)</code></pre>
 <p>Any problems with this?</p>
 <p>One issue is that there’s several albums that don’t include every
 key. This isnt a problem per se, but you can imagine other settings
@@ -502,27 +506,20 @@ difficult to understand what’s going on in some facets.</p>
 <p>What we can do is free up the axes: x, y, or both. Here’s how we do
 it. Compare the following four options: which one works best? Which
 might work best in other contexts?</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album)
-
-ggplot(data = taylor) +
+  facet_wrap(~ album_name, 
+             scales = &quot;free_x&quot;)</code></pre>
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album, 
-             scales = &quot;free_x&quot;)
-
-ggplot(data = taylor) +
+  facet_wrap(~ album_name, 
+             scales = &quot;free_y&quot;)</code></pre>
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = key) +
   geom_bar() +
-  facet_wrap(~ album, 
-             scales = &quot;free_y&quot;)
-
-ggplot(data = taylor) +
-  aes(x = key) +
-  geom_bar() +
-  facet_wrap(~ album, 
+  facet_wrap(~ album_name, 
              scales = &quot;free&quot;)</code></pre>
 </div>
 <div id="who-likes-tufte" class="section level2">
@@ -533,16 +530,16 @@ ggplot2 would let me use the Tufte approach”. It’s easier to make your
 graphics look like Tufte’s if you’ve loaded the
 <strong>ggthemes</strong> package (which hopefully you were able to do
 from the start of this workshop).</p>
-<p>If you want to look at how the tempo across Taylor Swift’s different
+<p>If you want to look at how the tempo across Amy Winehouse’s different
 albums have varied, why not compare:</p>
-<pre class="r"><code>ggplot(data = taylor) +
-  aes(x = reorder(album, 
+<pre class="r"><code>ggplot(data = amy) +
+  aes(x = reorder(album_name, 
                   ymd(release_date)),
       y = tempo) +
   geom_boxplot() </code></pre>
 <p>with:</p>
-<pre class="r"><code>ggplot(data = taylor) +
-  aes(x = reorder(album, 
+<pre class="r"><code>ggplot(data = amy) +
+  aes(x = reorder(album_name, 
                   ymd(release_date)),
       y = tempo) +
   geom_tufteboxplot() </code></pre>
@@ -571,7 +568,7 @@ theme that you like the look of, there’s often a package available for
 that as well, you’ll just have to install it.</p>
 <p>Let’s say we want to tweak our last graph so that we lose the grey
 grid, swapping it for something a bit more minimal.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
       colour = acousticness) +
@@ -592,16 +589,16 @@ This isn’t a problem per se – sparse graphs are often clear graphs – but
 you might find yourself wondering how it is that you sometimes see
 graphics with text on them. This is broadly pretty easy to do in ggplot,
 and this is how.</p>
-<pre class="r"><code>ggplot(data = taylor) +
+<pre class="r"><code>ggplot(data = amy) +
   aes(x = tempo,
       y = danceability,
       colour = acousticness) +
   geom_point() +
   theme_light() +
   annotate(&quot;text&quot;, 
-           x=175, 
+           x=150, 
            y=0.8, 
-           label=&quot;No Taylor songs \n are both fast \n and danceable&quot;)</code></pre>
+           label=&quot;Few Amy Winehouse \nsongs are both \nfast and danceable&quot;)</code></pre>
 <p>Here, what I’ve done is add an annotate() in my ggplot2 code. You can
 see it needs four arguments: what kind of annotation it is, where it’s
 going on each of the x and y axes, and a label. (You’ll also note I’ve
@@ -634,18 +631,18 @@ computer I’m writing this handout on; I’ll also demonstrate this in the
 workshop.</p>
 <pre class="r"><code>setwd(&quot;~/Library/Mobile Documents/com~apple~CloudDocs/r/smi105-data_viz_materials/smi105-teaching-materials/week-05/handout&quot;)</code></pre>
 <p>Now I’ve done this, I can both load data from this folder, like so
-(imagine I’ve saved <strong>taylor.csv</strong> in this folder):</p>
-<pre class="r"><code>taylor_again &lt;- read_csv(&quot;taylor.csv&quot;)</code></pre>
+(imagine I’ve saved <strong>amy.csv</strong> in this folder):</p>
+<pre class="r"><code>amy_again &lt;- read_csv(&quot;amy.csv&quot;)</code></pre>
 <p>but I can also <em>save</em> the graphic I plotted most recently:</p>
-<pre class="r"><code>ggsave(&quot;taylor_plot_01.png&quot;)</code></pre>
+<pre class="r"><code>ggsave(&quot;amy_plot_01.png&quot;)</code></pre>
 <p>You’ll note this is fairly sparse. The <strong>ggsave</strong>
 command is flexible, but simple to use if you want it to be. (I normally
 want it to be simple.) One thing you’ll sometimes want to do is change
 the dimensions of the graph – maybe you want a long and thin graph,
-maybe you want a short and fit graph. By default ggsave uses inches as
+maybe you want a short and fat graph. By default ggsave uses inches as
 its units, but you can tweak this. Here’s how you can change the
 dimensions of a graph.</p>
-<pre class="r"><code>ggsave(&quot;taylor_plot_01.png&quot;, width = 10, height = 5)</code></pre>
+<pre class="r"><code>ggsave(&quot;amy_plot_01.png&quot;, width = 10, height = 5)</code></pre>
 <p>And so on. (You can also export to different file formats, like .jpg,
 and .eps; if you want to do this, just change the file extension in the
 command.)</p>
@@ -659,8 +656,8 @@ last part of this session, I’ll demonstrate how this works.</p>
 </div>
 <div id="task" class="section level2">
 <h2>Task</h2>
-<p>No task this week – you’ve got an assessment due in for me soon, so
-please dedicate the rest of the week to working on that assessment.</p>
+<p>No task this week – you’ve got an assessment due in soon, so please
+dedicate the rest of the week to working on that assessment.</p>
 </div>
 
 

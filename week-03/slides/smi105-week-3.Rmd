@@ -1,5 +1,5 @@
 ---
-title: "EDC101: Week 3 Data Storytelling"
+title: "EDC117: Week 3 Data Storytelling"
 subtitle: ""  
 author: 
   - "Dr. Calum Webb"
@@ -33,7 +33,7 @@ decktape generic --key=ArrowRight --load-pause 1800 --slides '1-29' --size '1216
 <br><br>
 
 # Data Storytelling
-#### EDC101: Week 3
+#### EDC117: Week 3
 
 <br><br>
 
@@ -714,16 +714,16 @@ We can think of a story of having a few essential components:
 
 .pull-right[
 
+<br><br>
 
 <center>
-<iframe width="252" height="450"
-src="https://www.youtube.com/embed/sdLqIvHxyA0"
+<iframe width="450" height="252"
+src="https://www.youtube.com/embed/F6IUicQaLAY?si=uqJL_eQbbo2WjZY-&start=36&end=88"
 title="YouTube video player"
 frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen></iframe>
 </center>
-
 
 ]
 
