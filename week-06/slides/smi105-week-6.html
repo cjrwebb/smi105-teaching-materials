@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>EDC117: Week 6 Social Research Methods</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Calum Webb" />
+    <meta name="date" content="2026-11-01" />
+    <script src="smi105-week-6_files/header-attrs/header-attrs.js"></script>
+    <link href="smi105-week-6_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="smi105-week-6_files/tile-view/tile-view.js"></script>
+    <link href="smi105-week-6_files/panelset/panelset.css" rel="stylesheet" />
+    <script src="smi105-week-6_files/panelset/panelset.js"></script>
+    <script src="smi105-week-6_files/xaringanExtra-progressBar/progress-bar.js"></script>
+    <link href="smi105-week-6_files/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script src="smi105-week-6_files/clipboard/clipboard.min.js"></script>
+    <link href="smi105-week-6_files/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="smi105-week-6_files/shareon/shareon.min.js"></script>
+    <link href="smi105-week-6_files/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="smi105-week-6_files/xaringanExtra-shareagain/shareagain.js"></script>
+    <script src="smi105-week-6_files/mark.js/mark.min.js"></script>
+    <link href="smi105-week-6_files/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="smi105-week-6_files/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: middle, title
+background-size: contain
+
+&lt;!----- Make a pdf using:
+
+decktape generic --key=ArrowRight --load-pause 1800 --slides '1-53' --size '1216x684' --url-load-timeout 80000 --page-load-timeout 40000 "week-05/slides/smi105-week-5.html" week-05/slides/smi105-week-5.pdf
+
+-----&gt;
+
+
+&lt;br&gt;&lt;br&gt;
+
+# Social Research Methods
+#### EDC117: Week 6
+
+&lt;br&gt;&lt;br&gt;
+
+**Dr. Calum Webb**&lt;br&gt;
+Sheffield Methods Institute, the University of Sheffield&lt;br&gt;
+[c.j.webb@sheffield.ac.uk](mailto:c.j.webb@sheffield.ac.uk)
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 180px;
+height: 128px;
+z-index: 0;
+background-image: url(header/smi-logo-white.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:2em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+
+
+
+<style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #F8F8F8;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+
+
+
+---
+
+class: middle, inverse
+
+# Sign in
+
+---
+
+class: middle
+
+## Learning outcomes
+
+.panelset[
+
+.panel[.panel-name[What will I learn?]
+
+By the end of this week you will know:
+
+* How data is systematically collected by social researchers according to different aims and the paradigms of quantitative and qualitative social research.
+
+* What kinds of methods are typical in quantitative and qualitative research, and how do researchers ensure they are being ethical when they conduct research.
+
+* How can data visualisation fit into qualitative and quantitative approaches to social research
+
+* How can we process qualitative data in R in a way that we can quantify and visualise topics and sentiments.
+
+]
+]
+
+---
+
+class: inverse, middle
+
+#### Part I
+
+# Where does our data come from? Introduction to Social Research Methods
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Quantitative Research
+
+Quantitative research describes an approach where researchers find ways to quantify what they are interested in through operationalisation of concepts, so that statistical methods can be used to identify patterns, test hypotheses, and establish the size and scale of the topic concerned. It is typically *deductive* in its approach, the researcher starts with an idea, develops a way to test it, collects data, and then performs their analysis and publishes their results.
+
+.footnote[Bryman, Alan (2012). Social research methods (4th ed.). Oxford: Oxford University Press.]
+
+]
+
+--
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Qualitative Research
+
+Qualitative research describes an approach that is associated with research that involves in-depth engagement with the phenomena of interest and the systematic collection and analysis of large quantities of unstructured data in the form of text, case studies, conversations, records of experiences and social interactions, historical accounts, and so on, in order to develop rich descriptions and 'make sense of' things through the meanings people give to them. 
+
+
+.footnote[Denzin NK, Lincoln YS, editors. The Sage handbook of qualitative research. Thousand Oaks: SAGE Publications; 2005]
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Same topic, different approaches...
+
+How might we approach the same problem in different ways in a quantitative versus qualitative approach? We'll use a case study example throughout the lecture based on the following research question:
+
+&gt; In what ways might the proliferation of data centres impact society?
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class="figure"&gt;
+&lt;img src="images/herts-dc.png" alt="A data centre in Heretfordshire" width="100%" /&gt;
+&lt;p class="caption"&gt;Source: &lt;a href='https://www.bbc.co.uk/news/articles/clyr9nx0jrzo' target='_blank'&gt;BBC News. (2025).&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Same topic, different approaches...
+
+How might we approach the same problem in different ways in a quantitative versus qualitative approach? We'll use a case study example throughout the lecture based on the following research question:
+
+&gt; In what ways might the proliferation of data centres impact society?
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## A quantitative approach...
+
+In what ways can we measure data centres and their proliferation? 
+
+
+|Measuring Data Centres                           |
+|:------------------------------------------------|
+|Number of Data Centres                           |
+|Square footage of data centres                   |
+|Amount of social media posts online              |
+|Number of planning applications for data centres |
+|Power usage of data centres                      |
+
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Same topic, different approaches...
+
+How might we approach the same problem in different ways in a quantitative versus qualitative approach? We'll use a case study example throughout the lecture based on the following research question:
+
+&gt; In what ways might the proliferation of data centres impact society?
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## A quantitative approach...
+
+How about impact on society? How might we quantify and measure that? 
+
+
+|Measuring Impact on Society                                      |
+|:----------------------------------------------------------------|
+|Economic impact of data centres                                  |
+|Ecological impact of data centres (water quality, noise levels)  |
+|Concurrence with poverty rates, job losses or growth             |
+|Whether social media posts are positive or negative              |
+|House prices near data centres                                   |
+|Numbers of rallies and protests against data centre construction |
+
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Same topic, different approaches...
+
+How might we approach the same problem in different ways in a quantitative versus qualitative approach? We'll use a case study example throughout the lecture based on the following research question:
+
+&gt; In what ways might the proliferation of data centres impact society?
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## A quantitative approach...
+
+If we collect data on these things, what kinds of hypotheses could we test and what would this tell us about the topic?
+
+* Is there an association between the number of data centres built and the existing poverty rate? Are communities with high rates of poverty more likely to have data centres imposed on them?
+* Do towns where a data centre has been built see a decrease in their rates of unemployment five years after construction, compared to towns with comparable starting levels of unemployment that did not have data centres constructed?
+* As data centres have become more frequently talked about, has the average attitudes towards them become more negative or more positive on social media?
+
+
+]
+
+---
+
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Same topic, different approaches...
+
+How might we approach the same problem in different ways in a quantitative versus qualitative approach? We'll use a case study example throughout the lecture based on the following research question:
+
+&gt; In what ways might the proliferation of data centres impact society?
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;
+
+## A qualitative approach
+
+A qualitative approach may emphasise *induction*, rather than deduction. In other words, a qualitative approach may start by thinking about questions like:
+
+* What are my own experiences of and attitudes towards data centres? Where are my blind spots?
+* How can I access people who make decisions regarding data centres, their locations, their impact and regulation?
+* How can I access people who are affected by their construction? Where do I need to be?
+* How might what I hear or observe be different depending on the way that I approach the research? 
+* How much time can I realistically spend in the field (not a literal one) gathering data?
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Same topic, different approaches...
+
+How might we approach the same problem in different ways in a quantitative versus qualitative approach? We'll use a case study example throughout the lecture based on the following research question:
+
+&gt; In what ways might the proliferation of data centres impact society?
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+## A qualitative approach
+
+&lt;img src="images/qualprocess.png" alt="A flowchart of a qualitative research planning thought process that goes: 'I can speak to people who are impacted about their experiences', 'But that doesn’t give me the full experience of what it’s like living next to a data centre', 'I could stay for a while in the town and record my experiences and how I feel living and working near the data centre', 'But just staying here a while doesn’t mean I know what it’s like to live here long term', 'I could collate records of town meetings over the past several years as data and analyse them to better understand the history leading up to the construction'" width="70%" style="display: block; margin: auto;" /&gt;
+
+We might then think about how we could undertake our research in a way that maximises the richness of our data.
+
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Same topic, different approaches...
+
+How might we approach the same problem in different ways in a quantitative versus qualitative approach? We'll use a case study example throughout the lecture based on the following research question:
+
+&gt; In what ways might the proliferation of data centres impact society?
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;
+
+## A qualitative approach
+
+Once this data has been collected, there needs to be a systematic approach to analysing it in a way that helps us identify and construct themes that help us (and the audience for our research) understand the topic. This is typically called the 'coding' of the data, and there are many different approaches.
+
+* Are there similar themes that come up often through what people say, do, and the contexts surrounding them?
+* Are there wider narratives and are these the same for everyone I spoke to? Are they consistent with my own experiences or the data that wasn't based on my presence? Did different people attach different meanings to the same events? Why might this be?
+* Can some of the subjects of my data serve as informative case studies for how people think about and react to the building of data centres?
+
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Typical Methods in Quantitative Research
+
+* **Surveys** (closed questions) distributed to representative samples of a wider population (e.g. voters).
+* **Observation** (counting occurrences or gathering data on what is 'left behind' via unobtrusive methods) can be by the researcher, or by sensors/other means, e.g. traffic violations/near misses, time spent interacting with an exhibit, smart-watch data on biometrics, social media posts, etc.
+* **Secondary data analysis of administrative data** (data that is collected for some other purpose, but can be valuable for research) — rates of people receiving unemployment-related benefits, school attendance rates, etc.
+* **Experiments and quasi-experimental designs** (manipulating something of interest in a treatment group, and comparing to a control group), e.g. A.B. testing in social media such as Youtube video thumbnails and measuring click-through.
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/YouGove-Main-Screen.jpeg" alt="A screenshot of the Yougov App main page" width="45%" /&gt;
+&lt;p class="caption"&gt;YouGov, a Major Survey Company&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/fieldnotes.png" alt="Image of someone taking fieldnotes" width="70%" /&gt;
+&lt;p class="caption"&gt;Photo by Stephen Astu, Unsplash&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+## Typical Methods in Qualitative Research
+
+* **Surveys** (open questions) free-text responses that allow participants to answer in whatever way they want in writing.
+* **Interviews and focus groups**, asking people directly about the topic and allowing rich narratives to be developed through dialogue.
+* **Ethnography/Observation** recording what happens in the field (including online spaces), what was said, and the researchers' own experiences/feelings about what is happening.
+* **Diary methods** (asking participants to record their experiences, thoughts, feelings over time), can be through video, text, photographs, etc.
+* **Secondary analysis of text** (text here can also mean video, photographs, etc.) — examples include qualitative data repositories like Qualibank (UK Data Service), document analysis, and so on.
+
+
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+# Let's do a survey where we have open and closed questions...
+
+* The first question is a **closed** response question because the researcher has decided beforehand that you can only identify as someone who 'lived in Sheffield already' or as someone who 'lived outside of Sheffield' — there is not much room of nuance.
+
+* The remaining questions are **open** response questions because you are able to answer however you like.
+
+We'll use the results to create some plots in the workshop on Thursday.
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="smi105-week-6_files/figure-html/unnamed-chunk-7-1.png" alt="QR Code for an online survey" width="450" height="450" /&gt;
+&lt;p class="caption"&gt;Our survey: &lt;a href='https://forms.gle/z5kSeGMFG4Yz7HrL8' target='_blank'&gt;https://forms.gle/z5kSeGMFG4Yz7HrL8&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
+---
+
+# Some Strengths and Weaknesses of Research Design
+
+.pull-left[
+
+### Quantitative Social Research Methods
+
+**What can be easier?**
+
+* *Reliability*: The research design is easier to replicate and apply in different circumstances, with different people, to test whether we find similar things each time.
+* *Generalisability*: We can design studies in a way that means our participants are reflective of a wider group we are interested in, and use statistical techniques to account for the impact of sampling variability.
+* *Time and cost*
+
+**What can be more challenging?**
+
+* *Validity*: the ways participants can express themselves is limited by the need to restrict responses in ways that can be represented quantitatively (into mutually exclusive groups, or numbered ranges, etc.)
+
+]
+
+--
+
+.pull-right[
+
+### Qualitative Social Research Methods
+
+**What can be easier?**
+
+* *Validity*: Participants are able to express themselves in ways that are authentic to them, through a variety of different mediums, so data is more likely to represent their actual beliefs and feelings about something.
+* *Identifying the "how" and "why"*: The flexibility of qualitative methods enables researchers to explore narratives and individual histories to better describe social processes.
+
+**What can be more challenging?**
+
+* *Reliability &amp; generalisation*: The nature of qualitative research (richness of data and number of participants) means it can be difficult to be confident that our findings extent to all instances of the social phenomena.
+
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+# Research Ethics
+
+Ethical review ensures that research does not breach peoples' legal and human rights.
+
+* **Anonymity**: The right to respect for private and family life (Article 8 ECHR, GDPR, UK GDPR)
+* **Informed consent**: Participants must be informed of the purpose for which the data is being collected so that they can knowingly consent to its collection and use (GDPR, UK GDPR)
+* **Right to Withdraw**: When consent is given, participants must be able to freely withdraw that consent to prevent further processing of personally identifying information or their participation (Articles 17 to 19 GDPR)
+* **Prevention of harm**: participants should not be subject to harmful, degrading, or inhumane treatment in research, and any risk of harm should be clearly communicated to participants and managed.
+
+
+]
+
+--
+
+.pull-right[
+
+# &amp;nbsp;
+
+&lt;br&gt;
+
+**Beyond legal requirements**, ethics in research also includes considerations and questions about social responsibility and harm:
+
+* Is our research representative of the diversity of people affected by an issue?
+* Are our research methods transparent, well-documented, reproducible, and open for scrutiny and critique?
+* When we publish our research, are some groups of people likely to be put at risk of harm than others?
+* Are our research methods exploitative of our research participants — is it ethical for me to build my career on the time and contributions of my participants, who may be vulnerable? Can I empower those participants? (see: Participatory research).
+
+]
+
+---
+
+class: inverse, middle
+
+#### Part II
+
+# Data Visualisation in Social Research
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+# Data visualisation in social research
+
+**What can our data visualisations add to social research?** 
+
+* The data visualisations we have been making so far come from the **quantitative** side of social research.
+
+* Data visualisations can help **draw attention to an issue** initially, so that people engage with the stories and themes that come from our qualitative reserach.
+
+* Data visualisations can also be used as a form of **elicitation** when conducting qualitative research. We can use them as an *object* to prompt peoples' opinions and thoughts.
+
+]
+
+--
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-6_files/figure-html/unnamed-chunk-8-1.png" alt="A scatterplot showing a slight negative correlation between state GDP per capita and the Data Centre footprint relative to the size of the state. Virginia is shown as an outlier with 288 data centres, compared to the next highest state of Oregon with 91 data centres." width="500" height="500" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+# 'Futuring the Cloud' by Madelyn Zander (2024)
+
+&gt; Research Question: "What are the daily experiences of individuals who live alongside large-scale data center developments?"
+
+* North Virginia
+* 56 semi-structured formal interviews (30-90 minutes)
+* 63 spontaneous/unplanned interviews (up to 30 minutes in length)
+* Ethnography (walking around the area, attending committee meetings, signing up to email groups)
+* Document review (reviewing planning applications, laws and byelaws, proceedings, promotional and activist materials, historical accounts, media coverage)
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-6_files/figure-html/unnamed-chunk-9-1.png" alt="A scatterplot showing a slight negative correlation between state GDP per capita and the Data Centre footprint relative to the size of the state. Virginia is shown as an outlier with 288 data centres, compared to the next highest state of Oregon with 91 data centres." width="500" height="500" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+# 'Futuring the Cloud' by Madelyn Zander (2024)
+
+&lt;br&gt;
+
+&gt; "We are selling the town soul for uncertain data center tax revenues;" Alec remarked that "everyone thinks the money will magically appear tomorrow and fix everything, but look at Gainesville [a nearby community], that project was passed two years ago, and the building isn’t even finished." p. 143
+
+&amp;nbsp;
+
+&gt; “I no longer enjoy tending to my garden. It’s like I live next to a busy highway now. We can’t be expected to live like this.” Martha, pp.153-154
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-6_files/figure-html/unnamed-chunk-10-1.png" alt="A scatterplot showing a slight negative correlation between state GDP per capita and the Data Centre footprint relative to the size of the state. Virginia is shown as an outlier with 288 data centres, compared to the next highest state of Oregon with 91 data centres." width="500" height="500" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+# 'Futuring the Cloud' by Madelyn Zander (2024)
+
+"In addition to simply filing noise complaints and noise pollution violations—making their own kind of noise—community members are engaging in what I consider to be an important form of activism and community-based knowledge production—what many environmental justice scholars term “citizen science” (Ottinger, 2010). ... John, the same community member who conducted a financial study of the Digital Gateway, conducted a noise study to challenge the findings of a large corporation. Through their own instruments and analyses, and even by bringing their everyday experiences to the Board, the opposition sought recognition by government officials, for their concerns to be taken seriously enough to influence local policy and regulation of data center noise." (p.157) **Zander (2024) discussing the theme of citizen science that they identified in their qualitative data.**
+
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;img src="smi105-week-6_files/figure-html/unnamed-chunk-11-1.png" alt="A scatterplot showing a slight negative correlation between state GDP per capita and the Data Centre footprint relative to the size of the state. Virginia is shown as an outlier with 288 data centres, compared to the next highest state of Oregon with 91 data centres." width="500" height="500" style="display: block; margin: auto;" /&gt;
+
+]
+
+???
+
+Zander, M. (2024). Futuring the Cloud: An Ethnographic Study of Critical Data Center Infrastructure Growth, Environmental Threat, and Community Risk. Doctoral Thesis. University of Colorado Boulder. 31239000
+
+Data centres and poverty example
+
+North Virginia
+56 semi-structured formal interviews (30-90 minutes)
+63 spontaneous/unplanned interviews (up to 30 minutes in length)
+Ethnography (walking around the area, attending committee meetings, signing up to email groups)
+Document review (reviewing planning applications, laws and byelaws, proceedings, promotional and activist materials, historical accounts, media coverage)
+
+
+"We are selling the town soul for uncertain data center tax revenues;" Alec remarked that "everyone thinks the money will magically appear tomorrow and fix everything, but look at Gainesville [a nearby community], that project was passed two years ago, and the building isn’t even finished." p. 143
+
+"I do not understand why the study and the county is looking at how much land we will ‘need’ for data centers. Can you explain why the study didn’t focus on how much we want?" Abby, p.151
+
+“I no longer enjoy tending to my garden. It’s like I live next to a busy highway now. We can’t be expected to live like this.” Martha, pp.153-154
+
+
+Example of constructing themes (citizen science):
+
+In addition to simply filing noise complaints and noise pollution violations—making their own kind of noise—community members are engaging in what I consider to be an important form of activism and community-based knowledge production—what many environmental justice scholars term “citizen science” (Ottinger, 2010). Ottinger (2010) defines citizen science as the “knowledge production by, and for, nonscientists” that can contribute to environmental decision
+making, the formation of more robust and democratic policy (Fischer, 2000; Irwin, 2001, and to influence the research directions of science to be “more responsive to broad social concerns rather than the specific interests of elites” (Hess, 2007; Martin, 2006; Ottinger, 2010). John, the same community member who conducted a financial study of the Digital Gateway, conducted a noise study to challenge the findings of a large corporation. Through their own instruments and analyses, and even by bringing their everyday experiences to the Board, the opposition sought
+recognition by government officials, for their concerns to be taken seriously enough to influence local policy and regulation of data center noise. p.157
+
+The very notion that my informants conducted a noise study at all suggests something important: the need to substantiate the everyday material realities of the cloud to shape how the industry is governed and to shape how it is imagined at the state and national levels. Some scholars suggest that environmental monitoring and data collection by citizens (the citizen science) can be better understood as a form of organizing or a mechanism for political accountability, rather than as an epistemic intervention (p.158)
+
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Visual methods in qualitative research vs. visualisation of qualitative data
+
+In this module, we're going to be learning how we can apply the quantitative-based methods for visualising data to open-text qualitative data responses. 
+
+**This is not a replacement for qualitative analysis of data**. As you will see on Thursday, we lose nuance, context, and can often make some errors in interpretation when our data is processed so heavily. 
+
+What it *can* be is engaging for audiences, or somewhat informative in very, very large corpuses of data (e.g. for observing how sentiment changes over many thousands of lines of text over a long time or body of work).
+
+]
+
+
+.pull-right[
+
+&lt;br&gt;
+
+When we apply conventional data visualisation to qualitative data we go from this...
+
+.grey[
+
+After the fact, after the complaints, after the publicity. Palms got greased, because I guarantee the community didn't vote for that. And I'm sure those property values no longer exist.  These pieces of shit are here to destroy us, then fly off with their golden parachutes once the damage has been done. This shit should be illegal. your own city and town officials are selling you out and not losing a second of sleep over it. y'all think trump is bad, these people are trump x1000 in your own back yards. Why don't local governments respect the wishes of their constituents? You guys need to understand that this is a total obliteration plan concocted purely by billionaires, and they’re honest plan is to make human race stupid and as incompetent as possible. This is why you see AI being pushed so much. This is why you see data centers being built all over the place. It is to achieve A world deliberately meant to disrupt mess up, stress out, and irrationalize your life and your composure/ mental health. It's sad as this was a pretty area. Now it is just dozens of Amazon and other's data centers and expanding. So much for all that farm land. Man, this shit is criminal. The good Ole American south being a completely dogshit place to live business as usual ...
+]
+
+]
+
+---
+
+.pull-left[
+
+&lt;br&gt;
+
+## Visual methods in qualitative research vs. visualisation of qualitative data
+
+In this module, we're going to be learning how we can apply the quantitative-based methods for visualising data to open-text qualitative data responses. 
+
+**This is not a replacement for qualitative analysis of data**. As you will see on Thursday, we lose nuance, context, and can often make some errors in interpretation when our data is processed so heavily. 
+
+What it *can* be is engaging for audiences, or somewhat informative in very, very large corpuses of data (e.g. for observing how sentiment changes over many thousands of lines of text over a long time or body of work).
+
+]
+
+
+.pull-right[
+
+&lt;br&gt;
+
+To this...
+
+.grey[
+
+&lt;img src="smi105-week-6_files/figure-html/unnamed-chunk-13-1.png" alt="" width="500" height="450" /&gt;
+]
+
+]
+
+---
+
+.pull-left-small[
+
+&lt;br&gt;
+
+## Visual methods in qualitative research vs. visualisation of qualitative data
+
+Qualitative methods also frequently incorporate visual mediums into the research process, as visual artefacts are often meaningful to participants or effective in communicating their thoughts, feelings, or opinions on subjects.
+
+This is often about **layering additional richness and complexity** rather than simplifying it for the purpose of summarisation or the identification of trends.
+
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/jcrm-02-01-132_if006.jpg" alt="Extracts from two zine research projects" width="40%" /&gt;&lt;img src="images/jcrm-02-01-132_if013.jpg" alt="Extracts from two zine research projects" width="40%" /&gt;
+&lt;p class="caption"&gt;Wong, M., Mishra, A., &amp; Quyoum, A. (2026). ‘Zine-ing’ research otherwise: care, joy, and creative co-design with racially marginalised communities. Journal of Creative Research Methods, 2(1), 132-165.&lt;/p&gt;
+&lt;/div&gt;
+
+
+]
+
+---
+
+.pull-left-small[
+
+&lt;br&gt;
+
+## Visual methods in qualitative research vs. visualisation of qualitative data
+
+Qualitative methods also frequently incorporate visual mediums into the research process, as visual artefacts are often meaningful to participants or effective in communicating their thoughts, feelings, or opinions on subjects.
+
+This is often about **layering additional richness and complexity** rather than simplifying it for the purpose of summarisation or the identification of trends.
+
+
+]
+
+.pull-right-big[
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/pearce.png" alt="Screenshot of composite images from social media sites about climate change." width="100%" /&gt;
+&lt;p class="caption"&gt;Pearce W, Özkula SM, Greene AK, Teeling L, Bansard JS, Omena JJ &amp; Rabello ET (2020) Visual cross-platform analysis: digital methods to research social media images. Information, Communication &amp; Society, 23(2), 161-180.&lt;/p&gt;
+&lt;/div&gt;
+
+
+]
+
+
+---
+
+# The rest of this week:
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;
+
+**This week's workshop**:
+
+Now that you have a strong foundation in creating and customising ggplot data visualisations, from this week onwards we'll be making our workshops more about building the more advanced skills you'll need in order to succeed in your second and final assessment. The second assessment will require you to engage with real-world data, so we'll be introducing: a) more ways of visualising data that are often very flexible and b) crucial data tidying and ingestion skills. Some of this stuff will be complex, but you do not need to master **all** of it to do very well in your assessment. 
+
+We are going to be taking our survey responses about Sheffield from the lecture and then visualising the topics and sentiments in wordclouds and sentiment bar plots.
+
+
+]
+
+--
+
+.pull-right[
+
+**Before week 7**:
+
+Core tasks:
+
+* Before workshop: Work through the task at the end of the workshop handout
+
+Supplementary tasks:
+
+* Read Chalabi, M. and Gray, J. Sketching With Data The Data Journalism Handbook 2 pages 108-114
+
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "slideNumberFormat": "%current%",
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "sealed": false,
+  "ratio": "16:9",
+  "self_contained": true,
+  "countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<style>
+.my-header {
+	background-color: #440099;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 70px;
+	width: 100%;
+	text-align: left;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.inverse)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="my-header"></div>';
+  });
+</script>
+
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

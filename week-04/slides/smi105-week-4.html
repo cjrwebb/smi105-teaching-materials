@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>EDC101: Week 4 Chart Types</title>
+    <title>EDC117: Week 4 Chart Types</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Calum Webb" />
-    <meta name="date" content="2026-03-19" />
+    <meta name="date" content="2026-10-14" />
     <script src="smi105-week-4_files/header-attrs/header-attrs.js"></script>
     <link href="smi105-week-4_files/tile-view/tile-view.css" rel="stylesheet" />
     <script src="smi105-week-4_files/tile-view/tile-view.js"></script>
@@ -58,7 +58,7 @@ decktape generic --key=ArrowRight --load-pause 1800 --slides '1-47' --size '1216
 &lt;br&gt;&lt;br&gt;
 
 # Chart Types
-#### EDC101: Week 4
+#### EDC117: Week 4
 
 &lt;br&gt;&lt;br&gt;
 
@@ -189,7 +189,7 @@ Datasets, variables, types of variables
 ### This is a **dataset**
 
 .center[
-&lt;img src="images/terminology-1-dataset.png" width="90%" /&gt;
+&lt;img src="images/terminology-1-dataset.png" alt="" width="90%" /&gt;
 ]
 
 
@@ -198,7 +198,7 @@ Datasets, variables, types of variables
 ### Each **row** is an **observation**, e.g. a song, person, measurement at a specific time
 
 .center[
-&lt;img src="images/terminology-2-observations.png" width="90%" /&gt;
+&lt;img src="images/terminology-2-observations.png" alt="" width="90%" /&gt;
 ]
 
 ---
@@ -206,7 +206,7 @@ Datasets, variables, types of variables
 ### Each **column** is a **variable**, e.g. the name of the song, the tempo, etc.
 
 .center[
-&lt;img src="images/terminology-3-variables.png" width="90%" /&gt;
+&lt;img src="images/terminology-3-variables.png" alt="" width="90%" /&gt;
 ]
 
 ---
@@ -214,7 +214,7 @@ Datasets, variables, types of variables
 ### Each **cell** is a **value**, e.g. the duration of the song *for this observation*
 
 .center[
-&lt;img src="images/terminology-4-values.png" width="90%" /&gt;
+&lt;img src="images/terminology-4-values.png" alt="" width="90%" /&gt;
 ]
 
 
@@ -230,7 +230,7 @@ class: middle
 background-color: white
 
 .center[
-&lt;img src="images/continuous-ordinal-categorical.png" width="80%" /&gt;
+&lt;img src="images/continuous-ordinal-categorical.png" alt="" width="80%" /&gt;
 ]
 
 .footnote[Art by Allison Horst]
@@ -241,7 +241,7 @@ background-color: white
 ### Examples of **categorical** variables might be track name, whether it is explicit, or album name
 
 .center[
-&lt;img src="images/terminology-5-categorical.png" width="90%" /&gt;
+&lt;img src="images/terminology-5-categorical.png" alt="" width="90%" /&gt;
 ]
 
 
@@ -250,7 +250,7 @@ background-color: white
 ### Examples of **ordinal** variables might be time signature or track number
 
 .center[
-&lt;img src="images/terminology-6-ordinal.png" width="90%" /&gt;
+&lt;img src="images/terminology-6-ordinal.png" alt="" width="90%" /&gt;
 ]
 
 
@@ -259,7 +259,7 @@ background-color: white
 ### Examples of **continuous** variables might be duration or tempo
 
 .center[
-&lt;img src="images/terminology-7-continuous.png" width="90%" /&gt;
+&lt;img src="images/terminology-7-continuous.png" alt="" width="90%" /&gt;
 ]
 
 ---
@@ -269,7 +269,7 @@ background-color: white
 ### &lt;br&gt;
 
 .center[
-&lt;img src="images/three-runners-1.svg" width="60%" /&gt;
+&lt;img src="images/three-runners-1.svg" alt="" width="60%" /&gt;
 ]
 
 ---
@@ -277,7 +277,7 @@ background-color: white
 ### One variable we might have for runners is finish time: this is continuous because we know that if Runner 2 was 30 seconds slower than Runner 1, and Runner 3 was 1 minute slower than Runner 2, Runner 3 was behind by twice as much. 1 second means the same thing. 
 
 .center[
-&lt;img src="images/three-runners-2.svg" width="60%" /&gt;
+&lt;img src="images/three-runners-2.svg" alt="" width="60%" /&gt;
 ]
 
 ---
@@ -285,7 +285,7 @@ background-color: white
 ### Another variable might be the placement of the runners: 1st, 2nd, 3rd. We know that runner 2 was slower than runner 1, but we don't know *how much by*. 1st, 2nd, and 3rd also means different things depending on the *race*. 3rd in a Park Run ≠ 3rd in Olympics.  This is ordinal.
 
 .center[
-&lt;img src="images/three-runners-3.svg" width="60%" /&gt;
+&lt;img src="images/three-runners-3.svg" alt="" width="60%" /&gt;
 ]
 
 
@@ -294,7 +294,7 @@ background-color: white
 ### Lastly, another variable we could have is the country the runner is representing. There is no inherent ordering to countries, any ordering would depend on some other external variable (such as alphabetical order). 
 
 .center[
-&lt;img src="images/three-runners-4.svg" width="60%" /&gt;
+&lt;img src="images/three-runners-4.svg" alt="" width="60%" /&gt;
 ]
 
 
@@ -334,7 +334,7 @@ These are data visualisations that are often driven by:
 
 .center[
 
-&lt;img src="images/tukey.jpg" width="70%" /&gt;
+&lt;img src="images/tukey.jpg" alt="" width="70%" /&gt;
 
 ]
 
@@ -350,14 +350,14 @@ class: middle
 
 ### One variable
 
-<div id="htmlwidget-c98603072006ea97de72" class="formattable_widget html-widget" style="width:100%;height:252px;" width="100%" height="252"></div>
-<script type="application/json" data-for="htmlwidget-c98603072006ea97de72">{"x":{"html":"<table class=\"table table-condensed\">\n <thead>\n  <tr>\n   <th style=\"text-align:right;\"> Variable Type <\/th>\n   <th style=\"text-align:right;\"> Visualisation <\/th>\n  <\/tr>\n <\/thead>\n<tbody>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Nominal   <\/span> <\/td>\n   <td style=\"text-align:right;\"> Bar Chart <\/td>\n  <\/tr>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Ordinal   <\/span> <\/td>\n   <td style=\"text-align:right;\"> Bar Chart <\/td>\n  <\/tr>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Continuous<\/span> <\/td>\n   <td style=\"text-align:right;\"> Histogram <\/td>\n  <\/tr>\n<\/tbody>\n<\/table>"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-582da14df4170079ffa4" class="formattable_widget html-widget" style="width:100%;height:252px;" width="100%" height="252"></div>
+<script type="application/json" data-for="htmlwidget-582da14df4170079ffa4">{"x":{"html":"<table class=\"table table-condensed\">\n <thead>\n  <tr>\n   <th style=\"text-align:right;\"> Variable Type <\/th>\n   <th style=\"text-align:right;\"> Visualisation <\/th>\n  <\/tr>\n <\/thead>\n<tbody>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Nominal   <\/span> <\/td>\n   <td style=\"text-align:right;\"> Bar Chart <\/td>\n  <\/tr>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Ordinal   <\/span> <\/td>\n   <td style=\"text-align:right;\"> Bar Chart <\/td>\n  <\/tr>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Continuous<\/span> <\/td>\n   <td style=\"text-align:right;\"> Histogram <\/td>\n  <\/tr>\n<\/tbody>\n<\/table>"},"evals":[],"jsHooks":[]}</script>
 
 
 ### Two variables
 
-<div id="htmlwidget-1a151ae3f84954c5fbe5" class="formattable_widget html-widget" style="width:100%;height:252px;" width="100%" height="252"></div>
-<script type="application/json" data-for="htmlwidget-1a151ae3f84954c5fbe5">{"x":{"html":"<table class=\"table table-condensed\">\n <thead>\n  <tr>\n   <th style=\"text-align:right;\"> Variable Type <\/th>\n   <th style=\"text-align:right;\"> Nominal <\/th>\n   <th style=\"text-align:right;\"> Ordinal <\/th>\n   <th style=\"text-align:right;\"> Continuous <\/th>\n  <\/tr>\n <\/thead>\n<tbody>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Nominal   <\/span> <\/td>\n   <td style=\"text-align:right;\"> Bivariate Bar Chart <\/td>\n   <td style=\"text-align:right;\">  <\/td>\n   <td style=\"text-align:right;\">  <\/td>\n  <\/tr>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Ordinal   <\/span> <\/td>\n   <td style=\"text-align:right;\"> Bivariate Bar Chart <\/td>\n   <td style=\"text-align:right;\"> Bivariate Bar Chart <\/td>\n   <td style=\"text-align:right;\">  <\/td>\n  <\/tr>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Continuous<\/span> <\/td>\n   <td style=\"text-align:right;\"> Boxplot <\/td>\n   <td style=\"text-align:right;\"> Boxplot <\/td>\n   <td style=\"text-align:right;\"> Scatterplot <\/td>\n  <\/tr>\n<\/tbody>\n<\/table>"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-170a763a260275626ab9" class="formattable_widget html-widget" style="width:100%;height:252px;" width="100%" height="252"></div>
+<script type="application/json" data-for="htmlwidget-170a763a260275626ab9">{"x":{"html":"<table class=\"table table-condensed\">\n <thead>\n  <tr>\n   <th style=\"text-align:right;\"> Variable Type <\/th>\n   <th style=\"text-align:right;\"> Nominal <\/th>\n   <th style=\"text-align:right;\"> Ordinal <\/th>\n   <th style=\"text-align:right;\"> Continuous <\/th>\n  <\/tr>\n <\/thead>\n<tbody>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Nominal   <\/span> <\/td>\n   <td style=\"text-align:right;\"> Bivariate Bar Chart <\/td>\n   <td style=\"text-align:right;\">  <\/td>\n   <td style=\"text-align:right;\">  <\/td>\n  <\/tr>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Ordinal   <\/span> <\/td>\n   <td style=\"text-align:right;\"> Bivariate Bar Chart <\/td>\n   <td style=\"text-align:right;\"> Bivariate Bar Chart <\/td>\n   <td style=\"text-align:right;\">  <\/td>\n  <\/tr>\n  <tr>\n   <td style=\"text-align:right;\"> <span style=\"font-weight: bold\">Continuous<\/span> <\/td>\n   <td style=\"text-align:right;\"> Boxplot <\/td>\n   <td style=\"text-align:right;\"> Boxplot <\/td>\n   <td style=\"text-align:right;\"> Scatterplot <\/td>\n  <\/tr>\n<\/tbody>\n<\/table>"},"evals":[],"jsHooks":[]}</script>
 
 
 ---
@@ -377,7 +377,7 @@ class: middle
 
 &lt;br&gt;
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-17-1.png" width="500" height="500" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-17-1.png" alt="" width="500" height="500" /&gt;
 
 
 ]
@@ -400,7 +400,7 @@ class: middle
 
 &lt;br&gt;
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-18-1.png" width="500" height="500" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-18-1.png" alt="" width="500" height="500" /&gt;
 
 
 ]
@@ -424,7 +424,7 @@ class: middle
 
 &lt;br&gt;
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-19-1.png" width="500" height="500" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-19-1.png" alt="" width="500" height="500" /&gt;
 
 
 ]
@@ -450,7 +450,7 @@ class: middle
 
 &lt;br&gt;
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-20-1.png" width="500" height="500" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-20-1.png" alt="" width="500" height="500" /&gt;
 
 
 ]
@@ -477,7 +477,7 @@ class: middle
 
 &lt;br&gt;
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-21-1.png" width="500" height="500" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-21-1.png" alt="" width="500" height="500" /&gt;
 
 
 ]
@@ -507,7 +507,7 @@ class: middle
 
 .center[
 
-&lt;img src="images/tukey.jpg" width="70%" /&gt;
+&lt;img src="images/tukey.jpg" alt="" width="70%" /&gt;
 
 ]
 
@@ -593,7 +593,7 @@ bar chart: `geom_col` / `geom_bar`
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-24-1.png" width="500" height="500" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-24-1.png" alt="" width="500" height="500" /&gt;
 
 ]
 
@@ -633,7 +633,7 @@ sunburst chart: `geom_col` / `geom_bar` + `coord_polar`
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-25-1.png" width="500" height="500" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-25-1.png" alt="" width="500" height="500" /&gt;
 
 ]
 
@@ -670,7 +670,7 @@ dumbbell chart: `geom_point` x2 + `geom_segment`
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-26-1.png" width="500" height="450" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-26-1.png" alt="" width="500" height="450" /&gt;
 
 ]
 
@@ -707,7 +707,7 @@ While the 'data-driven' approach to selecting a visualisation works well, we now
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-27-1.png" width="500" height="450" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-27-1.png" alt="" width="500" height="450" /&gt;
 
 ]
 
@@ -744,7 +744,7 @@ Donut Chart: Horizontal 100% Stacked Bar`geom_col/bar` + `coord_polar`
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-28-1.png" width="500" height="450" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-28-1.png" alt="" width="500" height="450" /&gt;
 
 ]
 
@@ -782,7 +782,7 @@ Dendrogram using `ggdendro`
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-29-1.png" width="500" height="500" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-29-1.png" alt="" width="500" height="500" /&gt;
 
 ]
 
@@ -820,7 +820,7 @@ Scatterplot: `geom_point`
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-30-1.png" width="500" height="500" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-30-1.png" alt="" width="500" height="500" /&gt;
 
 ]
 
@@ -858,7 +858,7 @@ Heatmap: `geom_tile`
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-31-1.png" width="500" height="450" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-31-1.png" alt="" width="500" height="450" /&gt;
 
 ]
 
@@ -895,7 +895,7 @@ Line plot: `geom_line` + `group`/`colour` `aes`
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-32-1.png" width="500" height="450" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-32-1.png" alt="" width="500" height="450" /&gt;
 
 ]
 
@@ -932,7 +932,7 @@ Line plot: `geom_line` + `group`/`colour` `aes`
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-33-1.png" width="500" height="450" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-33-1.png" alt="" width="500" height="450" /&gt;
 
 ]
 
@@ -970,7 +970,7 @@ Moving plot: `gganimate`
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-34-1.gif" width="500" height="450" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-34-1.gif" alt="" width="500" height="450" /&gt;
 
 ]
 
@@ -1009,7 +1009,7 @@ Choropleth: `geom_sf`
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-35-1.png" width="500" height="450" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-35-1.png" alt="" width="500" height="450" /&gt;
 
 ]
 
@@ -1047,7 +1047,7 @@ Dorling Cartogram: `cartogram` package &amp; `geom_sf`
 
 .center[
 
-&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-36-1.png" width="500" height="450" /&gt;
+&lt;img src="smi105-week-4_files/figure-html/unnamed-chunk-36-1.png" alt="" width="500" height="450" /&gt;
 
 ]
 

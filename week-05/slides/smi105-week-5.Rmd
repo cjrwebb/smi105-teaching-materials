@@ -1,5 +1,5 @@
 ---
-title: "EDC101: Week 5 Visual design"
+title: "EDC117: Week 5 Visual design"
 subtitle: ""  
 author: 
   - "Dr. Calum Webb"
@@ -33,7 +33,7 @@ decktape generic --key=ArrowRight --load-pause 1800 --slides '1-53' --size '1216
 <br><br>
 
 # Visual Design
-#### EDC101: Week 5
+#### EDC117: Week 5
 
 <br><br>
 
@@ -3386,17 +3386,8 @@ We’ll begin by talking through your first assessment and address any questions
 
 .pull-right[
 
-Week 6 (next week) is a reading week. There is no lecture or workshop in week 6.
+**Before week 6**:
 
-
-**Before week 7**:
-
-**Core tasks**:
-
-* Before workshop: Work through the task at the end of the workshop handout
-
-**Supplementary tasks**:
-
-Before week 7 lecture: Read Chalabi, M. and Gray, J. Sketching With Data The Data Journalism Handbook 2 pages 108-114, available online here: https://s3.eu-central-1.amazonaws.com/datajournalismcom/handbooks/The-Data-Journalism-Handbook-2.pdf
+There are no homework tasks this week, as you should be working on your first assessment.
 
 ]

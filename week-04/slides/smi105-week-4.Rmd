@@ -1,5 +1,5 @@
 ---
-title: "EDC101: Week 4 Chart Types"
+title: "EDC117: Week 4 Chart Types"
 subtitle: ""  
 author: 
   - "Dr. Calum Webb"
@@ -33,7 +33,7 @@ decktape generic --key=ArrowRight --load-pause 1800 --slides '1-47' --size '1216
 <br><br>
 
 # Chart Types
-#### EDC101: Week 4
+#### EDC117: Week 4
 
 <br><br>
 
