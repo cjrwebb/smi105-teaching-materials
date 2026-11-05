@@ -512,10 +512,11 @@ comfortably, so let’s remove our slice() function at the same time:</p>
   count(word, sort = TRUE) %&gt;%
   ggplot() +
   aes(label = word, size = n) +
-  geom_text_wordcloud()</code></pre>
-<p>You might find that your wordcloud is a little too big or too small.
-We can adjust the size of the wordcloud using the scale_size_area()
-function. For example:</p>
+  geom_text_wordcloud(use_richtext = FALSE)</code></pre>
+<p>Note: we need to add use_richtext = FALSE to ensure this words on the
+university computers. You might find that your wordcloud is a little too
+big or too small. We can adjust the size of the wordcloud using the
+scale_size_area() function. For example:</p>
 <pre class="r"><code>survey %&gt;%
   select(time, resident, perfect_day) %&gt;%
   unnest_tokens(word, perfect_day) %&gt;%
@@ -523,7 +524,7 @@ function. For example:</p>
   count(word, sort = TRUE) %&gt;%
   ggplot() +
   aes(label = word, size = n) +
-  geom_text_wordcloud() +
+  geom_text_wordcloud(use_richtext = FALSE) +
   scale_size_area(max_size = 10)</code></pre>
 </div>
 <div id="visualising-sentiment-in-text-data" class="section level2">
@@ -589,7 +590,7 @@ colour of the word be relative to the sentiment.</p>
   inner_join(afinn, by = &quot;word&quot;) %&gt;%
   ggplot() +
   aes(label = word, size = n, colour = value) +
-  geom_text_wordcloud() +
+  geom_text_wordcloud(use_richtext = FALSE) +
   scale_size_area(max_size = 10) +
   scale_colour_gradient(low = &quot;navy&quot;, high = &quot;coral&quot;) </code></pre>
 </div>
@@ -652,7 +653,7 @@ differences in our word cloud:</p>
   count(word1, word2, sort = TRUE) %&gt;%
   ggplot() +
   aes(label = paste(word1, word2), size = n) +
-  geom_text_wordcloud()</code></pre>
+  geom_text_wordcloud(use_richtext = FALSE)</code></pre>
 </div>
 <div id="shaping-our-wordcloud" class="section level2">
 <h2>Shaping our wordcloud</h2>
@@ -674,7 +675,8 @@ geom_text_wordcloud() function. The built in shapes are: “circle”,
   count(word1, word2, sort = TRUE) %&gt;%
   ggplot() +
   aes(label = paste(word1, word2), size = n) +
-  geom_text_wordcloud(shape = &quot;diamond&quot;)</code></pre>
+  geom_text_wordcloud(use_richtext = FALSE,
+                      shape = &quot;diamond&quot;)</code></pre>
 <p><strong>We may need to skip over this part in the interest of
 time.</strong> We can also use images of with transparent backgrounds in
 order to force our wordcloud into any shape we like. The ggwordcloud
@@ -696,7 +698,7 @@ heart.</p>
   aes(label = paste(word1, word2), size = n) +
   geom_text_wordcloud_area(mask = png::readPNG(system.file(&quot;extdata/hearth.png&quot;,
       package = &quot;ggwordcloud&quot;, mustWork = TRUE
-    )), rm_outside = TRUE)</code></pre>
+    )), rm_outside = TRUE, use_richtext = FALSE)</code></pre>
 </div>
 <div id="back-to-sentiment-and-bigrams" class="section level2">
 <h2>Back to sentiment and bigrams</h2>
@@ -861,8 +863,8 @@ of results that weren’t quite right, for example, we were picking up
 could do is ask our local model to identify and summarise activities or
 events that people recommend in their responses.</p>
 <pre class="r"><code>response &lt;- quick_llama(survey$perfect_day, 
-                        max_tokens = 50, 
-                        system_prompt = &quot;You will be provided with survey responses about activities and places people recommend in Sheffield. For each response, extract the names of the places (other than Sheffield itself) and/or the activities in the response and separate multiple activities/places with commas. Never produce any additional information, only the names of places/activities. Ensure all names/places are in title case.&quot;, seed = 72, temperature = 0)
+                        max_tokens = 60, 
+                        system_prompt = &quot;You will be provided with survey responses about activities and places people recommend in Sheffield. For each response, only extract the names of the places (other than Sheffield itself) and/or the activities in the response and separate multiple activities/places with commas. Never produce any additional information, never write an introduction or explanation, or any other extra text, only the names of places/activities. Do not produce duplicates. Ensure all names/places are in title case. If there are no activities, events, or places, simply write NA. Follow these rules strictly.&quot;, seed = 117, temperature = 0.1, repeat_last_n = 6, penalty_repeat = 1.2, clean = TRUE, n_threads = 4, n_ctx = 6656)
 paste(response)</code></pre>
 <p>So, what are we doing here? Instead of writing out a single prompt,
 we are providing the model with all of our ‘perfect_day’ responses as
@@ -886,7 +888,7 @@ commas, using a slightly modified unnest_tokens() function</p>
   select(resident, recommendations) %&gt;%
   unnest_tokens(word, recommendations, 
                 token = &quot;regex&quot;, pattern = &quot;,&quot;, 
-                to_lower = FALSE) </code></pre>
+                to_lower = TRUE) </code></pre>
 <p>Lastly, this could use a little tidying up by removing the extra
 spaces. Then we’ll be ready to plot. We can do this using mutate() and
 the str_trim() function.</p>
@@ -897,13 +899,12 @@ the str_trim() function.</p>
   select(resident, recommendations) %&gt;%
   unnest_tokens(word, recommendations, 
                 token = &quot;regex&quot;, pattern = &quot;,&quot;, 
-                to_lower = FALSE) %&gt;%
+                to_lower = TRUE) %&gt;%
   mutate(
     word = str_trim(word)
   )</code></pre>
 <p>Now let’s finally make our word cloud of recommended places and
-activities, coloured by whether someone lived in Sheffield before their
-studies or not.</p>
+activities.</p>
 <pre class="r"><code>survey %&gt;%
   mutate(
     recommendations = paste(response)
@@ -911,14 +912,14 @@ studies or not.</p>
   select(resident, recommendations) %&gt;%
   unnest_tokens(word, recommendations, 
                 token = &quot;regex&quot;, pattern = &quot;,&quot;, 
-                to_lower = FALSE) %&gt;%
+                to_lower = TRUE) %&gt;%
   mutate(
     word = str_trim(word)
   ) %&gt;%
-  count(resident, word) %&gt;%
+  count(word) %&gt;%
   ggplot() +
-  aes(label = word, size = n, colour = resident) +
-  geom_text_wordcloud() +
+  aes(label = word, size = n) +
+  geom_text_wordcloud(use_richtext = FALSE) +
   scale_size_area(max_size = 10)</code></pre>
 <p>Not bad!</p>
 </div>

@@ -152,10 +152,10 @@ survey %>%
   count(word, sort = TRUE) %>%
   ggplot() +
   aes(label = word, size = n) +
-  geom_text_wordcloud()
+  geom_text_wordcloud(use_richtext = FALSE)
 ```
 
-You might find that your wordcloud is a little too big or too small. We can adjust the size of the wordcloud using the scale_size_area() function. For example:
+Note: we need to add use_richtext = FALSE to ensure this words on the university computers. You might find that your wordcloud is a little too big or too small. We can adjust the size of the wordcloud using the scale_size_area() function. For example:
 
 ```{r}
 survey %>%
@@ -165,7 +165,7 @@ survey %>%
   count(word, sort = TRUE) %>%
   ggplot() +
   aes(label = word, size = n) +
-  geom_text_wordcloud() +
+  geom_text_wordcloud(use_richtext = FALSE) +
   scale_size_area(max_size = 10)
 ```
 
@@ -224,7 +224,7 @@ survey %>%
   inner_join(afinn, by = "word") %>%
   ggplot() +
   aes(label = word, size = n, colour = value) +
-  geom_text_wordcloud() +
+  geom_text_wordcloud(use_richtext = FALSE) +
   scale_size_area(max_size = 10) +
   scale_colour_gradient(low = "navy", high = "coral") 
 ```
@@ -281,7 +281,7 @@ survey %>%
   count(word1, word2, sort = TRUE) %>%
   ggplot() +
   aes(label = paste(word1, word2), size = n) +
-  geom_text_wordcloud()
+  geom_text_wordcloud(use_richtext = FALSE)
 ```
 
 ## Shaping our wordcloud
@@ -300,7 +300,8 @@ survey %>%
   count(word1, word2, sort = TRUE) %>%
   ggplot() +
   aes(label = paste(word1, word2), size = n) +
-  geom_text_wordcloud(shape = "diamond")
+  geom_text_wordcloud(use_richtext = FALSE,
+                      shape = "diamond")
 ```
 
 **We may need to skip over this part in the interest of time.** We can also use images of with transparent backgrounds in order to force our wordcloud into any shape we like. The ggwordcloud packages comes with some of these built in, for example, if we wanted to make our wordcloud fit the shape of a heart (as much as possible, at least!), we can do this by providing the function with information about the image of a heart with a transparent background outside the heart. 
@@ -319,7 +320,7 @@ survey %>%
   aes(label = paste(word1, word2), size = n) +
   geom_text_wordcloud_area(mask = png::readPNG(system.file("extdata/hearth.png",
       package = "ggwordcloud", mustWork = TRUE
-    )), rm_outside = TRUE)
+    )), rm_outside = TRUE, use_richtext = FALSE)
 ```
 
 ## Back to sentiment and bigrams
@@ -465,8 +466,8 @@ Okay — how does this help us? Remember back when we tried to identify activiti
 
 ```{r}
 response <- quick_llama(survey$perfect_day, 
-                        max_tokens = 50, 
-                        system_prompt = "You will be provided with survey responses about activities and places people recommend in Sheffield. For each response, extract the names of the places (other than Sheffield itself) and/or the activities in the response and separate multiple activities/places with commas. Never produce any additional information, only the names of places/activities. Ensure all names/places are in title case.", seed = 72, temperature = 0)
+                        max_tokens = 60, 
+                        system_prompt = "You will be provided with survey responses about activities and places people recommend in Sheffield. For each response, only extract the names of the places (other than Sheffield itself) and/or the activities in the response and separate multiple activities/places with commas. Never produce any additional information, never write an introduction or explanation, or any other extra text, only the names of places/activities. Do not produce duplicates. Ensure all names/places are in title case. If there are no activities, events, or places, simply write NA. Follow these rules strictly.", seed = 117, temperature = 0.1, repeat_last_n = 6, penalty_repeat = 1.2, clean = TRUE, n_threads = 4, n_ctx = 6656)
 paste(response)
 ```
 
@@ -492,7 +493,7 @@ survey %>%
   select(resident, recommendations) %>%
   unnest_tokens(word, recommendations, 
                 token = "regex", pattern = ",", 
-                to_lower = FALSE) 
+                to_lower = TRUE) 
 ```
 
 Lastly, this could use a little tidying up by removing the extra spaces. Then we'll be ready to plot. We can do this using mutate() and the str_trim() function.
@@ -505,13 +506,13 @@ survey %>%
   select(resident, recommendations) %>%
   unnest_tokens(word, recommendations, 
                 token = "regex", pattern = ",", 
-                to_lower = FALSE) %>%
+                to_lower = TRUE) %>%
   mutate(
     word = str_trim(word)
   )
 ```
 
-Now let's finally make our word cloud of recommended places and activities, coloured by whether someone lived in Sheffield before their studies or not.
+Now let's finally make our word cloud of recommended places and activities.
 
 ```{r}
 survey %>%
@@ -521,14 +522,14 @@ survey %>%
   select(resident, recommendations) %>%
   unnest_tokens(word, recommendations, 
                 token = "regex", pattern = ",", 
-                to_lower = FALSE) %>%
+                to_lower = TRUE) %>%
   mutate(
     word = str_trim(word)
   ) %>%
-  count(resident, word) %>%
+  count(word) %>%
   ggplot() +
-  aes(label = word, size = n, colour = resident) +
-  geom_text_wordcloud() +
+  aes(label = word, size = n) +
+  geom_text_wordcloud(use_richtext = FALSE) +
   scale_size_area(max_size = 10)
 ```
 
