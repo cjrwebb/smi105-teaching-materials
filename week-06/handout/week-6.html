@@ -423,6 +423,13 @@ necessary by using skip = 1. Let’s add this and see the result.</p>
                      )
 
 glimpse(survey)</code></pre>
+<p><strong>If all of the above doesn’t work, don’t panic!</strong> It’s
+probably just because student Google accounts are limited in what they
+are allowed to do. It’s a shame if it doesn’t work but not the end of
+the world. There is a backup that you can access by running the
+following code:</p>
+<pre class="r"><code># Load the backup file if the googlesheets connection doesn&#39;t work
+survey &lt;- read_csv(&quot;https://bit.ly/backupsurvey117&quot;)</code></pre>
 </div>
 <div id="working-with-qualitative-text-data-topics-versus-sentiment" class="section level2">
 <h2>Working with qualitative text data: Topics versus Sentiment</h2>

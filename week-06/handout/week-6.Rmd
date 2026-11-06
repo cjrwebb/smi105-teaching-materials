@@ -55,6 +55,7 @@ read_sheet(url)
 
 ```
 
+
 The first line of code asked R to get the web address that the short link from bit.ly is pointing to, and then saves it in an object called url that we can use instead of having to type out "https://docs.google.com/spreadsheets/d/1y6Ep8KZcmTY_Itso3p5Lbw6QPo2Viy0zaXkQrCFO5Bo/edit?usp=sharing"
 
 This looks okay, but the variable names are way too long, we definitely don't want to have to be typing them all out ourselves. Luckily, we can give R a vector of shortened names we want to use. However, because we are now ignoring our original headers, we also want to tell googlesheets4 that the first row of our data is no longer necessary by using skip = 1. Let's add this and see the result.
@@ -68,6 +69,15 @@ survey <- read_sheet(url,
                      )
 
 glimpse(survey)
+
+```
+
+**If all of the above doesn't work, don't panic!** It's probably just because student Google accounts are limited in what they are allowed to do. It's a shame if it doesn't work but not the end of the world. There is a backup that you can access by running the following code: 
+
+```{r}
+
+# Load the backup file if the googlesheets connection doesn't work
+survey <- read_csv("https://bit.ly/backupsurvey117")
 
 ```
 

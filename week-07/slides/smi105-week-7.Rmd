@@ -1,5 +1,5 @@
 ---
-title: "EDC101: Week 7 Publishing a data visualisation"
+title: "EDC117: Week 7 Publishing a data visualisation"
 subtitle: ""  
 author: 
   - "Dr. Calum Webb"
@@ -33,7 +33,7 @@ decktape generic --key=ArrowRight --load-pause 1800 --slides '1-55' --size '1216
 <br><br>
 
 # Publishing a data visualisation
-#### EDC101: Week 7
+#### EDC117: Week 7
 
 <br><br>
 
